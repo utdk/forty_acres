@@ -1,0 +1,2 @@
+# Ignore paths that contain local development files.
+node_modules/

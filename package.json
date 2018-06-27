@@ -1,0 +1,25 @@
+{
+  "name": "forty_acres",
+  "version": "1.0.0",
+  "description": "Bootstrap based Drupal theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Marsello",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "~4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "accessible-mega-menu": "git+https://github.com/utexas-its-wcs/Accessible-Mega-Menu.git"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
