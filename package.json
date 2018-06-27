@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Bootstrap based Drupal theme",
   "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.austin.utexas.edu:eis1-wcs/forty_acres.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
