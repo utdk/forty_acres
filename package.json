@@ -13,10 +13,10 @@
   "author": "Mike Marsello",
   "license": "ISC",
   "dependencies": {
+    "accessible-mega-menu": "git+https://github.com/utexas-its-wcs/Accessible-Mega-Menu.git",
     "bootstrap": "~4.1.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3",
-    "accessible-mega-menu": "git+https://github.com/utexas-its-wcs/Accessible-Mega-Menu.git"
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
     "del": "^3.0.0",
@@ -24,6 +24,10 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-sequence": "^1.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "stylelint": "^9.1.1",
+    "stylelint-checkstyle-formatter": "^0.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-browser-hacks": "^1.1.0"
   }
 }

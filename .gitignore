@@ -1,2 +1,5 @@
 # Ignore paths that contain local development files.
 node_modules/
+
+# Ignore git pre-commit config
+.github/config.sh
