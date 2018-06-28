@@ -1,0 +1,21 @@
+core: 8.x
+type: theme
+base theme: stable
+name: Forty Acres
+description: UT-branded theme using the Bootstrap library v4.
+screenshot: images/screenshot.png
+
+regions:
+  hidden: Hidden
+  header: Header
+  navigation: Navigation
+  top_bar: Top bar
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: Primary
+  sidebar_second: Secondary
+  footer_left: Footer left
+  footer_middle: Footer middle
+  page_top: Page top
+  page_bottom: Page bottom
