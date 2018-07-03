@@ -8,14 +8,13 @@ screenshot: images/screenshot.png
 regions:
   hidden: Hidden
   header: Header
-  navigation: Navigation
-  top_bar: Top bar
+  primary_menu: Primary Menu
+  secondary_menu: Secondary Menu
+  breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help
   content: Content
-  sidebar_first: Primary
-  sidebar_second: Secondary
-  footer_left: Footer left
-  footer_middle: Footer middle
+  sidebar_first: Left Sidebar
+  sidebar_second: Right Sidebar
   page_top: Page top
   page_bottom: Page bottom
