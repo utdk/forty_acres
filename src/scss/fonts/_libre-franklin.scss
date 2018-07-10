@@ -1,0 +1,50 @@
+// ----------
+// Libre Franklin
+
+// Bold
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-bold-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-bold-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Italic
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-italic-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-italic-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+// Regular
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-regular-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-regular-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Medium
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-medium-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-medium-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Semibold
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-semibold-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-semibold-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+// Bold
+@font-face {
+  font-family: "LibreFrank";
+  src: url('../fonts/librefrank/librefranklin-black-webfont.woff') format('woff'), url('../fonts/librefrank/librefranklin-black-webfont.woff2') format('woff2'), url('../fonts/librefrank/librefranklin-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
