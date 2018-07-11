@@ -1,0 +1,23 @@
+//
+// Brandbar component.
+//
+
+.ut-brandbar {
+  background-color: $ut-burntorange;
+  height: 40px;
+  text-align: center;
+
+  .ut-logo--shieldtexas {
+    max-height: 25px;
+    display: block;
+
+    @include screen-mq(medium) {
+      float: right;
+    }
+
+    img {
+      margin-top: 6px;
+      height: 25px;
+    }
+  }
+}

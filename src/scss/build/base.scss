@@ -2,7 +2,11 @@
 
 // Functions, Mixins and Variables
 @import "../variables";
+@import "../mixins/responsive";
 
 // Fonts
 @import "../fonts/charis";
 @import "../fonts/libre-franklin";
+
+// Global Components
+@import "../texas-design-system/components/brandbar";

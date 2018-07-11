@@ -46,3 +46,25 @@
   font-weight: 900;
   font-style: normal;
 }
+
+.ut-brandbar {
+  background-color: #bf5700;
+  height: 40px;
+  text-align: center;
+}
+
+.ut-brandbar .ut-logo--shieldtexas {
+  max-height: 25px;
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .ut-brandbar .ut-logo--shieldtexas {
+    float: right;
+  }
+}
+
+.ut-brandbar .ut-logo--shieldtexas img {
+  margin-top: 6px;
+  height: 25px;
+}
