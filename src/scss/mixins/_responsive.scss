@@ -1,6 +1,6 @@
 // ----------
 // Screen min width media query utility @access public
-@mixin screen-mq($mq-breakpoint, $mq-breakpoints: $screen-breakpoints) {
+@mixin screen-mq($mq-breakpoint, $mq-breakpoints: $grid-breakpoints) {
   // If $mq-breakpoint is a key that exists in
   // $mq-breakpoints, get and use the value
   @if map-has-key($mq-breakpoints, $mq-breakpoint) {

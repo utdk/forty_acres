@@ -11,7 +11,7 @@
     max-height: 25px;
     display: block;
 
-    @include screen-mq(medium) {
+    @include screen-mq(md) {
       float: right;
     }
 

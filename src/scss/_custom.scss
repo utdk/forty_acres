@@ -2,14 +2,6 @@
 $ut-font--serif: "CharisSil", Georgia, serif;
 $ut-font--sans: "LibreFrank", Arial, Helvetica, sans-serif;
 
-// Break Point Variable Map
-$screen-breakpoints: (
-  small:  600px,
-  medium: 900px,
-  large:  1200px,
-  xl:     1600px
-);
-
 // Primary Color Palette
 $ut-burntorange: #bf5700;
 $ut-charcoal: #333f48;
@@ -50,3 +42,20 @@ $ut-limestone--t60: #e6e4dc;
 $ut-limestone--s20: #aba89e;
 $ut-limestone--s40: #807e76;
 $ut-limestone--s60: #56544e;
+
+// Overrides of variables in node_modules/bootstrap/scss/_variables.scss
+$font-family-sans-serif: $ut-font--sans;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1600px
+);
+
+$container-max-widths: (
+  sm: 564px,
+  md: 852px,
+  lg: 1168px,
+  xl: 1540px
+);
