@@ -11,5 +11,5 @@
 function forty_acres_preprocess_page(&$variables) {
   $theme_handler = \Drupal::service('theme_handler');
   $theme_path = $theme_handler->getTheme('forty_acres')->getPath();
-  $variables['brandbar_shield'] = $theme_path . '/images/utexas-brandbar-shield.svg';
+  $variables['brandbar_shield'] = '/' . $theme_path . '/images/utexas-brandbar-shield.svg';
 }
