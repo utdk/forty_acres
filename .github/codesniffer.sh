@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# The following file must exist & must define the 
+# The following file must exist & must define the
 # PHPCS_BIN and RULESET variables.
 # See example.config.sh
 source "${BASH_SOURCE[0]%/*}/config.sh"
 
-PHP_LIST=$( git diff --name-only --cached --diff-filter=ACM -- '*.php' '*.inc' '*.yml' '*.module' '*.install')
-echo 
+PHP_LIST=$( git diff --name-only --cached --diff-filter=ACM -- '*.php' '*.inc' '*.yml' '*.module' '*.install' '*.theme')
+echo
 if [ ! -f $PHPCS_BIN ];
   then
     echo "WARNING: PHP Code Sniffer was not found. This commit might include coding standards violations. You can fix this by ensuring that composer has correctly installed it's dev dependencies including a symlink in the bin folder to the phpcs package in vendor."
