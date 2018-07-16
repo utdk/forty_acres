@@ -13,8 +13,3 @@ if [ 1 = "$e" ];
   then
     exit $e
 fi
-
-# Run CSS/SCSS linting
-sh .github/stylelint.sh
-e=$?
-exit $e

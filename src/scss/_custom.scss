@@ -1,4 +1,5 @@
 // Font Family Variables
+// stylelint-disable plugin/no-browser-hacks
 $ut-font--serif: "CharisSil", Georgia, serif;
 $ut-font--sans: "LibreFrank", Arial, Helvetica, sans-serif;
 
@@ -59,3 +60,4 @@ $container-max-widths: (
   lg: 1168px,
   xl: 1540px
 );
+// stylelint-enable

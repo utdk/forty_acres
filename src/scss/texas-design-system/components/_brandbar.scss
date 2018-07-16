@@ -10,7 +10,7 @@
   .ut-logo--shieldtexas {
     max-height: 25px;
     display: block;
-
+    // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       float: right;
     }
