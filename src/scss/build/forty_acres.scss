@@ -1,0 +1,17 @@
+///// Global Imports & Styles For Forty Acres
+
+// Functions, Mixins and Variables
+// functions.scss is necessary to import before settings
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../custom";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../mixins/responsive";
+@import "../mixins/general_mixins";
+
+// Global Design System Components
+@import "../texas-design-system/components/brandbar";
+@import "../texas-design-system/components/header";
+@import "../texas-design-system/components/footer";
+
+// Global Forty Acres Components
+@import "../layout/header";

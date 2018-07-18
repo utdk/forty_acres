@@ -1,0 +1,29 @@
+//
+// UT DS Header CSS Overrides.
+//
+header.ut-header {
+  .ut-header-wrapper {
+    .ut-main_logo {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        max-width: unset;
+      }
+    }
+  }
+
+  .ut-search_bar {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      top: 0;
+      right: 15px;
+    }
+  }
+
+  #js-nav-toggle {
+    display: inline-block;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      display: none;
+    }
+  }
+}

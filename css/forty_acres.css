@@ -1,0 +1,229 @@
+.ut-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+*:focus,
+.ut-focus {
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 3px;
+}
+.ut-brandbar {
+  height: 40px;
+  text-align: center;
+  background-color: #bf5700;
+}
+.ut-brandbar .ut-logo--shieldtexas {
+  display: block;
+  max-height: 25px;
+}
+@media screen and (min-width: 900px) {
+  .ut-brandbar .ut-logo--shieldtexas {
+    float: right;
+  }
+}
+.ut-brandbar .ut-logo--shieldtexas img {
+  height: 25px;
+  margin-top: 6px;
+}
+header.ut-header {
+  padding-bottom: 0;
+  border-bottom: 1px solid #c4cdd4;
+}
+@media screen and (min-width: 900px) {
+  header.ut-header {
+    padding-bottom: 1rem;
+  }
+}
+header.ut-header .site-branding {
+  padding: 0.75em 0;
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .site-branding {
+    padding: 1.5em 0;
+  }
+}
+header.ut-header .ut-header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+header.ut-header .ut-header-wrapper .navbar-brand {
+  margin-right: auto;
+}
+header.ut-header .ut-header-wrapper .ut-main_logo {
+  max-height: 35px;
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .ut-header-wrapper .ut-main_logo {
+    max-width: 70%;
+    max-height: 60px;
+  }
+}
+.ut-search_bar {
+  max-width: 100%;
+  height: 35px;
+  margin: 1em;
+  padding: 0;
+  border: 1px solid #5e686e;
+  background-color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .ut-search_bar {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    display: block;
+    width: 220px;
+    margin: 0;
+  }
+}
+.ut-search_bar form {
+  position: relative;
+}
+.ut-search_bar .input--search {
+  width: 100%;
+  height: 2.25rem;
+  padding-left: 0.5rem;
+  border: none;
+  background: transparent;
+}
+.ut-search_bar .input--search::-webkit-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search:-ms-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search::-ms-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search::placeholder {
+  font-style: italic;
+}
+.ut-search_bar .ut-btn--search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.25rem;
+  height: 2.1rem;
+  border: none;
+  background: none;
+  line-height: 2;
+}
+.ut-search_bar .ut-btn--search:hover {
+  cursor: pointer;
+  color: #bf5700;
+}
+.ut-social_bar {
+  padding: 0 1em;
+}
+@media screen and (min-width: 900px) {
+  .ut-social_bar {
+    position: absolute;
+    top: -58px;
+    right: 235px;
+    display: block;
+    padding: 0;
+  }
+}
+.ut-social_bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+@media screen and (min-width: 600px) {
+  .ut-social_bar ul {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .ut-social_bar ul li {
+    margin: 0 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .ut-social_bar ul li {
+    margin: 0 3px;
+  }
+}
+.ut-social_bar svg {
+  width: 32px;
+  cursor: pointer;
+
+  fill: #333f48;
+}
+.ut-social_bar svg:hover {
+  fill: #1f262b;
+}
+@media screen and (min-width: 900px) {
+  .ut-social_bar svg {
+    width: 26px;
+  }
+}
+ul.ut-menu--list,
+ul.ut-menu--list-bold {
+  margin: 0 0 1.5rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+ul.ut-menu--list li,
+ul.ut-menu--list-bold li {
+  margin-bottom: 0.25rem;
+}
+@media screen and (min-width: 900px) {
+  ul.ut-menu--list li,
+  ul.ut-menu--list-bold li {
+    margin-bottom: 0.75rem;
+  }
+}
+ul.ut-menu--list a,
+ul.ut-menu--list-bold a {
+  color: #1f262b;
+}
+footer.ut-footer {
+  padding: 3rem 0;
+  background-color: #f9fafb;
+}
+footer.ut-footer .ut-logo--primary {
+  max-width: 100%;
+  max-height: 62px;
+}
+footer.ut-footer .text--copyright {
+  font-family: "CharisSil", Georgia, serif;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+ul.ut-menu--list-bold {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .ut-header-wrapper .ut-main_logo {
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .ut-search_bar {
+    top: 0;
+    right: 15px;
+  }
+}
+header.ut-header #js-nav-toggle {
+  display: inline-block;
+}
+@media screen and (min-width: 900px) {
+  header.ut-header #js-nav-toggle {
+    display: none;
+  }
+}

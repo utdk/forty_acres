@@ -1,0 +1,55 @@
+//
+// UT DS Global Mixins
+//
+
+// ----------
+// Block Modifier @access public
+// @param {String} $modifer - Modifier's name
+// stylelint-disable at-rule-no-unknown
+@mixin mod($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// ----------
+// Image Fluidity Include @access public
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+// ----------
+// List Style Stripper @access public
+@mixin list-style-none {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ut-list-unstyled {
+  @include list-style-none();
+}
+
+// ----------
+//  Caret icon appender @access public
+// @mixin link-caret {
+//   &:after {
+//     font-family: "ut-icons";
+//     content: "\f105";
+//     position: absolute;
+//     padding-left: 5px;
+//   }
+// }
+
+// ----------
+// Focus on elements appearance
+@mixin focus-default {
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 3px;
+}
+
+*:focus,
+.ut-focus {
+  @include focus-default;
+}
+// stylelint-enable

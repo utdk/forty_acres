@@ -1,0 +1,59 @@
+//
+// Footer Theme File
+//
+
+// Extensions for this component
+%menu--list {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include list-style-none;
+
+  margin: 0 0 1.5rem;
+  font-size: .875rem;
+
+  li {
+    margin-bottom: .25rem;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      margin-bottom: .75rem;
+    }
+  }
+
+  a {
+    color: $ut-charcoal--s40;
+  }
+}
+
+// ----------
+// Basic UT Footer defaults
+footer.ut-footer {
+  background-color: $ut-shade--t20;
+  padding: 3rem 0;
+
+  // UT Primary logo in the footer sizing conditions.
+  // Shield shouldn't be smaller than 50px
+  .ut-logo--primary {
+    max-width: 100%;
+    max-height: 62px;
+  }
+
+  // coyright text
+  .text--copyright {
+    font-family: $ut-font--serif;
+    font-size: .75rem;
+    font-style: italic;
+  }
+}
+
+// Links in a Menu List appearance in the footer
+ul.ut-menu--list {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %menu--list;
+}
+
+ul.ut-menu--list-bold {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %menu--list;
+
+  font-weight: 600;
+  text-transform: uppercase;
+}

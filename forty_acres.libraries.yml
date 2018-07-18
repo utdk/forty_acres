@@ -2,3 +2,4 @@ global:
   css:
     theme:
       css/base.css: {}
+      css/forty_acres.css: {}
