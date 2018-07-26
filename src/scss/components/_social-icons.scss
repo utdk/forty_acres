@@ -1,0 +1,9 @@
+.block__ut-social-links--items {
+  svg {
+    fill: $ut-charcoal;
+    width: 22px;
+    &:hover {
+      fill: $ut-charcoal--s40;
+    }
+  }
+}

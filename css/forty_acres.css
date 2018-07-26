@@ -208,6 +208,14 @@ ul.ut-menu--list-bold {
   text-transform: uppercase;
   font-weight: 600;
 }
+.block__ut-social-links--items svg {
+  width: 22px;
+
+  fill: #333f48;
+}
+.block__ut-social-links--items svg:hover {
+  fill: #1f262b;
+}
 @media screen and (min-width: 900px) {
   header.ut-header .ut-header-wrapper .ut-main_logo {
     max-width: unset;
