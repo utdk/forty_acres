@@ -1,0 +1,18 @@
+.ut-parent_entity {
+  position: static;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    position: absolute;
+    top: -54px;
+  }
+  a {
+    color: $ut-charcoal;
+    font-family: $ut-font--sans;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      color: $ut-white;
+      font-family: $ut-font--serif;
+      font-size: 14px;
+    }
+  }
+}

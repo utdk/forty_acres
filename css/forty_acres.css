@@ -216,6 +216,26 @@ ul.ut-menu--list-bold {
 .block__ut-social-links--items svg:hover {
   fill: #1f262b;
 }
+.ut-parent_entity {
+  position: static;
+}
+@media screen and (min-width: 900px) {
+  .ut-parent_entity {
+    position: absolute;
+    top: -54px;
+  }
+}
+.ut-parent_entity a {
+  color: #333f48;
+  font-family: "LibreFrank", Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 900px) {
+  .ut-parent_entity a {
+    color: #fff;
+    font-family: "CharisSil", Georgia, serif;
+    font-size: 14px;
+  }
+}
 @media screen and (min-width: 900px) {
   header.ut-header .ut-header-wrapper .ut-main_logo {
     max-width: unset;

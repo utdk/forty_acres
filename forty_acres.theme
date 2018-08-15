@@ -15,4 +15,7 @@ function forty_acres_preprocess_page(&$variables) {
   $variables['brandbar_shield'] = '/' . $theme_path . '/images/utexas-brandbar-shield.svg';
   // Year for use in footer copyright.
   $variables['year'] = date('Y');
+  // Parent entity link and title.
+  $variables['parent_entity_title'] = theme_get_setting('parent_link_title');
+  $variables['parent_entity_link'] = theme_get_setting('parent_link');
 }
