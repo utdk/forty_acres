@@ -1,0 +1,112 @@
+//
+// Tag & Input Buttons.
+//
+
+// ----------
+// Button Extension
+// This is included whenever a button type is added.
+%ut-button {
+  background-color: $ut-burntorange;
+  border: 2px solid $ut-burntorange;
+  border-radius: 4px;
+  color: $ut-white;
+  display: inline-block;
+  font-family: $ut-font--sans;
+  font-weight: 600;
+  margin-bottom: .55rem;
+  padding: .5rem 1rem;
+  text-decoration: none !important;
+  transition: background-color, color, border-color, .33s ease-out;
+
+  &:link,
+  &:visited {
+    color: $ut-white;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid $ut-burntorange--s20;
+    background-color: $ut-burntorange--s20;
+    color: $ut-white !important;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: $ut-burntorange--s10;
+  }
+}
+
+// ----------
+// Button defaults
+.ut-btn {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-button;
+
+  // Secondary Color Change
+  // This is a white background with a orange borders.
+  &--secondary {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-button;
+
+    background-color: $ut-white;
+    border-color: $ut-burntorange;
+    color: $ut-burntorange;
+
+    &:link,
+    &:visited {
+      color: $ut-burntorange;
+    }
+  }
+
+  // Disabled button.
+  &--disabled {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-button;
+
+    background-color: $ut-shade--t40;
+    border-color: $ut-shade--t40;
+    color: $ut-shade;
+
+    &:link,
+    &:visited {
+      color: $ut-shade;
+    }
+    &:hover,
+    &:focus {
+      color: $ut-charcoal--s40 !important;
+      background-color: $ut-shade--t40;
+      border-color: $ut-shade--t40;
+    }
+  }
+
+  // Small buttons used for CTAs.
+  &--small {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-button;
+
+    font-size: 0.825rem;
+    line-height: 1.5;
+    padding: .25rem .75rem;
+    text-transform: uppercase;
+  }
+
+  // Large buttons.
+  &--large {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-button;
+
+    padding: .75rem 1.25rem;
+    text-transform: uppercase;
+  }
+}
+
+// ----------
+// Corner or Border radius defaults
+.corner--rounded {
+  border-radius: 4px !important;
+}
+.corner--square {
+  border-radius: 0 !important;
+}
+.corner--pill {
+  border-radius: 2rem !important;
+}
