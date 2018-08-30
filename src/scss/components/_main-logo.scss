@@ -1,0 +1,11 @@
+//
+// UT DS Footer CSS Overrides.
+//
+.ut-header,
+.ut-footer {
+  .ut-logo--main {
+    max-height: 60px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include img-fluid;
+  }
+}

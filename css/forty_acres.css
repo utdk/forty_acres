@@ -236,16 +236,17 @@ ul.ut-menu--list-bold {
     font-size: 14px;
   }
 }
+.ut-header .ut-logo--main,
+.ut-footer .ut-logo--main {
+  max-width: 100%;
+  height: auto;
+  max-height: 60px;
+}
 .header-menu__list li {
   display: inline-block;
 }
 .header-menu__list li + li {
   margin-left: 10px;
-}
-@media screen and (min-width: 900px) {
-  header.ut-header .ut-header-wrapper .ut-main_logo {
-    max-width: unset;
-  }
 }
 @media screen and (min-width: 900px) {
   header.ut-header .ut-search_bar {
