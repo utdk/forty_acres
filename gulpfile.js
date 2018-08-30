@@ -47,4 +47,11 @@ gulp.task("css-lint", function lintCssTask() {
     }));
 });
 
-gulp.task("default", sequence("scss-lint", "sass", "css-lint", "copy-css"));
+gulp.task('copy-js', function() {
+  return gulp
+    .src('node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('js'));
+});
+
+gulp.task("default", sequence("scss-lint", "sass", "css-lint", "copy-css", "copy-js"));
