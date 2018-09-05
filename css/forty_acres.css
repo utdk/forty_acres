@@ -358,3 +358,22 @@ header.ut-header #js-nav-toggle {
     display: none;
   }
 }
+footer.ut-footer .block {
+  margin-bottom: 20px;
+}
+footer.ut-footer .required-links__list {
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+footer.ut-footer .footer-menu__list-item {
+  margin-bottom: 20px;
+}
+footer.ut-footer .required-links__list-item {
+  margin-bottom: 15px;
+}
+footer.ut-footer .footer-textarea {
+  padding-left: 10px;
+  border-left: 1px solid #c4cdd4;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}

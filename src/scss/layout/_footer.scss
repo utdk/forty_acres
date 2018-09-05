@@ -1,0 +1,23 @@
+//
+// UT DS Footer CSS Overrides.
+//
+footer.ut-footer {
+  .block {
+    margin-bottom: 20px;
+  }
+  .required-links__list {
+    column-count: 2;
+  }
+  .footer-menu__list-item {
+    margin-bottom: 20px;
+  }
+  .required-links__list-item {
+    margin-bottom: 15px;
+  }
+  .footer-textarea {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-left: 10px;
+    border-left: 1px solid $ut-shade--t60;
+  }
+}
