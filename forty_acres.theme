@@ -5,6 +5,8 @@
  * The primary PHP file for the Forty Acres theme.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_preprocess_page().
  */
@@ -18,4 +20,13 @@ function forty_acres_preprocess_page(&$variables) {
   // Parent entity link and title.
   $variables['parent_entity_title'] = theme_get_setting('parent_link_title');
   $variables['parent_entity_link'] = theme_get_setting('parent_link');
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function forty_acres_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'search-block-form') {
+    $form['keys']['#attributes']['placeholder'] = 'Search the site...';
+  }
 }
