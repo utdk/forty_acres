@@ -409,6 +409,32 @@ header.ut-header #js-nav-toggle {
     display: none;
   }
 }
+@media screen and (min-width: 900px) {
+  header.ut-header .ut-header-wrapper {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 900px) {
+  header.ut-header #ut-main_menu-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-right: 30px;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .region-primary-menu {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 900px) {
+  header.ut-header .region-header-secondary,
+  header.ut-header .region-header-tertiary {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
 footer.ut-footer .block {
   margin-bottom: 20px;
 }

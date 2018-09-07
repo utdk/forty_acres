@@ -4,11 +4,13 @@
       <div class="row">
         <div class="col-12">
           <div class="ut-header-wrapper">
-            {{ page.header }}
+            {{ page.header_primary }}
             <button class="ut-btn--toggle" aria-controls="main-menu" aria-expanded="false" id="js-nav-toggle"
-              href="#ut-main_menu-wrapper"><span class="hamburger"></span>MENU</button>
+              href="#ut-main_menu-wrapper">MENU</button>
           </div>
           <div id="ut-main_menu-wrapper">
+          {{ page.header_secondary }}
+          {{ page.header_tertiary }}
             {% if parent_entity_link and parent_entity_title %}
               {% include '@forty_acres/includes/parent_entity.html.twig' %}
             {% endif %}

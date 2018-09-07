@@ -7,9 +7,10 @@ screenshot: images/screenshot.png
 
 regions:
   hidden: Hidden
-  header: Header
+  header_primary: Header Primary
+  header_secondary: Header Secondary
+  header_tertiary: Header Tertiary
   primary_menu: Primary Menu
-  secondary_menu: Secondary Menu
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help

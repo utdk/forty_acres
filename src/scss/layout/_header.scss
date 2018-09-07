@@ -17,4 +17,34 @@ header.ut-header {
       display: none;
     }
   }
+  .ut-header-wrapper {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      display: inline-block;
+    }
+  }
+  #ut-main_menu-wrapper {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-right: 30px;
+      text-align: right;
+    }
+  }
+  .region-primary-menu {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      text-align: left;
+    }
+  }
+  .region-header-secondary,
+  .region-header-tertiary {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
 }
