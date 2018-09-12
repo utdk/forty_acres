@@ -1,11 +1,23 @@
 //
 // UT DS Footer CSS Overrides.
 //
+
 .ut-header,
+.ut-footer {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include img-fluid;
+}
+.ut-header {
+  .ut-logo--main {
+    max-height: 40px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      max-height: 60px;
+    }
+  }
+}
 .ut-footer {
   .ut-logo--main {
     max-height: 60px;
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include img-fluid;
   }
 }

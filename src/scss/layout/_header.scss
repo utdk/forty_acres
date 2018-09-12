@@ -2,49 +2,65 @@
 // UT DS Header CSS Overrides.
 //
 header.ut-header {
-  .ut-search_bar {
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      top: 0;
-      right: 15px;
-    }
-  }
-
-  #js-nav-toggle {
-    display: inline-block;
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      display: none;
-    }
-  }
-  .ut-header-wrapper {
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      display: inline-block;
-    }
-  }
-  #ut-main_menu-wrapper {
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      padding-right: 30px;
-      text-align: right;
-    }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    padding-top: 1rem;
+    padding-bottom: 0;
   }
   .region-primary-menu {
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
-      text-align: left;
+      margin: 0;
+      // this pushes the hr down enough for it to appear whole
+      margin-bottom: 1px;
+    }
+  }
+  .region-header-primary {
+    padding: 10px 0;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding: 0;
+    }
+  }
+  .ut-header-wrapper {
+    justify-content: space-between;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .header-flex-wrapper {
+    margin-top: 20px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      margin-top: unset;
+      display: flex;
+      justify-content: flex-end;
+      // pushes the main menu down a bit and it works even if
+      // the header blocks are absent
+      min-height: 80px;
     }
   }
   .region-header-secondary,
   .region-header-tertiary {
+    display: flex;
+    flex-direction: column;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
-      display: inline-block;
       margin-left: 20px;
+      padding: 0;
+    }
+    // adds some vertical space between divs and navs in header regions
+    & > div,
+    & > nav {
+      margin-bottom: 20px;
+      margin-right: auto;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        margin-right: unset;
+        margin-left: auto;
+      }
     }
   }
 }

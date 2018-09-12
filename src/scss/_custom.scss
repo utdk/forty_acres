@@ -51,13 +51,24 @@ $grid-breakpoints: (
   sm: 600px,
   md: 900px,
   lg: 1200px,
-  xl: 1600px
+  xl: 1600px,
 );
 
 $container-max-widths: (
-  sm: 564px,
-  md: 852px,
-  lg: 1168px,
-  xl: 1540px
+  sm: 840px,
+  md: 1000px,
+  lg: 1140px,
+  xl: 1500px,
 );
+
+// Minor Third for smaller screens.
+$min-font-scale: 1.2;
+
+// Major Third for larger screens.
+$max-font-scale: 1.25;
+
+// ----------
+// Default settings for Font Colors
+$ut-body-font-color: $ut-charcoal--s40;
+$ut-header-font-color: $ut-charcoal;
 // stylelint-enable

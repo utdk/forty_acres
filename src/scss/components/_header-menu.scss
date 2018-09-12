@@ -2,11 +2,16 @@
 // Header menu component.
 //
 
-.header-menu__list {
-  li {
+ul.header-menu__list {
+  margin-bottom: 0;
+  .header-menu__list-item {
     display: inline-block;
-    & + li {
-      margin-left: 10px;
+    margin-bottom: 0;
+    & + .header-menu__list-item {
+      margin-left: 5px;
     }
+  }
+  .header-menu__link {
+    padding: 5px;
   }
 }

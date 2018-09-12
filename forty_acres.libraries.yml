@@ -5,3 +5,7 @@ global:
       css/forty_acres.css: {}
   js:
     js/jquery-accessibleMegaMenu.js: {}
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

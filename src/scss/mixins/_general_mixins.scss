@@ -52,4 +52,12 @@
 .ut-focus {
   @include focus-default;
 }
+
+// ----------
+// Clearfix @access public
+@mixin clearfix {
+  display: block;
+  clear: both;
+  content: "";
+}
 // stylelint-enable
