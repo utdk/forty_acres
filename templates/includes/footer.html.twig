@@ -4,12 +4,18 @@
       <div class="col-12 col-sm-6 col-md-4">
         {{ page.footer_left }}
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        {{ page.footer_middle }}
-      </div>
-      <div class="col-12 col-md-5">
+      {% if page.footer_middle %}
+        <div class="col-12 col-sm-6 col-md-3">
+          {{ page.footer_middle }}
+        </div>
+        <div class="col-12 col-md-5">
+          {{ page.footer_right }}
+        </div>
+      {% else %}
+      <div class="col-12 col-sm-6 col-md-8">
         {{ page.footer_right }}
       </div>
+      {% endif %}
     </div>
     <div class="row">
       <div class="col-12">
