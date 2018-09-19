@@ -54,3 +54,19 @@ function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $va
     $suggestions[] = 'menu__' . $region;
   }
 }
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function forty_acres_preprocess_breadcrumb(&$variables) {
+
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
+
+    // Add the title of the page in the breadcrumb.
+    $variables['breadcrumb'][] = [
+      'text' => $node->getTitle(),
+      'url' => $node->URL(),
+    ];
+
+  }
+}
