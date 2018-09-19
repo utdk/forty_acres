@@ -29,12 +29,20 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('main-menu__list') }}>
+      <ul{{ attributes.addClass('main-menu__list') }} role="menu">
     {% else %}
-      <ul class='main-menu__ul--sub-menu'>
+      <div class="sub-nav-wrapper">
+        <ul class='main-menu__list--sub-menu' role="menu">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes.addClass((menu_level == 0) ? 'main-menu__list-item' : 'main-menu__list-item--sub-menu') }}>
+      {%
+        set item_classes = [
+          item.is_expanded ? 'menu-item-has-children',
+          menu_level == 0 ? 'main-menu__list-item' : 'main-menu__list-item--sub-menu',
+          item.in_active_trail ? 'active',
+        ]
+      %}
+      <li{{ item.attributes.addClass(item_classes) }} role="menuitem">
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
@@ -42,5 +50,8 @@
       </li>
     {% endfor %}
     </ul>
+    {% if menu_level != 0 %}
+      </div>
+    {% endif %}
   {% endif %}
 {% endmacro %}

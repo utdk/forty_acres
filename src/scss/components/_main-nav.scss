@@ -48,47 +48,47 @@
     }
   }
   // For the plus minus menu toggle reveals.
-  .icon {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    z-index: 100;
-    text-align: center;
-    font-weight: bold;
-    font-style: normal;
-    color: $ut-charcoal;
-    border-left: 1px solid $ut-charcoal--t40;
-    // &:before {
-    //   width: 20px;
-    //   height: 20px;
-    //   content: $ut-angle-right;
-    //   top: 8px;
-    //   position: absolute;
-    //   left: 26px;
-    //   font-size: 1.125rem;
-    //   transition: transform, color 0.33s;
-    //   transform-origin: center center;
-    // }
-    &.icon--open {
-      &:before {
-        transform: rotate(90deg);
-        color: $ut-burntorange;
-      }
-    }
-    &:hover {
-      color: $ut-burntorange;
-    }
-  }
+  // .icon {
+  //   cursor: pointer;
+  //   display: none;
+  //   position: absolute;
+  //   right: 1px;
+  //   top: 1px;
+  //   z-index: 100;
+  //   text-align: center;
+  //   font-weight: bold;
+  //   font-style: normal;
+  //   color: $ut-charcoal;
+  //   border-left: 1px solid $ut-charcoal--t40;
+  //   &:before {
+  //     width: 20px;
+  //     height: 20px;
+  //     content: $ut-angle-right;
+  //     top: 8px;
+  //     position: absolute;
+  //     left: 26px;
+  //     font-size: 1.125rem;
+  //     transition: transform, color 0.33s;
+  //     transform-origin: center center;
+  //   }
+  //   &.icon--open {
+  //     &:before {
+  //       transform: rotate(90deg);
+  //       color: $ut-burntorange;
+  //     }
+  //   }
+  //   &:hover {
+  //     color: $ut-burntorange;
+  //   }
+  // }
   @media (max-width: map-get($grid-breakpoints, md)) {
     display: block;
-    .icon {
-      text-align: center;
-      display: block;
-      width: 70px;
-      height: 35px;
-    }
+    // .icon {
+    //   text-align: center;
+    //   display: block;
+    //   width: 70px;
+    //   height: 35px;
+    // }
     & > a {
       display: block;
     }
@@ -113,32 +113,32 @@
 }
 
 // Parent of child items from top.
-.main-menu__list > .menu-item-has-children.main-menu__list-item > a {
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    padding-right: 1.75rem;
-    // &::before {
-    //   position: absolute;
-    //   width: 20px;
-    //   height: 20px;
-    //   content: $ut-angle-down;
-    //   top: 0.75rem;
-    //   right: 0;
-    //   font-size: 0.75rem;
-    // }
-    &.open::before {
-      color: $ut-burntorange;
-      animation: move 0.185s ease-in forwards;
-      @keyframes move {
-        from {
-          top: 0.75rem;
-        }
-        to {
-          top: 1rem;
-        }
-      }
-    }
-  }
-}
+// .main-menu__list > .menu-item-has-children.main-menu__list-item > a {
+//   @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+//     padding-right: 1.75rem;
+//     &::before {
+//       position: absolute;
+//       width: 20px;
+//       height: 20px;
+//       content: $ut-angle-down;
+//       top: 0.75rem;
+//       right: 0;
+//       font-size: 0.75rem;
+//     }
+//     &.open::before {
+//       color: $ut-burntorange;
+//       animation: move 0.185s ease-in forwards;
+//       @keyframes move {
+//         from {
+//           top: 0.75rem;
+//         }
+//         to {
+//           top: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Open state of first descendant link within a top level navigation item.
 .main-menu__list-item > a.open {
@@ -149,69 +149,75 @@
   }
 }
 
-/* main-menu__ul--sub-menuigation panel */
-.main-menu__ul--sub-menu {
-  list-style: none;
-  position: absolute;
-  display: none;
-  top: 2.2rem;
-  padding: 0.5rem 1rem 1rem;
-  border: 1px solid $ut-charcoal--t40;
-  background-color: $ut-white;
-  width: 240px;
-  max-height: 500px;
-  transition: background-color, color, 0.33s;
-  z-index: 2;
-  // stylelint-disable-next-line no-descending-specificity
-  a {
-    display: block;
-    padding: 0.5rem 0;
-  }
-
-  @media (max-width: 900px) {
-    width: 100%;
-    top: 0;
-    background-color: $ut-limestone--t40;
-    position: relative;
-    max-height: 0;
-    padding: 0 25px;
-
+/* main-menu__list--sub-menuigation panel */
+.sub-nav-wrapper {
+  .main-menu__list--sub-menu {
+    list-style: none;
+    position: absolute;
+    display: none;
+    top: 2.2rem;
+    padding: 0.5rem 1rem 1rem;
+    border: 1px solid $ut-charcoal--t40;
+    background-color: $ut-white;
+    width: 240px;
+    max-height: 500px;
+    transition: background-color, color, 0.33s;
+    z-index: 2;
+    // stylelint-disable-next-line no-descending-specificity
     a {
-      padding: 0.5rem 1rem 1rem;
+      display: block;
+      padding: 0.5rem 0;
     }
+
+    @media (max-width: 900px) {
+      width: 100%;
+      top: 0;
+      background-color: $ut-limestone--t40;
+      position: relative;
+      max-height: 0;
+      padding: 0 25px;
+
+      a {
+        padding: 0.5rem 1rem 1rem;
+      }
+    }
+    // stylelint-disable-next-line no-descending-specificity
+    // li a {
+    //   text-transform: capitalize;
+    //   // stylelint-disable-next-line at-rule-no-unknown
+    //   // @include link-caret;
+    //   @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+    //     &.overflowing {
+    //       right: 0;
+    //     }
+    //     &.one-column {
+    //       width: 240px;
+    //       column-count: 1;
+    //     }
+    //     &.two-columns {
+    //       width: 400px;
+    //       column-count: 2;
+    //     }
+    //     &.three-columns {
+    //       width: 500px;
+    //       column-count: 3;
+    //     }
+    //   }
+    // }
   }
-  /* main-menu__ul--sub-menuigation panel open state */
-  &.open {
+  &.open .main-menu__list--sub-menu {
     display: block;
     max-height: 500px;
   }
-  // stylelint-disable-next-line no-descending-specificity
-  li a {
-    text-transform: capitalize;
-    // stylelint-disable-next-line at-rule-no-unknown
-    // @include link-caret;
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-      &.overflowing {
-        right: 0;
-      }
-      &.one-column {
-        width: 240px;
-        column-count: 1;
-      }
-      &.two-columns {
-        width: 400px;
-        column-count: 2;
-      }
-      &.three-columns {
-        width: 500px;
-        column-count: 3;
-      }
-    }
-  }
 }
+// show dropdowns on focus
+// a.focus + .sub-nav-wrapper > .main-menu__list--sub-menu {
+//   display: block;
+//   max-height: 500px;
+// }
 
-/* list of items within main-menu__ul--sub-menu navigation panel */
-.main-menu__ul--sub-menu ul {
+/* list of items within main-menu__list--sub-menu navigation panel */
+.main-menu__list--sub-menu ul {
   display: inline-block;
   vertical-align: top;
   margin: 0 1em 0 0;
