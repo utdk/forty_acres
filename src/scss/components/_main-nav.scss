@@ -3,7 +3,7 @@
 //
 
 // ----------
-// Mega menu list.
+// Mega menu list (main menu ul).
 .main-menu__list {
   display: flex;
   justify-content: space-between;
@@ -20,21 +20,19 @@
   }
 }
 
-// A top level navigation item in the mega menu.
+// A top level navigation item in the mega menu (main menu ul > li)
 .main-menu__list-item {
   list-style: none;
   display: inline-block;
   padding: 0;
   margin: 0;
   position: relative;
-  a {
+  // First descendant link within a top level navigation item (main menu ul > li > a).
+  .main-menu__link {
     font-size: 0.875rem;
     text-transform: uppercase;
     color: $ut-body-font-color;
     font-weight: 600;
-  }
-  // First descendant link within a top level navigation item
-  > a {
     border: 1px solid transparent;
     display: block;
     margin: 0;
@@ -44,101 +42,137 @@
     @media (min-width: map-get($grid-breakpoints, md) + 1px) {
       background-color: $ut-white;
       display: inline-block;
-      margin: 0 0 -1px 0;
+      margin: 1px 0 0 0;
+    }
+  }
+  .main-menu__link--sub-menu {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    color: $ut-body-font-color;
+    font-weight: 600;
+    display: block;
+    margin: 0;
+    padding: 0 25px;
+    position: relative;
+    transition: border, color, 0.33s ease-in-out;
+    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+      background-color: $ut-white;
+      display: inline-block;
+      margin: 1px 0 0 0;
+      padding: 0.5em 1em;
     }
   }
   // For the plus minus menu toggle reveals.
-  // .icon {
-  //   cursor: pointer;
-  //   display: none;
-  //   position: absolute;
-  //   right: 1px;
-  //   top: 1px;
-  //   z-index: 100;
-  //   text-align: center;
-  //   font-weight: bold;
-  //   font-style: normal;
-  //   color: $ut-charcoal;
-  //   border-left: 1px solid $ut-charcoal--t40;
-  //   &:before {
-  //     width: 20px;
-  //     height: 20px;
-  //     content: $ut-angle-right;
-  //     top: 8px;
-  //     position: absolute;
-  //     left: 26px;
-  //     font-size: 1.125rem;
-  //     transition: transform, color 0.33s;
-  //     transform-origin: center center;
-  //   }
-  //   &.icon--open {
-  //     &:before {
-  //       transform: rotate(90deg);
-  //       color: $ut-burntorange;
-  //     }
-  //   }
-  //   &:hover {
-  //     color: $ut-burntorange;
-  //   }
-  // }
-  @media (max-width: map-get($grid-breakpoints, md)) {
-    display: block;
-    // .icon {
-    //   text-align: center;
-    //   display: block;
-    //   width: 70px;
-    //   height: 35px;
-    // }
-    & > a {
+  .icon {
+    cursor: pointer;
+    // display: none;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    z-index: 100;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    color: $ut-charcoal;
+    width: 20px;
+    height: 20px;
+    // content: $ut-angle-right;
+    font-size: 1.125rem;
+    transition: transform, color 0.33s;
+    transform-origin: center center;
+    background-image: url(../images/chevron-down.svg);
+    background-size: cover;
+    &.icon--open {
+      &:before {
+        transform: rotate(90deg);
+        color: $ut-burntorange;
+      }
+    }
+    &:hover {
+      color: $ut-burntorange;
+    }
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      border-left: 1px solid $ut-charcoal--t40;
+      right: 0;
+      top: 1px;
+      text-align: center;
       display: block;
+      width: 70px;
+      height: 35px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 20px 4px;
+      // & > a {
+      //   display: block;
+      // }
     }
   }
-  // Focus/open states of first descendant link within a top level
-  // navigation item.
-  & > a:hover,
-  & > a:focus,
-  & > a.open {
+
+  // Focus/open/hover states of first descendant link within a top level
+  // navigation item (main menu ul > li > a).
+  .main-menu__link:hover,
+  .main-menu__link:focus,
+  .main-menu__link.open {
     border: 1px solid $ut-charcoal--t40;
     text-decoration: none;
-  }
-  // Hovering on main menu items with LINKS ONLY!!!
-  & > a[href*="http"] {
-    &:hover,
-    &:focus,
-    &.open {
-      color: $ut-burntorange;
-      text-decoration: underline;
+    color: $ut-burntorange;
+    text-decoration: underline;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      border-bottom: 1px solid transparent;
+      margin-top: 1px;
+      z-index: 3;
     }
   }
+  // Focus/open/hover states of first descendant link within a second level
+  // navigation item (subnav ul > li > a).
+  .main-menu__link--sub-menu:hover,
+  .main-menu__link--sub-menu:focus,
+  .main-menu__link--sub-menu.open {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      outline-offset: 0;
+    }
+  }
+  // Hovering on main menu items with LINKS ONLY!!!
+  // We'll need a new way to accomplish this as it doesn't account for internal links.
+  // .main-menu__link[href*="http"] {
+  //   &:hover,
+  //   &:focus,
+  //   &.open {
+  //     color: $ut-burntorange;
+  //     text-decoration: underline;
+  //   }
+  // }
 }
 
 // Parent of child items from top.
-// .main-menu__list > .menu-item-has-children.main-menu__list-item > a {
-//   @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-//     padding-right: 1.75rem;
-//     &::before {
-//       position: absolute;
-//       width: 20px;
-//       height: 20px;
-//       content: $ut-angle-down;
-//       top: 0.75rem;
-//       right: 0;
-//       font-size: 0.75rem;
-//     }
-//     &.open::before {
-//       color: $ut-burntorange;
-//       animation: move 0.185s ease-in forwards;
-//       @keyframes move {
-//         from {
-//           top: 0.75rem;
-//         }
-//         to {
-//           top: 1rem;
-//         }
-//       }
-//     }
-//   }
-// }
+.main-menu__list > .menu-item-has-children.main-menu__list-item > a {
+  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+    padding-right: 1.75rem;
+    // &::before {
+    //   position: absolute;
+    //   width: 20px;
+    //   height: 20px;
+    //   // content: $ut-angle-down;
+    //   top: 0.75rem;
+    //   right: 0;
+    //   font-size: 0.75rem;
+    // }
+    // &.open::before {
+    //   color: $ut-burntorange;
+    //   animation: move 0.185s ease-in forwards;
+    //   @keyframes move {
+    //     from {
+    //       top: 0.75rem;
+    //     }
+    //     to {
+    //       top: 1rem;
+    //     }
+    //   }
+    // }
+  }
+}
 
 // Open state of first descendant link within a top level navigation item.
 .main-menu__list-item > a.open {
@@ -155,18 +189,18 @@
     list-style: none;
     position: absolute;
     display: none;
-    top: 2.2rem;
-    padding: 0.5rem 1rem 1rem;
+    top: 2.3rem;
+    padding: 0.5rem 1rem;
     border: 1px solid $ut-charcoal--t40;
     background-color: $ut-white;
     width: 240px;
     max-height: 500px;
     transition: background-color, color, 0.33s;
     z-index: 2;
-    // stylelint-disable-next-line no-descending-specificity
-    a {
+    .main-menu__link--sub-menu {
       display: block;
       padding: 0.5rem 0;
+      text-transform: capitalize;
     }
 
     @media (max-width: 900px) {
@@ -177,96 +211,56 @@
       max-height: 0;
       padding: 0 25px;
 
-      a {
-        padding: 0.5rem 1rem 1rem;
+      .main-menu__link--sub-menu {
+        padding: 0.5rem 0;
       }
     }
-    // stylelint-disable-next-line no-descending-specificity
-    // li a {
-    //   text-transform: capitalize;
-    //   // stylelint-disable-next-line at-rule-no-unknown
-    //   // @include link-caret;
-    //   @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    //     &.overflowing {
-    //       right: 0;
-    //     }
-    //     &.one-column {
-    //       width: 240px;
-    //       column-count: 1;
-    //     }
-    //     &.two-columns {
-    //       width: 400px;
-    //       column-count: 2;
-    //     }
-    //     &.three-columns {
-    //       width: 500px;
-    //       column-count: 3;
-    //     }
-    //   }
-    // }
-  }
-  &.open .main-menu__list--sub-menu {
-    display: block;
-    max-height: 500px;
-  }
-}
-// show dropdowns on focus
-// a.focus + .sub-nav-wrapper > .main-menu__list--sub-menu {
-//   display: block;
-//   max-height: 500px;
-// }
-
-/* list of items within main-menu__list--sub-menu navigation panel */
-.main-menu__list--sub-menu ul {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 1em 0 0;
-  padding: 1em;
-  @media (max-width: 767px) {
-    display: block;
-  }
-  li {
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-#ut-main_menu-wrapper {
-  transition: background-color, color, 0.25s;
-  // max-height: 0;
-  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-    padding: 1rem;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 60px;
-    left: 0;
-    overflow: hidden;
-    overflow-y: scroll;
-    // animation: all 0.25s;
-    overflow: hidden;
-    opacity: 0;
-    background-color: $ut-limestone--t20;
-    border-top: 1px solid $ut-shade--t60;
-    border-bottom: 1px solid $ut-shade--t60;
-    display: flex;
-    flex-flow: column-reverse;
-    &.active {
-      opacity: 1;
+    &.open {
+      display: block;
+      max-height: 500px;
     }
   }
+  // stylelint-disable-next-line at-rule-no-unknown
   @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    position: relative;
-  }
-  &.active {
-    max-height: 100vh;
+    .main-menu__list-item--sub-menu {
+      display: block;
+      list-style-type: none;
+      margin: 0;
+      padding: 3px 0;
+    }
+    &.overflowing .main-menu__list--sub-menu {
+      right: 0;
+    }
+    &.one-column .main-menu__list--sub-menu {
+      width: 240px;
+      column-count: 1;
+    }
+    &.two-columns .main-menu__list--sub-menu {
+      width: 400px;
+      column-count: 2;
+      .main-menu__list-item--sub-menu {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+    &.three-columns .main-menu__list--sub-menu {
+      width: 500px;
+      column-count: 3;
+      .main-menu__list-item--sub-menu {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+    &.open .main-menu__list--sub-menu {
+      display: block;
+      max-height: 500px;
+    }
   }
 }
 
-// ----------
-// This is the Main Menu mobile toggle button.
+// Main Menu mobile toggle button.
 #js-nav-toggle {
   display: inline-block;
   // stylelint-disable-next-line at-rule-no-unknown

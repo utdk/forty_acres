@@ -43,7 +43,11 @@
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }} role="menuitem">
-        {{ link(item.title, item.url) }}
+        {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--sub-menu' %}
+        {{ link(item.title, item.url, { 'class':[link_class]}) }}
+        {% if item.is_expanded %}
+          <a href="##" class="icon subnav-trigger"></a>
+        {% endif %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

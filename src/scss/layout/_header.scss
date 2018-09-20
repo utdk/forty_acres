@@ -22,6 +22,7 @@ header.ut-header {
       padding: 0;
     }
   }
+  // Wraps the Primary Header region and #js-nav-toggle button
   .ut-header-wrapper {
     justify-content: space-between;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -37,8 +38,8 @@ header.ut-header {
       margin-top: unset;
       display: flex;
       justify-content: flex-end;
-      // pushes the main menu down a bit and it works even if
-      // the header blocks are absent
+      // Use min-height to push the main menu down a bit and it works even if
+      // the header blocks
       min-height: 80px;
     }
   }
@@ -51,7 +52,8 @@ header.ut-header {
       margin-left: 20px;
       padding: 0;
     }
-    // adds some vertical space between divs and navs in header regions
+    // Add some vertical space between direct descendant divs and navs in case where
+    // multiple blocks have been added to header regions
     & > div,
     & > nav {
       margin-bottom: 20px;
@@ -61,6 +63,37 @@ header.ut-header {
         margin-right: unset;
         margin-left: auto;
       }
+    }
+  }
+  // Wrapper of the entire mobile nav that is shown/hidden via click event
+  // on #js-nav-toggle which toggles 'active' class on #ut-main_menu-wrapper.
+  #ut-main_menu-wrapper {
+    transition: background-color, color, 0.25s;
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      padding: 1rem;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 60px;
+      left: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      overflow: hidden;
+      opacity: 0;
+      background-color: $ut-limestone--t20;
+      border-top: 1px solid $ut-shade--t60;
+      border-bottom: 1px solid $ut-shade--t60;
+      display: flex;
+      flex-flow: column-reverse;
+      &.active {
+        opacity: 1;
+      }
+    }
+    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+      position: relative;
+    }
+    &.active {
+      max-height: 100vh;
     }
   }
 }
