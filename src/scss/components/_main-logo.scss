@@ -24,7 +24,7 @@
   }
 }
 
-.ut-header.short_logo {
+.short_logo {
   .ut-logo--main {
     max-height: 40px;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -34,13 +34,7 @@
   }
 }
 
-.ut-footer.short_logo {
-  .ut-logo--main {
-    max-height: 60px;
-  }
-}
-
-.ut-header.tall_logo {
+.tall_logo {
   .ut-logo--main {
     max-height: 60px;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -49,15 +43,3 @@
     }
   }
 }
-
-.ut-footer.tall_logo {
-  .ut-logo--main {
-    max-height: 60px;
-
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      max-height: 100px;
-    }
-  }
-}
-
