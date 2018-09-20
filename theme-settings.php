@@ -27,6 +27,7 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     '#collapsible' => TRUE,
     '#group' => 'ut_vertical_tabs',
   ];
+  $setting = theme_get_setting('logo_height');
   $form['header_theme_settings']['logo_height'] = [
     '#type' => 'radios',
     '#title' => t('Logo Height'),
@@ -35,7 +36,7 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
       'short_logo' => t('Short'),
       'tall_logo' => t('Tall'),
     ],
-    '#default_value' => theme_get_setting('logo_height'),
+    '#default_value' => isset($setting) ? $setting : 'short_logo',
   ];
   // Header settings subsections.
   $form['header_theme_settings']['parent_entity_fieldset'] = [
