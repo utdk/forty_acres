@@ -11,6 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_system_theme_settings_alter().
  */
 function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
+
   // Forty Acres custom settings.
   $form['utexas_custom_section'] = [
     '#type' => 'markup',
@@ -26,7 +27,16 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     '#collapsible' => TRUE,
     '#group' => 'ut_vertical_tabs',
   ];
-
+  $form['header_theme_settings']['logo_height'] = [
+    '#type' => 'radios',
+    '#title' => t('Logo Height'),
+    '#description' => "Most UT Austin logos will work with the 'short' option, but logos that are taller or wider than normal may need to use the 'tall' setting in order to not appear too small.",
+    '#options' => [
+      'short_logo' => t('Short'),
+      'tall_logo' => t('Tall'),
+    ],
+    '#default_value' => theme_get_setting('logo_height'),
+  ];
   // Header settings subsections.
   $form['header_theme_settings']['parent_entity_fieldset'] = [
     '#type' => 'fieldset',
