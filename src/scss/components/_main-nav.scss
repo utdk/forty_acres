@@ -259,24 +259,6 @@
   }
 }
 
-// Allow enough space under the header logo if it is tall by adjusting margins.
-.ut-header.tall_logo {
-  #ut-main_menu-wrapper {
-    margin-top: 20px;
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      margin-top: 0;
-    }
-    nav {
-      margin-top: 0;
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
-        margin-top: 30px;
-      }
-    }
-  }
-}
-
 // ----------
 // This is the Main Menu mobile toggle button.
 #js-nav-toggle {
