@@ -28,7 +28,7 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     '#group' => 'ut_vertical_tabs',
   ];
   $setting = theme_get_setting('logo_height');
-  $form['header_theme_settings']['logo_height'] = [
+  $form['logo']['logo_height'] = [
     '#type' => 'radios',
     '#title' => t('Logo Height'),
     '#description' => "Most UT Austin logos will work with the 'short' option, but logos that are taller or wider than normal may need to use the 'tall' setting in order to not appear too small. For best results, use an image that is twice as large as the desired display size, for higher pixel density screens.",
