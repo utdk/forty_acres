@@ -39,13 +39,24 @@
     padding: 0.5em 1em;
     position: relative;
     transition: border, color, 0.33s ease-in-out;
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      width: calc(100% - 70px);
+      // Trigger subnav to be visible when L1 has focus or open class.
+      &.focus,
+      &.open {
+        ~ div.sub-nav-wrapper > .main-menu__list--subnav {
+          max-height: 500px;
+          display: block;
+        }
+      }
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
     }
   }
-  .main-menu__link--sub-menu {
+  .main-menu__link--subnav {
     font-size: 0.875rem;
     text-transform: capitalize;
     color: $ut-body-font-color;
@@ -55,7 +66,7 @@
     padding: 0 25px;
     position: relative;
     transition: border, color, 0.33s ease-in-out;
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+    @media (min-width: map-get($grid-breakpoints, md)) {
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
@@ -65,7 +76,6 @@
   // For the plus minus menu toggle reveals.
   .icon {
     cursor: pointer;
-    // display: none;
     position: absolute;
     right: 0;
     top: 9px;
@@ -76,7 +86,6 @@
     color: $ut-charcoal;
     width: 20px;
     height: 20px;
-    // content: $ut-angle-right;
     font-size: 1.125rem;
     transition: transform, color 0.33s;
     transform-origin: center center;
@@ -91,8 +100,7 @@
     &:hover {
       color: $ut-burntorange;
     }
-    @media (max-width: map-get($grid-breakpoints, md)) {
-      border-left: 1px solid $ut-charcoal--t40;
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       right: 0;
       top: 1px;
       text-align: center;
@@ -102,9 +110,6 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 20px 4px;
-      // & > a {
-      //   display: block;
-      // }
     }
   }
 
@@ -126,51 +131,23 @@
   }
   // Focus/open/hover states of first descendant link within a second level
   // navigation item (subnav ul > li > a).
-  .main-menu__link--sub-menu:hover,
-  .main-menu__link--sub-menu:focus,
-  .main-menu__link--sub-menu.open {
+  .main-menu__link--subnav:hover,
+  .main-menu__link--subnav:focus,
+  .main-menu__link--subnav.open {
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       outline-offset: 0;
     }
   }
-  // Hovering on main menu items with LINKS ONLY!!!
-  // We'll need a new way to accomplish this as it doesn't account for internal links.
-  // .main-menu__link[href*="http"] {
-  //   &:hover,
-  //   &:focus,
-  //   &.open {
-  //     color: $ut-burntorange;
-  //     text-decoration: underline;
-  //   }
-  // }
 }
 
 // Parent of child items from top.
-.main-menu__list > .menu-item-has-children.main-menu__list-item > a {
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+.menu-item-has-children.main-menu__list-item > .main-menu__link {
+  @media (min-width: map-get($grid-breakpoints, md)) {
     padding-right: 1.75rem;
-    // &::before {
-    //   position: absolute;
-    //   width: 20px;
-    //   height: 20px;
-    //   // content: $ut-angle-down;
-    //   top: 0.75rem;
-    //   right: 0;
-    //   font-size: 0.75rem;
-    // }
-    // &.open::before {
-    //   color: $ut-burntorange;
-    //   animation: move 0.185s ease-in forwards;
-    //   @keyframes move {
-    //     from {
-    //       top: 0.75rem;
-    //     }
-    //     to {
-    //       top: 1rem;
-    //     }
-    //   }
-    // }
+  }
+  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    border-right: 1px solid $ut-charcoal--t40;
   }
 }
 
@@ -178,14 +155,14 @@
 .main-menu__list-item > a.open {
   border-bottom: none;
   z-index: 3;
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+  @media (min-width: map-get($grid-breakpoints, md)) {
     border: 1px solid $ut-charcoal--t40;
   }
 }
 
-/* main-menu__list--sub-menuigation panel */
+/* main-menu__list--subnavigation panel */
 .sub-nav-wrapper {
-  .main-menu__list--sub-menu {
+  .main-menu__list--subnav {
     list-style: none;
     position: absolute;
     display: none;
@@ -197,13 +174,13 @@
     max-height: 500px;
     transition: background-color, color, 0.33s;
     z-index: 2;
-    .main-menu__link--sub-menu {
+    .main-menu__link--subnav {
       display: block;
       padding: 0.5rem 0;
       text-transform: capitalize;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       width: 100%;
       top: 0;
       background-color: $ut-limestone--t40;
@@ -211,7 +188,7 @@
       max-height: 0;
       padding: 0 25px;
 
-      .main-menu__link--sub-menu {
+      .main-menu__link--subnav {
         padding: 0.5rem 0;
       }
     }
@@ -221,39 +198,39 @@
     }
   }
   // stylelint-disable-next-line at-rule-no-unknown
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    .main-menu__list-item--sub-menu {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    .main-menu__list-item--subnav {
       display: block;
       list-style-type: none;
       margin: 0;
       padding: 3px 0;
     }
-    &.overflowing .main-menu__list--sub-menu {
+    &.overflowing .main-menu__list--subnav {
       right: 0;
     }
-    &.one-column .main-menu__list--sub-menu {
+    &.one-column .main-menu__list--subnav {
       width: 240px;
       column-count: 1;
     }
-    &.two-columns .main-menu__list--sub-menu {
+    &.two-columns .main-menu__list--subnav {
       width: 400px;
       column-count: 2;
-      .main-menu__list-item--sub-menu {
+      .main-menu__list-item--subnav {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
       }
     }
-    &.three-columns .main-menu__list--sub-menu {
+    &.three-columns .main-menu__list--subnav {
       width: 500px;
       column-count: 3;
-      .main-menu__list-item--sub-menu {
+      .main-menu__list-item--subnav {
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
       }
     }
-    &.open .main-menu__list--sub-menu {
+    &.open .main-menu__list--subnav {
       display: block;
       max-height: 500px;
     }

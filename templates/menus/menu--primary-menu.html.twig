@@ -32,21 +32,21 @@
       <ul{{ attributes.addClass('main-menu__list') }} role="menu">
     {% else %}
       <div class="sub-nav-wrapper">
-        <ul class='main-menu__list--sub-menu' role="menu">
+        <ul class='main-menu__list--subnav' role="menu">
     {% endif %}
     {% for item in items %}
       {%
         set item_classes = [
           item.is_expanded ? 'menu-item-has-children',
-          menu_level == 0 ? 'main-menu__list-item' : 'main-menu__list-item--sub-menu',
+          menu_level == 0 ? 'main-menu__list-item' : 'main-menu__list-item--subnav',
           item.in_active_trail ? 'active',
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }} role="menuitem">
-        {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--sub-menu' %}
+        {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--subnav' %}
         {{ link(item.title, item.url, { 'class':[link_class]}) }}
         {% if item.is_expanded %}
-          <a href="##" class="icon subnav-trigger"></a>
+          <icon class="icon subnav-trigger"></icon>
         {% endif %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

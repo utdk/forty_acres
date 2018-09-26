@@ -73,7 +73,7 @@ header.ut-header {
       padding: 1rem;
       width: 100%;
       position: absolute;
-      z-index: 1;
+      z-index: -100;
       top: 60px;
       left: 0;
       overflow: hidden;
@@ -93,7 +93,7 @@ header.ut-header {
       position: relative;
     }
     &.active {
-      max-height: 100vh;
+      z-index: 100;
     }
   }
 }

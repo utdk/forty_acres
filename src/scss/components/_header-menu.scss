@@ -5,10 +5,18 @@
 ul.header-menu__list {
   margin-bottom: 0;
   .header-menu__list-item {
-    display: inline-block;
-    margin-bottom: 0;
-    & + .header-menu__list-item {
-      margin-left: 5px;
+    display: block;
+    margin-bottom: 10px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      & + .header-menu__list-item {
+        margin-left: 5px;
+      }
     }
   }
   .header-menu__link {
