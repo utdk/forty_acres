@@ -729,6 +729,45 @@ div.search-block-form div.contextual {
 .ut-search-form input[type="submit"]:hover {
   cursor: pointer;
 }
+#block-breadcrumbs {
+  margin: 1rem 0;
+}
+#block-breadcrumbs ul {
+  padding-left: 0;
+  font-size: 0;
+}
+#block-breadcrumbs ul li {
+  display: inline-block;
+  padding: 0 12px;
+  padding: 8px 0 10px 0;
+  list-style: none;
+  border-top: 1px solid #e1ddd2;
+  border-bottom: 1px solid #e1ddd2;
+  background-color: #fff;
+  font-size: 11px;
+}
+#block-breadcrumbs ul li::before {
+  position: relative;
+  top: 1px;
+  margin: 0 8px 0 13px;
+  content: ">";
+  color: #aaa;
+}
+#block-breadcrumbs ul li:first-child {
+  padding-left: 15px;
+  border-left: 1px solid #e1ddd2;
+}
+#block-breadcrumbs ul li:first-child::before {
+  margin: 0;
+  content: "";
+}
+#block-breadcrumbs ul li:last-child {
+  padding-right: 15px;
+  border-right: 1px solid #e1ddd2;
+}
+#block-breadcrumbs ul li a {
+  color: #bf5700;
+}
 @media screen and (min-width: 900px) {
   header.ut-header {
     padding-top: 1rem;

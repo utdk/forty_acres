@@ -1,0 +1,41 @@
+// Breadcrumb styling
+
+#block-breadcrumbs {
+  margin: 1rem 0;
+  ul {
+    padding-left: 0;
+    font-size: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 12px;
+      font-size: 11px;
+      background-color: #fff;
+      padding: 8px 0 10px 0;
+      border-bottom: 1px solid #e1ddd2;
+      border-top: 1px solid #e1ddd2;
+      &::before {
+        color: #AAAAAA;
+        content: ">";
+        margin: 0 8px 0 13px;
+        position: relative;
+        top: 1px;
+      }
+      &:first-child {
+        border-left: 1px solid #e1ddd2;
+        padding-left: 15px;
+        &::before {
+          content: "";
+          margin: 0;
+        }
+      }
+      &:last-child {
+        border-right: 1px solid #e1ddd2;
+        padding-right: 15px;
+      }
+      a {
+        color: $ut-burntorange;
+      }
+    }
+  }
+}
