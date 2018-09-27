@@ -12,7 +12,7 @@
     attach: function (context, settings) {
 
       // Initialize megamenu library on main menu.
-      $('nav#block-main-navigation').accessibleMegaMenu({
+      $('nav#block-accessible-main-menu').accessibleMegaMenu({
           uuidPrefix: "accessible-megamenu",
           menuClass: "nav-menu",
           topNavItemClass: "main-menu__list-item",
@@ -37,7 +37,7 @@
       });
 
       // Adding columns to the navigation dynamically.
-      $('nav#block-main-navigation .sub-nav').each(function(i, el){
+      $('nav#block-accessible-main-menu .sub-nav').each(function(i, el){
         var $el = $(el),
             $main = $('.main-menu__list'),
             children = $el.find('.main-menu__list-item--subnav'),
