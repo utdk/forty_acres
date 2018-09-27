@@ -2,8 +2,6 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var uglify = require("gulp-uglify");
-var del = require("del");
 var sequence = require("gulp-sequence");
 var autoprefixer = require("gulp-autoprefixer");
 var gulpStylelint = require("gulp-stylelint");
@@ -21,7 +19,7 @@ gulp.task("scss-lint", function lintCssTask() {
 });
 
 gulp.task("sass", function () {
-  return gulp.src("./src/scss/build/**/*.scss")
+  return gulp.src("src/scss/build/**/*.scss")
     .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
     .pipe(autoprefixer({
       browsers: ["last 2 versions"],
@@ -29,11 +27,6 @@ gulp.task("sass", function () {
     }))
     .pipe(csscombx())
     .pipe(gulp.dest("css"));
-});
-
-gulp.task("copy-css", function(){
-  return gulp.src("src/css/**/*.css")
-  .pipe(gulp.dest("css"));
 });
 
 gulp.task("css-lint", function lintCssTask() {
@@ -47,11 +40,4 @@ gulp.task("css-lint", function lintCssTask() {
     }));
 });
 
-gulp.task('copy-js', function () {
-  return gulp
-    .src('node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('js'));
-});
-
-gulp.task("default", sequence("scss-lint", "sass", "css-lint", "copy-css", "copy-js"));
+gulp.task("default", sequence("scss-lint", "sass", "css-lint"));

@@ -1,0 +1,17 @@
+// ----------
+// Screen min width media query utility @access public
+// stylelint-disable-next-line at-rule-no-unknown
+@mixin screen-mq($mq-breakpoint, $mq-breakpoints: $grid-breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  // stylelint-disable-next-line at-rule-no-unknown
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    // stylelint-disable-next-line plugin/no-browser-hacks
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @content;
+  }
+}
