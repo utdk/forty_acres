@@ -18,10 +18,9 @@
     'region-' ~ region|clean_class,
   ]
 %}
-<nav role="navigation" aria-labelledby="{{ region }}"{{ attributes|without('role', 'aria-labelledby') }}>
-  {% if content %}
-    <div{{ attributes.addClass(classes) }}>
-      {{ content }}
-    </div>
-  {% endif %}
-</nav>
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endif %}
+

@@ -3,7 +3,7 @@
 //
 
 // ----------
-// Mega menu list.
+// Mega menu list (main menu ul).
 .main-menu__list {
   display: flex;
   justify-content: space-between;
@@ -13,254 +13,258 @@
   margin: 0;
   padding: 0;
   z-index: 15;
-  @media (min-width: 900px) {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
     flex-direction: row;
     margin-left: -10px;
     margin-right: -10px;
   }
 }
 
-// A top level navigation item in the mega menu.
+// A top level navigation item in the mega menu (main menu ul > li)
 .main-menu__list-item {
   list-style: none;
   display: inline-block;
   padding: 0;
   margin: 0;
   position: relative;
-  a {
+
+  // First descendant link within a top level navigation item (main menu ul > li > a).
+  .main-menu__link {
     font-size: 0.875rem;
     text-transform: uppercase;
     color: $ut-body-font-color;
     font-weight: 600;
-  }
-  // First descendant link within a top level navigation item
-  > a {
     border: 1px solid transparent;
     display: block;
     margin: 0;
     padding: 0.5em 1em;
     position: relative;
-    transition: border, color, 0.33s ease-in-out;
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-      background-color: $ut-white;
-      display: inline-block;
-      margin: 0 0 -1px 0;
-    }
-  }
-  // For the plus minus menu toggle reveals.
-  .icon {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    z-index: 100;
-    text-align: center;
-    font-weight: bold;
-    font-style: normal;
-    color: $ut-charcoal;
-    border-left: 1px solid $ut-charcoal--t40;
-    // &:before {
-    //   width: 20px;
-    //   height: 20px;
-    //   content: $ut-angle-right;
-    //   top: 8px;
-    //   position: absolute;
-    //   left: 26px;
-    //   font-size: 1.125rem;
-    //   transition: transform, color 0.33s;
-    //   transform-origin: center center;
-    // }
-    &.icon--open {
-      &:before {
-        transform: rotate(90deg);
-        color: $ut-burntorange;
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      width: calc(100% - 70px);
+      // Trigger subnav to be visible when L1 has focus or open class.
+      &.focus,
+      &.open {
+        ~ div.sub-nav-wrapper > .main-menu__list--subnav {
+          max-height: 500px;
+          display: block;
+        }
       }
     }
-    &:hover {
-      color: $ut-burntorange;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      transition: border, color, 100ms ease-in-out;
+      background-color: $ut-white;
+      display: inline-block;
+      margin: 1px 0 0 0;
     }
-  }
-  @media (max-width: map-get($grid-breakpoints, md)) {
-    display: block;
-    .icon {
-      text-align: center;
-      display: block;
-      width: 70px;
-      height: 35px;
+    // Open state of first descendant link within a top level navigation item.
+    &.open {
+      border-bottom: none;
+      z-index: 3;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        border: 1px solid $ut-charcoal--t40;
+      }
     }
-    & > a {
-      display: block;
-    }
-  }
-  // Focus/open states of first descendant link within a top level
-  // navigation item.
-  & > a:hover,
-  & > a:focus,
-  & > a.open {
-    border: 1px solid $ut-charcoal--t40;
-    text-decoration: none;
-  }
-  // Hovering on main menu items with LINKS ONLY!!!
-  & > a[href*="http"] {
+    // Focus/open/hover states of first descendant link within a top level
+    // navigation item (main menu ul > li > a).
     &:hover,
     &:focus,
     &.open {
+      border: 1px solid $ut-charcoal--t40;
+      text-decoration: none;
       color: $ut-burntorange;
       text-decoration: underline;
-    }
-  }
-}
-
-// Parent of child items from top.
-.main-menu__list > .menu-item-has-children.main-menu__list-item > a {
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    padding-right: 1.75rem;
-    // &::before {
-    //   position: absolute;
-    //   width: 20px;
-    //   height: 20px;
-    //   content: $ut-angle-down;
-    //   top: 0.75rem;
-    //   right: 0;
-    //   font-size: 0.75rem;
-    // }
-    &.open::before {
-      color: $ut-burntorange;
-      animation: move 0.185s ease-in forwards;
-      @keyframes move {
-        from {
-          top: 0.75rem;
-        }
-        to {
-          top: 1rem;
-        }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        border-bottom: 1px solid transparent;
+        margin-top: 1px;
+        z-index: 3;
       }
     }
   }
-}
-
-// Open state of first descendant link within a top level navigation item.
-.main-menu__list-item > a.open {
-  border-bottom: none;
-  z-index: 3;
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    border: 1px solid $ut-charcoal--t40;
-  }
-}
-
-/* main-menu__ul--sub-menuigation panel */
-.main-menu__ul--sub-menu {
-  list-style: none;
-  position: absolute;
-  display: none;
-  top: 2.2rem;
-  padding: 0.5rem 1rem 1rem;
-  border: 1px solid $ut-charcoal--t40;
-  background-color: $ut-white;
-  width: 240px;
-  max-height: 500px;
-  transition: background-color, color, 0.33s;
-  z-index: 2;
-  // stylelint-disable-next-line no-descending-specificity
-  a {
-    display: block;
-    padding: 0.5rem 0;
-  }
-
-  @media (max-width: 900px) {
-    width: 100%;
-    top: 0;
-    background-color: $ut-limestone--t40;
-    position: relative;
-    max-height: 0;
-    padding: 0 25px;
-
-    a {
-      padding: 0.5rem 1rem 1rem;
+  // L1 links with subnavs.
+  &.menu-item-has-children > .main-menu__link {
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      border-right: 1px solid $ut-charcoal--t40;
+      // Add borders if subnav is open.
+      &[aria-expanded="true"] {
+        border-left: 1px solid $ut-charcoal--t40;
+        border-top: 1px solid $ut-charcoal--t40;
+      }
     }
-  }
-  /* main-menu__ul--sub-menuigation panel open state */
-  &.open {
-    display: block;
-    max-height: 500px;
-  }
-  // stylelint-disable-next-line no-descending-specificity
-  li a {
-    text-transform: capitalize;
     // stylelint-disable-next-line at-rule-no-unknown
-    // @include link-caret;
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-      &.overflowing {
-        right: 0;
+    @include screen-mq(md) {
+      padding-right: 1.75rem;
+      // Chevron icon animation on desktop.
+      &:before {
+        content: "";
+        position: absolute;
+        right: 1px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/chevron-down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 1px 2px;
+        transition: background-position 100ms ease-in;
       }
-      &.one-column {
-        width: 240px;
-        column-count: 1;
-      }
-      &.two-columns {
-        width: 400px;
-        column-count: 2;
-      }
-      &.three-columns {
-        width: 500px;
-        column-count: 3;
+      &.hover,
+      &.open {
+        &:before {
+          background-position: 1px 8px;
+        }
       }
     }
   }
-}
 
-/* list of items within main-menu__ul--sub-menu navigation panel */
-.main-menu__ul--sub-menu ul {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 1em 0 0;
-  padding: 1em;
-  @media (max-width: 767px) {
+  .main-menu__link--subnav {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    color: $ut-body-font-color;
+    font-weight: 600;
     display: block;
-  }
-  li {
-    display: block;
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-  }
-}
-
-#ut-main_menu-wrapper {
-  transition: background-color, color, 0.25s;
-  // max-height: 0;
-  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-    padding: 1rem;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 60px;
-    left: 0;
-    overflow: hidden;
-    overflow-y: scroll;
-    // animation: all 0.25s;
-    overflow: hidden;
-    opacity: 0;
-    background-color: $ut-limestone--t20;
-    border-top: 1px solid $ut-shade--t60;
-    border-bottom: 1px solid $ut-shade--t60;
-    display: flex;
-    flex-flow: column-reverse;
-    &.active {
-      opacity: 1;
+    padding: 0 25px;
+    position: relative;
+    transition: border, color, 0.33s ease-in-out;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      background-color: $ut-white;
+      display: inline-block;
+      margin: 1px 0 0 0;
+      padding: 0.5em 1em;
+    }
+    // Focus/open/hover states of first descendant link within a second level
+    // navigation item (subnav ul > li > a).
+    &:hover,
+    &:focus,
+    &.open {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        outline-offset: 0;
+      }
     }
   }
-  @media (min-width: map-get($grid-breakpoints, md) + 1px) {
-    position: relative;
-  }
-  &.active {
-    max-height: 100vh;
+
+  // For the chevron icon subnav toggle reveal.
+  i.subnav-trigger {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 70px;
+    height: 37px;
+    transform-origin: center center;
+    // Place chevron in pseudoclass so it can be rotated without moving its container.
+    &:before {
+      content: "";
+      position: absolute;
+      right: 17px;
+      height: 35px;
+      width: 35px;
+      background-image: url(../images/chevron-down.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 5px 4px;
+      transform: rotate(-90deg);
+    }
+    // Animation on click event.
+    &.icon--open {
+      border-right: 1px solid $ut-charcoal--t40;
+      border-top: 1px solid $ut-charcoal--t40;
+      &:before {
+        transform: rotate(0deg);
+      }
+    }
+    // Hide icon on desktop resolution.
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      display: none;
+    }
   }
 }
 
-// ----------
-// This is the Main Menu mobile toggle button.
+// Subnav panel.
+.sub-nav-wrapper {
+  .main-menu__list--subnav {
+    list-style: none;
+    position: absolute;
+    display: none;
+    top: 2.3rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $ut-charcoal--t40;
+    background-color: $ut-white;
+    width: 240px;
+    max-height: 500px;
+    transition: background-color, color, 0.33s;
+    z-index: 2;
+    .main-menu__link--subnav {
+      display: block;
+      padding: 0.5rem 0;
+      text-transform: capitalize;
+    }
+    // Mobile only styles.
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      width: 100%;
+      top: 0;
+      background-color: $ut-limestone--t40;
+      position: relative;
+      max-height: 0;
+      padding: 0 25px;
+    }
+    &.open {
+      display: block;
+      max-height: 500px;
+    }
+  }
+
+  // Desktop only styles for subnavs that overflow the screen and
+  // to determine the number of columns per subnav.
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    .main-menu__list-item--subnav {
+      display: block;
+      list-style-type: none;
+      margin: 0;
+      padding: 3px 0;
+    }
+    &.overflowing .main-menu__list--subnav {
+      right: 0;
+    }
+    &.one-column .main-menu__list--subnav {
+      width: 240px;
+      column-count: 1;
+    }
+    &.two-columns .main-menu__list--subnav {
+      width: 400px;
+      column-count: 2;
+      .main-menu__list-item--subnav {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+    &.three-columns .main-menu__list--subnav {
+      width: 500px;
+      column-count: 3;
+      .main-menu__list-item--subnav {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+    &.open .main-menu__list--subnav {
+      display: block;
+      max-height: 500px;
+    }
+  }
+}
+
+// Main Menu mobile toggle button.
 #js-nav-toggle {
   display: inline-block;
   // stylelint-disable-next-line at-rule-no-unknown

@@ -58,6 +58,23 @@ function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $va
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function forty_acres_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  $base_plugin_id = $variables['elements']['#base_plugin_id'];
+  if (isset($base_plugin_id) && $base_plugin_id === 'system_menu_block') {
+    if (isset($variables['elements']['#id'])) {
+      $hook = $variables['elements']['#id'];
+      $block = Block::load($hook);
+      $region = $block->getRegion();
+      $suggestions[] = 'block__system_menu_block__' . $region;
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_breadcrumb().
  */
 function forty_acres_preprocess_breadcrumb(&$variables) {
