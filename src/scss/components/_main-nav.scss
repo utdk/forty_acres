@@ -13,7 +13,8 @@
   margin: 0;
   padding: 0;
   z-index: 15;
-  @media (min-width: 900px) {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
     flex-direction: row;
     margin-left: -10px;
     margin-right: -10px;
@@ -27,6 +28,7 @@
   padding: 0;
   margin: 0;
   position: relative;
+
   // First descendant link within a top level navigation item (main menu ul > li > a).
   .main-menu__link {
     font-size: 0.875rem;
@@ -38,7 +40,6 @@
     margin: 0;
     padding: 0.5em 1em;
     position: relative;
-    transition: border, color, 0.33s ease-in-out;
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       width: calc(100% - 70px);
       // Trigger subnav to be visible when L1 has focus or open class.
@@ -50,12 +51,74 @@
         }
       }
     }
-    @media (min-width: map-get($grid-breakpoints, md)) {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      transition: border, color, 100ms ease-in-out;
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
     }
+    // Open state of first descendant link within a top level navigation item.
+    &.open {
+      border-bottom: none;
+      z-index: 3;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        border: 1px solid $ut-charcoal--t40;
+      }
+    }
+    // Focus/open/hover states of first descendant link within a top level
+    // navigation item (main menu ul > li > a).
+    &:hover,
+    &:focus,
+    &.open {
+      border: 1px solid $ut-charcoal--t40;
+      text-decoration: none;
+      color: $ut-burntorange;
+      text-decoration: underline;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        border-bottom: 1px solid transparent;
+        margin-top: 1px;
+        z-index: 3;
+      }
+    }
   }
+  // L1 links with subnavs.
+  &.menu-item-has-children > .main-menu__link {
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      border-right: 1px solid $ut-charcoal--t40;
+      // Add borders if subnav is open.
+      &[aria-expanded="true"] {
+        border-left: 1px solid $ut-charcoal--t40;
+        border-top: 1px solid $ut-charcoal--t40;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-right: 1.75rem;
+      // Chevron icon animation on desktop.
+      &:before {
+        content: "";
+        position: absolute;
+        right: 1px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/chevron-down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 1px 2px;
+        transition: background-position 100ms ease-in;
+      }
+      &.hover,
+      &.open {
+        &:before {
+          background-position: 1px 8px;
+        }
+      }
+    }
+  }
+
   .main-menu__link--subnav {
     font-size: 0.875rem;
     text-transform: capitalize;
@@ -66,101 +129,66 @@
     padding: 0 25px;
     position: relative;
     transition: border, color, 0.33s ease-in-out;
-    @media (min-width: map-get($grid-breakpoints, md)) {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
       padding: 0.5em 1em;
     }
-  }
-  // For the plus minus menu toggle reveals.
-  .icon {
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: 9px;
-    z-index: 100;
-    text-align: center;
-    font-weight: bold;
-    font-style: normal;
-    color: $ut-charcoal;
-    width: 20px;
-    height: 20px;
-    font-size: 1.125rem;
-    transition: transform, color 0.33s;
-    transform-origin: center center;
-    background-image: url(../images/chevron-down.svg);
-    background-size: cover;
-    &.icon--open {
-      &:before {
-        transform: rotate(90deg);
-        color: $ut-burntorange;
+    // Focus/open/hover states of first descendant link within a second level
+    // navigation item (subnav ul > li > a).
+    &:hover,
+    &:focus,
+    &.open {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        outline-offset: 0;
       }
     }
-    &:hover {
-      color: $ut-burntorange;
-    }
-    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-      right: 0;
-      top: 1px;
-      text-align: center;
-      display: block;
-      width: 70px;
+  }
+
+  // For the chevron icon subnav toggle reveal.
+  i.subnav-trigger {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 70px;
+    height: 37px;
+    transform-origin: center center;
+    // Place chevron in pseudoclass so it can be rotated without moving its container.
+    &:before {
+      content: "";
+      position: absolute;
+      right: 17px;
       height: 35px;
+      width: 35px;
+      background-image: url(../images/chevron-down.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: 20px 4px;
+      background-position: 5px 4px;
+      transform: rotate(-90deg);
     }
-  }
-
-  // Focus/open/hover states of first descendant link within a top level
-  // navigation item (main menu ul > li > a).
-  .main-menu__link:hover,
-  .main-menu__link:focus,
-  .main-menu__link.open {
-    border: 1px solid $ut-charcoal--t40;
-    text-decoration: none;
-    color: $ut-burntorange;
-    text-decoration: underline;
+    // Animation on click event.
+    &.icon--open {
+      border-right: 1px solid $ut-charcoal--t40;
+      border-top: 1px solid $ut-charcoal--t40;
+      &:before {
+        transform: rotate(0deg);
+      }
+    }
+    // Hide icon on desktop resolution.
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
-      border-bottom: 1px solid transparent;
-      margin-top: 1px;
-      z-index: 3;
-    }
-  }
-  // Focus/open/hover states of first descendant link within a second level
-  // navigation item (subnav ul > li > a).
-  .main-menu__link--subnav:hover,
-  .main-menu__link--subnav:focus,
-  .main-menu__link--subnav.open {
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      outline-offset: 0;
+      display: none;
     }
   }
 }
 
-// Parent of child items from top.
-.menu-item-has-children.main-menu__list-item > .main-menu__link {
-  @media (min-width: map-get($grid-breakpoints, md)) {
-    padding-right: 1.75rem;
-  }
-  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-    border-right: 1px solid $ut-charcoal--t40;
-  }
-}
-
-// Open state of first descendant link within a top level navigation item.
-.main-menu__list-item > a.open {
-  border-bottom: none;
-  z-index: 3;
-  @media (min-width: map-get($grid-breakpoints, md)) {
-    border: 1px solid $ut-charcoal--t40;
-  }
-}
-
-/* main-menu__list--subnavigation panel */
+// Subnav panel.
 .sub-nav-wrapper {
   .main-menu__list--subnav {
     list-style: none;
@@ -179,7 +207,7 @@
       padding: 0.5rem 0;
       text-transform: capitalize;
     }
-
+    // Mobile only styles.
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       width: 100%;
       top: 0;
@@ -187,18 +215,17 @@
       position: relative;
       max-height: 0;
       padding: 0 25px;
-
-      .main-menu__link--subnav {
-        padding: 0.5rem 0;
-      }
     }
     &.open {
       display: block;
       max-height: 500px;
     }
   }
+
+  // Desktop only styles for subnavs that overflow the screen and
+  // to determine the number of columns per subnav.
   // stylelint-disable-next-line at-rule-no-unknown
-  @media (min-width: map-get($grid-breakpoints, md)) {
+  @include screen-mq(md) {
     .main-menu__list-item--subnav {
       display: block;
       list-style-type: none;

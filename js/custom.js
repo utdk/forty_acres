@@ -63,12 +63,14 @@
 
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
-        $('icon.subnav-trigger').off('click').on('click', function() {
+        $('i.subnav-trigger').off('click').on('click', function() {
           $(this).toggleClass('icon--open');
           // Add 'open' class to subnav associated with icon.
           $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
           // Remove 'open' class from all other subnavs.
           $(this).parent('.main-menu__list-item').siblings().find('.main-menu__list--subnav').removeClass('open');
+          // Remove 'icon--open' class from all other icons.
+          $(this).parent('.main-menu__list-item').siblings().find('i.subnav-trigger').removeClass('icon--open');
           // Toggle aria attributes.
           $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) {
             return (attr == 'true') ? 'false' : 'true';
@@ -92,24 +94,24 @@
         $('ul.main-menu__list.nav-menu .main-menu__list--subnav').removeClass('open');
         $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
         $('#ut-main_menu-wrapper').removeClass('active');
-        $('icon.subnav-trigger').removeClass('icon--open');
+        $('i.subnav-trigger').removeClass('icon--open');
       }
 
       // Undo preventDefault called on L1 links so they are clickable.
-      $('.menu-item-has-children > a').on('touchstart', function(){
+      $('.menu-item-has-children > .main-menu__link').on('touchstart', function(){
         window.location.href = $(this).attr('href');
       });
 
       var resizeEvent = debounce(function() {
         // Reset to defaults
         resetDefaults();
-        // Disable mouseover events and attach click event on mobile.
+        // Attach click event to chevron on mobile.
         if (window.innerWidth < 900) {
           iconClick();
         }
         // Disable click event on chevron on desktop.
         else {
-          $('icon.subnav-trigger').off('click');
+          $('i.subnav-trigger').off('click');
         }
       }, 100);
       $(window).on('load resize', resizeEvent);
