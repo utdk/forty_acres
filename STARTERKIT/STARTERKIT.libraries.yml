@@ -1,0 +1,11 @@
+global:
+  css:
+    theme:
+      css/overrides.css: {}
+      css/styles.css: {}
+
+  # js:
+    # js/example.custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

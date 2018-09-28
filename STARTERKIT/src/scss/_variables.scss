@@ -1,0 +1,74 @@
+// Font Family Variables
+// stylelint-disable plugin/no-browser-hacks
+$ut-font--serif: "CharisSil", Georgia, serif;
+$ut-font--sans: "LibreFrank", Arial, Helvetica, sans-serif;
+
+// Primary Color Palette
+$ut-burntorange: #bf5700;
+$ut-charcoal: #333f48;
+$ut-white: #ffffff;
+
+// Secondary Colors
+$ut-bluebonnet: #005f86;
+$ut-turquoise: #00a9b7;
+$ut-turtlepond: #579d42;
+$ut-cactus: #a6cd57;
+$ut-shade: #9cadb7;
+$ut-tangerine: #f8971f;
+$ut-limestone: #d6d2c4;
+$ut-sunshine: #ffd600;
+
+// Web only utility colors
+$ut-error_red: #cd2026;
+
+// Tints and Shades of the Palette
+$ut-bluebonnet--s20: #074d6a;
+$ut-turquoise--s20: #138791;
+$ut-shade--t20: #f9fafb;
+$ut-shade--t40: #e6ebed;
+$ut-shade--t60: #c4cdd4;
+$ut-shade--s20: #7d8a92;
+$ut-shade--s40: #5e686e;
+$ut-shade--s60: #3e4549;
+$ut-turtlepond--s20: #487d39;
+$ut-burntorange--s10: #AE4F00;
+$ut-burntorange--s20: #9d4700;
+$ut-charcoal--t20: #ebeced;
+$ut-charcoal--t40: #c2c5c8;
+$ut-charcoal--t60: #858c91;
+$ut-charcoal--s40: #1f262b;
+$ut-limestone--t20: #fbfbf9;
+$ut-limestone--t40: #f2f1ed;
+$ut-limestone--t60: #e6e4dc;
+$ut-limestone--s20: #aba89e;
+$ut-limestone--s40: #807e76;
+$ut-limestone--s60: #56544e;
+
+// Overrides of variables in node_modules/bootstrap/scss/_variables.scss
+$font-family-sans-serif: $ut-font--sans;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 840px,
+  md: 1000px,
+  lg: 1140px,
+  xl: 1500px,
+);
+
+// Minor Third for smaller screens.
+$min-font-scale: 1.2;
+
+// Major Third for larger screens.
+$max-font-scale: 1.25;
+
+// ----------
+// Default settings for Font Colors
+$ut-body-font-color: $ut-charcoal--s40;
+$ut-header-font-color: $ut-charcoal;
+// stylelint-enable

@@ -1,0 +1,28 @@
+core: 8.x
+type: theme
+base theme: forty_acres
+name: STARTERKIT
+description: Custom subtheme of Forty Acres theme.
+screenshot: images/screenshot.png
+
+regions:
+  hidden: Hidden
+  header_primary: Header Primary
+  header_secondary: Header Secondary
+  header_tertiary: Header Tertiary
+  primary_menu: Primary Menu
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: Left Sidebar
+  sidebar_second: Right Sidebar
+  footer_left: Left Footer
+  footer_middle: Middle Footer
+  footer_right: Right Footer
+  page_top: Page top
+  page_bottom: Page bottom
+
+libraries:
+  - STARTERKIT/global
+
