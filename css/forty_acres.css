@@ -333,6 +333,9 @@ ul.ut-menu--list-bold {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     margin-right: -10px;
     margin-left: -10px;
   }
@@ -343,6 +346,10 @@ ul.ut-menu--list-bold {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.main-menu__list-item.breaks-two-lines {
+  -ms-flex-preferred-size: 1%;
+  flex-basis: 1%;
 }
 .main-menu__list-item .main-menu__link {
   position: relative;
@@ -416,19 +423,20 @@ ul.ut-menu--list-bold {
   .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
     position: absolute;
     right: 1px;
+    bottom: 6px;
     width: 20px;
-    height: 20px;
+    height: 100%;
     content: "";
-    -webkit-transition: background-position 100ms ease-in;
-    transition: background-position 100ms ease-in;
+    -webkit-transition: bottom 100ms ease-in;
+    transition: bottom 100ms ease-in;
     background-image: url(../images/chevron-down.svg);
     background-repeat: no-repeat;
-    background-position: 1px 2px;
+    background-position: bottom;
     background-size: contain;
   }
   .main-menu__list-item.menu-item-has-children > .main-menu__link.hover:before,
   .main-menu__list-item.menu-item-has-children > .main-menu__link.open:before {
-    background-position: 1px 8px;
+    bottom: 0;
   }
 }
 .main-menu__list-item .main-menu__link--subnav {
@@ -499,7 +507,6 @@ ul.ut-menu--list-bold {
 .sub-nav-wrapper .main-menu__list--subnav {
   position: absolute;
   z-index: 2;
-  top: 2.3rem;
   display: none;
   width: 240px;
   max-height: 500px;
