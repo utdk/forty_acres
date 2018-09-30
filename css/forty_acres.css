@@ -375,7 +375,7 @@ ul.ut-menu--list-bold {
 @media screen and (min-width: 900px) {
   .main-menu__list-item .main-menu__link {
     display: inline-block;
-    margin: 1px 0 0 0;
+    margin: 1px 0 -1px 0;
     -webkit-transition: border, color, 100ms ease-in-out;
     transition: border, color, 100ms ease-in-out;
     background-color: #fff;

@@ -61,7 +61,7 @@
       transition: border, color, 100ms ease-in-out;
       background-color: $ut-white;
       display: inline-block;
-      margin: 1px 0 0 0;
+      margin: 1px 0 -1px 0;
     }
     // Open state of first descendant link within a top level navigation item.
     &.open {

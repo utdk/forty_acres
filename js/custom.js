@@ -112,9 +112,9 @@
         // Disable click event on chevron on desktop.
         else {
           $("i.subnav-trigger").off("click");
+          $(".main-menu__list-item").removeClass("breaks-two-lines");
           var mainMenuHeight = $(".main-menu__list").css("height");
           if (parseInt(mainMenuHeight) > 38) {
-            console.log($(".main-menu__list").css("height"));
             $('.main-menu__list-item').addClass('breaks-two-lines');
           }
         }
