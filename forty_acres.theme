@@ -89,3 +89,12 @@ function forty_acres_preprocess_breadcrumb(&$variables) {
 
   }
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function forty_acres_preprocess_menu_local_action(&$variables) {
+  if (isset($variables['link'])) {
+    $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
+  }
+}
