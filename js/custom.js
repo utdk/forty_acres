@@ -29,6 +29,9 @@
       var menuToggler = $('#js-nav-toggle');
       var togglerTarget = $('#ut-main_menu-wrapper');
       menuToggler.on('click', function () {
+        if (menuToggler.text() == 'CLOSE') {
+          resetDefaults();
+        }
         togglerTarget.toggleClass('active');
         togglerTarget.hasClass('active') ? menuToggler.html('CLOSE') : menuToggler.html('MENU');
         menuToggler.attr('aria-expanded', function(index, attr) {
@@ -92,8 +95,6 @@
         $('ul.main-menu__list.nav-menu .sub-nav-wrapper').removeClass('open hover focus').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
         $('ul.main-menu__list.nav-menu .main-menu__link').removeClass('open').attr('aria-expanded', 'false');
         $('ul.main-menu__list.nav-menu .main-menu__list--subnav').removeClass('open');
-        $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
-        $('#ut-main_menu-wrapper').removeClass('active');
         $('i.subnav-trigger').removeClass('icon--open');
       }
 
@@ -104,6 +105,8 @@
 
       var resizeEvent = debounce(function() {
         // Reset to defaults
+        $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
+        $('#ut-main_menu-wrapper').removeClass('active');
         resetDefaults();
         // Attach click event to chevron on mobile.
         if (window.innerWidth < 900) {
