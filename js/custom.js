@@ -39,26 +39,26 @@
       // Adding columns to the navigation dynamically.
       $('nav#block-accessible-main-menu .sub-nav').each(function(i, el){
         var $el = $(el),
-            $main = $('.main-menu__list'),
-            children = $el.find('.main-menu__list-item--subnav'),
-            containerWidth;
-          // Get the max row width.
-          containerWidth = $el.parent().parent().width();
-          // Still in Mobile View.
-          if (!containerWidth) { return; }
-          // Add column classes based on number of submenu items.
-          var numColumns = (children.length % 3 === 0) ? 'three-columns' : 'two-columns';
-          if (children.length === 1) {
-              numColumns = 'one-column';
-          }
-          $el.addClass(numColumns);
-          // Insure subnavs don't open to the right of the viewport.
-          var numChildren = $main.children();
-          numChildren.each(function(e) {
-            if (e >= (numChildren.length / 2)) {
-              $(this).find('.sub-nav').addClass('overflowing');
-            }
-          })
+          children = $el.find('.main-menu__list-item--subnav'),
+          navWidth = $el.parent().parent().width(),
+          navOffsetLeft = $el.parent().parent().offset().left,
+          subnavOffsetLeft = $el.offset().left,
+          subnavWidth;
+
+        // Add column classes based on number of submenu items.
+        var numColumns = (children.length % 3 === 0) ? 'three-columns' : 'two-columns';
+        if (children.length === 1) {
+            numColumns = 'one-column';
+        }
+        $el.addClass(numColumns);
+
+        // Determine subnavWidth here because it needs to be calculated after the column
+        // classes have been added.
+        subnavWidth = $el.children().outerWidth();
+        // Insure subnavs don't open to the right of the container.
+        if ((subnavWidth + subnavOffsetLeft) > (navWidth + navOffsetLeft)) {
+          $el.addClass('overflowing');
+        }
       });
 
       // Make click event on L2 links on mobile menu trigger.
