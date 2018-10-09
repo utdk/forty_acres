@@ -1,6 +1,10 @@
-
 #block-tabs {
   margin: 1.5rem 0;
+  // Styles imported from classy/css/components/tabs.css
+  .tabs a:focus,
+  .tabs a:hover {
+    background-color: #f5f5f5;
+  }
   ul.tabs.primary {
     border-bottom: 1px solid #bbb;
     border-collapse: collapse;
@@ -11,8 +15,10 @@
     white-space: nowrap;
     box-sizing: border-box;
     line-height: normal;
+
     li {
       display: inline-block;
+
       a {
         background-color: #ddd;
         border-color: #bbb;
@@ -30,11 +36,55 @@
           text-decoration: underline;
         }
       }
+
       a.is-active {
         background-color: #fff;
         border: 1px solid #bbb;
         border-bottom: 1px solid #fff;
       }
     }
+  }
+
+  // Styles imported from bartik/css/components/tabs.css
+  ul.tabs.secondary {
+    border-bottom: none;
+    margin: 5px;
+    padding: 0.5em 0;
+    overflow: hidden;
+  }
+  ul.tabs.secondary li {
+    border-right: 1px solid #ccc; /* LTR */
+    display: block;
+    float: left; /* LTR */
+    margin: 0;
+    padding: 0 1em;
+  }
+  [dir="rtl"] ul.tabs.secondary li {
+    border-left: 1px solid #ccc;
+    border-right: none;
+    float: right;
+  }
+  ul.tabs.secondary li:last-child {
+    border-right: none; /* LTR */
+  }
+  ul.tabs.secondary li:first-child {
+    padding-left: 0; /* LTR */
+  }
+  [dir="rtl"] ul.tabs.secondary li:last-child {
+    border-left: none;
+  }
+  [dir="rtl"] ul.tabs.secondary li:first-child {
+    padding-right: 0;
+  }
+  // stylelint-disable-next-line no-descending-specificity
+  ul.tabs.secondary li a {
+    display: inline;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+  }
+  ul.tabs.secondary li a.is-active {
+    background: #f2f2f2;
+    border-bottom: none;
+    border-radius: 5px;
   }
 }

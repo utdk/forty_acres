@@ -29,6 +29,9 @@
       var menuToggler = $('#js-nav-toggle');
       var togglerTarget = $('#ut-main_menu-wrapper');
       menuToggler.on('click', function () {
+        if (menuToggler.text() == 'CLOSE') {
+          resetDefaults();
+        }
         togglerTarget.toggleClass('active');
         togglerTarget.hasClass('active') ? menuToggler.html('CLOSE') : menuToggler.html('MENU');
         menuToggler.attr('aria-expanded', function(index, attr) {
@@ -39,26 +42,26 @@
       // Adding columns to the navigation dynamically.
       $('nav#block-accessible-main-menu .sub-nav').each(function(i, el){
         var $el = $(el),
-            $main = $('.main-menu__list'),
-            children = $el.find('.main-menu__list-item--subnav'),
-            containerWidth;
-          // Get the max row width.
-          containerWidth = $el.parent().parent().width();
-          // Still in Mobile View.
-          if (!containerWidth) { return; }
-          // Add column classes based on number of submenu items.
-          var numColumns = (children.length % 3 === 0) ? 'three-columns' : 'two-columns';
-          if (children.length === 1) {
-              numColumns = 'one-column';
-          }
-          $el.addClass(numColumns);
-          // Insure subnavs don't open to the right of the viewport.
-          var numChildren = $main.children();
-          numChildren.each(function(e) {
-            if (e >= (numChildren.length / 2)) {
-              $(this).find('.sub-nav').addClass('overflowing');
-            }
-          })
+          children = $el.find('.main-menu__list-item--subnav'),
+          navWidth = $el.parent().parent().width(),
+          navOffsetLeft = $el.parent().parent().offset().left,
+          subnavOffsetLeft = $el.offset().left,
+          subnavWidth;
+
+        // Add column classes based on number of submenu items.
+        var numColumns = (children.length % 3 === 0) ? 'three-columns' : 'two-columns';
+        if (children.length === 1) {
+            numColumns = 'one-column';
+        }
+        $el.addClass(numColumns);
+
+        // Determine subnavWidth here because it needs to be calculated after the column
+        // classes have been added.
+        subnavWidth = $el.children().outerWidth();
+        // Insure subnavs don't open to the right of the container.
+        if ((subnavWidth + subnavOffsetLeft) > (navWidth + navOffsetLeft)) {
+          $el.addClass('overflowing');
+        }
       });
 
       // Make click event on L2 links on mobile menu trigger.
@@ -92,8 +95,6 @@
         $('ul.main-menu__list.nav-menu .sub-nav-wrapper').removeClass('open hover focus').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
         $('ul.main-menu__list.nav-menu .main-menu__link').removeClass('open').attr('aria-expanded', 'false');
         $('ul.main-menu__list.nav-menu .main-menu__list--subnav').removeClass('open');
-        $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
-        $('#ut-main_menu-wrapper').removeClass('active');
         $('i.subnav-trigger').removeClass('icon--open');
       }
 
@@ -104,6 +105,8 @@
 
       var resizeEvent = debounce(function() {
         // Reset to defaults
+        $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
+        $('#ut-main_menu-wrapper').removeClass('active');
         resetDefaults();
         // Attach click event to chevron on mobile.
         if (window.innerWidth < 900) {
