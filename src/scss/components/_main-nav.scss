@@ -42,13 +42,9 @@
     position: relative;
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       width: calc(100% - 70px);
-      // Trigger subnav to be visible when L1 has focus or open class.
-      &.focus,
-      &.open {
-        ~ div.sub-nav-wrapper > .main-menu__list--subnav {
-          max-height: 500px;
-          display: block;
-        }
+      &.add-border {
+        border-top: 1px solid $ut-charcoal--t40;
+        border-left: 1px solid $ut-charcoal--t40;
       }
     }
     // stylelint-disable-next-line at-rule-no-unknown
@@ -57,30 +53,21 @@
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
-    }
-    // Open state of first descendant link within a top level navigation item.
-    &.open {
-      border-bottom: none;
-      z-index: 3;
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
+      // Focus/open/hover states of first descendant link within a top level
+      // navigation item (main menu ul > li > a).
+      &:hover,
+      &:focus,
+      &.open {
         border: 1px solid $ut-charcoal--t40;
-      }
-    }
-    // Focus/open/hover states of first descendant link within a top level
-    // navigation item (main menu ul > li > a).
-    &:hover,
-    &:focus,
-    &.open {
-      border: 1px solid $ut-charcoal--t40;
-      text-decoration: none;
-      color: $ut-burntorange;
-      text-decoration: underline;
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
-        border-bottom: 1px solid transparent;
-        margin-top: 1px;
-        z-index: 3;
+        text-decoration: none;
+        color: $ut-burntorange;
+        text-decoration: underline;
+        // stylelint-disable-next-line at-rule-no-unknown
+        @include screen-mq(md) {
+          border-bottom: 1px solid transparent;
+          margin-top: 1px;
+          z-index: 3;
+        }
       }
     }
   }
@@ -88,11 +75,6 @@
   &.menu-item-has-children > .main-menu__link {
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
       border-right: 1px solid $ut-charcoal--t40;
-      // Add borders if subnav is open.
-      &[aria-expanded="true"] {
-        border-left: 1px solid $ut-charcoal--t40;
-        border-top: 1px solid $ut-charcoal--t40;
-      }
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {

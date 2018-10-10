@@ -66,7 +66,7 @@
 
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
-        $('i.subnav-trigger').off('click').on('click', function() {
+        $('i.subnav-trigger').off('click').on('click keydown touchstart', function() {
           $(this).toggleClass('icon--open');
           // Add 'open' class to subnav associated with icon.
           $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
@@ -78,13 +78,15 @@
           $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) {
             return (attr == 'true') ? 'false' : 'true';
           });
+          $(this).siblings('.main-menu__link').toggleClass('add-border');
           $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function(index, attr) {
             return (attr == 'true') ? 'false' : 'true';
           });
           $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function(index, attr) {
             return (attr == 'true') ? 'false' : 'true';
           });
-          // Reset aria attributes of the clicked item's siblings.
+          // Reset aria attributes and styles of the clicked item's siblings.
+          $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').removeClass('add-border');
           $(this).parent('.main-menu__list-item').siblings().find('.sub-nav-wrapper').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
           $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').attr('aria-expanded', 'false');
         });
@@ -92,6 +94,7 @@
 
       // Reset aria attributes and remove dynamic classes from main menu list items.
       var resetDefaults = function() {
+        $('.main-menu__link').removeClass('add-border');
         $('ul.main-menu__list.nav-menu .sub-nav-wrapper').removeClass('open hover focus').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
         $('ul.main-menu__list.nav-menu .main-menu__link').removeClass('open').attr('aria-expanded', 'false');
         $('ul.main-menu__list.nav-menu .main-menu__list--subnav').removeClass('open');
@@ -99,8 +102,14 @@
       }
 
       // Undo preventDefault called on L1 links so they are clickable.
-      $('.menu-item-has-children > .main-menu__link').on('touchstart', function(){
+      // $('.menu-item-has-children > .main-menu__link').off('touchstart keydown').on('touchstart', function(){
+      //   window.location.href = $(this).attr('href');
+      // });
+
+      $('.main-menu__link').on('click touchstart', function(event) {
         window.location.href = $(this).attr('href');
+        console.log(event.type + '  ' + event.target);
+        $(this).addClass('open');
       });
 
       var resizeEvent = debounce(function() {
