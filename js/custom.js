@@ -66,29 +66,32 @@
 
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
-        $('i.subnav-trigger').off('click').on('click keydown touchstart', function() {
-          $(this).toggleClass('icon--open');
-          // Add 'open' class to subnav associated with icon.
-          $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
-          // Remove 'open' class from all other subnavs.
-          $(this).parent('.main-menu__list-item').siblings().find('.main-menu__list--subnav').removeClass('open');
-          // Remove 'icon--open' class from all other icons.
-          $(this).parent('.main-menu__list-item').siblings().find('i.subnav-trigger').removeClass('icon--open');
-          // Toggle aria attributes.
-          $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) {
-            return (attr == 'true') ? 'false' : 'true';
-          });
-          $(this).siblings('.main-menu__link').toggleClass('add-border');
-          $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function(index, attr) {
-            return (attr == 'true') ? 'false' : 'true';
-          });
-          $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function(index, attr) {
-            return (attr == 'true') ? 'false' : 'true';
-          });
-          // Reset aria attributes and styles of the clicked item's siblings.
-          $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').removeClass('add-border');
-          $(this).parent('.main-menu__list-item').siblings().find('.sub-nav-wrapper').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
-          $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').attr('aria-expanded', 'false');
+        $('i.subnav-trigger').off('click').on('click keydown touchstart', function(e) {
+          console.log(e);
+          if (e.type == 'click' || e.type == 'touchstart' || e.keyCode == 13) {
+            $(this).toggleClass('icon--open');
+            // Add 'open' class to subnav associated with icon.
+            $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
+            // Remove 'open' class from all other subnavs.
+            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__list--subnav').removeClass('open');
+            // Remove 'icon--open' class from all other icons.
+            $(this).parent('.main-menu__list-item').siblings().find('i.subnav-trigger').removeClass('icon--open');
+            // Toggle aria attributes.
+            $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) {
+              return (attr == 'true') ? 'false' : 'true';
+            });
+            $(this).siblings('.main-menu__link').toggleClass('add-border');
+            $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function(index, attr) {
+              return (attr == 'true') ? 'false' : 'true';
+            });
+            $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function(index, attr) {
+              return (attr == 'true') ? 'false' : 'true';
+            });
+            // Reset aria attributes and styles of the clicked item's siblings.
+            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').removeClass('add-border');
+            $(this).parent('.main-menu__list-item').siblings().find('.sub-nav-wrapper').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
+            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').attr('aria-expanded', 'false');
+          }
         });
       }
 
