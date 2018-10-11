@@ -64,6 +64,9 @@
         }
       });
 
+      // // Determine if device is touch or non-touch.
+      var touchStatus = ($('html').hasClass('no-touchevents')) ? 'click' : 'touchstart';
+
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
         $('i.subnav-trigger').off('click').on('click keydown touchstart', function(e) {
