@@ -46,7 +46,7 @@
         {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--subnav' %}
         {{ link(item.title, item.url, { 'class':[link_class]}) }}
         {% if item.is_expanded %}
-          <i class="icon subnav-trigger" tabindex=1></i>
+          <i class="icon subnav-trigger" tabindex=0></i>
         {% endif %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

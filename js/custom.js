@@ -67,6 +67,7 @@
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
         $('i.subnav-trigger').off('click').on('click keydown touchstart', function(e) {
+          console.log(e.type);
           if (e.type == 'click' || e.type == 'touchstart' || e.keyCode == 13) {
             $(this).toggleClass('icon--open');
             // Add 'open' class to subnav associated with icon.
@@ -104,14 +105,8 @@
       }
 
       // Undo preventDefault called on L1 links so they are clickable.
-      // $('.menu-item-has-children > .main-menu__link').off('touchstart keydown').on('touchstart', function(){
-      //   window.location.href = $(this).attr('href');
-      // });
-
       $('.main-menu__link').on('click touchstart', function(event) {
         window.location.href = $(this).attr('href');
-        console.log(event.type + '  ' + event.target);
-        $(this).addClass('open');
       });
 
       var resizeEvent = debounce(function() {
@@ -121,7 +116,10 @@
         resetDefaults();
         // Attach click event to chevron on mobile.
         if (window.innerWidth < 900) {
+          // Add click handler to mobile nav chevron.
           iconClick();
+          // Remove mouseover event from main menu.
+          $('.main-menu__list').off('mouseover');
         }
         // Disable click event on chevron on desktop.
         else {
