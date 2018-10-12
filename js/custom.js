@@ -69,7 +69,7 @@
 
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
-        $('i.subnav-trigger').off('focus blur').on('mousedown keydown touchstart', function(e) {
+        $('i.subnav-trigger').on('touchstart mousedown keydown', function(e) {
           console.log(e.type);
           if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
             e.preventDefault();
@@ -123,7 +123,7 @@
           // Add click handler to mobile nav chevron.
           iconClick();
           // Remove mouseover event from main menu.
-          $('.main-menu__list').off('mouseover');
+          $('.main-menu__list').off('mouseover touchstart');
         }
         // Disable click event on chevron on desktop.
         else {
