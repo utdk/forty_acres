@@ -69,9 +69,10 @@
 
       // Make click event on L2 links on mobile menu trigger.
       var iconClick = function() {
-        $('i.subnav-trigger').off('click').on('click keydown touchstart', function(e) {
+        $('i.subnav-trigger').off('focus blur').on('mousedown keydown touchstart', function(e) {
           console.log(e.type);
-          if (e.type == 'click' || e.type == 'touchstart' || e.keyCode == 13) {
+          if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
+            e.preventDefault();
             $(this).toggleClass('icon--open');
             // Add 'open' class to subnav associated with icon.
             $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
