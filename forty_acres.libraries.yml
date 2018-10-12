@@ -10,4 +10,3 @@ global:
     - core/jquery
     - core/drupal
     - core/drupal.debounce
-    - core/modernizr

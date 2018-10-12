@@ -34,12 +34,10 @@
         }
         togglerTarget.toggleClass('active');
         togglerTarget.hasClass('active') ? menuToggler.html('CLOSE') : menuToggler.html('MENU');
-        menuToggler.attr('aria-expanded', function(index, attr) {
-          return (attr == 'true') ? 'false' : 'true';
-        });
+        menuToggler.attr('aria-expanded', function(index, attr) { return (attr == 'false') ? 'true' : 'false'; });
       });
 
-      // Adding columns to the navigation dynamically.
+      // Adding column and overflowing classes to the navigation dynamically.
       $('nav#block-accessible-main-menu .sub-nav').each(function(i, el){
         var $el = $(el),
           children = $el.find('.main-menu__list-item--subnav'),
@@ -64,16 +62,15 @@
         }
       });
 
-      // // Determine if device is touch or non-touch.
-      var touchStatus = ($('html').hasClass('no-touchevents')) ? 'click' : 'touchstart';
-
-      // Make click event on L2 links on mobile menu trigger.
+      // Click event on L2 links on mobile menu trigger.
       var iconClick = function() {
         $('i.subnav-trigger').on('touchstart mousedown keydown', function(e) {
-          console.log(e.type);
           if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
+            // Keep mousedown event from grabbing focus.
             e.preventDefault();
             $(this).toggleClass('icon--open');
+            // Add border on sibling link when active.
+            $(this).siblings('.main-menu__link').toggleClass('add-border');
             // Add 'open' class to subnav associated with icon.
             $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
             // Remove 'open' class from all other subnavs.
@@ -81,16 +78,9 @@
             // Remove 'icon--open' class from all other icons.
             $(this).parent('.main-menu__list-item').siblings().find('i.subnav-trigger').removeClass('icon--open');
             // Toggle aria attributes.
-            $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) {
-              return (attr == 'true') ? 'false' : 'true';
-            });
-            $(this).siblings('.main-menu__link').toggleClass('add-border');
-            $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function(index, attr) {
-              return (attr == 'true') ? 'false' : 'true';
-            });
-            $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function(index, attr) {
-              return (attr == 'true') ? 'false' : 'true';
-            });
+            $(this).siblings('.main-menu__link').attr('aria-expanded', function(index, attr) { return (attr == 'true') ? 'false' : 'true'; });
+            $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function(index, attr) { return (attr == 'true') ? 'false' : 'true'; });
+            $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function(index, attr) { return (attr == 'true') ? 'false' : 'true'; });
             // Reset aria attributes and styles of the clicked item's siblings.
             $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').removeClass('add-border');
             $(this).parent('.main-menu__list-item').siblings().find('.sub-nav-wrapper').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
@@ -122,7 +112,7 @@
         if (window.innerWidth < 900) {
           // Add click handler to mobile nav chevron.
           iconClick();
-          // Remove mouseover event from main menu.
+          // Remove mouseover and touchstart event from main menu.
           $('.main-menu__list').off('mouseover touchstart');
         }
         // Disable click event on chevron on desktop.
