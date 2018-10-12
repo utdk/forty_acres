@@ -65,7 +65,7 @@
       // Click event on L2 links on mobile menu trigger.
       var iconClick = function() {
         $('i.subnav-trigger').on('touchstart mousedown keydown', function(e) {
-          if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
+          if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13) {
             // Keep mousedown event from grabbing focus.
             e.preventDefault();
             $(this).toggleClass('icon--open');
