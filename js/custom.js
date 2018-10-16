@@ -119,6 +119,7 @@
           $(".main-menu__list-item").removeClass("breaks-two-lines");
           // Get the current height of the main menu (greater than 38px if line breaks present)
           // and conditionally add breaks-two-lines class to those list items.
+          // See https://issues.its.utexas.edu/browse/UDK8-551
           var mainMenuHeight = $(".main-menu__list").css("height");
           if (parseInt(mainMenuHeight) > 38) {
             $('.main-menu__list-item').addClass('breaks-two-lines');
