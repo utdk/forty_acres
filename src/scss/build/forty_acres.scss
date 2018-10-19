@@ -13,8 +13,14 @@
 @import "../texas-design-system/components/buttons";
 @import "../texas-design-system/components/header";
 @import "../texas-design-system/components/footer";
+@import "../texas-design-system/components/resources";
+
+// Global Design System Core Branding
+@import "../texas-design-system/core-brand/typography";
+@import "../texas-design-system/core-brand/utilities";
 
 // Global Forty Acres Components
+@import "../components/images";
 @import "../components/main-nav";
 @import "../components/social-icons";
 @import "../components/parent-entity";
