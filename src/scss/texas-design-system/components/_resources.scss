@@ -1,0 +1,56 @@
+//
+// Resources Theme File
+//
+
+// Resource widget from Drupal Kit.
+
+.utexas-resource {
+  display: flex;
+  margin: 0 0 20px 0;
+  background-color: $ut-limestone--t20;
+  border: 1px solid $ut-limestone--t40;
+  flex-direction: column;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    flex-direction: row;
+  }
+
+  .image-wrapper {
+    flex: 0 0 50%;
+    .ut-img--fluid {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .data-wrapper {
+    flex: 0 0 50%;
+    padding: 20px;
+  }
+  .link-list {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include list-style-none;
+
+    margin-bottom: 0;
+    li {
+      padding-bottom: 9px;
+    }
+  }
+}
+
+.utexas-resource-wrapper.sidebar-display {
+  .utexas-resource {
+    flex-direction: column;
+  }
+}
+
+// Drupal Kit overrides
+// stylelint-disable-next-line
+.utexas-resource {
+  .ut-headline {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  picture img {
+    width: 100%;
+  }
+}

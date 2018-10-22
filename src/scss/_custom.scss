@@ -1,7 +1,15 @@
+// ----------
 // Font Family Variables
 // stylelint-disable plugin/no-browser-hacks
 $ut-font--serif: "CharisSil", Georgia, serif;
 $ut-font--sans: "LibreFrank", Arial, Helvetica, sans-serif;
+
+$ut-font--code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$ut-font--pre: "Courier 10 Pitch", Courier, monospace;
+
+$ut-text--line-height: 1.5625;
+$ut-text--line-height-pre: 1.6;
+$ut-base-font-size: 1rem;
 
 // Primary Color Palette
 $ut-burntorange: #bf5700;
