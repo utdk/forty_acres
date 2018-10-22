@@ -6,3 +6,7 @@ img {
   // stylelint-disable-next-line at-rule-no-unknown
   @include img-fluid;
 }
+// Insure image link image fields fill up their container.
+.utexas-image-link img {
+  width: 100%;
+}
