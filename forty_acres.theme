@@ -98,3 +98,31 @@ function forty_acres_preprocess_menu_local_action(&$variables) {
     $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
   }
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+  if ($field_name == 'field_utexas_resource_headline') {
+    foreach ($variables['items'] as $item) {
+      $item['attributes']->addClass('ut-headline');
+    }
+  }
+  if ($field_name == 'field_utexas_rc_title') {
+    foreach ($variables['items'] as $item) {
+      $item['attributes']->addClass('ut-headline--underline');
+    }
+  }
+  if ($field_name == 'field_utexas_resource_links') {
+    $variables['attributes']['class'][] = 'link-list';
+    foreach ($variables['items'] as $item) {
+      $link_options = [
+        'attributes' => [
+          'class' => ['ut-cta-link--darker'],
+        ],
+      ];
+      $item['content']['#url']->setOptions($link_options);
+    }
+  }
+}
