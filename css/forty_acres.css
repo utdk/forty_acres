@@ -607,6 +607,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.utexas-image-link img {
+  width: 100%;
+}
 .main-menu__list {
   position: relative;
   z-index: 15;
