@@ -1,0 +1,191 @@
+//
+// Body Copy and General Typography.
+//
+
+body {
+  font-family: $ut-font--sans;
+  font-size: $ut-base-font-size;
+  line-height: $ut-text--line-height;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.ut-font--serif {
+  font-family: $ut-font--serif;
+}
+
+// ----------
+// Links
+a:hover,
+a:focus {
+  color: $ut-burntorange--s20;
+}
+
+a:active {
+  color: $ut-burntorange--s10;
+}
+
+// stylelint-disable-next-line no-descending-specificity
+a,
+a:link,
+a:visited {
+  color: $ut-burntorange;
+  // stylelint-disable-next-line no-descending-specificity
+  p & {
+    text-decoration: underline;
+  }
+}
+
+// ----------
+// Headings
+h1,
+.ut-h1 {
+  font-size: 3.0625rem;
+  line-height: 1.143;
+  font-weight: 600;
+}
+
+h2,
+.ut-h2 {
+  font-size: 2.4375rem;
+  line-height: 1.154;
+  font-weight: 500;
+}
+
+h3,
+.ut-h3 {
+  font-size: 1.5625rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+h4,
+.ut-h4 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: normal;
+}
+
+h5,
+.ut-h5 {
+  font-size: 1rem;
+  line-height: 1.5625;
+  font-weight: 600;
+}
+
+h6,
+.ut-h6 {
+  font-size: 0.8125rem;
+  line-height: 1.385;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ut-h1,
+.ut-h2,
+.ut-h3,
+.ut-h4,
+.ut-h5,
+.ut-h6 {
+  color: $ut-charcoal;
+  article & {
+    padding-top: 1.25rem;
+  }
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+  font-size: 2rem;
+  color: $ut-shade--s60;
+  border-top: 1px solid $ut-shade--s60;
+  border-bottom: 1px solid $ut-shade--s60;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  font-family: $ut-font--pre;
+  line-height: $ut-text--line-height-pre;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: $ut-font--code;
+  font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $ut-shade--t20;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $ut-shade--t40;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+small {
+  line-height: 1.2;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+// ----------
+// Intro Text Style
+.ut-copy--intro {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: $ut-charcoal;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(large) {
+  article {
+    word-wrap: break-word;
+    p,
+    ul,
+    ol,
+    dt {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+// +screen-mq(xl)
+//   article
+//     p, ul, ol, dt
+//       font-size: 1.25rem
