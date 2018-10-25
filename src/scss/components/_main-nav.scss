@@ -18,16 +18,26 @@
     flex-direction: row;
     margin-left: -10px;
     margin-right: -10px;
+    align-items: flex-end;
   }
 }
 
 // A top level navigation item in the mega menu (main menu ul > li)
 .main-menu__list-item {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   position: relative;
+  align-items: stretch;
+  &.breaks-two-lines {
+    flex-basis: 1%;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    display: inline-block;
+  }
 
   // First descendant link within a top level navigation item (main menu ul > li > a).
   .main-menu__link {
@@ -52,22 +62,30 @@
       transition: border, color, 100ms ease-in-out;
       background-color: $ut-white;
       display: inline-block;
-      margin: 1px 0 0 0;
-      // Focus/open/hover states of first descendant link within a top level
-      // navigation item (main menu ul > li > a).
-      &:hover,
-      &:focus,
-      &.open {
+      margin: 1px 0 -1px 0;
+    }
+    &.open {
+      border-bottom: none;
+      z-index: 3;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
         border: 1px solid $ut-charcoal--t40;
-        text-decoration: none;
-        color: $ut-burntorange;
-        text-decoration: underline;
-        // stylelint-disable-next-line at-rule-no-unknown
-        @include screen-mq(md) {
-          border-bottom: 1px solid transparent;
-          margin-top: 1px;
-          z-index: 3;
-        }
+      }
+    }
+    // Focus/open/hover states of first descendant link within a top level
+    // navigation item (main menu ul > li > a).
+    &:hover,
+    &:focus,
+    &.open {
+      // Open state of first descendant link within a top level navigation item.
+      text-decoration: none;
+      color: $ut-burntorange;
+      text-decoration: underline;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        border-bottom: 1px solid transparent;
+        margin-top: 1px;
+        z-index: 3;
       }
     }
   }
@@ -84,18 +102,19 @@
         content: "";
         position: absolute;
         right: 1px;
+        bottom: 6px;
         width: 20px;
-        height: 20px;
+        height: 100%;
         background-image: url(../images/chevron-down.svg);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 1px 2px;
-        transition: background-position 100ms ease-in;
+        background-position: bottom;
+        transition: bottom 100ms ease-in;
       }
       &.hover,
       &.open {
         &:before {
-          background-position: 1px 8px;
+          bottom: 0;
         }
       }
     }
@@ -133,19 +152,17 @@
   // For the chevron icon subnav toggle reveal.
   i.subnav-trigger {
     cursor: pointer;
-    position: absolute;
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: 0;
     top: 0;
     z-index: 100;
     width: 70px;
-    height: 37px;
-    transform-origin: center center;
     // Place chevron in pseudoclass so it can be rotated without moving its container.
     &:before {
       content: "";
-      position: absolute;
-      right: 17px;
       height: 35px;
       width: 35px;
       background-image: url(../images/chevron-down.svg);
@@ -172,11 +189,14 @@
 
 // Subnav panel.
 .sub-nav-wrapper {
+  // Mobile only styles.
+  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    flex-basis: 100%;
+  }
   .main-menu__list--subnav {
     list-style: none;
     position: absolute;
     display: none;
-    top: 2.3rem;
     padding: 0.5rem 1rem;
     border: 1px solid $ut-charcoal--t40;
     background-color: $ut-white;
