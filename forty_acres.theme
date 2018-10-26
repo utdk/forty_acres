@@ -103,26 +103,80 @@ function forty_acres_preprocess_menu_local_action(&$variables) {
  * Implements hook_preprocess_field().
  */
 function forty_acres_preprocess_field(&$variables) {
-  $field_name = $variables['field_name'];
-  if ($field_name == 'field_utexas_resource_headline') {
-    foreach ($variables['items'] as $item) {
-      $item['attributes']->addClass('ut-headline');
-    }
+
+  // Photo Content Area fields.
+  _forty_acres_preprocess_pca_fields($variables);
+
+  // Resource widget fields.
+  _forty_acres_preprocess_resource_fields($variables);
+}
+
+/**
+ * Photo Content Area - add classes to fields.
+ */
+function _forty_acres_preprocess_pca_fields(&$variables) {
+
+  switch ($variables['field_name']) {
+
+    case 'field_utexas_pca_copy':
+      $variables['attributes']['class'][] = 'ut-copy';
+      break;
+
+    case 'field_utexas_pca_credit':
+      foreach ($variables['items'] as $item) {
+        $item['attributes']->addClass('caption');
+      }
+      break;
+
+    case 'field_utexas_pca_headline':
+      foreach ($variables['items'] as $item) {
+        $item['attributes']->addClass('ut-headline');
+      }
+      break;
+
+    case 'field_utexas_pca_links':
+      $variables['attributes']['class'][] = 'link-list';
+      foreach ($variables['items'] as $item) {
+        $link_options = [
+          'attributes' => [
+            'class' => ['ut-link'],
+          ],
+        ];
+        $item['content']['#url']->setOptions($link_options);
+      }
+      break;
   }
-  if ($field_name == 'field_utexas_rc_title') {
-    foreach ($variables['items'] as $item) {
-      $item['attributes']->addClass('ut-headline--underline');
-    }
-  }
-  if ($field_name == 'field_utexas_resource_links') {
-    $variables['attributes']['class'][] = 'link-list';
-    foreach ($variables['items'] as $item) {
-      $link_options = [
-        'attributes' => [
-          'class' => ['ut-cta-link--darker'],
-        ],
-      ];
-      $item['content']['#url']->setOptions($link_options);
-    }
+}
+
+/**
+ * Resource - add classes to fields.
+ */
+function _forty_acres_preprocess_resource_fields(&$variables) {
+
+  switch ($variables['field_name']) {
+
+    case 'field_utexas_resource_headline':
+      foreach ($variables['items'] as $item) {
+        $item['attributes']->addClass('ut-headline');
+      }
+      break;
+
+    case 'field_utexas_rc_title':
+      foreach ($variables['items'] as $item) {
+        $item['attributes']->addClass('ut-headline--underline');
+      }
+      break;
+
+    case 'field_utexas_resource_links':
+      $variables['attributes']['class'][] = 'link-list';
+      foreach ($variables['items'] as $item) {
+        $link_options = [
+          'attributes' => [
+            'class' => ['ut-cta-link--darker'],
+          ],
+        ];
+        $item['content']['#url']->setOptions($link_options);
+      }
+      break;
   }
 }

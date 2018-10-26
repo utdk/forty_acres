@@ -1,0 +1,83 @@
+//
+// Photo Content Area widget.
+//
+
+.ut-photo-content-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  // stylelint-disable at-rule-no-unknown
+  @include screen-mq(sm) {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .photo-wrapper {
+    margin-bottom: 10px;
+    @include screen-mq(sm) {
+      flex: 0 0 50%;
+      text-align: center;
+    }
+
+    .caption {
+      font-style: italic;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin: auto;
+      text-align: left;
+      @include screen-mq(sm) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .content-wrapper {
+    @include screen-mq(sm) {
+      flex: 0 0 50%;
+    }
+  }
+
+  .ut-headline {
+    margin-bottom: 10px;
+  }
+
+  .ut-copy {
+    font-size: 1rem;
+  }
+
+  .link-list ul {
+    @include list-style-none;
+
+    li {
+      margin-bottom: 9px;
+    }
+  }
+
+  // Texas Design System edits - replacing .image class with img.
+  // stylelint-disable
+  .photo-wrapper {
+    img {
+      @include screen-mq(sm) {
+        max-width: 80%;
+      }
+    }
+  }
+  &.sidebar-display {
+    @include screen-mq(lg) {
+      flex-direction: column;
+
+      img {
+        max-width: 100%;
+      }
+
+      .caption {
+        max-width: 100%;
+      }
+    }
+  }
+  .content-wrapper {
+    h3 {
+      padding-top: 0;
+    }
+  }
+}

@@ -310,6 +310,90 @@ ul.ut-menu--list-bold {
   text-transform: uppercase;
   font-weight: 600;
 }
+.ut-photo-content-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) {
+  .ut-photo-content-area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+}
+.ut-photo-content-area .photo-wrapper {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .ut-photo-content-area .photo-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    text-align: center;
+  }
+}
+.ut-photo-content-area .photo-wrapper .caption {
+  margin: auto;
+  text-align: left;
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 600px) {
+  .ut-photo-content-area .photo-wrapper .caption {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .ut-photo-content-area .content-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+}
+.ut-photo-content-area .ut-headline {
+  margin-bottom: 10px;
+}
+.ut-photo-content-area .ut-copy {
+  font-size: 1rem;
+}
+.ut-photo-content-area .link-list ul {
+  padding-left: 0;
+  list-style: none;
+}
+.ut-photo-content-area .link-list ul li {
+  margin-bottom: 9px;
+}
+@media screen and (min-width: 600px) {
+  .ut-photo-content-area .photo-wrapper img {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ut-photo-content-area.sidebar-display {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .ut-photo-content-area.sidebar-display img {
+    max-width: 100%;
+  }
+  .ut-photo-content-area.sidebar-display .caption {
+    max-width: 100%;
+  }
+}
+.ut-photo-content-area .content-wrapper h3 {
+  padding-top: 0;
+}
 .utexas-resource {
   display: -webkit-box;
   display: -ms-flexbox;
