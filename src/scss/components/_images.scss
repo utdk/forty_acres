@@ -7,6 +7,9 @@ img {
   @include img-fluid;
 }
 // Insure image link image fields fill up their container.
-.utexas-image-link img {
-  width: 100%;
+.utexas-image-link,
+.ut-flex-content-area {
+  img {
+    width: 100%;
+  }
 }
