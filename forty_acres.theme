@@ -80,7 +80,7 @@ function forty_acres_theme_suggestions_block_alter(array &$suggestions, array $v
  */
 function forty_acres_preprocess_breadcrumb(&$variables) {
 
-  if (($node = Node::load(\Drupal::service('current_route_match')->getRawParameter('node'))) && $variables['breadcrumb']) {
+  if (($node = Node::load((int)\Drupal::service('current_route_match')->getRawParameter('node'))) && $variables['breadcrumb']) {
 
     // Add the title of the page in the breadcrumb.
     $variables['breadcrumb'][] = [
