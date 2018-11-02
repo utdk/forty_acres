@@ -37,12 +37,6 @@
   }
 }
 
-.utexas-resource-wrapper.sidebar-display {
-  .utexas-resource {
-    flex-direction: column;
-  }
-}
-
 // Drupal Kit overrides
 // stylelint-disable-next-line
 .utexas-resource {
@@ -52,5 +46,13 @@
   }
   picture img {
     width: 100%;
+  }
+}
+
+.layout--utexas-66-33--container {
+  .layout__region--sidebar {
+    .utexas-resource {
+      flex-direction: column;
+    }
   }
 }

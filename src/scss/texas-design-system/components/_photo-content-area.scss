@@ -62,22 +62,24 @@
       }
     }
   }
-  &.sidebar-display {
-    @include screen-mq(lg) {
-      flex-direction: column;
-
-      img {
-        max-width: 100%;
-      }
-
-      .caption {
-        max-width: 100%;
-      }
-    }
-  }
   .content-wrapper {
     h3 {
       padding-top: 0;
+    }
+  }
+}
+
+.layout--utexas-66-33--container {
+  .layout__region--sidebar {
+    .ut-photo-content-area {
+      flex-direction: column;
+      flex: 0 0 100%;
+      img {
+        width: 100%;
+      }
+      .caption {
+        width: 100%;
+      }
     }
   }
 }
