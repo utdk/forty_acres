@@ -1,0 +1,93 @@
+//
+// Featured Highlight Theme file
+//
+
+// Featured Highlight widget from Drupal Kit.
+
+.utexas-featured-highlight {
+  color: #fff;
+  padding: 60px 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  background-color: $ut-charcoal;
+  flex-direction: column;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    flex-direction: row;
+  }
+
+  .image-wrapper {
+    min-width: auto;
+    margin-bottom: 1rem;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      min-width: 250px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      min-width: 330px;
+    }
+  }
+  .content-wrapper {
+    padding-left: 30px;
+    .ut-date {
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .ut-headline {
+      padding-top: 0;
+      font-size: 2rem;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// // Styling beyond the Texas Design System.
+.layout--utexas-66-33--container {
+  .layout__region--sidebar {
+    .utexas-featured-highlight {
+      flex-direction: column;
+      .content-wrapper {
+        padding: 0 1rem;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        .image-wrapper {
+          max-width: none;
+          min-width: auto;
+        }
+      }
+    }
+  }
+}
+
+.layout--utexas-50-50--container {
+  .layout__region--left,
+  .layout__region--right {
+    .utexas-featured-highlight {
+      flex-direction: column;
+      .content-wrapper {
+        padding: 0 1rem;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        .image-wrapper {
+          max-width: none;
+          min-width: auto;
+        }
+      }
+    }
+  }
+}
+
+// stylelint-disable-next-line
+.image-wrapper {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(sm) {
+    margin-bottom: 1rem;
+    max-width: none;
+  }
+}
