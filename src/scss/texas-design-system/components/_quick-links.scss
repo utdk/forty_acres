@@ -1,0 +1,37 @@
+// Styling for Quick Links Widget.
+
+.utexas-quick-links {
+  .ut-headline {
+    margin-bottom: 15px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: 1.125rem;
+      line-height: 1.625;
+      margin: 0 0 .5rem;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      font-size: 1.25rem;
+      line-height: 1.6875rem;
+    }
+  }
+  .ut-copy {
+    font-size: 1rem;
+  }
+  .link-list {
+    list-style: none;
+    padding-left: 0;
+    column-count: 1;
+    margin-bottom: 0;
+    li {
+      padding-bottom: 30px;
+      page-break-inside: avoid;
+      break-inside: avoid-column;
+      -webkit-column-break-inside: avoid;
+    }
+    a.ut-link {
+      font-weight: 500;
+    }
+  }
+}
+
