@@ -1,0 +1,105 @@
+//
+// Promo List Theme File
+//
+
+// ----------
+// Component SCSS
+
+.ut-promo-list-wrapper {
+  &.two-column-responsive {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      column-count: 2;
+      .utexas-promo-list {
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+        column-break-inside: avoid;
+        padding-bottom: 20px;
+        margin: 0 20px 20px 20px;
+        border-bottom: 1px solid $ut-charcoal--t20;
+        + .utexas-promo-list {
+          border-top: none;
+          padding-top: 0;
+        }
+        &.column-bottom {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .utexas-promo-list {
+    display: flex;
+    padding-bottom: 20px;
+    margin: 0 20px;
+    + .utexas-promo-list {
+      border-top: 1px solid $ut-charcoal--t20;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    .image-wrapper {
+      flex: 0 0 64px;
+      margin-right: 12px;
+      margin-bottom: 0;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        flex: 0 0 68px;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        flex: 0 0 85px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .ut-copy {
+      p:last-child() {
+        margin-bottom: 0;
+      }
+    }
+    .ut-headline {
+      font-weight: 500;
+      padding-top: 0;
+    }
+    a > .ut-headline {
+      color: $ut-burntorange;
+    }
+  }
+}
+
+.layout--utexas-66-33--container {
+  .layout__region--sidebar {
+    .ut-promo-list-wrapper {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        flex-direction: column;
+        .utexas-promo-list {
+          flex-direction: column;
+          flex: 0 0 100%;
+        }
+        .image-wrapper {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+        .ut-copy {
+          margin-top: 15px;
+        }
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        flex-direction: inherit;
+        .utexas-promo-list {
+          flex-direction: inherit;
+          flex: inherit;
+        }
+        .image-wrapper {
+          margin-right: inherit;
+          margin-bottom: inherit;
+        }
+        .ut-copy {
+          margin-top: inherit;
+        }
+      }
+    }
+  }
+}
