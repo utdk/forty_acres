@@ -362,14 +362,11 @@ ul.ut-menu--list-bold {
 .ut-photo-content-area .ut-headline {
   margin-bottom: 10px;
 }
-.ut-photo-content-area .ut-copy {
-  font-size: 1rem;
-}
-.ut-photo-content-area .link-list ul {
+.ut-photo-content-area ul.link-list {
   padding-left: 0;
   list-style: none;
 }
-.ut-photo-content-area .link-list ul li {
+.ut-photo-content-area ul.link-list li {
   margin-bottom: 9px;
 }
 @media screen and (min-width: 600px) {

@@ -41,11 +41,7 @@
     margin-bottom: 10px;
   }
 
-  .ut-copy {
-    font-size: 1rem;
-  }
-
-  .link-list ul {
+  ul.link-list {
     @include list-style-none;
 
     li {
