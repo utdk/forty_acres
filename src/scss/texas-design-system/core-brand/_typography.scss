@@ -96,9 +96,10 @@ h6,
 .ut-h5,
 .ut-h6 {
   color: $ut-charcoal;
-  article & {
-    padding-top: 1.25rem;
-  }
+  // TODO: confirm with Zach the purpose of lines 100 - 102
+  // article & {
+  //   padding-top: 1.25rem;
+  // }
 }
 
 p {
