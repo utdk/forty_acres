@@ -461,8 +461,8 @@ ul.ut-menu--list-bold {
   align-items: center;
   margin: 0 0 20px 0;
   padding: 60px 10px;
-  color: #fff;
-  background-color: #333f48;
+  color: #000;
+  background-color: #d6d2c4;
 }
 @media screen and (min-width: 900px) {
   .utexas-featured-highlight {
@@ -498,7 +498,7 @@ ul.ut-menu--list-bold {
   font-size: 2rem;
 }
 .utexas-featured-highlight .content-wrapper .ut-headline a {
-  color: #fff;
+  color: #000;
 }
 .layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight {
   -webkit-box-orient: vertical;
