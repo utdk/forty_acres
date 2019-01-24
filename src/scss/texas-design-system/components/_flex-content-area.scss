@@ -6,19 +6,11 @@
 // Default Flex Content Area appearance
 
 .ut-flex-content-area-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   .image-wrapper {
     margin-bottom: 10px;
   }
   .ut-flex-content-area {
-    flex: 0 0 100%;
     margin-bottom: 20px;
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(sm) {
-      flex: 0 0 49%;
-    }
   }
   .link-list {
     // stylelint-disable-next-line at-rule-no-unknown
@@ -29,22 +21,5 @@
   }
   .ut-headline {
     padding: 0.5rem 0;
-  }
-  .ut-flex-content-area:nth-child(1):nth-last-child(3),
-  .ut-flex-content-area:nth-child(2):nth-last-child(2),
-  .ut-flex-content-area:nth-child(3):nth-last-child(1) {
-    flex: 0 0 32%;
-  }
-}
-
-.layout--utexas-66-33--container {
-  .layout__region--sidebar {
-    .ut-flex-content-area-wrapper {
-      flex-direction: column;
-      .ut-flex-content-area {
-        flex-direction: column;
-        flex: 0 0 100%;
-      }
-    }
   }
 }
