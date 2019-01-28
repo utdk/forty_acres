@@ -30,8 +30,12 @@ See https://issues.its.utexas.edu/projects/UDK8/issues/UDK8-NNN
 ## Evaluation Steps
 <!--- Include notes for both functional testing & code review -->
 0. See general setup, below
-0. 
+0.
 
 ## General Development Setup
 1. Locate this repository in the `themes/` directory of a Drupal 8 site
 2. Run `drush en forty_acres -y`
+
+## Potential Reviewers
+
+@twf369 @jmf3658 @rh34438 @mjm6289 @jfg276 @lar3597
