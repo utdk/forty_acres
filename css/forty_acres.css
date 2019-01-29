@@ -310,6 +310,69 @@ ul.ut-menu--list-bold {
   text-transform: uppercase;
   font-weight: 600;
 }
+/* General defaults for Hero elements */
+.ut-hero .ut-btn--hero {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: background-color, color, 0.33s ease-out;
+  transition: background-color, color, 0.33s ease-out;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+/* Hero with Orange Box similar to core site (i.e., Style 1) */
+.hero--photo-orange-insert .hero-content {
+  background: #bf5700;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .hero-content {
+    background: #bf5700;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(191, 87, 0, 0.5)), color-stop(82%, rgba(191, 87, 0, 0.9)), to(rgba(191, 87, 0, 0.9)));
+    background: linear-gradient(to bottom, rgba(191, 87, 0, 0.5) 0%, rgba(191, 87, 0, 0.9) 82%, rgba(191, 87, 0, 0.9) 100%);
+  }
+}
+.hero--photo-orange-insert .hero-callout {
+  color: #fff;
+}
+.hero--photo-orange-insert .hero-headline {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 2.0625rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .hero-headline {
+    font-size: 2.4375rem;
+  }
+}
+.hero--photo-orange-insert .hero-subhead {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.hero--photo-orange-insert .ut-btn--hero {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .ut-btn--hero {
+    font-size: 1rem;
+  }
+  .hero--photo-orange-insert .hero-subhead {
+    font-size: 1.25rem;
+  }
+}
+.ut-hero .ut-btn--hero:hover,
+.ut-hero .ut-btn--hero:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #bf5700;
+  background-color: #fff;
+}
 .ut-photo-content-area {
   display: -webkit-box;
   display: -ms-flexbox;
