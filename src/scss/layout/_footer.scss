@@ -6,13 +6,16 @@ footer.ut-footer {
     margin-bottom: 20px;
   }
   .required-links__list {
-    column-count: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .required-links__list-item {
+    flex: 0 1 48%;
+    margin-bottom: 15px;
   }
   .footer-menu__list-item {
     margin-bottom: 20px;
-  }
-  .required-links__list-item {
-    margin-bottom: 15px;
   }
   .footer-textarea {
     font-size: 0.875rem;

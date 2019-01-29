@@ -239,28 +239,26 @@
     }
     &.one-column .main-menu__list--subnav {
       width: 240px;
-      column-count: 1;
+      .main-menu__list-item--subnav {
+        flex: 0 1 100%;
+      }
     }
     &.two-columns .main-menu__list--subnav {
       width: 400px;
-      column-count: 2;
       .main-menu__list-item--subnav {
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid;
+        flex: 0 1 48%;
       }
     }
     &.three-columns .main-menu__list--subnav {
       width: 500px;
-      column-count: 3;
       .main-menu__list-item--subnav {
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid;
+        flex: 0 1 32%;
       }
     }
     &.open .main-menu__list--subnav {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       max-height: 500px;
     }
   }

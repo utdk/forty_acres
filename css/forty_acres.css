@@ -577,34 +577,32 @@ ul.ut-menu--list-bold {
 .utexas-quick-links .link-list {
   margin-bottom: 0;
   padding-left: 0;
-  -webkit-column-count: 1;
-  column-count: 1;
   list-style: none;
 }
 .utexas-quick-links .link-list li {
   padding-bottom: 30px;
-
-  break-inside: avoid-column;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
 }
 .utexas-quick-links .link-list a.ut-link {
   font-weight: 500;
 }
 @media screen and (min-width: 1200px) {
   .ut-promo-list-wrapper.two-column-responsive {
-    -webkit-column-count: 2;
-    column-count: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .ut-promo-list-wrapper.two-column-responsive .utexas-promo-list {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 45%;
+    flex: 0 1 45%;
     margin: 0 20px 20px 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ebeced;
-
-    break-inside: avoid-column;
-    -webkit-column-break-inside: avoid;
-    column-break-inside: avoid;
-    page-break-inside: avoid;
   }
   .ut-promo-list-wrapper.two-column-responsive .utexas-promo-list + .utexas-promo-list {
     padding-top: 0;
@@ -1296,31 +1294,37 @@ img {
   }
   .sub-nav-wrapper.one-column .main-menu__list--subnav {
     width: 240px;
-    -webkit-column-count: 1;
-    column-count: 1;
+  }
+  .sub-nav-wrapper.one-column .main-menu__list--subnav .main-menu__list-item--subnav {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
   }
   .sub-nav-wrapper.two-columns .main-menu__list--subnav {
     width: 400px;
-    -webkit-column-count: 2;
-    column-count: 2;
   }
   .sub-nav-wrapper.two-columns .main-menu__list--subnav .main-menu__list-item--subnav {
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 48%;
+    flex: 0 1 48%;
   }
   .sub-nav-wrapper.three-columns .main-menu__list--subnav {
     width: 500px;
-    -webkit-column-count: 3;
-    column-count: 3;
   }
   .sub-nav-wrapper.three-columns .main-menu__list--subnav .main-menu__list-item--subnav {
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 32%;
+    flex: 0 1 32%;
   }
   .sub-nav-wrapper.open .main-menu__list--subnav {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     max-height: 500px;
   }
 }
@@ -1657,14 +1661,23 @@ footer.ut-footer .block {
   margin-bottom: 20px;
 }
 footer.ut-footer .required-links__list {
-  -webkit-column-count: 2;
-  column-count: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+footer.ut-footer .required-links__list-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 48%;
+  flex: 0 1 48%;
+  margin-bottom: 15px;
 }
 footer.ut-footer .footer-menu__list-item {
   margin-bottom: 20px;
-}
-footer.ut-footer .required-links__list-item {
-  margin-bottom: 15px;
 }
 footer.ut-footer .footer-textarea {
   padding-left: 10px;

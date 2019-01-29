@@ -21,13 +21,9 @@
   .link-list {
     list-style: none;
     padding-left: 0;
-    column-count: 1;
     margin-bottom: 0;
     li {
       padding-bottom: 30px;
-      page-break-inside: avoid;
-      break-inside: avoid-column;
-      -webkit-column-break-inside: avoid;
     }
     a.ut-link {
       font-weight: 500;
