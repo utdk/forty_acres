@@ -85,3 +85,35 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+/* Hero with pinned overlay that is width of the max content container (Style 3) */
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(lg) {
+  .ut-hero.hero--photo-white-notch .hero-callout {
+    padding: 1.5rem 1.25rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-headline {
+  padding-bottom: 5px;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(lg) {
+  .ut-hero.hero--photo-white-notch .hero-headline {
+    padding-bottom: 0;
+    font-size: 1.9375rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-subhead {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(lg) {
+  .ut-hero.hero--photo-white-notch .hero-subhead {
+    font-size: 1.25rem;
+  }
+}
