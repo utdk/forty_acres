@@ -85,3 +85,29 @@
   cursor: pointer;
   text-decoration: none;
 }
+/* Centered Image with blue bar (i.e., Style 4) */
+.ut-hero.hero--blue-bar .hero-headline {
+  color: #fff;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.ut-hero.hero--blue-bar .hero-subhead {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: .5rem;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(md) {
+  .ut-hero.hero--blue-bar .hero-headline {
+    font-size: 1.9375rem;
+  }
+  .ut-hero.hero--blue-bar .hero-subhead {
+    font-size: 1.25rem;
+  }
+  .ut-hero .ut-btn--hero {
+    font-size: 1rem;
+    float: right;
+  }
+}
