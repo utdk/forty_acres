@@ -394,7 +394,6 @@ ul.ut-menu--list-bold {
   color: #bf5700;
   background-color: #fff;
 }
-<<<<<<< HEAD
 /* Hero with pinned overlay that is width of the max content container (Style 3) */
 @media screen and (min-width: 1200px) {
   .ut-hero.hero--photo-white-notch .hero-callout {
@@ -403,16 +402,10 @@ ul.ut-menu--list-bold {
 }
 .ut-hero.hero--photo-white-notch .hero-headline {
   padding-bottom: 5px;
-=======
-/* Centered Image with blue bar (i.e., Style 4) */
-.ut-hero.hero--blue-bar .hero-headline {
-  color: #fff;
->>>>>>> 4b698bd9f7c33c6a526da8e768152523d3f0b2dc
   font-size: 1.6875rem;
   font-weight: 600;
   line-height: 1.25;
 }
-<<<<<<< HEAD
 @media screen and (min-width: 1200px) {
   .ut-hero.hero--photo-white-notch .hero-headline {
     padding-bottom: 0;
@@ -420,20 +413,28 @@ ul.ut-menu--list-bold {
   }
 }
 .ut-hero.hero--photo-white-notch .hero-subhead {
-=======
-.ut-hero.hero--blue-bar .hero-subhead {
-  margin-bottom: 0.5rem;
->>>>>>> 4b698bd9f7c33c6a526da8e768152523d3f0b2dc
   font-size: 1em;
   font-weight: 400;
   line-height: 1.25;
 }
-<<<<<<< HEAD
 @media screen and (min-width: 1200px) {
   .ut-hero.hero--photo-white-notch .hero-subhead {
     font-size: 1.25rem;
   }
-=======
+}
+/* Centered Image with blue bar (i.e., Style 4) */
+.ut-hero.hero--blue-bar .hero-headline {
+  color: #fff;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.ut-hero.hero--blue-bar .hero-subhead {
+  margin-bottom: 0.5rem;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
 @media screen and (min-width: 900px) {
   .ut-hero.hero--blue-bar .hero-headline {
     font-size: 1.9375rem;
@@ -445,7 +446,6 @@ ul.ut-menu--list-bold {
     float: right;
     font-size: 1rem;
   }
->>>>>>> 4b698bd9f7c33c6a526da8e768152523d3f0b2dc
 }
 .ut-photo-content-area {
   display: -webkit-box;
