@@ -145,7 +145,7 @@
 
 /* Centered Image with blue bar (i.e., Style 4) */
 .ut-hero.hero--blue-bar .hero-headline {
-  color: #fff;
+  color: $ut-white;
   font-size: 1.6875rem;
   font-weight: 600;
   line-height: 1.25;
@@ -168,4 +168,28 @@
     font-size: 1rem;
     float: right;
   }
+}
+
+/* Medium, floated right image (i.e., Style 5) */
+.ut-hero.hero--half-n-half .hero-headline {
+  color: $ut-charcoal;
+  padding: .625rem 0;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(md) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 1.9375rem;
+  }
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(lg) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+.ut-hero.hero--half-n-half .ut-btn--secondary {
+  align-self: start;
 }

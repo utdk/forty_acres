@@ -469,6 +469,28 @@ ul.ut-menu--list-bold {
     font-size: 1rem;
   }
 }
+/* Medium, floated right image (i.e., Style 5) */
+.ut-hero.hero--half-n-half .hero-headline {
+  padding: 0.625rem 0;
+  color: #333f48;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media screen and (min-width: 900px) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 1.9375rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+.ut-hero.hero--half-n-half .ut-btn--secondary {
+  -ms-flex-item-align: start;
+  align-self: start;
+}
 .ut-photo-content-area {
   display: -webkit-box;
   display: -ms-flexbox;
