@@ -10,6 +10,31 @@
   padding: .5rem 1rem;
   transition: background-color, color, .33s ease-out;
 }
+
+/* Styling for default hero with caption and credit line. */
+.ut-hero p.hero--caption-credit-wrapper {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  padding: 10px 0 10px 0;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(sm) {
+  .ut-hero p.hero--caption-credit-wrapper {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 10px 0 10px 0;
+  }
+}
+.ut-hero .hero-caption {
+  padding-right: .5rem;
+}
+.ut-hero .credit {
+  font-style: italic;
+  color: #6a6a6a;
+}
+
 /* Hero with Orange Box similar to core site (i.e., Style 1) */
 .hero--photo-orange-insert {
   .hero-content {

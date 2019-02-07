@@ -323,6 +323,28 @@ ul.ut-menu--list-bold {
   font-size: 0.75rem;
   font-weight: 600;
 }
+/* Styling for default hero with caption and credit line. */
+.ut-hero p.hero--caption-credit-wrapper {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+@media screen and (min-width: 600px) {
+  .ut-hero p.hero--caption-credit-wrapper {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.ut-hero .hero-caption {
+  padding-right: 0.5rem;
+}
+.ut-hero .credit {
+  color: #6a6a6a;
+  font-style: italic;
+}
 /* Hero with Orange Box similar to core site (i.e., Style 1) */
 .hero--photo-orange-insert .hero-content {
   background: #bf5700;
