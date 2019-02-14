@@ -54,4 +54,4 @@ gulp.task('copy-js', function () {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task("default", sequence("scss-lint", "sass", "css-lint", "copy-css", "copy-js"));
+gulp.task("default", gulp.series("scss-lint", "sass", "css-lint", "copy-css", "copy-js"));

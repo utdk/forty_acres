@@ -135,11 +135,32 @@
   font-size: 1em;
   font-weight: 400;
   line-height: 1.25;
+  float: left;
+  padding-top: 3px;
 }
 // stylelint-disable-next-line at-rule-no-unknown
 @include screen-mq(lg) {
   .ut-hero.hero--photo-white-notch .hero-subhead {
     font-size: 1.25rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-cta {
+  display: inline-block;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    display: block;
+  }
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    a.ut-btn {
+      color: $ut-burntorange;
+      background-color: $ut-white;
+      font-style: italic;
+      border: none;
+      padding: inherit;
+      &:hover {
+        color: $ut-burntorange--s20 !important;
+      }
+    }
   }
 }
 

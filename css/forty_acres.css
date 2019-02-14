@@ -435,6 +435,8 @@ ul.ut-menu--list-bold {
   }
 }
 .ut-hero.hero--photo-white-notch .hero-subhead {
+  float: left;
+  padding-top: 3px;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.25;
@@ -442,6 +444,26 @@ ul.ut-menu--list-bold {
 @media screen and (min-width: 1200px) {
   .ut-hero.hero--photo-white-notch .hero-subhead {
     font-size: 1.25rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-cta {
+  display: inline-block;
+}
+@media screen and (min-width: 900px) {
+  .ut-hero.hero--photo-white-notch .hero-cta {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn {
+    padding: inherit;
+    color: #bf5700;
+    border: none;
+    background-color: #fff;
+    font-style: italic;
+  }
+  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn:hover {
+    color: #9d4700 !important;
   }
 }
 /* Centered Image with blue bar (i.e., Style 4) */
