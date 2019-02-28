@@ -48,13 +48,16 @@ function forty_acres_preprocess_block(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
-  // Remove the block and replace dashes with underscores in the block ID to
-  // use for the hook name.
+  $theme_name = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  $theme_key = strtolower($theme_name) . '-';
+  // Remove the block, the themename (if present), and replace dashes with
+  // underscores in the block ID to use for the hook name.
   if (isset($variables['attributes']['block'])) {
-    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
-    $block = Block::load($hook);
-    $region = $block->getRegion();
-    $suggestions[] = 'menu__' . $region;
+    $hook = str_replace([$theme_key, 'block-', '-'], ['', '', '_'], $variables['attributes']['block']);
+    if ($block = Block::load($hook)) {
+      $region = $block->getRegion();
+      $suggestions[] = 'menu__' . $region;
+    }
   }
 }
 
@@ -80,7 +83,7 @@ function forty_acres_theme_suggestions_block_alter(array &$suggestions, array $v
  */
 function forty_acres_preprocess_breadcrumb(&$variables) {
 
-  if (($node = Node::load( (int) \Drupal::service('current_route_match')->getRawParameter('node'))) && $variables['breadcrumb']) {
+  if (($node = Node::load((int) \Drupal::service('current_route_match')->getRawParameter('node'))) && $variables['breadcrumb']) {
 
     // Add the title of the page in the breadcrumb.
     $variables['breadcrumb'][] = [
