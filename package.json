@@ -15,10 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "accessible-mega-menu": "git+https://github.com/utexas-its-wcs/Accessible-Mega-Menu.git",
-    "bootstrap": "~4.1.1",
-    "jquery": "^3.3.1",
+    "bootstrap": "^4.3.1",
+    "jquery": "^1.9.1",
     "natives": "^1.1.6",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.7"
   },
   "devDependencies": {
     "del": "^3.0.0",
