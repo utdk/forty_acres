@@ -82,12 +82,3 @@
     }
   }
 }
-
-// stylelint-disable-next-line
-.image-wrapper {
-  // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(sm) {
-    margin-bottom: 1rem;
-    max-width: none;
-  }
-}

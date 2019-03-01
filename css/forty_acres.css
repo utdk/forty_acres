@@ -736,12 +736,6 @@ ul.ut-menu--list-bold {
     max-width: none;
   }
 }
-@media screen and (min-width: 600px) {
-  .image-wrapper {
-    max-width: none;
-    margin-bottom: 1rem;
-  }
-}
 .ut-flex-content-area-wrapper .image-wrapper {
   margin-bottom: 10px;
 }
