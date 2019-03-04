@@ -1,0 +1,9 @@
+.ut-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+*:focus,
+.ut-focus {
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 3px;
+}

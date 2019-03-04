@@ -2,7 +2,6 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var sequence = require("gulp-sequence");
 var autoprefixer = require("gulp-autoprefixer");
 var gulpStylelint = require("gulp-stylelint");
 var csscombx = require("gulp-csscombx");
@@ -40,4 +39,4 @@ gulp.task("css-lint", function lintCssTask() {
     }));
 });
 
-gulp.task("default", sequence("scss-lint", "sass", "css-lint"));
+gulp.task("default", gulp.series("scss-lint", "sass", "css-lint"));
