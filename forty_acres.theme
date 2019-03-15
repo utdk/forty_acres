@@ -7,7 +7,6 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
-use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_preprocess_page().
@@ -82,16 +81,33 @@ function forty_acres_theme_suggestions_block_alter(array &$suggestions, array $v
  * Implements hook_preprocess_breadcrumb().
  */
 function forty_acres_preprocess_breadcrumb(&$variables) {
+  // Use a placeholder to inject dynamic content.
+  $placeholder_title = [
+    '#lazy_builder' => ['_utexas_breadcrumbs_title_placeholder', ['page_title']],
+    '#create_placeholder' => TRUE,
+  ];
+  $variables['breadcrumb'][] = [
+    'text' => $placeholder_title,
+  ];
+}
 
-  if (($node = Node::load((int) \Drupal::service('current_route_match')->getRawParameter('node'))) && $variables['breadcrumb']) {
-
-    // Add the title of the page in the breadcrumb.
-    $variables['breadcrumb'][] = [
-      'text' => $node->getTitle(),
-      'url' => $node->URL(),
-    ];
-
-  }
+/**
+ * Return values for the breadcrumb title placeholder.
+ *
+ * @param string $page_title
+ *   The placeholder object for the page title.
+ *
+ * @return array
+ *   A render array.
+ */
+function _utexas_breadcrumbs_title_placeholder($page_title) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  $render_array = [
+    '#markup' => $title,
+  ];
+  return $render_array;
 }
 
 /**
