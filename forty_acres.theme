@@ -104,10 +104,10 @@ function _utexas_breadcrumbs_title_placeholder($page_title) {
   $request = \Drupal::request();
   $route_match = \Drupal::routeMatch();
   $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-  $render_array = [
-    '#markup' => $title,
-  ];
-  return $render_array;
+  if (is_string($title)) {
+    $title = ['#markup' => $title];
+  }
+  return $title;
 }
 
 /**
