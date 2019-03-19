@@ -1,0 +1,217 @@
+//
+// Form resets
+// These are the default look and feel for form elements.
+
+// Forms only Variables.
+// stylelint-disable-next-line plugin/no-browser-hacks
+$ut-input--font-color: $ut-charcoal--s40;
+// stylelint-disable-next-line plugin/no-browser-hacks
+$ut-input--placeholder: $ut-charcoal;
+
+// Form Focus Extension
+%ut-input--focus {
+  color: $ut-charcoal;
+  background-color: $ut-limestone--t40;
+  border: 1px solid $ut-charcoal;
+  // width: calc(100% + 1.9rem);
+}
+
+// ----------
+// Basic Input, Text Area, and select extension
+%ut-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $ut-white;
+  background-image: none;
+  background-clip: padding-box;
+  border: 2px solid $ut-shade--s40;
+  color: $ut-input--font-color;
+  display: block;
+  font-size: $ut-base-font-size;
+  line-height: $ut-text--line-height;
+  margin: 0.25em 0;
+  max-width: 46rem;
+  padding: 0.5rem 1em;
+  width: 100%;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  // Placeholder
+  &::placeholder {
+    color: $ut-shade--s40;
+    opacity: 1;
+  }
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-input--focus;
+  }
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    opacity: 1;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+// ----------
+// Text inputs and text areas
+input,
+optgroup,
+select,
+textarea {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-input;
+}
+
+// Labels in forms
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 2.25rem;
+  max-width: 46rem;
+}
+
+select {
+  background-color: $ut-white;
+  background-image: url(../images/arrow-both.svg);
+  background-position: right 1.25rem center;
+  background-repeat: no-repeat;
+  background-size: 0.675rem;
+  padding-right: 2.85rem;
+}
+
+textarea {
+  height: 16rem;
+  overflow: auto;
+}
+
+// ----------
+// Input Errors
+.ut-input--error {
+  border-left: 0.25rem solid $ut-error_red;
+  margin-top: 2.25rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  position: relative;
+  right: 1.9rem;
+  .error-label {
+    margin-top: 0;
+    font-weight: bold;
+  }
+  .error-message {
+    font-style: italic;
+    color: $ut-charcoal;
+  }
+}
+
+// Sucessful inputs
+// Unlike the above this is applied directly to the form element.
+.ut-input--success {
+  border: 2px solid $ut-turtlepond;
+}
+
+// Warning inputs
+// Unlike the above this is applied directly to the form element.
+.ut-input--warning {
+  border: 2px solid $ut-sunshine;
+}
+
+// Elements inside of a fieldset
+.ut-fieldset {
+  label {
+    margin-top: 0;
+  }
+}
+
+// ----------
+// Radio and Checkbox
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  position: absolute;
+  left: -999em;
+}
+
+[type="checkbox"] + label,
+[type="radio"] + label {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+[type="checkbox"] + label::before,
+[type="radio"] + label::before {
+  background: $ut-white;
+  box-shadow: 0 0 0 1px $ut-shade--s40;
+  content: "\a0";
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  margin-right: 0.75em;
+  text-indent: 0.15em;
+  vertical-align: middle;
+  width: 2rem;
+}
+
+[type="radio"] + label::before {
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px $ut-white, 0 0 0 3px $ut-shade--s40;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  margin-right: 0.75rem;
+  width: 1.4rem;
+}
+
+[type="checkbox"]:checked + label::before,
+[type="radio"]:checked + label::before {
+  background-color: $ut-bluebonnet;
+  box-shadow: 0 0 0 1px $ut-bluebonnet;
+}
+
+[type="radio"]:checked + label::before {
+  box-shadow: 0 0 0 2px $ut-white, 0 0 0 4px $ut-bluebonnet;
+}
+
+[type="checkbox"]:checked + label::before,
+[type="checkbox"]:checked:disabled + label::before {
+  background-image: url("../images/checkmark.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+// stylelint-disable no-descending-specificity
+[type="radio"]:focus + label::before,
+[type="checkbox"]:focus + label::before {
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 6px;
+}
+
+// Disabled inputs
+[type="checkbox"]:disabled + label {
+  color: #d6d7d9;
+}
+
+[type="checkbox"]:disabled + label::before,
+[type="radio"]:disabled + label::before {
+  background: $input-bg-disabled;
+  box-shadow: 0 0 0 1px #aeb0b5;
+  cursor: not-allowed;
+}

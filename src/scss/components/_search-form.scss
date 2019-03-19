@@ -32,6 +32,7 @@ div.search-block-form div.contextual {
     height: 2.25rem;
     padding-left: .5rem;
     width: 100%;
+    margin: 0;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       width: 218px;
@@ -49,6 +50,7 @@ div.search-block-form div.contextual {
     right: 0;
     position: absolute;
     top: 0;
+    margin: 0;
     width: 2.25rem;
     background-image: url(../images/search.svg);
     background-repeat: no-repeat;
