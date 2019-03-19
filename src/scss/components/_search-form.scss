@@ -17,7 +17,7 @@ div.search-block-form div.contextual {
   width: 100%;
   padding: 0;
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     margin-left: auto;
     width: 218px;
   }
@@ -34,7 +34,7 @@ div.search-block-form div.contextual {
     width: 100%;
     margin: 0;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       width: 218px;
     }
     &::placeholder {

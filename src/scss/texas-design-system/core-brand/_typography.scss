@@ -96,10 +96,6 @@ h6,
 .ut-h5,
 .ut-h6 {
   color: $ut-charcoal;
-  // TODO: confirm with Zach the purpose of lines 100 - 102
-  // article & {
-  //   padding-top: 1.25rem;
-  // }
 }
 
 p {
@@ -174,19 +170,14 @@ hr {
   color: $ut-charcoal;
 }
 // stylelint-disable-next-line at-rule-no-unknown
-@include screen-mq(large) {
-  article {
-    word-wrap: break-word;
-    p,
-    ul,
-    ol,
-    dt {
-      font-size: 1.125rem;
-    }
-  }
-}
-
-// +screen-mq(xl)
-//   article
-//     p, ul, ol, dt
-//       font-size: 1.25rem
+// @include screen-mq(lg) {
+//   article {
+//     word-wrap: break-word;
+//     p,
+//     ul,
+//     ol,
+//     dt {
+//       font-size: 1.125rem;
+//     }
+//   }
+// }

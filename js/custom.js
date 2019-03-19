@@ -109,7 +109,7 @@
         $('#ut-main_menu-wrapper').removeClass('active');
         resetDefaults();
         // Attach click event to chevron on mobile.
-        if (window.innerWidth < 900) {
+        if (window.innerWidth < 1200) {
           // Add click handler to mobile nav chevron.
           iconClick();
           // Remove mouseover and touchstart event from main menu.

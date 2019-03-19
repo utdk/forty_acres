@@ -3,13 +3,13 @@
 //
 header.ut-header {
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     padding-top: 1rem;
     padding-bottom: 0;
   }
   .region-primary-menu {
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       margin: 0;
       // this pushes the hr down enough for it to appear whole
       margin-bottom: 1px;
@@ -18,7 +18,7 @@ header.ut-header {
   .region-header-primary {
     padding: 10px 0;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       padding: 0;
     }
   }
@@ -26,7 +26,7 @@ header.ut-header {
   .ut-header-wrapper {
     justify-content: space-between;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       position: absolute;
       z-index: 1;
     }
@@ -34,7 +34,7 @@ header.ut-header {
   .header-flex-wrapper {
     margin-top: 20px;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       margin-top: unset;
       display: flex;
       justify-content: flex-end;
@@ -48,7 +48,7 @@ header.ut-header {
     display: flex;
     flex-direction: column;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       margin-left: 20px;
       padding: 0;
     }
@@ -59,7 +59,7 @@ header.ut-header {
       margin-bottom: 20px;
       margin-right: auto;
       // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
+      @include screen-mq(lg) {
         margin-right: unset;
         margin-left: auto;
       }
@@ -69,27 +69,28 @@ header.ut-header {
   // on #js-nav-toggle which toggles 'active' class on #ut-main_menu-wrapper.
   #ut-main_menu-wrapper {
     transition: background-color, color, 0.25s;
-    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       padding: 1rem;
       width: 100%;
       position: absolute;
       z-index: -100;
-      top: 60px;
+      top: 80px;
       left: 0;
       overflow: hidden;
-      overflow-y: scroll;
       overflow: hidden;
       opacity: 0;
       background-color: $ut-limestone--t20;
-      border-top: 1px solid $ut-shade--t60;
-      border-bottom: 1px solid $ut-shade--t60;
+      border: 1px solid $ut-shade--t60;
       display: flex;
       flex-flow: column-reverse;
       &.active {
         opacity: 1;
       }
     }
-    @media (min-width: map-get($grid-breakpoints, md) + 1px) {
+    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+      top: 60px;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg) + 1px) {
       position: relative;
     }
     &.active {

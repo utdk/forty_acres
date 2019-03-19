@@ -14,7 +14,7 @@
   padding: 0;
   z-index: 15;
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     flex-direction: row;
     margin-left: -10px;
     margin-right: -10px;
@@ -35,7 +35,7 @@
     flex-basis: 1%;
   }
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     display: inline-block;
   }
 
@@ -50,7 +50,7 @@
     margin: 0;
     padding: 0.5em 1em;
     position: relative;
-    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       width: calc(100% - 70px);
       &.add-border {
         border-top: 1px solid $ut-charcoal--t40;
@@ -58,7 +58,7 @@
       }
     }
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       transition: border, color, 100ms ease-in-out;
       background-color: $ut-white;
       display: inline-block;
@@ -68,7 +68,7 @@
       border-bottom: none;
       z-index: 3;
       // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
+      @include screen-mq(lg) {
         border: 1px solid $ut-charcoal--t40;
       }
     }
@@ -82,7 +82,7 @@
       color: $ut-burntorange;
       text-decoration: underline;
       // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
+      @include screen-mq(lg) {
         border-bottom: 1px solid transparent;
         margin-top: 1px;
         z-index: 3;
@@ -91,11 +91,11 @@
   }
   // L1 links with subnavs.
   &.menu-item-has-children > .main-menu__link {
-    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       border-right: 1px solid $ut-charcoal--t40;
     }
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       padding-right: 1.75rem;
       // Chevron icon animation on desktop.
       &:before {
@@ -131,7 +131,7 @@
     position: relative;
     transition: border, color, 0.33s ease-in-out;
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       background-color: $ut-white;
       display: inline-block;
       margin: 1px 0 0 0;
@@ -143,7 +143,7 @@
     &:focus,
     &.open {
       // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
+      @include screen-mq(lg) {
         outline-offset: 0;
       }
     }
@@ -181,7 +181,7 @@
     }
     // Hide icon on desktop resolution.
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
+    @include screen-mq(lg) {
       display: none;
     }
   }
@@ -190,7 +190,7 @@
 // Subnav panel.
 .sub-nav-wrapper {
   // Mobile only styles.
-  @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+  @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
     flex-basis: 100%;
   }
   .main-menu__list--subnav {
@@ -210,7 +210,7 @@
       text-transform: capitalize;
     }
     // Mobile only styles.
-    @media (max-width: map-get($grid-breakpoints, md) - 1px) {
+    @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       width: 100%;
       top: 0;
       background-color: $ut-limestone--t40;
@@ -227,7 +227,7 @@
   // Desktop only styles for subnavs that overflow the screen and
   // to determine the number of columns per subnav.
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     .main-menu__list-item--subnav {
       display: block;
       list-style-type: none;
@@ -274,7 +274,7 @@
   border-radius: 0;
   width: 6.5rem;
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
+  @include screen-mq(lg) {
     display: none;
   }
 }
