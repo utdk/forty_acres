@@ -215,3 +215,16 @@ input[type="radio"] {
   box-shadow: 0 0 0 1px #aeb0b5;
   cursor: not-allowed;
 }
+
+// Layout Builder form fixes for radios and checkboxes.
+#drupal-off-canvas input[type="checkbox"],
+#drupal-off-canvas input[type="radio"] {
+  display: inline-block;
+  width: 20px;
+}
+#drupal-off-canvas label {
+  display: inline-block;
+  &:before {
+    display: none;
+  }
+}

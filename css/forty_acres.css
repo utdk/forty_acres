@@ -1211,6 +1211,17 @@ input[type="radio"] {
   -webkit-box-shadow: 0 0 0 1px #aeb0b5;
   box-shadow: 0 0 0 1px #aeb0b5;
 }
+#drupal-off-canvas input[type="checkbox"],
+#drupal-off-canvas input[type="radio"] {
+  display: inline-block;
+  width: 20px;
+}
+#drupal-off-canvas label {
+  display: inline-block;
+}
+#drupal-off-canvas label:before {
+  display: none;
+}
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
