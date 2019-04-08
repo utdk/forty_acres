@@ -21,8 +21,8 @@
           hoverClass: "hover",
           focusClass: "focus",
           openClass: "open",
-          openDelay: 100,
-          closeDelay: 100
+          openDelay: 0,
+          closeDelay: 250
       });
 
       // Enable main menu dropdown trigger and set aria-expanded attribute.

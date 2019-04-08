@@ -14,7 +14,7 @@
   "author": "Mike Marsello",
   "license": "ISC",
   "dependencies": {
-    "accessible-mega-menu": "git+https://github.com/utexas-its-wcs/Accessible-Mega-Menu.git",
+    "accessible-mega-menu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu#84b7461e4719e0c33a902b94b1247e0e7f7ea5c9",
     "bootstrap": "^4.3.1",
     "jquery": "^1.9.1",
     "natives": "^1.1.6",

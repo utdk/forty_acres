@@ -29,10 +29,10 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('main-menu__list') }} role="menu">
+      <ul{{ attributes.addClass('main-menu__list') }}>
     {% else %}
       <div class="sub-nav-wrapper">
-        <ul class='main-menu__list--subnav' role="menu">
+        <ul class='main-menu__list--subnav'>
     {% endif %}
     {% for item in items %}
       {%
@@ -42,7 +42,7 @@
           item.in_active_trail ? 'active',
         ]
       %}
-      <li{{ item.attributes.addClass(item_classes) }} role="menuitem">
+      <li{{ item.attributes.addClass(item_classes) }}>
         {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--subnav' %}
         {{ link(item.title, item.url, { 'class':[link_class]}) }}
         {% if item.is_expanded %}

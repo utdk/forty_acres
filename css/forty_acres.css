@@ -195,9 +195,6 @@ header.ut-header .ut-header-wrapper .ut-main_logo {
 .ut-search_bar .input--search::-webkit-input-placeholder {
   font-style: italic;
 }
-.ut-search_bar .input--search:-ms-input-placeholder {
-  font-style: italic;
-}
 .ut-search_bar .input--search::-ms-input-placeholder {
   font-style: italic;
 }
@@ -1051,13 +1048,6 @@ textarea::-webkit-input-placeholder {
   opacity: 1;
   color: #5e686e;
 }
-input:-ms-input-placeholder,
-optgroup:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  opacity: 1;
-  color: #5e686e;
-}
 input::-ms-input-placeholder,
 optgroup::-ms-input-placeholder,
 select::-ms-input-placeholder,
@@ -1472,6 +1462,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: stretch;
@@ -1861,9 +1854,6 @@ div.search-block-form div.contextual {
   }
 }
 .ut-search-form input[type="search"]::-webkit-input-placeholder {
-  font-style: italic;
-}
-.ut-search-form input[type="search"]:-ms-input-placeholder {
   font-style: italic;
 }
 .ut-search-form input[type="search"]::-ms-input-placeholder {

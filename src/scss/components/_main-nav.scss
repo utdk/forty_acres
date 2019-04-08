@@ -31,6 +31,7 @@
   margin: 0;
   position: relative;
   align-items: stretch;
+  flex-grow: 0;
   &.breaks-two-lines {
     flex-basis: 1%;
   }
