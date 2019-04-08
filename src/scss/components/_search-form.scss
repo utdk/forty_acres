@@ -29,9 +29,10 @@ div.search-block-form div.contextual {
   input[type="search"] {
     border: none;
     background: transparent;
-    height: 2.25rem;
+    height: 2rem;
     padding-left: .5rem;
     width: 100%;
+    max-width: unset;
     margin: 0;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
@@ -44,21 +45,55 @@ div.search-block-form div.contextual {
 
   input[type="submit"] {
     border: none;
-    background: none;
-    height: 2.1rem;
+    height: 2rem;
     line-height: 2;
     right: 0;
     position: absolute;
     top: 0;
     margin: 0;
     width: 2.25rem;
-    background-image: url(../images/search.svg);
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 10px;
     color: transparent;
+    background-color: transparent;
+    z-index: 1;
     &:hover {
       cursor: pointer;
     }
+  }
+  .svg.search {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    z-index: 0;
+    width: 24px;
+    height: 24px;
+    fill: $ut-burntorange;
+  }
+}
+
+form.search-form {
+  position: relative;
+  input {
+    max-width: unset;
+  }
+  #edit-keys {
+    background: transparent;
+  }
+  #edit-submit {
+    position: absolute;
+    width: 50px;
+    top: 25px;
+    right: 0;
+    border: none;
+    background: transparent;
+    color: transparent;
+  }
+  .svg.search {
+    fill: $ut-burntorange;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    z-index: -1;
   }
 }

@@ -98,23 +98,17 @@
     @include screen-mq(lg) {
       padding-right: 1.75rem;
       // Chevron icon animation on desktop.
-      &:before {
-        content: "";
+      &:after {
+        content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 18 28"><path d="M16.797 11.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359z"></path></svg>');
         position: absolute;
-        right: 1px;
-        bottom: 6px;
-        width: 20px;
-        height: 100%;
-        background-image: url(../images/chevron-down.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        transition: bottom 100ms ease-in;
+        padding-left: 10px;
+        top: 8px;
+        transition: top 100ms ease-in;
       }
       &.hover,
       &.open {
-        &:before {
-          bottom: 0;
+        &:after {
+          top: 12px;
         }
       }
     }
@@ -160,22 +154,17 @@
     top: 0;
     z-index: 100;
     width: 70px;
-    // Place chevron in pseudoclass so it can be rotated without moving its container.
-    &:before {
-      content: "";
-      height: 35px;
-      width: 35px;
-      background-image: url(../images/chevron-down.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 5px 4px;
+    .svg.angle-down {
+      width: 24px;
+      height: 24px;
       transform: rotate(-90deg);
+      transition: transform .1s ease-in;
     }
     // Animation on click event.
     &.icon--open {
       border-right: 1px solid $ut-charcoal--t40;
       border-top: 1px solid $ut-charcoal--t40;
-      &:before {
+      .svg.angle-down {
         transform: rotate(0deg);
       }
     }

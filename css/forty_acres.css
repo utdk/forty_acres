@@ -1553,23 +1553,17 @@ img {
   .main-menu__list-item.menu-item-has-children > .main-menu__link {
     padding-right: 1.75rem;
   }
-  .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
+  .main-menu__list-item.menu-item-has-children > .main-menu__link:after {
     position: absolute;
-    right: 1px;
-    bottom: 6px;
-    width: 20px;
-    height: 100%;
-    content: "";
-    -webkit-transition: bottom 100ms ease-in;
-    transition: bottom 100ms ease-in;
-    background-image: url(../images/chevron-down.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    top: 8px;
+    padding-left: 10px;
+    content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"9\" height=\"14\" viewBox=\"0 0 18 28\"><path d=\"M16.797 11.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359z\"></path></svg>");
+    -webkit-transition: top 100ms ease-in;
+    transition: top 100ms ease-in;
   }
-  .main-menu__list-item.menu-item-has-children > .main-menu__link.hover:before,
-  .main-menu__list-item.menu-item-has-children > .main-menu__link.open:before {
-    bottom: 0;
+  .main-menu__list-item.menu-item-has-children > .main-menu__link.hover:after,
+  .main-menu__list-item.menu-item-has-children > .main-menu__link.open:after {
+    top: 12px;
   }
 }
 .main-menu__list-item .main-menu__link--subnav {
@@ -1616,22 +1610,21 @@ img {
   width: 70px;
   cursor: pointer;
 }
-.main-menu__list-item i.subnav-trigger:before {
-  width: 35px;
-  height: 35px;
-  content: "";
+.main-menu__list-item i.subnav-trigger .svg.angle-down {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  background-image: url(../images/chevron-down.svg);
-  background-repeat: no-repeat;
-  background-position: 5px 4px;
-  background-size: contain;
 }
 .main-menu__list-item i.subnav-trigger.icon--open {
   border-top: 1px solid #c2c5c8;
   border-right: 1px solid #c2c5c8;
 }
-.main-menu__list-item i.subnav-trigger.icon--open:before {
+.main-menu__list-item i.subnav-trigger.icon--open .svg.angle-down {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
@@ -1855,7 +1848,8 @@ div.search-block-form div.contextual {
 }
 .ut-search-form input[type="search"] {
   width: 100%;
-  height: 2.25rem;
+  max-width: unset;
+  height: 2rem;
   margin: 0;
   padding-left: 0.5rem;
   border: none;
@@ -1880,22 +1874,57 @@ div.search-block-form div.contextual {
 }
 .ut-search-form input[type="submit"] {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   width: 2.25rem;
-  height: 2.1rem;
+  height: 2rem;
   margin: 0;
   color: transparent;
   border: none;
-  background: none;
-  background-image: url(../images/search.svg);
-  background-repeat: no-repeat;
-  background-position: 10px;
-  background-size: 20px;
+  background-color: transparent;
   line-height: 2;
 }
 .ut-search-form input[type="submit"]:hover {
   cursor: pointer;
+}
+.ut-search-form .svg.search {
+  position: absolute;
+  z-index: 0;
+  top: 3px;
+  right: 3px;
+  width: 24px;
+  height: 24px;
+
+  fill: #bf5700;
+}
+form.search-form {
+  position: relative;
+}
+form.search-form input {
+  max-width: unset;
+}
+form.search-form #edit-keys {
+  background: transparent;
+}
+form.search-form #edit-submit {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 50px;
+  color: transparent;
+  border: none;
+  background: transparent;
+}
+form.search-form .svg.search {
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+  fill: #bf5700;
 }
 #block-breadcrumbs {
   margin: 1rem 0;
