@@ -1013,7 +1013,7 @@ optgroup:focus,
 select:focus,
 textarea:focus {
   color: #333f48;
-  border: 1px solid #333f48;
+  border: 2px solid #333f48;
   background-color: #f2f1ed;
 }
 input,
