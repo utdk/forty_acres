@@ -769,7 +769,7 @@ ul.ut-menu--list-bold {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .ut-promo-list-wrapper.two-column-responsive .utexas-promo-list {
+  .ut-promo-list-wrapper.two-column-responsive .promo-list {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 45%;
     flex: 0 1 45%;
@@ -777,27 +777,27 @@ ul.ut-menu--list-bold {
     padding-bottom: 1.25rem;
     border-bottom: 1px solid #ebeced;
   }
-  .ut-promo-list-wrapper.two-column-responsive .utexas-promo-list + .utexas-promo-list {
+  .ut-promo-list-wrapper.two-column-responsive .promo-list + .promo-list {
     padding-top: 0;
     border-top: none;
   }
-  .ut-promo-list-wrapper.two-column-responsive .utexas-promo-list.column-bottom {
+  .ut-promo-list-wrapper.two-column-responsive .promo-list.column-bottom {
     border-bottom: none;
   }
 }
-.ut-promo-list-wrapper .utexas-promo-list {
+.ut-promo-list-wrapper .promo-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 1.25rem;
   padding-bottom: 1.25rem;
 }
-.ut-promo-list-wrapper .utexas-promo-list + .utexas-promo-list {
+.ut-promo-list-wrapper .promo-list + .promo-list {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   border-top: 1px solid #ebeced;
 }
-.ut-promo-list-wrapper .utexas-promo-list .image-wrapper {
+.ut-promo-list-wrapper .promo-list .image-wrapper {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 4rem;
   flex: 0 0 4rem;
@@ -805,79 +805,33 @@ ul.ut-menu--list-bold {
   margin-bottom: 0;
 }
 @media screen and (min-width: 900px) {
-  .ut-promo-list-wrapper .utexas-promo-list .image-wrapper {
+  .ut-promo-list-wrapper .promo-list .image-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 68px;
     flex: 0 0 68px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .ut-promo-list-wrapper .utexas-promo-list .image-wrapper {
+  .ut-promo-list-wrapper .promo-list .image-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 85px;
     flex: 0 0 85px;
   }
 }
-.ut-promo-list-wrapper .utexas-promo-list .image-wrapper img {
+.ut-promo-list-wrapper .promo-list .image-wrapper img {
   width: 100%;
 }
-.ut-promo-list-wrapper .utexas-promo-list .ut-copy p:last-child {
+.ut-promo-list-wrapper .promo-list .ut-copy p:last-child {
   margin-bottom: 0;
 }
-.ut-promo-list-wrapper .utexas-promo-list .ut-headline {
+.ut-promo-list-wrapper .promo-list .ut-headline {
   padding-top: 0;
-  font-weight: 500;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
-.ut-promo-list-wrapper .utexas-promo-list a > .ut-headline {
+.ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
-}
-@media screen and (min-width: 600px) {
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .utexas-promo-list {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .image-wrapper {
-    margin-right: 0;
-    margin-bottom: 0.9375rem;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .ut-copy {
-    margin-top: 0.9375rem;
-  }
-}
-@media screen and (min-width: 900px) {
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper {
-    -webkit-box-orient: inherit;
-    -webkit-box-direction: inherit;
-    -ms-flex-direction: inherit;
-    flex-direction: inherit;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .utexas-promo-list {
-    -webkit-box-flex: inherit;
-    -ms-flex: inherit;
-    flex: inherit;
-    -webkit-box-orient: inherit;
-    -webkit-box-direction: inherit;
-    -ms-flex-direction: inherit;
-    flex-direction: inherit;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .image-wrapper {
-    margin-right: inherit;
-    margin-bottom: inherit;
-  }
-  .layout--utexas-66-33--container .layout__region--sidebar .ut-promo-list-wrapper .ut-copy {
-    margin-top: inherit;
-  }
 }
 .utexas-promo-unit {
   display: -webkit-box;

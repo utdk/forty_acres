@@ -12,12 +12,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      .utexas-promo-list {
+      .promo-list {
         flex: 0 1 45%;
         padding-bottom: rem-calc(20);
         margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
         border-bottom: 1px solid $ut-charcoal--t20;
-        + .utexas-promo-list {
+        + .promo-list {
           border-top: none;
           padding-top: 0;
         }
@@ -27,11 +27,11 @@
       }
     }
   }
-  .utexas-promo-list {
+  .promo-list {
     display: flex;
     padding-bottom: rem-calc(20);
     margin: 0 rem-calc(20);
-    + .utexas-promo-list {
+    + .promo-list {
       border-top: 1px solid $ut-charcoal--t20;
       padding-bottom: rem-calc(20);
       padding-top: rem-calc(20);
@@ -58,48 +58,13 @@
       }
     }
     .ut-headline {
-      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      font-weight: 400;
       padding-top: 0;
     }
     a > .ut-headline {
       color: $ut-burntorange;
-    }
-  }
-}
-
-.layout--utexas-66-33--container {
-  .layout__region--sidebar {
-    .ut-promo-list-wrapper {
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(sm) {
-        flex-direction: column;
-        .utexas-promo-list {
-          flex-direction: column;
-          flex: 0 0 100%;
-        }
-        .image-wrapper {
-          margin-right: 0;
-          margin-bottom: rem-calc(15);
-        }
-        .ut-copy {
-          margin-top: rem-calc(15);
-        }
-      }
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
-        flex-direction: inherit;
-        .utexas-promo-list {
-          flex-direction: inherit;
-          flex: inherit;
-        }
-        .image-wrapper {
-          margin-right: inherit;
-          margin-bottom: inherit;
-        }
-        .ut-copy {
-          margin-top: inherit;
-        }
-      }
     }
   }
 }
