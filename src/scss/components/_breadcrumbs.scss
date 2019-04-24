@@ -8,22 +8,21 @@
     li {
       list-style: none;
       display: inline-block;
-      padding: 0 12px;
-      font-size: 11px;
+      font-size: rem-calc(11);
       background-color: #fff;
-      padding: 8px 0 10px 0;
+      padding: rem-calc(8) 0 rem-calc(10) 0;
       border-bottom: 1px solid #e1ddd2;
       border-top: 1px solid #e1ddd2;
       &::before {
         color: #AAAAAA;
         content: ">";
-        margin: 0 8px 0 13px;
+        margin: 0 rem-calc(8) 0 rem-calc(13);
         position: relative;
         top: 1px;
       }
       &:first-child {
         border-left: 1px solid #e1ddd2;
-        padding-left: 15px;
+        padding-left: rem-calc(15);
         &::before {
           content: "";
           margin: 0;
@@ -31,7 +30,7 @@
       }
       &:last-child {
         border-right: 1px solid #e1ddd2;
-        padding-right: 15px;
+        padding-right: rem-calc(15);
       }
       a {
         color: $ut-burntorange;

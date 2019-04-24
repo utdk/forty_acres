@@ -7,16 +7,16 @@
 
 .ut-flex-content-area-wrapper {
   .image-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: rem-calc(10);
   }
   .ut-flex-content-area {
-    margin-bottom: 20px;
+    margin-bottom: rem-calc(20);
   }
   .link-list {
     // stylelint-disable-next-line at-rule-no-unknown
     @include list-style-none;
     li {
-      margin-bottom: 9px;
+      margin-bottom: rem-calc(9);
     }
   }
   .ut-headline {

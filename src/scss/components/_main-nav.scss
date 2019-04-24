@@ -32,9 +32,6 @@
   position: relative;
   align-items: stretch;
   flex-grow: 0;
-  &.breaks-two-lines {
-    flex-basis: 1%;
-  }
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(lg) {
     display: inline-block;
@@ -85,7 +82,7 @@
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
         border-bottom: 1px solid transparent;
-        margin-top: 1px;
+        margin-top: rem-calc(1);
         z-index: 3;
       }
     }
@@ -102,14 +99,14 @@
       &:after {
         content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 18 28"><path d="M16.797 11.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359z"></path></svg>');
         position: absolute;
-        padding-left: 10px;
-        top: 8px;
+        padding-left: rem-calc(10);
+        top: rem-calc(8);
         transition: top 100ms ease-in;
       }
       &.hover,
       &.open {
         &:after {
-          top: 12px;
+          top: rem-calc(12);
         }
       }
     }
@@ -122,15 +119,15 @@
     font-weight: 600;
     display: block;
     margin: 0;
-    padding: 0 25px;
+    padding: 0 rem-calc(25);
     position: relative;
     transition: border, color, 0.33s ease-in-out;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       background-color: $ut-white;
       display: inline-block;
-      margin: 1px 0 0 0;
-      padding: 0.5em 1em;
+      margin: rem-calc(1) 0 0 0;
+      padding: 0.5rem 1rem;
     }
     // Focus/open/hover states of first descendant link within a second level
     // navigation item (subnav ul > li > a).
@@ -206,7 +203,7 @@
       background-color: $ut-limestone--t40;
       position: relative;
       max-height: 0;
-      padding: 0 25px;
+      padding: 0 rem-calc(25);
     }
     &.open {
       display: block;
@@ -222,7 +219,7 @@
       display: block;
       list-style-type: none;
       margin: 0;
-      padding: 3px 0;
+      padding: rem-calc(3) 0;
     }
     &.overflowing .main-menu__list--subnav {
       right: 0;

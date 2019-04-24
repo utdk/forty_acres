@@ -3,7 +3,7 @@
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(md) {
     position: absolute;
-    top: -54px;
+    top: rem-calc(-54);
   }
   a {
     color: $ut-charcoal;
@@ -12,7 +12,7 @@
     @include screen-mq(md) {
       color: $ut-white;
       font-family: $ut-font--serif;
-      font-size: 14px;
+      font-size: rem-calc(14);
     }
   }
 }

@@ -6,10 +6,10 @@
 
 .utexas-featured-highlight {
   color: #000;
-  padding: 60px 10px;
+  padding: rem-calc(60) rem-calc(10);
   display: flex;
   align-items: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 rem-calc(20) 0;
   background-color: $ut-limestone;
   flex-direction: column;
   // stylelint-disable-next-line at-rule-no-unknown
@@ -30,10 +30,10 @@
     }
   }
   .content-wrapper {
-    padding-left: 30px;
+    padding-left: rem-calc(30);
     .ut-date {
       font-style: italic;
-      margin-bottom: 12px;
+      margin-bottom: rem-calc(12);
     }
     .ut-headline {
       padding-top: 0;

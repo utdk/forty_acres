@@ -14,8 +14,8 @@
       justify-content: space-between;
       .utexas-promo-list {
         flex: 0 1 45%;
-        padding-bottom: 20px;
-        margin: 0 20px 20px 20px;
+        padding-bottom: rem-calc(20);
+        margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
         border-bottom: 1px solid $ut-charcoal--t20;
         + .utexas-promo-list {
           border-top: none;
@@ -29,16 +29,16 @@
   }
   .utexas-promo-list {
     display: flex;
-    padding-bottom: 20px;
-    margin: 0 20px;
+    padding-bottom: rem-calc(20);
+    margin: 0 rem-calc(20);
     + .utexas-promo-list {
       border-top: 1px solid $ut-charcoal--t20;
-      padding-bottom: 20px;
-      padding-top: 20px;
+      padding-bottom: rem-calc(20);
+      padding-top: rem-calc(20);
     }
     .image-wrapper {
-      flex: 0 0 64px;
-      margin-right: 12px;
+      flex: 0 0 rem-calc(64);
+      margin-right: rem-calc(12);
       margin-bottom: 0;
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
@@ -79,10 +79,10 @@
         }
         .image-wrapper {
           margin-right: 0;
-          margin-bottom: 15px;
+          margin-bottom: rem-calc(15);
         }
         .ut-copy {
-          margin-top: 15px;
+          margin-top: rem-calc(15);
         }
       }
       // stylelint-disable-next-line at-rule-no-unknown

@@ -2,7 +2,7 @@
 
 .utexas-quick-links {
   .ut-headline {
-    margin-bottom: 15px;
+    margin-bottom: rem-calc(15);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       font-size: 1.125rem;
@@ -12,7 +12,7 @@
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       font-size: 1.25rem;
-      line-height: 1.6875rem;
+      line-height: 1.6875;
     }
   }
   .ut-copy {
@@ -23,7 +23,7 @@
     padding-left: 0;
     margin-bottom: 0;
     li {
-      padding-bottom: 30px;
+      padding-bottom: rem-calc(30);
     }
     a.ut-link {
       font-weight: 500;

@@ -6,7 +6,7 @@
 
 .utexas-resource {
   display: flex;
-  margin: 0 0 20px 0;
+  margin: 0 0 rem-calc(20) 0;
   background-color: $ut-limestone--t20;
   border: 1px solid $ut-limestone--t40;
   flex-direction: column;
@@ -24,7 +24,7 @@
   }
   .data-wrapper {
     flex: 0 0 50%;
-    padding: 20px;
+    padding: rem-calc(20);
   }
   .link-list {
     // stylelint-disable-next-line at-rule-no-unknown
@@ -32,7 +32,7 @@
 
     margin-bottom: 0;
     li {
-      padding-bottom: 9px;
+      padding-bottom: rem-calc(9);
     }
   }
 }
@@ -42,7 +42,7 @@
 .utexas-resource {
   .ut-headline {
     padding-top: 0;
-    padding-bottom: 10px;
+    padding-bottom: rem-calc(10);
   }
   picture img {
     width: 100%;

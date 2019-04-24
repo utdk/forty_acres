@@ -16,7 +16,7 @@ header.ut-header {
     }
   }
   .region-header-primary {
-    padding: 10px 0;
+    padding: rem-calc(10) 0;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       padding: 0;
@@ -32,7 +32,7 @@ header.ut-header {
     }
   }
   .header-flex-wrapper {
-    margin-top: 20px;
+    margin-top: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       margin-top: unset;
@@ -49,14 +49,14 @@ header.ut-header {
     flex-direction: column;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
-      margin-left: 20px;
+      margin-left: rem-calc(20);
       padding: 0;
     }
     // Add some vertical space between direct descendant divs and navs in case where
     // multiple blocks have been added to header regions
     & > div,
     & > nav {
-      margin-bottom: 20px;
+      margin-bottom: rem-calc(20);
       margin-right: auto;
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
@@ -74,7 +74,7 @@ header.ut-header {
       width: 100%;
       position: absolute;
       z-index: -100;
-      top: 80px;
+      top: rem-calc(80);
       left: 0;
       overflow: hidden;
       overflow: hidden;
@@ -88,7 +88,7 @@ header.ut-header {
       }
     }
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-      top: 60px;
+      top: rem-calc(60);
     }
     @media (min-width: map-get($grid-breakpoints, lg) + 1px) {
       position: relative;

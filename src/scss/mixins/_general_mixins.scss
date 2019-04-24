@@ -6,6 +6,8 @@
 // Block Modifier @access public
 // @param {String} $modifer - Modifier's name
 // stylelint-disable at-rule-no-unknown
+// stylelint-disable plugin/no-browser-hacks
+// stylelint-disable length-zero-no-unit
 @mixin mod($modifier) {
   &--#{$modifier} {
     @content;
@@ -59,5 +61,33 @@
   display: block;
   clear: both;
   content: "";
+}
+
+// ----------
+// Strip unit of measure
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// ----------
+// Convert the value to rem
+@function convert-to-rem($value, $base-value: $ut-rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+// ----------
+// rem-calc function to convert pixel values to rem values
+@function rem-calc($values, $base-value: $ut-rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
 }
 // stylelint-enable

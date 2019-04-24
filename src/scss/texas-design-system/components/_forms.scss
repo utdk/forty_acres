@@ -164,7 +164,7 @@ input[type="radio"] {
   content: "\a0";
   display: inline-block;
   height: 2rem;
-  line-height: 2rem;
+  line-height: 2;
   margin-right: 0.75em;
   text-indent: 0.15em;
   vertical-align: middle;
@@ -175,7 +175,7 @@ input[type="radio"] {
   border-radius: 100%;
   box-shadow: 0 0 0 2px $ut-white, 0 0 0 3px $ut-shade--s40;
   height: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.4;
   margin-right: 0.75rem;
   width: 1.4rem;
 }

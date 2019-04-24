@@ -10,8 +10,8 @@
     border-collapse: collapse;
     height: auto;
     list-style: none;
-    margin: 5px;
-    padding: 0 0 3px 1em;
+    margin: rem-calc(5);
+    padding: 0 0 rem-calc(3) 1rem;
     white-space: nowrap;
     box-sizing: border-box;
     line-height: normal;
@@ -26,8 +26,8 @@
         border-width: 1px;
         border-radius: 3px 3px 0 0;
         height: auto;
-        margin-right: 0.5em;
-        padding: 4px 1em 3px;
+        margin-right: 0.5rem;
+        padding: rem-calc(4) 1rem rem-calc(3);
         text-decoration: none;
         color: #333;
 
@@ -48,8 +48,8 @@
   // Styles imported from bartik/css/components/tabs.css
   ul.tabs.secondary {
     border-bottom: none;
-    margin: 5px;
-    padding: 0.5em 0;
+    margin: rem-calc(5);
+    padding: 0.5rem 0;
     overflow: hidden;
   }
   ul.tabs.secondary li {
@@ -57,7 +57,7 @@
     display: block;
     float: left; /* LTR */
     margin: 0;
-    padding: 0 1em;
+    padding: 0 1rem;
   }
   [dir="rtl"] ul.tabs.secondary li {
     border-left: 1px solid #ccc;
@@ -79,7 +79,7 @@
   // stylelint-disable-next-line no-descending-specificity
   ul.tabs.secondary li a {
     display: inline;
-    padding: 0.25em 0.5em;
+    padding: 0.25rem 0.5rem;
     text-decoration: none;
   }
   ul.tabs.secondary li a.is-active {

@@ -5,15 +5,15 @@
 .ut-photo-content-area {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: rem-calc(20);
   // stylelint-disable at-rule-no-unknown
   @include screen-mq(sm) {
     flex-direction: row;
-    margin-bottom: 40px;
+    margin-bottom: rem-calc(40);
   }
 
   .photo-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: rem-calc(10);
     @include screen-mq(sm) {
       flex: 0 0 50%;
       text-align: center;
@@ -22,7 +22,7 @@
     .caption {
       font-style: italic;
       font-size: 0.875rem;
-      line-height: 1.25rem;
+      line-height: 1.25;
       margin: auto;
       text-align: left;
       @include screen-mq(sm) {
@@ -38,14 +38,14 @@
   }
 
   .ut-headline {
-    margin-bottom: 10px;
+    margin-bottom: rem-calc(10);
   }
 
   ul.link-list {
     @include list-style-none;
 
     li {
-      margin-bottom: 9px;
+      margin-bottom: rem-calc(10);
     }
   }
 

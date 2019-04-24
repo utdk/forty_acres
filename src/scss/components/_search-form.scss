@@ -61,8 +61,8 @@ div.search-block-form div.contextual {
   }
   .svg.search {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: rem-calc(3);
+    right: rem-calc(3);
     z-index: 0;
     width: 24px;
     height: 24px;
@@ -81,7 +81,7 @@ form.search-form {
   #edit-submit {
     position: absolute;
     width: 50px;
-    top: 25px;
+    top: rem-calc(25);
     right: 0;
     border: none;
     background: transparent;
@@ -92,8 +92,8 @@ form.search-form {
     width: 30px;
     height: 30px;
     position: absolute;
-    right: 10px;
-    top: 35px;
+    right: rem-calc(10);
+    top: rem-calc(35);
     z-index: -1;
   }
 }
