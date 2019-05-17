@@ -1,70 +1,17 @@
 //
-// Promo List Theme File
+// Promo List widget styles
 //
 
 // ----------
 // Component SCSS
 
-.ut-promo-list-wrapper {
-  &.two-column-responsive {
-    // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(lg) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .promo-list {
-        flex: 0 1 45%;
-        padding-bottom: rem-calc(20);
-        margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
-        border-bottom: 1px solid $ut-charcoal--t20;
-        + .promo-list {
-          border-top: none;
-          padding-top: 0;
-        }
-        &.column-bottom {
-          border-bottom: none;
-        }
-      }
-    }
+.ut-promo-list-wrapper .promo-list {
+  .ut-headline {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 500;
   }
-  .promo-list {
-    display: flex;
-    padding-bottom: rem-calc(20);
-    margin: 0 rem-calc(20);
-    + .promo-list {
-      border-top: 1px solid $ut-charcoal--t20;
-      padding-bottom: rem-calc(20);
-      padding-top: rem-calc(20);
-    }
-    .image-wrapper {
-      flex: 0 0 rem-calc(64);
-      margin-right: rem-calc(12);
-      margin-bottom: 0;
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
-        flex: 0 0 68px;
-      }
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(lg) {
-        flex: 0 0 85px;
-      }
-      img {
-        width: 100%;
-      }
-    }
-    .ut-copy {
-      p:last-child() {
-        margin-bottom: 0;
-      }
-    }
-    .ut-headline {
-      font-size: 1.125rem;
-      line-height: 1.5;
-      font-weight: 400;
-      padding-top: 0;
-    }
-    a > .ut-headline {
-      color: $ut-burntorange;
-    }
+  a > .ut-headline {
+    color: $ut-burntorange;
   }
 }
