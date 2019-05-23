@@ -16,24 +16,19 @@
   "dependencies": {
     "accessible-mega-menu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu#84b7461e4719e0c33a902b94b1247e0e7f7ea5c9",
     "bootstrap": "^4.3.1",
-    "jquery": "^1.9.1",
     "natives": "^1.1.6",
-    "popper.js": "^1.14.7"
-  },
-  "devDependencies": {
-    "del": "^3.0.0",
+    "popper.js": "^1.14.7",
     "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-cli": "^2.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cli": "^2.1.0",
     "gulp-csscombx": "^4.2.1",
-    "gulp-sass": "^4.0.1",
-    "gulp-sequence": "^1.0.0",
-    "gulp-stylelint": "^7.0.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
     "lodash": "^4.17.11",
-    "stylelint": "^9.3.0",
-    "stylelint-checkstyle-formatter": "^0.1.1",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-no-browser-hacks": "^1.1.0"
+    "stylelint": "^10.0.1",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-no-browser-hacks": "^1.2.1"
   }
 }
