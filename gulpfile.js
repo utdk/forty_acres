@@ -29,17 +29,6 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("css"));
 });
 
-gulp.task("css-lint", function lintCssTask() {
-  return gulp
-    .src("./css/**/*.css")
-    .pipe(gulpStylelint({
-      reporters: [
-        {formatter: "string", console: true}
-      ],
-      failAfterError: false
-    }));
-});
-
 gulp.task('copy-js', function () {
   return gulp
     .src('./node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js')
@@ -47,4 +36,4 @@ gulp.task('copy-js', function () {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task("default", gulp.series("scss-lint", "sass", "css-lint", "copy-js"));
+gulp.task("default", gulp.series("scss-lint", "sass", "copy-js"));

@@ -195,12 +195,6 @@ header.ut-header .ut-header-wrapper .ut-main_logo {
 .ut-search_bar .input--search::-webkit-input-placeholder {
   font-style: italic;
 }
-.ut-search_bar .input--search::-moz-placeholder {
-  font-style: italic;
-}
-.ut-search_bar .input--search:-ms-input-placeholder {
-  font-style: italic;
-}
 .ut-search_bar .input--search::-ms-input-placeholder {
   font-style: italic;
 }
@@ -692,20 +686,6 @@ input::-webkit-input-placeholder,
 optgroup::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  opacity: 1;
-  color: #5e686e;
-}
-input::-moz-placeholder,
-optgroup::-moz-placeholder,
-select::-moz-placeholder,
-textarea::-moz-placeholder {
-  opacity: 1;
-  color: #5e686e;
-}
-input:-ms-input-placeholder,
-optgroup:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
   opacity: 1;
   color: #5e686e;
 }
@@ -1511,12 +1491,6 @@ div.search-block-form div.contextual {
   }
 }
 .ut-search-form input[type="search"]::-webkit-input-placeholder {
-  font-style: italic;
-}
-.ut-search-form input[type="search"]::-moz-placeholder {
-  font-style: italic;
-}
-.ut-search-form input[type="search"]:-ms-input-placeholder {
   font-style: italic;
 }
 .ut-search-form input[type="search"]::-ms-input-placeholder {
