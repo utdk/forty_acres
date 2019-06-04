@@ -1,0 +1,11 @@
+/*
+Texas Design System input manipulation is incompatible with Drupal's Media
+Library checkboxes. See UDK8-1055.
+*/
+.media-library-item input[type="checkbox"],
+.media-library-item input[type="radio"] {
+  position: relative;
+  left: 0;
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+}
