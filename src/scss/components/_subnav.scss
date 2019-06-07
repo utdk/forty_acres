@@ -16,6 +16,7 @@ ul.subnav {
     font-size: rem-calc(14);
     line-height: rem-calc(20);
     padding: 7px 5px 7px 15px;
+    margin-bottom: 5px;
     border-left: 1px solid $ut-shade--s20;
     list-style-type: none;
     display: block;
@@ -29,7 +30,7 @@ ul.subnav {
     padding-left: 5px;
     li {
       padding: 5px 3px 5px 15px;
-      margin: 4px 0 4px 0;
+      margin: 2px 0 2px 0;
     }
     li a {
       font-weight: 400;

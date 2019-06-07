@@ -1403,6 +1403,7 @@ ul.subnav li {
 }
 ul.subnav li a {
   display: block;
+  margin-bottom: 5px;
   padding: 7px 5px 7px 15px;
   list-style-type: none;
   color: #9d4700;
@@ -1419,7 +1420,7 @@ ul.subnav ul {
   padding-left: 5px;
 }
 ul.subnav ul li {
-  margin: 4px 0 4px 0;
+  margin: 2px 0 2px 0;
   padding: 5px 3px 5px 15px;
 }
 ul.subnav ul li a {
