@@ -1641,14 +1641,14 @@ form.search-form .svg.search {
 
   fill: #bf5700;
 }
-#block-breadcrumbs {
+.block-system-breadcrumb-block {
   margin: 1rem 0;
 }
-#block-breadcrumbs ul {
+.block-system-breadcrumb-block ul {
   padding-left: 0;
   font-size: 0;
 }
-#block-breadcrumbs ul li {
+.block-system-breadcrumb-block ul li {
   display: inline-block;
   padding: 0.5rem 0 0.625rem 0;
   list-style: none;
@@ -1657,26 +1657,26 @@ form.search-form .svg.search {
   background-color: #fff;
   font-size: 0.6875rem;
 }
-#block-breadcrumbs ul li::before {
+.block-system-breadcrumb-block ul li::before {
   position: relative;
   top: 1px;
   margin: 0 0.5rem 0 0.8125rem;
   content: ">";
   color: #aaa;
 }
-#block-breadcrumbs ul li:first-child {
+.block-system-breadcrumb-block ul li:first-child {
   padding-left: 0.9375rem;
   border-left: 1px solid #e1ddd2;
 }
-#block-breadcrumbs ul li:first-child::before {
+.block-system-breadcrumb-block ul li:first-child::before {
   margin: 0;
   content: "";
 }
-#block-breadcrumbs ul li:last-child {
+.block-system-breadcrumb-block ul li:last-child {
   padding-right: 0.9375rem;
   border-right: 1px solid #e1ddd2;
 }
-#block-breadcrumbs ul li a {
+.block-system-breadcrumb-block ul li a {
   color: #bf5700;
 }
 @media screen and (min-width: 1200px) {
@@ -1829,14 +1829,14 @@ footer.ut-footer .footer-textarea {
   font-size: 0.875rem;
   line-height: 1.25;
 }
-#block-tabs {
+.block-local-tasks-block {
   margin: 1.5rem 0;
 }
-#block-tabs .tabs a:focus,
-#block-tabs .tabs a:hover {
+.block-local-tasks-block .tabs a:focus,
+.block-local-tasks-block .tabs a:hover {
   background-color: #f5f5f5;
 }
-#block-tabs ul.tabs.primary {
+.block-local-tasks-block ul.tabs.primary {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: auto;
@@ -1848,10 +1848,10 @@ footer.ut-footer .footer-textarea {
   border-bottom: 1px solid #bbb;
   line-height: normal;
 }
-#block-tabs ul.tabs.primary li {
+.block-local-tasks-block ul.tabs.primary li {
   display: inline-block;
 }
-#block-tabs ul.tabs.primary li a {
+.block-local-tasks-block ul.tabs.primary li a {
   height: auto;
   margin-right: 0.5rem;
   padding: 0.25rem 1rem 0.1875rem;
@@ -1863,22 +1863,22 @@ footer.ut-footer .footer-textarea {
   border-radius: 3px 3px 0 0;
   background-color: #ddd;
 }
-#block-tabs ul.tabs.primary li a:hover,
-#block-tabs ul.tabs.primary li a:focus {
+.block-local-tasks-block ul.tabs.primary li a:hover,
+.block-local-tasks-block ul.tabs.primary li a:focus {
   text-decoration: underline;
 }
-#block-tabs ul.tabs.primary li a.is-active {
+.block-local-tasks-block ul.tabs.primary li a.is-active {
   border: 1px solid #bbb;
   border-bottom: 1px solid #fff;
   background-color: #fff;
 }
-#block-tabs ul.tabs.secondary {
+.block-local-tasks-block ul.tabs.secondary {
   overflow: hidden;
   margin: 0.3125rem;
   padding: 0.5rem 0;
   border-bottom: none;
 }
-#block-tabs ul.tabs.secondary li {
+.block-local-tasks-block ul.tabs.secondary li {
   /* LTR */
   display: block;
   float: left;
@@ -1887,31 +1887,31 @@ footer.ut-footer .footer-textarea {
   padding: 0 1rem;
   border-right: 1px solid #ccc;
 }
-#block-tabs [dir="rtl"] ul.tabs.secondary li {
+.block-local-tasks-block [dir="rtl"] ul.tabs.secondary li {
   float: right;
   border-right: none;
   border-left: 1px solid #ccc;
 }
-#block-tabs ul.tabs.secondary li:last-child {
+.block-local-tasks-block ul.tabs.secondary li:last-child {
   border-right: none;
   /* LTR */
 }
-#block-tabs ul.tabs.secondary li:first-child {
+.block-local-tasks-block ul.tabs.secondary li:first-child {
   padding-left: 0;
   /* LTR */
 }
-#block-tabs [dir="rtl"] ul.tabs.secondary li:last-child {
+.block-local-tasks-block [dir="rtl"] ul.tabs.secondary li:last-child {
   border-left: none;
 }
-#block-tabs [dir="rtl"] ul.tabs.secondary li:first-child {
+.block-local-tasks-block [dir="rtl"] ul.tabs.secondary li:first-child {
   padding-right: 0;
 }
-#block-tabs ul.tabs.secondary li a {
+.block-local-tasks-block ul.tabs.secondary li a {
   display: inline;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
 }
-#block-tabs ul.tabs.secondary li a.is-active {
+.block-local-tasks-block ul.tabs.secondary li a.is-active {
   border-bottom: none;
   border-radius: 5px;
   background: #f2f2f2;
