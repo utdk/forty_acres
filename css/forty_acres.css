@@ -1829,6 +1829,13 @@ footer.ut-footer .footer-textarea {
   font-size: 0.875rem;
   line-height: 1.25;
 }
+/* To provide full bleed display, override the default
+Bootstraph margins on "container-fluid". This applies only
+in the context of the "main_content" region. */
+.region-content .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
 .block-local-tasks-block {
   margin: 1.5rem 0;
 }
@@ -2007,4 +2014,12 @@ Library checkboxes. See UDK8-1055.
   -webkit-appearance: checkbox;
 
   -moz-appearance: checkbox;
+}
+.node-layout-builder-form .form-actions {
+  text-align: center;
+}
+.node-layout-builder-form .form-actions input {
+  display: inline;
+  width: 20%;
+  margin-right: 1rem;
 }

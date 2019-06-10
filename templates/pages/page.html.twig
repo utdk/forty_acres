@@ -48,42 +48,36 @@
 
 {% include '@forty_acres/includes/header.html.twig' %}
 
-<div class="layout-container">
+{{ page.breadcrumb }}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
+{{ page.highlighted }}
 
-        {{ page.breadcrumb }}
+{{ page.help }}
 
-        {{ page.highlighted }}
-
-        {{ page.help }}
-
-        <main role="main">
-          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-          <div class="layout-content">
-            {{ page.content }}
-          </div>{# /.layout-content #}
-
-          {% if page.sidebar_first %}
-            <aside class="layout-sidebar-first" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          {% endif %}
-
-          {% if page.sidebar_second %}
-            <aside class="layout-sidebar-second" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          {% endif %}
-
-        </main>
-      </div>
-    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <main role="main">
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+        <div class="layout-content">
+          {{ page.content }}
+        </div>{# /.layout-content #}
+      
+        {% if page.sidebar_first %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+      
+        {% if page.sidebar_second %}
+          <aside class="layout-sidebar-second" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+      </main>
   </div>
-
-  {% include '@forty_acres/includes/footer.html.twig' %}
+  </div>
+</div>
+{% include '@forty_acres/includes/footer.html.twig' %}
 
 </div>{# /.layout-container #}
