@@ -63,6 +63,14 @@ $grid-breakpoints: (
   xl: 1600px,
 );
 
+// Break Point Variable Map from Texas Design System.
+$screen-breakpoints: (
+  small: 600px,
+  medium: 900px,
+  large: 1200px,
+  xl: 1600px,
+);
+
 $container-max-widths: (
   sm: 840px,
   md: 1000px,

@@ -127,153 +127,21 @@
 .corner--pill {
   border-radius: 2rem !important;
 }
-header.ut-header {
-  padding-bottom: 0;
-  border-bottom: 1px solid #c4cdd4;
+.ut-flex-content-area-wrapper .image-wrapper {
+  margin-bottom: 0.625rem;
 }
-@media screen and (min-width: 1200px) {
-  header.ut-header {
-    padding-bottom: 1rem;
-  }
+.ut-flex-content-area-wrapper .ut-flex-content-area {
+  margin-bottom: 1.25rem;
 }
-header.ut-header .site-branding {
-  padding: 0.75em 0;
-}
-@media screen and (min-width: 1200px) {
-  header.ut-header .site-branding {
-    padding: 1.5em 0;
-  }
-}
-header.ut-header .ut-header-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-header.ut-header .ut-header-wrapper .navbar-brand {
-  margin-right: auto;
-}
-header.ut-header .ut-header-wrapper .ut-main_logo {
-  max-height: 35px;
-}
-@media screen and (min-width: 1200px) {
-  header.ut-header .ut-header-wrapper .ut-main_logo {
-    max-width: 70%;
-    max-height: 60px;
-  }
-}
-.ut-search_bar {
-  max-width: 100%;
-  height: 35px;
-  margin: 1em;
-  padding: 0;
-  border: 1px solid #5e686e;
-  background-color: #fff;
-}
-@media screen and (min-width: 1200px) {
-  .ut-search_bar {
-    position: absolute;
-    top: -60px;
-    right: 0;
-    display: block;
-    width: 220px;
-    margin: 0;
-  }
-}
-.ut-search_bar form {
-  position: relative;
-}
-.ut-search_bar .input--search {
-  width: 100%;
-  height: 2.25rem;
-  padding-left: 0.5rem;
-  border: none;
-  background: transparent;
-}
-.ut-search_bar .input--search::-webkit-input-placeholder {
-  font-style: italic;
-}
-.ut-search_bar .input--search::-moz-placeholder {
-  font-style: italic;
-}
-.ut-search_bar .input--search:-ms-input-placeholder {
-  font-style: italic;
-}
-.ut-search_bar .input--search::-ms-input-placeholder {
-  font-style: italic;
-}
-.ut-search_bar .input--search::placeholder {
-  font-style: italic;
-}
-.ut-search_bar .ut-btn--search {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2.25rem;
-  height: 2.1rem;
-  border: none;
-  background: none;
-  line-height: 2;
-}
-.ut-search_bar .ut-btn--search:hover {
-  cursor: pointer;
-  color: #bf5700;
-}
-.ut-social_bar {
-  padding: 0 1em;
-}
-@media screen and (min-width: 1200px) {
-  .ut-social_bar {
-    position: absolute;
-    top: -58px;
-    right: 235px;
-    display: block;
-    padding: 0;
-  }
-}
-.ut-social_bar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 0;
+.ut-flex-content-area-wrapper .link-list {
   padding-left: 0;
   list-style: none;
 }
-@media screen and (min-width: 600px) {
-  .ut-social_bar ul {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+.ut-flex-content-area-wrapper .link-list li {
+  margin-bottom: 0.5625rem;
 }
-@media screen and (min-width: 600px) {
-  .ut-social_bar ul li {
-    margin: 0 10px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ut-social_bar ul li {
-    margin: 0 3px;
-  }
-}
-.ut-social_bar svg {
-  width: 32px;
-  cursor: pointer;
-
-  fill: #333f48;
-}
-.ut-social_bar svg:hover {
-  fill: #1f262b;
-}
-@media screen and (min-width: 1200px) {
-  .ut-social_bar svg {
-    width: 26px;
-  }
+.ut-flex-content-area-wrapper .ut-headline {
+  padding: 0.5rem 0;
 }
 ul.ut-menu--list,
 ul.ut-menu--list-bold {
@@ -312,348 +180,6 @@ footer.ut-footer .text--copyright {
 ul.ut-menu--list-bold {
   text-transform: uppercase;
   font-weight: 600;
-}
-/* General defaults for Hero elements */
-.ut-hero .ut-btn--hero {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  -webkit-transition: background-color, color, 0.33s ease-out;
-  transition: background-color, color, 0.33s ease-out;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  background: transparent;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-/* Styling for default hero with caption and credit line. */
-.ut-hero p.hero--caption-credit-wrapper {
-  margin: 0;
-  padding: 0.625rem 0 0.625rem 0;
-  font-size: 0.75rem;
-  line-height: 0.9375;
-}
-@media screen and (min-width: 600px) {
-  .ut-hero p.hero--caption-credit-wrapper {
-    margin: 0;
-    padding: 0.625rem 0 0.625rem 0;
-    font-size: 0.875rem;
-    line-height: 1.25;
-  }
-}
-.ut-hero .hero-caption {
-  padding-right: 0.5rem;
-}
-.ut-hero .credit {
-  color: #6a6a6a;
-  font-style: italic;
-}
-/* Hero with Orange Box similar to core site (i.e., Style 1) */
-.hero--photo-orange-insert .hero-content {
-  background: #bf5700;
-}
-@media screen and (min-width: 900px) {
-  .hero--photo-orange-insert .hero-content {
-    background: #bf5700;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(191, 87, 0, 0.5)), color-stop(82%, rgba(191, 87, 0, 0.9)), to(rgba(191, 87, 0, 0.9)));
-    background: linear-gradient(to bottom, rgba(191, 87, 0, 0.5) 0%, rgba(191, 87, 0, 0.9) 82%, rgba(191, 87, 0, 0.9) 100%);
-  }
-}
-.hero--photo-orange-insert .hero-callout {
-  color: #fff;
-}
-.hero--photo-orange-insert .hero-headline {
-  margin-bottom: 0.5rem;
-  color: #fff;
-  font-size: 2.0625rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 900px) {
-  .hero--photo-orange-insert .hero-headline {
-    font-size: 2.4375rem;
-  }
-}
-.hero--photo-orange-insert .hero-subhead {
-  margin-bottom: 0.5rem;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.25;
-}
-.hero--photo-orange-insert .ut-btn--hero {
-  text-transform: uppercase;
-}
-@media screen and (min-width: 900px) {
-  .hero--photo-orange-insert .ut-btn--hero {
-    font-size: 1rem;
-  }
-  .hero--photo-orange-insert .hero-subhead {
-    font-size: 1.25rem;
-  }
-}
-/* Floating content area ontop of image (i.e., Style 2) */
-.ut-hero.hero--photo-gradient .hero-callout {
-  padding: 1rem;
-}
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--photo-gradient .hero-callout {
-    padding: 1.5rem 1.25rem;
-  }
-}
-.ut-hero.hero--photo-gradient .hero-headline {
-  color: #fff;
-  font-size: 2.0625rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--photo-gradient .hero-headline {
-    font-size: 2.4375rem;
-    line-height: 2.625;
-  }
-}
-.ut-hero .ut-btn--hero:hover,
-.ut-hero .ut-btn--hero:focus {
-  cursor: pointer;
-  text-decoration: none;
-  color: #bf5700;
-  background-color: #fff;
-}
-/* Hero with pinned overlay that is width of the max content container (Style 3) */
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--photo-white-notch .hero-callout {
-    padding: 1.5rem 1.25rem;
-  }
-}
-.ut-hero.hero--photo-white-notch .hero-headline {
-  padding-bottom: 0.3125rem;
-  font-size: 1.6875rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--photo-white-notch .hero-headline {
-    padding-bottom: 0;
-    font-size: 1.9375rem;
-  }
-}
-.ut-hero.hero--photo-white-notch .hero-subhead {
-  float: left;
-  padding-top: 0.1875rem;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.25;
-}
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--photo-white-notch .hero-subhead {
-    font-size: 1.25rem;
-  }
-}
-.ut-hero.hero--photo-white-notch .hero-cta {
-  display: inline-block;
-}
-@media screen and (min-width: 900px) {
-  .ut-hero.hero--photo-white-notch .hero-cta {
-    display: block;
-  }
-}
-@media (max-width: 900px) {
-  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn {
-    padding: inherit;
-    color: #bf5700;
-    border: none;
-    background-color: #fff;
-    font-style: italic;
-  }
-  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn:hover {
-    color: #9d4700 !important;
-  }
-}
-/* Centered Image with blue bar (i.e., Style 4) */
-.ut-hero.hero--blue-bar .hero-headline {
-  color: #fff;
-  font-size: 1.6875rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-.ut-hero.hero--blue-bar .hero-subhead {
-  margin-bottom: 0.5rem;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.25;
-}
-@media screen and (min-width: 900px) {
-  .ut-hero.hero--blue-bar .hero-headline {
-    font-size: 1.9375rem;
-  }
-  .ut-hero.hero--blue-bar .hero-subhead {
-    font-size: 1.25rem;
-  }
-  .ut-hero .ut-btn--hero {
-    float: right;
-    font-size: 1rem;
-  }
-}
-/* Medium, floated right image (i.e., Style 5) */
-.ut-hero.hero--half-n-half .hero-headline {
-  padding: 0.625rem 0;
-  color: #333f48;
-  font-size: 1.6875rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-@media screen and (min-width: 900px) {
-  .ut-hero.hero--half-n-half .hero-headline {
-    font-size: 1.9375rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ut-hero.hero--half-n-half .hero-headline {
-    font-size: 2.5rem;
-  }
-}
-.ut-hero.hero--half-n-half .ut-btn--secondary {
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-.utexas-featured-highlight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0 0 1.25rem 0;
-  padding: 3.75rem 0.625rem;
-  color: #000;
-  background-color: #d6d2c4;
-}
-@media screen and (min-width: 900px) {
-  .utexas-featured-highlight {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-.utexas-featured-highlight .image-wrapper {
-  min-width: auto;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 900px) {
-  .utexas-featured-highlight .image-wrapper {
-    min-width: 250px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .utexas-featured-highlight .image-wrapper {
-    min-width: 330px;
-  }
-}
-.utexas-featured-highlight .content-wrapper {
-  padding-left: 1.875rem;
-}
-.utexas-featured-highlight .content-wrapper .ut-date {
-  margin-bottom: 0.75rem;
-  font-style: italic;
-}
-.utexas-featured-highlight .content-wrapper .ut-headline {
-  padding-top: 0;
-  font-size: 2rem;
-}
-.utexas-featured-highlight .content-wrapper .ut-headline a {
-  color: #000;
-}
-.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .content-wrapper {
-  padding: 0 1rem;
-}
-@media screen and (min-width: 900px) {
-  .layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .image-wrapper {
-    min-width: auto;
-    max-width: none;
-  }
-}
-.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight,
-.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .content-wrapper,
-.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .content-wrapper {
-  padding: 0 1rem;
-}
-@media screen and (min-width: 900px) {
-  .layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .image-wrapper,
-  .layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .image-wrapper {
-    min-width: auto;
-    max-width: none;
-  }
-}
-.ut-flex-content-area-wrapper .image-wrapper {
-  margin-bottom: 0.625rem;
-}
-.ut-flex-content-area-wrapper .ut-flex-content-area {
-  margin-bottom: 1.25rem;
-}
-.ut-flex-content-area-wrapper .link-list {
-  padding-left: 0;
-  list-style: none;
-}
-.ut-flex-content-area-wrapper .link-list li {
-  margin-bottom: 0.5625rem;
-}
-.ut-flex-content-area-wrapper .ut-headline {
-  padding: 0.5rem 0;
-}
-.utexas-quick-links .ut-headline {
-  margin-bottom: 0.9375rem;
-}
-@media screen and (min-width: 900px) {
-  .utexas-quick-links .ut-headline {
-    margin: 0 0 0.5rem;
-    font-size: 1.125rem;
-    line-height: 1.625;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .utexas-quick-links .ut-headline {
-    font-size: 1.25rem;
-    line-height: 1.6875;
-  }
-}
-.utexas-quick-links .ut-copy {
-  font-size: 1rem;
-}
-.utexas-quick-links .link-list {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
-.utexas-quick-links .link-list li {
-  padding-bottom: 1.875rem;
-}
-.utexas-quick-links .link-list a.ut-link {
-  font-weight: 500;
-}
-.ut-promo-list-wrapper .promo-list .ut-headline {
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.ut-promo-list-wrapper .promo-list a > .ut-headline {
-  color: #bf5700;
 }
 input:focus,
 optgroup:focus,
@@ -862,16 +388,153 @@ input[type="radio"] {
   -webkit-box-shadow: 0 0 0 1px #aeb0b5;
   box-shadow: 0 0 0 1px #aeb0b5;
 }
-#drupal-off-canvas input[type="checkbox"],
-#drupal-off-canvas input[type="radio"] {
-  display: inline-block;
-  width: 20px;
+header.ut-header {
+  padding-bottom: 0;
+  border-bottom: 1px solid #c4cdd4;
 }
-#drupal-off-canvas label {
-  display: inline-block;
+@media screen and (min-width: 1200px) {
+  header.ut-header {
+    padding-bottom: 1rem;
+  }
 }
-#drupal-off-canvas label:before {
-  display: none;
+header.ut-header .site-branding {
+  padding: 0.75em 0;
+}
+@media screen and (min-width: 1200px) {
+  header.ut-header .site-branding {
+    padding: 1.5em 0;
+  }
+}
+header.ut-header .ut-header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+header.ut-header .ut-header-wrapper .navbar-brand {
+  margin-right: auto;
+}
+header.ut-header .ut-header-wrapper .ut-main_logo {
+  max-height: 35px;
+}
+@media screen and (min-width: 1200px) {
+  header.ut-header .ut-header-wrapper .ut-main_logo {
+    max-width: 70%;
+    max-height: 60px;
+  }
+}
+.ut-search_bar {
+  max-width: 100%;
+  height: 35px;
+  margin: 1em;
+  padding: 0;
+  border: 1px solid #5e686e;
+  background-color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .ut-search_bar {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    display: block;
+    width: 220px;
+    margin: 0;
+  }
+}
+.ut-search_bar form {
+  position: relative;
+}
+.ut-search_bar .input--search {
+  width: 100%;
+  height: 2.25rem;
+  padding-left: 0.5rem;
+  border: none;
+  background: transparent;
+}
+.ut-search_bar .input--search::-webkit-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search::-moz-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search:-ms-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search::-ms-input-placeholder {
+  font-style: italic;
+}
+.ut-search_bar .input--search::placeholder {
+  font-style: italic;
+}
+.ut-search_bar .ut-btn--search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.25rem;
+  height: 2.1rem;
+  border: none;
+  background: none;
+  line-height: 2;
+}
+.ut-search_bar .ut-btn--search:hover {
+  cursor: pointer;
+  color: #bf5700;
+}
+.ut-social_bar {
+  padding: 0 1em;
+}
+@media screen and (min-width: 1200px) {
+  .ut-social_bar {
+    position: absolute;
+    top: -58px;
+    right: 235px;
+    display: block;
+    padding: 0;
+  }
+}
+.ut-social_bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+@media screen and (min-width: 600px) {
+  .ut-social_bar ul {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .ut-social_bar ul li {
+    margin: 0 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ut-social_bar ul li {
+    margin: 0 3px;
+  }
+}
+.ut-social_bar svg {
+  width: 32px;
+  cursor: pointer;
+
+  fill: #333f48;
+}
+.ut-social_bar svg:hover {
+  fill: #1f262b;
+}
+@media screen and (min-width: 1200px) {
+  .ut-social_bar svg {
+    width: 26px;
+  }
 }
 body {
   -webkit-text-size-adjust: 100%;
@@ -1013,6 +676,17 @@ hr {
   color: #333f48;
   font-size: 1.25rem;
   line-height: 1.25;
+}
+@media screen and (min-width: 1200px) {
+  article {
+    word-wrap: break-word;
+  }
+  article p,
+  article ul,
+  article ol,
+  article dt {
+    font-size: 1.125rem;
+  }
 }
 .ut-headline,
 .ut-headline--underline {
@@ -2002,6 +1676,350 @@ in the context of the "main_content" region.  */
   text-decoration: none;
   color: #5a5a5a;
   background: #dedede;
+}
+.utexas-featured-highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 1.25rem 0;
+  padding: 3.75rem 0.625rem;
+  color: #000;
+  background-color: #d6d2c4;
+}
+@media screen and (min-width: 900px) {
+  .utexas-featured-highlight {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.utexas-featured-highlight .image-wrapper {
+  min-width: auto;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .utexas-featured-highlight .image-wrapper {
+    min-width: 250px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .utexas-featured-highlight .image-wrapper {
+    min-width: 330px;
+  }
+}
+.utexas-featured-highlight .content-wrapper {
+  padding-left: 1.875rem;
+}
+.utexas-featured-highlight .content-wrapper .ut-date {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+.utexas-featured-highlight .content-wrapper .ut-headline {
+  padding-top: 0;
+  font-size: 2rem;
+}
+.utexas-featured-highlight .content-wrapper .ut-headline a {
+  color: #000;
+}
+.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .content-wrapper {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 900px) {
+  .layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .image-wrapper {
+    min-width: auto;
+    max-width: none;
+  }
+}
+.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight,
+.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .content-wrapper,
+.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .content-wrapper {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 900px) {
+  .layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .image-wrapper,
+  .layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .image-wrapper {
+    min-width: auto;
+    max-width: none;
+  }
+}
+.ut-headline {
+  padding: 0.5rem 0;
+}
+.ut-brandbar .ut-logo--shieldtexas img {
+  height: 25px;
+  margin-top: 6px;
+}
+#drupal-off-canvas input[type="checkbox"],
+#drupal-off-canvas input[type="radio"] {
+  display: inline-block;
+  width: 20px;
+}
+#drupal-off-canvas label {
+  display: inline-block;
+}
+#drupal-off-canvas label:before {
+  display: none;
+}
+.ut-promo-list-wrapper .promo-list .ut-headline {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.ut-promo-list-wrapper .promo-list a > .ut-headline {
+  color: #bf5700;
+}
+.utexas-quick-links .ut-headline {
+  margin-bottom: 0.9375rem;
+}
+@media screen and (min-width: 900px) {
+  .utexas-quick-links .ut-headline {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.625;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .utexas-quick-links .ut-headline {
+    font-size: 1.25rem;
+    line-height: 1.6875;
+  }
+}
+.utexas-quick-links .ut-copy {
+  font-size: 1rem;
+}
+.utexas-quick-links .link-list {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.utexas-quick-links .link-list li {
+  padding-bottom: 1.875rem;
+}
+.utexas-quick-links .link-list a.ut-link {
+  font-weight: 500;
+}
+/* General defaults for Hero elements */
+.ut-hero .ut-btn--hero {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: background-color, color, 0.33s ease-out;
+  transition: background-color, color, 0.33s ease-out;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+/* Styling for default hero with caption and credit line. */
+.ut-hero p.hero--caption-credit-wrapper {
+  margin: 0;
+  padding: 0.625rem 0 0.625rem 0;
+  font-size: 0.75rem;
+  line-height: 0.9375;
+}
+@media screen and (min-width: 600px) {
+  .ut-hero p.hero--caption-credit-wrapper {
+    margin: 0;
+    padding: 0.625rem 0 0.625rem 0;
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
+}
+.ut-hero .hero-caption {
+  padding-right: 0.5rem;
+}
+.ut-hero .credit {
+  color: #6a6a6a;
+  font-style: italic;
+}
+/* Hero with Orange Box similar to core site (i.e., Style 1) */
+.hero--photo-orange-insert .hero-content {
+  background: #bf5700;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .hero-content {
+    background: #bf5700;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(191, 87, 0, 0.5)), color-stop(82%, rgba(191, 87, 0, 0.9)), to(rgba(191, 87, 0, 0.9)));
+    background: linear-gradient(to bottom, rgba(191, 87, 0, 0.5) 0%, rgba(191, 87, 0, 0.9) 82%, rgba(191, 87, 0, 0.9) 100%);
+  }
+}
+.hero--photo-orange-insert .hero-callout {
+  color: #fff;
+}
+.hero--photo-orange-insert .hero-headline {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 2.0625rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .hero-headline {
+    font-size: 2.4375rem;
+  }
+}
+.hero--photo-orange-insert .hero-subhead {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.hero--photo-orange-insert .ut-btn--hero {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 900px) {
+  .hero--photo-orange-insert .ut-btn--hero {
+    font-size: 1rem;
+  }
+  .hero--photo-orange-insert .hero-subhead {
+    font-size: 1.25rem;
+  }
+}
+/* Floating content area ontop of image (i.e., Style 2) */
+.ut-hero.hero--photo-gradient .hero-callout {
+  padding: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--photo-gradient .hero-callout {
+    padding: 1.5rem 1.25rem;
+  }
+}
+.ut-hero.hero--photo-gradient .hero-headline {
+  color: #fff;
+  font-size: 2.0625rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--photo-gradient .hero-headline {
+    font-size: 2.4375rem;
+    line-height: 2.625;
+  }
+}
+.ut-hero .ut-btn--hero:hover,
+.ut-hero .ut-btn--hero:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #bf5700;
+  background-color: #fff;
+}
+/* Hero with pinned overlay that is width of the max content container (Style 3) */
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--photo-white-notch .hero-callout {
+    padding: 1.5rem 1.25rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-headline {
+  padding-bottom: 0.3125rem;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--photo-white-notch .hero-headline {
+    padding-bottom: 0;
+    font-size: 1.9375rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-subhead {
+  float: left;
+  padding-top: 0.1875rem;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--photo-white-notch .hero-subhead {
+    font-size: 1.25rem;
+  }
+}
+.ut-hero.hero--photo-white-notch .hero-cta {
+  display: inline-block;
+}
+@media screen and (min-width: 900px) {
+  .ut-hero.hero--photo-white-notch .hero-cta {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn {
+    padding: inherit;
+    color: #bf5700;
+    border: none;
+    background-color: #fff;
+    font-style: italic;
+  }
+  .ut-hero.hero--photo-white-notch .hero-cta a.ut-btn:hover {
+    color: #9d4700 !important;
+  }
+}
+/* Centered Image with blue bar (i.e., Style 4) */
+.ut-hero.hero--blue-bar .hero-headline {
+  color: #fff;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.ut-hero.hero--blue-bar .hero-subhead {
+  margin-bottom: 0.5rem;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+@media screen and (min-width: 900px) {
+  .ut-hero.hero--blue-bar .hero-headline {
+    font-size: 1.9375rem;
+  }
+  .ut-hero.hero--blue-bar .hero-subhead {
+    font-size: 1.25rem;
+  }
+  .ut-hero .ut-btn--hero {
+    float: right;
+    font-size: 1rem;
+  }
+}
+/* Medium, floated right image (i.e., Style 5) */
+.ut-hero.hero--half-n-half .hero-headline {
+  padding: 0.625rem 0;
+  color: #333f48;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media screen and (min-width: 900px) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 1.9375rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ut-hero.hero--half-n-half .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+.ut-hero.hero--half-n-half .ut-btn--secondary {
+  -ms-flex-item-align: start;
+  align-self: start;
 }
 /*
 Texas Design System input manipulation is incompatible with Drupal's Media

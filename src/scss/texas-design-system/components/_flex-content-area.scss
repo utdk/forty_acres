@@ -9,16 +9,20 @@
   .image-wrapper {
     margin-bottom: rem-calc(10);
   }
+
   .ut-flex-content-area {
     margin-bottom: rem-calc(20);
   }
+
   .link-list {
     // stylelint-disable-next-line at-rule-no-unknown
     @include list-style-none;
+
     li {
       margin-bottom: rem-calc(9);
     }
   }
+
   .ut-headline {
     padding: 0.5rem 0;
   }

@@ -50,9 +50,11 @@
   .layout__region--sidebar {
     .utexas-featured-highlight {
       flex-direction: column;
+
       .content-wrapper {
         padding: 0 1rem;
       }
+
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
         .image-wrapper {
@@ -65,13 +67,16 @@
 }
 
 .layout--utexas-50-50--container {
+
   .layout__region--left,
   .layout__region--right {
     .utexas-featured-highlight {
       flex-direction: column;
+
       .content-wrapper {
         padding: 0 1rem;
       }
+
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
         .image-wrapper {
