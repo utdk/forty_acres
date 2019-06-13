@@ -1830,8 +1830,8 @@ footer.ut-footer .footer-textarea {
   line-height: 1.25;
 }
 /* To provide full bleed display, override the default
-Bootstraph margins on "container-fluid". This applies only
-in the context of the "main_content" region. */
+Bootstrap padding on "container-fluid". This applies only
+in the context of the "main_content" region.  */
 .region-content .container-fluid {
   padding-right: 0;
   padding-left: 0;
