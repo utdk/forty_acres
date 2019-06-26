@@ -45,31 +45,9 @@
   }
 }
 
-// // Styling beyond the Texas Design System.
-.layout--utexas-66-33--container {
-  .layout__region--sidebar {
-    .utexas-featured-highlight {
-      flex-direction: column;
-
-      .content-wrapper {
-        padding: 0 1rem;
-      }
-
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(md) {
-        .image-wrapper {
-          max-width: none;
-          min-width: auto;
-        }
-      }
-    }
-  }
-}
-
-.layout--utexas-50-50--container {
-
-  .layout__region--left,
-  .layout__region--right {
+// Styling beyond the Texas Design System.
+.utexas-layout--twocol {
+  .layout__region--second {
     .utexas-featured-highlight {
       flex-direction: column;
 

@@ -1729,35 +1729,17 @@ in the context of the "main_content" region.  */
 .utexas-featured-highlight .content-wrapper .ut-headline a {
   color: #000;
 }
-.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight {
+.utexas-layout--twocol .layout__region--second .utexas-featured-highlight {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .content-wrapper {
+.utexas-layout--twocol .layout__region--second .utexas-featured-highlight .content-wrapper {
   padding: 0 1rem;
 }
 @media screen and (min-width: 900px) {
-  .layout--utexas-66-33--container .layout__region--sidebar .utexas-featured-highlight .image-wrapper {
-    min-width: auto;
-    max-width: none;
-  }
-}
-.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight,
-.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .content-wrapper,
-.layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .content-wrapper {
-  padding: 0 1rem;
-}
-@media screen and (min-width: 900px) {
-  .layout--utexas-50-50--container .layout__region--left .utexas-featured-highlight .image-wrapper,
-  .layout--utexas-50-50--container .layout__region--right .utexas-featured-highlight .image-wrapper {
+  .utexas-layout--twocol .layout__region--second .utexas-featured-highlight .image-wrapper {
     min-width: auto;
     max-width: none;
   }
