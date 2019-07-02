@@ -1748,6 +1748,9 @@ in the context of the "main_content" region.  */
   font-size: 0.9375rem;
   font-style: italic;
 }
+.ut-newsreel .news-description {
+  font-size: 1rem;
+}
 .ut-newsreel .news-headline {
   color: #bf5700;
   font-weight: 500;
