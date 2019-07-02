@@ -17,7 +17,7 @@
 
 /* Border styles */
 .field-border.ut-newsreel {
-  padding: 0 0 20px;
+  padding: 20px 0 10px 0;
   background-color: #fff;
   border: 1px solid #f0ede6;
   margin-bottom: 35px;
@@ -25,18 +25,13 @@
 .field-border.ut-newsreel .news-item,
 .field-border.ut-newsreel .ut-copy,
 .field-border.ut-newsreel .ut-cta {
-  padding: 0 15px;
+  padding: 0 10px;
   margin-bottom: 10px;
-}
-
-.field-border.ut-newsreel .ut-copy {
-  margin-top: 10px;
 }
 
 /* Background style */
 .field-background.ut-newsreel {
   background-color: #fffdfa;
-  padding-bottom: 20px;
 }
 .field-background.ut-newsreel .news-item,
 .field-border.ut-newsreel .ut-copy,

@@ -1761,7 +1761,7 @@ in the context of the "main_content" region.  */
 /* Border styles */
 .field-border.ut-newsreel {
   margin-bottom: 35px;
-  padding: 0 0 20px;
+  padding: 20px 0 10px 0;
   border: 1px solid #f0ede6;
   background-color: #fff;
 }
@@ -1769,14 +1769,10 @@ in the context of the "main_content" region.  */
 .field-border.ut-newsreel .ut-copy,
 .field-border.ut-newsreel .ut-cta {
   margin-bottom: 10px;
-  padding: 0 15px;
-}
-.field-border.ut-newsreel .ut-copy {
-  margin-top: 10px;
+  padding: 0 10px;
 }
 /* Background style */
 .field-background.ut-newsreel {
-  padding-bottom: 20px;
   background-color: #fffdfa;
 }
 .field-background.ut-newsreel .news-item,
