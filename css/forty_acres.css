@@ -1730,6 +1730,16 @@ in the context of the "main_content" region.  */
 #drupal-off-canvas label:before {
   display: none;
 }
+#layout-builder-modal .js-form-type-checkbox label {
+  color: #595959;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida Sans", sans-serif;
+  font-size: 0.75rem;
+}
+#layout-builder-modal .js-form-type-checkbox label:before {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2px;
+}
 .ut-promo-list-wrapper .promo-list .ut-headline {
   font-size: 1.125rem;
   font-weight: 500;
