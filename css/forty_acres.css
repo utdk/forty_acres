@@ -1981,6 +1981,10 @@ in the context of the "main_content" region.  */
   -ms-flex-item-align: start;
   align-self: start;
 }
+/* Styling for the Promo Unit component */
+.utexas-promo-unit .ut-headline > a {
+  color: #bf5700;
+}
 /*
 Texas Design System input manipulation is incompatible with Drupal's Media
 Library checkboxes. See UDK8-1055.
