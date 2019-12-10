@@ -31,7 +31,11 @@ gulp.task("sass", function () {
 
 gulp.task('copy-js', function () {
   return gulp
-    .src('./node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js')
+    .src([
+      './node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js',
+      './node_modules/bootstrap/js/dist/tab.js',
+      './node_modules/bootstrap/js/dist/util.js'
+    ])
     .pipe(uglify())
     .pipe(gulp.dest('js'));
 });

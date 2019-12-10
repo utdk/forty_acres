@@ -5,6 +5,8 @@ global:
       css/forty_acres.css: {}
   js:
     js/jquery-accessibleMegaMenu.js: {}
+    js/util.js: {}
+    js/tab.js: {}
     js/svgxuse.js: {}
     js/custom.js: {}
   dependencies:
