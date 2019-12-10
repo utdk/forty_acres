@@ -1,0 +1,9 @@
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  text-decoration: none !important;
+  color: $ut-white;
+  border: 2px solid $ut-burntorange;
+  border-radius: 4px;
+  background-color: $ut-burntorange;
+  font-weight: 600;
+}

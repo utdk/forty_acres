@@ -1210,6 +1210,15 @@ ul.header-menu__list .header-menu__list-item {
 ul.header-menu__list .header-menu__link {
   padding: 0.3125rem;
 }
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  text-decoration: none !important;
+  color: #fff;
+  border: 2px solid #bf5700;
+  border-radius: 4px;
+  background-color: #bf5700;
+  font-weight: 600;
+}
 div.search-block-form div.contextual {
   display: none !important;
 }
