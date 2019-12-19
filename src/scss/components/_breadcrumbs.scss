@@ -24,7 +24,7 @@
         border-left: 1px solid #e1ddd2;
         padding-left: rem-calc(15);
         &::before {
-          content: "";
+          content: '\00A0';
           margin: 0;
         }
       }

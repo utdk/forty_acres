@@ -1352,7 +1352,7 @@ form.search-form .svg.search {
 }
 .block-system-breadcrumb-block ul li:first-child::before {
   margin: 0;
-  content: "";
+  content: "\00A0";
 }
 .block-system-breadcrumb-block ul li:last-child {
   padding-right: 0.9375rem;
