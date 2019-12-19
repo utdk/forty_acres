@@ -1361,6 +1361,10 @@ form.search-form .svg.search {
 .block-system-breadcrumb-block ul li a {
   color: #bf5700;
 }
+/* Override the margin-bottom for .block class. */
+#block-breadcrumbs {
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: 1200px) {
   header.ut-header {
     padding-top: 1rem;
