@@ -1527,6 +1527,25 @@ in the context of the "main_content" region.  */
 .block {
   margin-bottom: 1.5rem;
 }
+/* Declare format for nested ordered lists */
+ol li {
+  list-style-type: decimal;
+}
+ol li ol li {
+  list-style-type: upper-alpha;
+}
+ol li ol li ol li {
+  list-style-type: upper-roman;
+}
+ol li ol li ol li ol li {
+  list-style-type: decimal;
+}
+ol li ol li ol li ol li ol li {
+  list-style-type: lower-alpha;
+}
+ol li ol li ol li ol li ol li ol li {
+  list-style-type: lower-roman;
+}
 .block-local-tasks-block {
   margin: 1.5rem 0;
 }
