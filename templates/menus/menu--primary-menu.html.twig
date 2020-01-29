@@ -34,6 +34,7 @@
       <div class="sub-nav-wrapper">
         <ul class='main-menu__list--subnav'>
     {% endif %}
+    {# Loop through each menu item in the current level (e.g., L1s) #}
     {% for item in items %}
       {%
         set item_classes = [
@@ -50,7 +51,9 @@
             <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>
           </i>
         {% endif %}
-        {% if item.below %}
+        {# In primary menu region, only display up to L2 items #}
+        {% if item.below and menu_level == 0 %}
+          {# Execute the menu_links macro with item.below (i.e., the next level in #}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>
