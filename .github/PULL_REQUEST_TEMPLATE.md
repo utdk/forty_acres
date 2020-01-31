@@ -2,8 +2,7 @@
 
 ## Motivation/Purpose of Changes
 <!--- Why is this change needed? Links to existing issues are great. -->
-See https://issues.its.utexas.edu/projects/UDK8/issues/UDK8-NNN
-
+See #
 
 ## Proposed Resolution/Implementation
 <!--- Describe any implementation choices you made that are noteworthy -->
@@ -18,7 +17,7 @@ See https://issues.its.utexas.edu/projects/UDK8/issues/UDK8-NNN
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change)
 
-## Checklist:
+## Checklist
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 - [ ] Code follows the coding style of this project.
@@ -29,13 +28,20 @@ See https://issues.its.utexas.edu/projects/UDK8/issues/UDK8-NNN
 
 ## Evaluation Steps
 <!--- Include notes for both functional testing & code review -->
-0. See general setup, below
+
+0. See 'installing a site with this branch,' below.
 0.
 
-## General Development Setup
-1. Locate this repository in the `themes/` directory of a Drupal 8 site
-2. Run `drush en forty_acres -y`
+## Reference: installing a site with this branch
+<!--- Include notes for both functional testing & code review -->
+
+1. `git clone git@github.austin.utexas.edu:eis1-wcs/utdk_scaffold.git && cd utdk_scaffold`
+2. `composer require utexas/utdk_profile:dev-develop`
+3. `cd web/themes/contrib/`
+4. `rm -rf forty_acres && git clone --branch <branchname> git@github.austin.utexas.edu:eis1-wcs/forty_acres.git`
+5. `composer run-script dev-scaffold`
+6. `fin init && fin init-site --wcs`
 
 ## Potential Reviewers
 
-@twf369 @jmf3658 @rh34438 @mjm6289 @jfg276 @lar3597
+@eis1-wcs/drupal-utdk
