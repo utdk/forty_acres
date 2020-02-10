@@ -28,12 +28,17 @@ function forty_acres_preprocess_page(&$variables) {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORMTPYE_alter().
  */
-function forty_acres_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form['#id'] === 'search-block-form') {
-    $form['keys']['#attributes']['placeholder'] = 'Search the site...';
-  }
+function forty_acres_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['keys']['#attributes']['placeholder'] = 'Search the site...';
+}
+
+/**
+ * Implements hook_form_FORMTPYE_alter().
+ */
+function forty_acres_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#attributes']['class'][] = 'ut-btn';
 }
 
 /**
