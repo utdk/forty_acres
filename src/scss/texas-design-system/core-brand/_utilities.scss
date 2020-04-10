@@ -61,34 +61,6 @@
 }
 
 // ----------
-// CTA Links
-// Found mostly in Cards but can be used in multiple places.
-a.ut-cta-link {
-  font-size: 0.825rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.35px;
-  // @include link-caret;
-  // Darker variants provided for when element is placed on gray background
-  &--darker {
-    color: $ut-burntorange--s20;
-  }
-}
-
-// ----------
-// UT Links
-// Generic link class with semi-bold font and no text-transform.
-a.ut-link {
-  font-size: inherit;
-  letter-spacing: 0.35px;
-  // @include link-caret;
-  // Darker variants provided for when element is placed on gray background
-  &--darker {
-    color: $ut-burntorange--s20;
-  }
-}
-
-// ----------
 // Intro Text Style
 .ut-copy {
   font-size: 1rem;
