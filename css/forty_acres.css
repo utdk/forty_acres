@@ -554,6 +554,13 @@ a:focus {
 a:active {
   color: #ae4f00;
 }
+a.ut-link {
+  letter-spacing: 0.35px;
+  font-size: inherit;
+}
+a.ut-link--darker {
+  color: #9d4700;
+}
 .ut-cta-link {
   letter-spacing: 0.35px;
   font-size: 0.825rem;
