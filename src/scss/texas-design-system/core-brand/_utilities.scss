@@ -30,10 +30,6 @@
 .ut-headline {
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
-  // Anchor tags nested within this class should inherit the color attribute
-  a {
-    color: $ut-charcoal;
-  }
 }
 
 // ----------

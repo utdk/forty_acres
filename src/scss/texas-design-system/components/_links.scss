@@ -21,6 +21,21 @@ a:active {
   color: $ut-burntorange--s10;
 }
 
+// UT Links
+// Generic link class with semi-bold font and no text-transform.
+a.ut-link {
+  font-size: inherit;
+  letter-spacing: 0.35px;
+  // Darker variants provided for when element is placed on gray background
+  &--darker,
+  &--darker:link,
+  &--darker:hover,
+  &--darker:active,
+  &--darker:visited {
+    color: $ut-burntorange--s20;
+  }
+}
+
 // ----------
 // CTA Links
 // Found mostly in Cards but can be used in multiple places.

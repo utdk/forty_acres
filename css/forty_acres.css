@@ -554,6 +554,17 @@ a:focus {
 a:active {
   color: #ae4f00;
 }
+a.ut-link {
+  letter-spacing: 0.35px;
+  font-size: inherit;
+}
+a.ut-link--darker,
+a.ut-link--darker:link,
+a.ut-link--darker:hover,
+a.ut-link--darker:active,
+a.ut-link--darker:visited {
+  color: #9d4700;
+}
 .ut-cta-link {
   letter-spacing: 0.35px;
   font-size: 0.825rem;
@@ -764,9 +775,6 @@ hr {
     font-size: 1.25rem;
     line-height: 1.6875;
   }
-}
-.ut-headline a {
-  color: #333f48;
 }
 .ut-headline--underline {
   margin: 0 0 1.25rem;
