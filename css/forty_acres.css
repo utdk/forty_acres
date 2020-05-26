@@ -1131,10 +1131,6 @@ ul.subnav li a {
   font-weight: 600;
   line-height: 1.25rem;
 }
-ul.subnav li a a {
-  text-decoration: none;
-  font-style: normal;
-}
 ul.subnav ul {
   padding-left: 5px;
 }
@@ -1148,20 +1144,19 @@ ul.subnav ul li a {
   font-weight: 400;
   line-height: 1.0625rem;
 }
-ul.subnav a.is-active {
-  color: #fff;
-  background-color: #bf5700;
-  font-weight: 600;
-}
+ul.subnav li a.is-active,
 ul.subnav li a:hover {
   text-decoration: none;
   color: #fff;
   background-color: #bf5700;
   font-weight: 600;
 }
-ul.subnav li a:hover a {
+ul.subnav ul li a.is-active,
+ul.subnav ul li a:hover {
   text-decoration: none;
   color: #fff;
+  background-color: #bf5700;
+  font-weight: normal;
 }
 ul.subnav li a:after {
   padding-left: 7px;
