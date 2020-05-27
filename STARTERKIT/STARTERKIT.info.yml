@@ -10,6 +10,7 @@ regions:
   header_primary: Header Primary
   header_secondary: Header Secondary
   header_tertiary: Header Tertiary
+  site_announcement: Site Announcement
   primary_menu: Primary Menu
   breadcrumb: Breadcrumb
   highlighted: Highlighted
