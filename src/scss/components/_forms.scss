@@ -14,19 +14,3 @@
     display: none;
   }
 }
-
-#layout-builder-modal {
-  .js-form-type-checkbox {
-    label {
-      font-size: .75rem;
-      color: #595959;
-      font-family: "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida Sans", sans-serif;
-
-      &:before {
-        width: .8rem;
-        height: .8rem;
-        border-radius: 2px;
-      }
-    }
-  }
-}

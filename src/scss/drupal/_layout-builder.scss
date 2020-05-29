@@ -6,3 +6,30 @@
   margin-right: 1rem;
   display: inline;
 }
+
+#layout-builder-modal {
+  legend {
+    width: auto;
+
+    .fieldset-legend {
+      padding: 0 2px;
+    }
+  }
+
+  .js-form-type-checkbox,
+  .js-form-type-radio {
+    label {
+      font-size: .81rem;
+      color: #595959;
+      font-family: "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida Sans", sans-serif;
+
+      &:before {
+        width: .8rem;
+        height: .8rem;
+        // Extra margin is needed because of the way padding is applied on the
+        // fieldset (using em units).
+        margin-left: 4px;
+      }
+    }
+  }
+}
