@@ -540,9 +540,6 @@ a {
   text-decoration: none;
   color: #bf5700;
 }
-p a {
-  text-decoration: underline;
-}
 a:link,
 a:visited {
   color: #bf5700;
@@ -626,13 +623,6 @@ a,
 a:link,
 a:visited {
   color: #bf5700;
-}
-p a,
-p
-a:link,
-p
-a:visited {
-  text-decoration: underline;
 }
 h1,
 .ut-h1 {

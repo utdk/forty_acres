@@ -33,10 +33,6 @@ a,
 a:link,
 a:visited {
   color: $ut-burntorange;
-  // stylelint-disable-next-line no-descending-specificity
-  p & {
-    text-decoration: underline;
-  }
 }
 
 // ----------
