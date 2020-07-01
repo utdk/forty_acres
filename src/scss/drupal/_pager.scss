@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Styles for Seven's Pagination.
+ */
+.pager__items {
+  margin: 0.25em 0 0.25em 1.5em; /* LTR */
+  padding: 0;
+  text-align: center;
+}
+[dir="rtl"] .pager__items {
+  margin: 0.25em 1.5em 0.25em 0;
+}
+.pager__item {
+  display: inline-block;
+  float: none;
+  font-size: 0.875rem;
+  height: 1.5rem;
+  margin-left: 0.3125rem;
+}
+.pager__item a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #6a6a6a;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: inherit;
+}
+.pager__item.is-active a {
+  background: $ut-burntorange;
+  font-weight: bold;
+  color: $ut-white;
+}
+.pager__item a:hover,
+.pager__item a:focus {
+  background: #e6e5e5;
+  cursor: pointer;
+}

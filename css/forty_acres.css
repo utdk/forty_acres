@@ -2077,3 +2077,45 @@ Library checkboxes. See UDK8-1055.
   height: 0.8rem;
   margin-left: 4px;
 }
+/**
+ * @file
+ * Styles for Seven's Pagination.
+ */
+.pager__items {
+  margin: 0.25em 0 0.25em 1.5em;
+  /* LTR */
+  padding: 0;
+  text-align: center;
+}
+[dir="rtl"] .pager__items {
+  margin: 0.25em 1.5em 0.25em 0;
+}
+.pager__item {
+  display: inline-block;
+  float: none;
+  height: 1.5rem;
+  margin-left: 0.3125rem;
+  font-size: 0.875rem;
+}
+.pager__item a {
+  display: block;
+  padding: 5px 10px;
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  text-decoration: none;
+  color: #6a6a6a;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: inherit;
+}
+.pager__item.is-active a {
+  color: #fff;
+  background: #bf5700;
+  font-weight: bold;
+}
+.pager__item a:hover,
+.pager__item a:focus {
+  cursor: pointer;
+  background: #e6e5e5;
+}
