@@ -28,14 +28,19 @@
   font-size: 1em;
   font-weight: normal;
   line-height: inherit;
+  &:hover {
+    background: #e6e5e5;
+    cursor: pointer;
+  }
+  &:focus {
+    background: #e6e5e5;
+  }
 }
 .pager__item.is-active a {
   background: $ut-burntorange;
   font-weight: bold;
   color: $ut-white;
-}
-.pager__item a:hover,
-.pager__item a:focus {
-  background: #e6e5e5;
-  cursor: pointer;
+  &:hover {
+    background: #a04400;
+  }
 }

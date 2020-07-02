@@ -2110,13 +2110,18 @@ Library checkboxes. See UDK8-1055.
   font-weight: normal;
   line-height: inherit;
 }
+.pager__item a:hover {
+  cursor: pointer;
+  background: #e6e5e5;
+}
+.pager__item a:focus {
+  background: #e6e5e5;
+}
 .pager__item.is-active a {
   color: #fff;
   background: #bf5700;
   font-weight: bold;
 }
-.pager__item a:hover,
-.pager__item a:focus {
-  cursor: pointer;
-  background: #e6e5e5;
+.pager__item.is-active a:hover {
+  background: #a04400;
 }
