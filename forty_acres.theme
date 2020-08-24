@@ -33,6 +33,7 @@ function forty_acres_preprocess_page(&$variables) {
  */
 function forty_acres_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['keys']['#attributes']['placeholder'] = 'Search the site...';
+  $form['actions']['#attributes']['id'] = 'edit-search-actions';
 }
 
 /**
