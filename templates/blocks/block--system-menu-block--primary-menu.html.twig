@@ -31,14 +31,15 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-{% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby', 'id')}} id="block-accessible-main-menu">
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {# Menu. #}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+{% set heading_id ="block-accessible-main-menu" %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby', 'id')}} id="{{ heading_id }}">
+	{# Label. If not displayed, we still provide it for screen readers. #}
+	{% if not configuration.label_display %}
+		{% set title_attributes = title_attributes.addClass('visually-hidden') %}
+	{% endif %}
+	{# Menu. #}
+	{% block content %}
+		{{ content }}
+	{% endblock %}
 </nav>
+
