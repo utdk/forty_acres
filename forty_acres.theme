@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
 use Drupal\block\Entity\Block;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\forty_acres\FortyAcresRenderCallback;
 
 /**
  * Implements hook_preprocess_page().
@@ -32,6 +33,7 @@ function forty_acres_preprocess_page(&$variables) {
  */
 function forty_acres_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['keys']['#attributes']['placeholder'] = 'Search the site...';
+  $form['actions']['#attributes']['id'] = 'edit-search-actions';
 }
 
 /**
@@ -154,7 +156,10 @@ function forty_acres_theme_suggestions_input_alter(array &$suggestions, array $v
 function forty_acres_preprocess_breadcrumb(&$variables) {
   // Use a placeholder to inject dynamic content.
   $placeholder_title = [
-    '#lazy_builder' => ['_utexas_breadcrumbs_title_placeholder', ['page_title']],
+    '#lazy_builder' => [
+      FortyAcresRenderCallback::class . '::lazyBuilder',
+      ['page_title'],
+    ],
     '#create_placeholder' => TRUE,
   ];
   $variables['breadcrumb'][] = [
@@ -163,25 +168,10 @@ function forty_acres_preprocess_breadcrumb(&$variables) {
 }
 
 /**
- * Return values for the breadcrumb title placeholder.
- *
- * @param string $page_title
- *   The placeholder object for the page title.
- *
- * @return array
- *   A render array.
+ * Implements hook_preprocess_block_system_messages_block().
  */
-function _utexas_breadcrumbs_title_placeholder($page_title) {
-  $request = \Drupal::request();
-  $route_match = \Drupal::routeMatch();
-  if ($route_match !== NULL) {
-    $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-    if (!is_array($title)) {
-      $title = ['#markup' => $title];
-    }
-    return $title;
-  }
-  return $page_title;
+function forty_acres_preprocess_block__system_messages_block(&$variables) {
+  $variables['content']['#include_fallback'] = FALSE;
 }
 
 /**
