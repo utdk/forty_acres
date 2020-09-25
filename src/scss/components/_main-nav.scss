@@ -114,7 +114,6 @@
 
   .main-menu__link--subnav {
     font-size: 0.875rem;
-    text-transform: capitalize;
     color: $ut-body-font-color;
     font-weight: 600;
     display: block;
@@ -194,7 +193,6 @@
     .main-menu__link--subnav {
       display: block;
       padding: 0.5rem 0;
-      text-transform: capitalize;
     }
     // Mobile only styles.
     @media (max-width: map-get($grid-breakpoints, lg) - 1px) {

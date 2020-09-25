@@ -932,7 +932,6 @@ img {
   padding: 0 1.5625rem;
   -webkit-transition: border, color, 0.33s ease-in-out;
   transition: border, color, 0.33s ease-in-out;
-  text-transform: capitalize;
   color: #1f262b;
   font-size: 0.875rem;
   font-weight: 600;
@@ -1014,7 +1013,6 @@ img {
 .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav {
   display: block;
   padding: 0.5rem 0;
-  text-transform: capitalize;
 }
 @media (max-width: 1199px) {
   .sub-nav-wrapper .main-menu__list--subnav {
