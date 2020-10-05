@@ -43,9 +43,13 @@
           item.in_active_trail ? 'active',
         ]
       %}
+      {% set link_classes = [menu_level == 0 ? 'main-menu__link' : 'main-menu__link--subnav'] %}
+      {% set link_attributes = { 'class': link_classes }%}
+      {% if item.url.getRouteName() == '<nolink>' or item.url.getRouteName() == '<none>' %}
+        {% set link_attributes = link_attributes|merge({'tabindex': 0}) %}
+      {% endif %}
       <li{{ item.attributes.addClass(item_classes) }}>
-        {% set link_class = (menu_level == 0) ? 'main-menu__link' : 'main-menu__link--subnav' %}
-        {{ link(item.title, item.url, { 'class':[link_class]}) }}
+        {{ link(item.title, item.url, link_attributes) }}
         {% if item.is_expanded %}
           <i class="icon subnav-trigger" tabindex=0>
             <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>

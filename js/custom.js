@@ -98,9 +98,18 @@
         $('i.subnav-trigger').removeClass('icon--open');
       }
 
-      // Undo preventDefault called on L1 links so they are clickable.
-      $('.main-menu__link').on('click touchstart', function(event) {
-        window.location.href = $(this).attr('href');
+      $('.main-menu__link').on('mousedown touchstart', function (event) {
+        // When href does not exist on the element, prevent the default behavior
+        // of "focus on mousedown" from occurring. This is neccessary when
+        // no-link behavior causes Drupal to output a <span> instead of a <a>.
+        if ($(this).attr('href') === undefined) {
+            event.preventDefault();
+          }
+        // When href does exist, add back the "go to href" behavior that has
+        // been removed elsewhere in the accessibleMegaMenu.js library.
+        else {
+          window.location.href = $(this).attr('href');
+        }
       });
 
       var resizeEvent = debounce(function() {
