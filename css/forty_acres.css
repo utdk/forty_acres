@@ -1544,6 +1544,9 @@ footer.ut-footer .footer-textarea {
   font-size: 0.875rem;
   line-height: 1.25;
 }
+footer.ut-footer a {
+  color: #9d4700;
+}
 /* To provide full bleed display, override the default
 Bootstrap padding on "container-fluid". This applies only
 in the context of the "main_content" region.  */
