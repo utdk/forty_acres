@@ -890,7 +890,6 @@ img {
 .main-menu__list-item .main-menu__link:hover,
 .main-menu__list-item .main-menu__link:focus,
 .main-menu__list-item .main-menu__link.open {
-  text-decoration: none;
   text-decoration: underline;
   color: #bf5700;
 }
@@ -902,6 +901,12 @@ img {
     margin-top: 0.0625rem;
     border-bottom: 1px solid transparent;
   }
+}
+.main-menu__list-item .main-menu__link:not([href]):hover,
+.main-menu__list-item .main-menu__link:not([href]):focus,
+.main-menu__list-item .main-menu__link:not([href]).open {
+  text-decoration: none;
+  color: #1f262b;
 }
 @media (max-width: 1199px) {
   .main-menu__list-item.menu-item-has-children > .main-menu__link {

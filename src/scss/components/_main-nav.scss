@@ -76,7 +76,6 @@
     &:focus,
     &.open {
       // Open state of first descendant link within a top level navigation item.
-      text-decoration: none;
       color: $ut-burntorange;
       text-decoration: underline;
       // stylelint-disable-next-line at-rule-no-unknown
@@ -85,6 +84,14 @@
         margin-top: rem-calc(1);
         z-index: 3;
       }
+    }
+    // When there is no href attribute, such as when usine <nolink> or <none>
+    // routes, remove underline and "link color".
+    &:not([href]):hover,
+    &:not([href]):focus,
+    &:not([href]).open {
+      color: $ut-body-font-color;
+      text-decoration: none;
     }
   }
   // L1 links with subnavs.
