@@ -77,11 +77,10 @@ header.ut-header {
       top: rem-calc(80);
       left: 0;
       overflow: hidden;
-      overflow: hidden;
       opacity: 0;
       background-color: $ut-limestone--t20;
       border: 1px solid $ut-shade--t60;
-      display: flex;
+      display: none;
       flex-flow: column-reverse;
       &.active {
         opacity: 1;
@@ -95,6 +94,7 @@ header.ut-header {
     }
     &.active {
       z-index: 100;
+      display: flex;
     }
   }
 }
