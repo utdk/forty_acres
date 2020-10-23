@@ -68,6 +68,8 @@ function forty_acres_preprocess_block(&$variables) {
   if (isset($variables['attributes']['id'])) {
     $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
   }
+  // Style block title like the headline by using its dedicated class.
+  $variables['title_attributes']['class'][] = 'ut-headline';
 }
 
 /**
