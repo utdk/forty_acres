@@ -3,18 +3,49 @@ a {
   text-decoration: none;
 }
 
+p a {
+  text-decoration: underline;
+}
+
 a:link,
 a:visited {
   color: $ut-burntorange;
 }
-
 a:hover,
 a:focus {
   color: $ut-burntorange--s20;
 }
-
 a:active {
   color: $ut-burntorange--s10;
+}
+
+/* Set links in announcement message to be underlined. */
+.announcement-body a {
+  text-decoration: underline;
+}
+
+/* Set links in ut-copy fields to be underlined. */
+.ut-copy a,
+.ut-copy ol a,
+.ut-copy ul a {
+  text-decoration: underline;
+}
+
+/* Set links in views pages header or footer to be underlined. */
+.views-element-container header a,
+.views-element-container footer a {
+  text-decoration: underline;
+}
+
+/* Set links in views blocks header or footer to be underlined. */
+.block-views header a,
+.block-views footer a {
+  text-decoration: underline;
+}
+
+/* Override CTA links so never underlined. */
+a.cta {
+  text-decoration: none !important;
 }
 
 // UT Links

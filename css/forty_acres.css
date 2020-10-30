@@ -540,6 +540,9 @@ a {
   text-decoration: none;
   color: #bf5700;
 }
+p a {
+  text-decoration: underline;
+}
 a:link,
 a:visited {
   color: #bf5700;
@@ -550,6 +553,30 @@ a:focus {
 }
 a:active {
   color: #ae4f00;
+}
+/* Set links in announcement message to be underlined. */
+.announcement-body a {
+  text-decoration: underline;
+}
+/* Set links in ut-copy fields to be underlined. */
+.ut-copy a,
+.ut-copy ol a,
+.ut-copy ul a {
+  text-decoration: underline;
+}
+/* Set links in views pages header or footer to be underlined. */
+.views-element-container header a,
+.views-element-container footer a {
+  text-decoration: underline;
+}
+/* Set links in views blocks header or footer to be underlined. */
+.block-views header a,
+.block-views footer a {
+  text-decoration: underline;
+}
+/* Override CTA links so never underlined. */
+a.cta {
+  text-decoration: none !important;
 }
 a.ut-link {
   letter-spacing: 0.35px;
