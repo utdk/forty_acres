@@ -3,6 +3,7 @@ global:
     theme:
       css/base.css: {}
       css/forty_acres.css: {}
+      css/align-override.css: {}
   js:
     js/jquery-accessibleMegaMenu.js: {}
     js/util.js: {}

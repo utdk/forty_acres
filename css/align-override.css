@@ -1,0 +1,31 @@
+.align-left,
+.align-right,
+.align-center {
+  margin-bottom: 1rem;
+  padding-top: 0.4rem;
+}
+.align-left {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+.align-right {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.align-center {
+  text-align: center;
+}
+/* Ensure caption text does not exceed image */
+/* Solution modeled after https://stackoverflow.com/a/28394126 */
+figure.align-right,
+figure.align-left,
+figure.align-center {
+  display: table;
+}
+figure.align-right figcaption,
+figure.align-left figcaption,
+figure.align-center figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align: left;
+}

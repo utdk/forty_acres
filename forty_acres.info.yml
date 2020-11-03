@@ -28,3 +28,6 @@ regions:
 
 libraries:
   - forty_acres/global
+
+ckeditor_stylesheets:
+  - css/align-override.css
