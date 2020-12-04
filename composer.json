@@ -46,9 +46,6 @@
       "role": "Developer"
     }
   ],
-  "require": {
-    "composer/installers": "^1.0.20"
-  },
   "config": {
     "sort-packages": true
   }
