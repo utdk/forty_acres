@@ -29,5 +29,11 @@ regions:
 libraries:
   - forty_acres/global
 
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        /core/themes/stable/css/core/dialog/off-canvas.reset.css: css/off-canvas.reset.css
+
 ckeditor_stylesheets:
   - css/align-override.css
