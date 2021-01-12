@@ -1589,7 +1589,7 @@ in the context of the "main_content" region.  */
 /* Styles for layout that are not specific to any one region. */
 /* Add a margin-bottom to wherever .block class is used in the main content region. */
 .block {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 /* Declare format for nested ordered lists */
 ol li {

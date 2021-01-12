@@ -1,3 +1,9 @@
+---
+name: Bug report
+about: Report something that needs to be fixed
+labels: 'bug'
+
+---
 <!--- Title format: Action-verb driven description of problem or feature -->
 
 ## Expected Behavior

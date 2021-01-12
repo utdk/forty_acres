@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
 use Drupal\block\Entity\Block;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Template\Attribute;
 use Drupal\forty_acres\FortyAcresRenderCallback;
 
 /**
@@ -118,6 +119,68 @@ function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $va
     if ($block = Block::load($hook)) {
       $region = $block->getRegion();
       $suggestions[] = 'menu__' . $region;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_menu().
+ */
+function forty_acres_preprocess_menu(&$variables) {
+  // Call this potentially self-invoking process function separately.
+  _forty_acres_preprocess_menu_items_create_attribute($variables['items']);
+
+  if ($variables['menu_name'] != 'main') {
+    return;
+  }
+
+  // Call this potentially self-invoking process function separately.
+  _forty_acres_preprocess_menu_items_nolink($variables['items']);
+}
+
+/**
+ * Helper function to recursively create menu item link attributes object.
+ */
+function _forty_acres_preprocess_menu_items_create_attribute(&$items) {
+  // Items are referred to using index throughout foreach to help recursively
+  // pass their data by reference.
+  foreach ($items as $delta => $unused) {
+    // Create new attributes object for use in the template.
+    $items[$delta]['link_attributes'] = new Attribute();
+
+    // When the menu item has children, recursively call this function.
+    if (!empty($items[$delta]['below'])) {
+      _forty_acres_preprocess_menu_items_create_attribute($items[$delta]['below']);
+    }
+  }
+}
+
+/**
+ * Helper function to recursively set menu item link attributes.
+ */
+function _forty_acres_preprocess_menu_items_nolink(&$items) {
+  // Items are referred to using index throughout foreach to help recursively
+  // pass their data by reference.
+  foreach ($items as $delta => $unused) {
+    /** @var \Drupal\Core\Template\Attribute $link_attributes */
+    $link_attributes = $items[$delta]['link_attributes'];
+    /** @var \Drupal\Core\Url $itemUrl */
+    $item_url = $items[$delta]['url'];
+
+    // If the url is routed (not external), check for <nolink> and <none> so
+    // that a tabindex can be applied for accessiblity.
+    if ($item_url->isRouted() && $menuEntityRouteName = $item_url->getRouteName()) {
+      if ($menuEntityRouteName == '<nolink>' || $menuEntityRouteName == '<none>') {
+        $link_attributes->setAttribute('tabindex', 0);
+      }
+    }
+
+    // Reassign link attributes after processing.
+    $items[$delta]['link_attributes'] = $link_attributes;
+
+    // When the menu item has children, recursively call this function.
+    if (!empty($items[$delta]['below'])) {
+      _forty_acres_preprocess_menu_items_nolink($items[$delta]['below']);
     }
   }
 }

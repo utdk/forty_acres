@@ -1,6 +1,6 @@
 core: 8.x
 core_version_requirement: ^8 || ^9
-version: '3.0.0-beta.9'
+version: '3.0.0-beta.10'
 type: theme
 base theme: stable
 name: Forty Acres
@@ -28,6 +28,12 @@ regions:
 
 libraries:
   - forty_acres/global
+
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        /core/themes/stable/css/core/dialog/off-canvas.reset.css: css/off-canvas.reset.css
 
 ckeditor_stylesheets:
   - css/align-override.css
