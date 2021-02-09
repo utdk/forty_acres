@@ -2,7 +2,7 @@
   "name": "utexas/forty_acres",
   "description": "A UT-branded Drupal theme based on Bootstrap version 4.",
   "type": "drupal-theme",
-  "license": "GPL-2.0",
+  "license": ["GPL-2.0-or-later"],
   "homepage": "https://github.austin.utexas.edu/eis1-wcs/forty_acres",
   "authors": [
     {
