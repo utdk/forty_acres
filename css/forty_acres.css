@@ -538,21 +538,9 @@ header.ut-header .ut-header-wrapper .ut-main_logo {
 }
 a {
   text-decoration: none;
-  color: #bf5700;
 }
 p a {
   text-decoration: underline;
-}
-a:link,
-a:visited {
-  color: #bf5700;
-}
-a:hover,
-a:focus {
-  color: #9d4700;
-}
-a:active {
-  color: #ae4f00;
 }
 /* Set links in announcement message to be underlined. */
 .announcement-body a {
@@ -639,17 +627,17 @@ body {
 .ut-font--serif {
   font-family: "CharisSil", Georgia, serif;
 }
-a:hover,
-a:focus {
-  color: #9d4700;
-}
-a:active {
-  color: #ae4f00;
-}
 a,
 a:link,
 a:visited {
+  color: #9d4700;
+}
+a:hover,
+a:focus {
   color: #bf5700;
+}
+a:active {
+  color: #ae4f00;
 }
 h1,
 .ut-h1 {
