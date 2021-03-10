@@ -1,51 +1,22 @@
 {
   "name": "utexas/forty_acres",
-  "description": "A UT-branded Drupal theme based on Bootstrap version 4.",
+  "description": "Default Drupal theme used with the UT Drupal Kit",
   "type": "drupal-theme",
+  "keywords": ["Drupal", "UT Drupal Kit"],
   "license": ["GPL-2.0-or-later"],
-  "homepage": "https://github.austin.utexas.edu/eis1-wcs/forty_acres",
+  "homepage": "https://drupalkit.its.utexas.edu",
   "authors": [
     {
-      "name": "Tyler Fahey",
-      "email": "twf369@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Mark Fullmer",
-      "email": "jmf3658@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Joe Goodman",
-      "email": "jfg276@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Paul Grotevant",
-      "email": "pfg@eid.utexas.edu",
-      "role": "Manager"
-    },
-    {
-      "name": "Rick Hastie",
-      "email": "rh34438@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Mike Marsello",
-      "email": "mjm6289@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Polo Reynaga",
-      "email": "lar3597@eid.utexas.edu",
-      "role": "Developer"
-    },
-    {
-      "name": "Jana Tate",
-      "email": "jdt947@eid.utexas.edu",
+      "name": "Web Content Management Solutions Team, Information Technology Services, The University of Texas at Austin",
+      "email": "wcs-drupal-site-admins@utlists.utexas.edu",
+      "homepage": "https://drupalkit.its.utexas.edu",
       "role": "Developer"
     }
   ],
+  "support": {
+    "email": "drupal-kit-support@utlists.utexas.edu",
+    "docs": "https://drupalkit.its.utexas.edu/docs"
+  },
   "config": {
     "sort-packages": true
   }
