@@ -1,7 +1,7 @@
 {
-  "name": "forty_acres",
+  "name": "@utexas/forty_acres",
   "version": "3.0.0-beta.11",
-  "description": "Bootstrap based Drupal theme",
+  "description": "Default Drupal theme used with the UT Drupal Kit",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
@@ -11,7 +11,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "./node_modules/gulp/bin/gulp.js default"
   },
-  "author": "Mike Marsello",
+  "author": {
+    "name": "Web Content Management Solutions Team, Information Technology Services, The University of Texas at Austin",
+    "email": "drupal-kit-support@utlists.utexas.edu",
+    "url": "https://drupalkit.its.utexas.edu",
+  },
   "license": "GPL-2.0-or-later",
   "dependencies": {
     "accessible-mega-menu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu#84b7461e4719e0c33a902b94b1247e0e7f7ea5c9",
