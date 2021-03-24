@@ -41,7 +41,3 @@ Fixes #
 4. `rm -rf forty_acres && git clone --branch <branchname> git@github.austin.utexas.edu:eis1-wcs/forty_acres.git`
 5. `composer run-script dev-scaffold`
 6. `fin init && fin init-site --wcs`
-
-## Potential Reviewers
-
-@eis1-wcs/drupal-utdk
