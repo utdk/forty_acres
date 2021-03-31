@@ -1,7 +1,7 @@
 {
   "name": "utexas/forty_acres",
   "description": "Default Drupal theme used with the UT Drupal Kit",
-  "type": "drupal-theme",
+  "type": "drupal-custom-theme",
   "keywords": ["Drupal", "UT Drupal Kit"],
   "license": ["GPL-2.0-or-later"],
   "homepage": "https://drupalkit.its.utexas.edu",
