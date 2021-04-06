@@ -33,11 +33,5 @@ Fixes #
 0.
 
 ## Reference: installing a site with this branch
-<!--- Include notes for both functional testing & code review -->
-
-1. `git clone git@github.austin.utexas.edu:eis1-wcs/utdk_scaffold.git && cd utdk_scaffold`
-2. `composer require utexas/utdk_profile:dev-develop`
-3. `cd web/themes/contrib/`
-4. `rm -rf forty_acres && git clone --branch <branchname> git@github.austin.utexas.edu:eis1-wcs/forty_acres.git`
-5. `composer run-script dev-scaffold`
-6. `fin init && fin init-site --wcs`
+<!--- Include installation snippet if multiple repos are involved -->
+0. Generate the installation snippet with the branch that corresponds to the PR at https://utdirect.utexas.edu/apps/wcs/wcms/utdk3/environment-generator.
