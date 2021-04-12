@@ -8,16 +8,6 @@ labels: 'release'
 ## Pre-release checks
 
 - [ ] Review the [documentation issues](https://github.austin.utexas.edu/eis1-wcs/utdk_docs/issues) for any pending tasks that relate to the issues resolved; if any have not been completed, put this issue on hold & resolve those documentation tasks
-- [ ] Contributed module dependencies have been updated, if updates are available
-    - (script available at [utdk3_release_packaging](https://github.austin.utexas.edu/eis1-wcs/utdk3_release_packaging/blob/main/releases/utdk_contrib_updater.sh))
-
-```
-git clone git@github.austin.utexas.edu:eis1-wcs/forty_acres.git
-cd forty_acres
-composer config repositories.drupal composer https://packages.drupal.org/8
-composer install
-composer outdated --direct
-```
 
 ## Release pull request tasks
 
