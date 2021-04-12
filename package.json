@@ -14,7 +14,7 @@
   "author": {
     "name": "Web Content Management Solutions Team, Information Technology Services, The University of Texas at Austin",
     "email": "drupal-kit-support@utlists.utexas.edu",
-    "url": "https://drupalkit.its.utexas.edu",
+    "url": "https://drupalkit.its.utexas.edu"
   },
   "license": "GPL-2.0-or-later",
   "dependencies": {
