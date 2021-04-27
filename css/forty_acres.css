@@ -389,6 +389,7 @@ input[type="radio"] {
   box-shadow: 0 0 0 1px #aeb0b5;
 }
 header.ut-header {
+  margin-bottom: 1rem;
   padding-bottom: 0;
   border-bottom: 1px solid #c4cdd4;
 }
@@ -1387,7 +1388,7 @@ form.search-form .svg.search {
   fill: #bf5700;
 }
 .block-system-breadcrumb-block {
-  margin: 1rem 0;
+  margin: 0;
 }
 .block-system-breadcrumb-block ul {
   padding-left: 0;

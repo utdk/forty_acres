@@ -4,6 +4,7 @@
 header.ut-header {
   border-bottom: 1px solid $ut-shade--t60;
   padding-bottom: 0;
+  margin-bottom: 1rem;
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(lg) {
     padding-bottom: 1rem;
