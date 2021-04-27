@@ -1237,11 +1237,8 @@ ul.subnav li a:after {
     margin-top: 0;
   }
 }
-.tall_logo nav {
-  margin-top: 0;
-}
-@media screen and (min-width: 900px) {
-  .tall_logo nav {
+@media screen and (min-width: 1200px) {
+  .tall_logo .region-primary-menu nav {
     margin-top: 1.875rem;
   }
 }

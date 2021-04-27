@@ -42,11 +42,10 @@
       margin-top: 0;
     }
   }
-  nav {
-    margin-top: 0;
+  .region-primary-menu nav {
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      margin-top: rem-calc(30);
+    @include screen-mq(lg) {
+      margin-top: 1.875rem;
     }
   }
   .ut-logo--main {
