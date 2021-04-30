@@ -1232,9 +1232,9 @@ ul.subnav li a:after {
 .tall_logo #ut-main_menu-wrapper {
   margin-top: 1.25rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1199px) {
   .tall_logo #ut-main_menu-wrapper {
-    margin-top: 0;
+    margin-top: 1.35rem;
   }
 }
 @media screen and (min-width: 1200px) {

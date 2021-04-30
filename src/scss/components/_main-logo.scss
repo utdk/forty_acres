@@ -38,10 +38,11 @@
   #ut-main_menu-wrapper {
     margin-top: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      margin-top: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg) - 1px) {
+      margin-top: 1.35rem;
     }
   }
+
   .region-primary-menu nav {
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
