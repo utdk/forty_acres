@@ -38,15 +38,15 @@
   #ut-main_menu-wrapper {
     margin-top: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      margin-top: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg) - 1px) {
+      margin-top: 1.35rem;
     }
   }
-  nav {
-    margin-top: 0;
+
+  .region-primary-menu nav {
     // stylelint-disable-next-line at-rule-no-unknown
-    @include screen-mq(md) {
-      margin-top: rem-calc(30);
+    @include screen-mq(lg) {
+      margin-top: 1.875rem;
     }
   }
   .ut-logo--main {
