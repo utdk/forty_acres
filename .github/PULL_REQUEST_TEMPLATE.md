@@ -1,37 +1,22 @@
-<!--- Title format : ISSUE # : Action-verb driven description-->
-
-## Motivation/Purpose of Changes
-<!--- Why is this change needed? Links to existing issues are great. -->
+## Purpose
 Fixes #
 
-## Proposed Resolution/Implementation
-<!--- Describe any implementation choices you made that are noteworthy -->
-<!--- or may require discussion. -->
+## Vouches
+- [ ] I checked the changed files for syntax compliance & [naming conventions](https://github.austin.utexas.edu/eis1-wcs/d8-standards/blob/master/Naming_Conventions.md) adherence
+- [ ] I evaluated whether new tests should be written for this change
+- [ ] I considered whether documentation or a decision record needs to be added
+- [ ] I considered whether this change accommodates new and existing sites
 
-## Screenshot(s)
-<!--- (If relevant) -->
+## Callouts
+- [ ] This change requires a companion migration task: #
+- [ ] This change has a companion documentation task: #
+- [ ] Combo change (requires changes from another repo):
 
-## Types of changes
-<!--- Put an `x` in all the boxes that apply: -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
+## Reference: running tests locally
+1. `fin test web/profiles/contrib/utexas/tests/src/Functional`
+1. `fin test-js web/profiles/contrib/utexas/tests/src/FunctionalJavascript`
 
-## Checklist
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] Code follows the coding style of this project.
-- [ ] Change requires a change to the documentation.
-- [ ] I have updated the documentation accordingly.
-- [ ] I have added tests to cover my changes.
-- [ ] All new and existing tests passed.
+## Setup
+1. Use https://utdirect.utexas.edu/apps/wcs/wcms/utdk3/environment-generator to generate the command related to this branch.
 
-## Evaluation Steps
-<!--- Include notes for both functional testing & code review -->
-
-0. See 'installing a site with this branch,' below.
-0.
-
-## Reference: installing a site with this branch
-<!--- Include installation snippet if multiple repos are involved -->
-0. Generate the installation snippet with the branch that corresponds to the PR at https://utdirect.utexas.edu/apps/wcs/wcms/utdk3/environment-generator.
+## Acceptance criteria
