@@ -22,7 +22,8 @@
           focusClass: "focus",
           openClass: "open",
           openDelay: 0,
-          closeDelay: 250
+          closeDelay: 250,
+          openOnMouseover: true
       });
 
       // Enable main menu dropdown trigger and set aria-expanded attribute.
@@ -68,6 +69,7 @@
           if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13) {
             // Keep mousedown event from grabbing focus.
             e.preventDefault();
+            e.stopPropagation();
             $(this).toggleClass('icon--open');
             // Add border on sibling link when active.
             $(this).siblings('.main-menu__link').toggleClass('add-border');
@@ -140,32 +142,36 @@
   Drupal.behaviors.utexasAccessibleMobileMenu = {
     attach: function (context, settings) {
       var closeMenu = function() {
-        // 1. Remove the active class from the menu wrapper to close it.
-        $("#ut-main_menu-wrapper").removeClass("active");
-        // 2. Set button attributes back to their defaulr values.
-        $(".ut-btn--toggle").attr("aria-expanded", "false");
-        $(".ut-btn--toggle").text("MENU");
-        // 3. Set focus to the mobile menu button.
+        // 1. Simulate menu toggle button click.
+        $('.ut-btn--toggle').click();
+        // 2. Set focus to the mobile menu button.
         $(".ut-btn--toggle").focus();
       }
-      // When a key is pressed.
-      $(document).on('keydown', function (event) {
-        // If it is the Esc key, and mobile menu is open, close it.
-        if (event.key === "Escape" && $("#ut-main_menu-wrapper").hasClass("active")) {
-          closeMenu();
-        }
-      });
-      // If children of mobile menu loses focus.
-      $("#ut-main_menu-wrapper").children().focusout(function (e) {
-        // Grab all parents and get their IDs.
-        var parentIds = $(e.relatedTarget).parents().map(function() {
-          return this.id;
-        }).get().join();
-        // If none of the parent has the menu wrapper ID, close the menu.
-        if (parentIds.indexOf("ut-main_menu-wrapper") === -1) {
-          closeMenu();
-        }
-      });
+      // Activate mobile menu logic only when mobile menu button is visible.
+      if ($("#js-nav-toggle").css('display') !== 'none') {
+        // When a key is pressed.
+        $(document).on('keydown', function (event) {
+          // If it is the Esc key, and mobile menu is open, close it.
+          if (event.key === "Escape" && $("#ut-main_menu-wrapper").hasClass("active")) {
+            // Give first click if pressing Esc within the mobile menu.
+            if (event.target.className !== "ut-btn--toggle") {
+              $('.ut-btn--toggle').click();
+            }
+            closeMenu();
+          }
+        });
+        // If children of mobile menu loses focus.
+        $("#ut-main_menu-wrapper").children().focusout(function (e) {
+          // Grab all parents and get their IDs.
+          var parentIds = $(e.relatedTarget).parents().map(function () {
+            return this.id;
+          }).get().join();
+          // If none of the parent has the menu wrapper ID, close the menu.
+          if (parentIds.indexOf("ut-main_menu-wrapper") === -1) {
+            closeMenu();
+          }
+        });
+      }
     }
   };
 
