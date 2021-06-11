@@ -1154,6 +1154,16 @@ ul.subnav li a {
   font-weight: 600;
   line-height: 1.25rem;
 }
+ul.subnav li span {
+  display: block;
+  margin-bottom: 5px;
+  padding: 7px 5px 7px 15px;
+  list-style-type: none;
+  border-left: 1px solid #7d8a92;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
 ul.subnav ul {
   padding-left: 5px;
 }
