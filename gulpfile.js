@@ -34,7 +34,13 @@ gulp.task('copy-js', function () {
     .src([
       './node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js',
       './node_modules/bootstrap/js/dist/tab.js',
-      './node_modules/bootstrap/js/dist/util.js'
+      './node_modules/bootstrap/js/dist/util.js',
+      './node_modules/bootstrap/js/dist/collapse.js',
+      './node_modules/bootstrap/js/dist/alert.js',
+      './node_modules/bootstrap/js/dist/dropdown.js',
+      './node_modules/bootstrap/js/dist/modal.js',
+      './node_modules/bootstrap/js/dist/tooltip.js',
+      './node_modules/popper.js/dist/umd/popper.js'
     ])
     .pipe(uglify())
     .pipe(gulp.dest('js'));

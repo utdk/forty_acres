@@ -7,10 +7,66 @@ global:
   js:
     js/jquery-accessibleMegaMenu.js: {}
     js/util.js: {}
-    js/tab.js: {}
     js/svgxuse.js: {}
     js/custom.js: {}
   dependencies:
     - core/jquery
     - core/drupal
     - core/drupal.debounce
+popper-js:
+  js:
+    js/popper.js: {}
+bootstrap-collapse:
+  css:
+    theme:
+      css/collapse.css: {}
+  js:
+    js/collapse.js: {}
+  dependencies:
+    - core/jquery
+bootstrap-alert:
+  css:
+    theme:
+      css/alert.css: {}
+  js:
+    js/alert.js: {}
+  dependencies:
+    - core/jquery
+bootstrap-dropdown:
+  css:
+    theme:
+      css/dropdown.css: {}
+  js:
+    js/dropdown.js: {}
+  dependencies:
+    - core/jquery
+    - forty_acres/popper-js
+bootstrap-modal:
+  css:
+    theme:
+      css/modal.css: {}
+  js:
+    js/modal.js: {}
+  dependencies:
+    - core/jquery
+bootstrap-tab:
+  css:
+    theme:
+      css/tab.css: {}
+  js:
+    js/tab.js: {}
+  dependencies:
+    - core/jquery
+bootstrap-tooltip-init:
+  js:
+    js/tooltip-initialize.js: {}
+bootstrap-tooltip:
+  css:
+    theme:
+      css/tooltip.css: {}
+  js:
+    js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - forty_acres/popper-js
+    - forty_acres/bootstrap-tooltip-init

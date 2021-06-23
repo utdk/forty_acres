@@ -2,3 +2,10 @@ features:
   favicon: true
 favicon:
   use_default: false
+bootstrap_components:
+  tooltip: 0
+  collapse: 'collapse'
+  alert: 0
+  dropdown: 0
+  modal: 0
+  tab: 'tab'
