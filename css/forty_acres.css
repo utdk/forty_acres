@@ -1290,6 +1290,36 @@ ul.header-menu__list .header-menu__link {
   background-color: #bf5700;
   font-weight: 600;
 }
+aside.inner-rail {
+  float: left;
+  width: 100%;
+  margin: 0 0 8px 0;
+  padding-right: 20px;
+  padding-left: 0;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+aside.inner-rail.right {
+  float: right;
+  padding-right: 0;
+  padding-left: 20px;
+}
+aside.inner-rail h3 {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #3c87a3;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 900px) {
+  aside.inner-rail {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  aside.inner-rail {
+    width: 33%;
+  }
+}
 div.search-block-form div.contextual {
   display: none !important;
 }

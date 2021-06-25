@@ -1,0 +1,30 @@
+aside.inner-rail {
+  float: left;
+  width: 100%;
+  margin: 0 0 8px 0;
+  padding-right: 20px;
+  padding-left: 0;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  &.right {
+    float: right;
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    border-bottom: 2px solid #3c87a3;
+    padding-bottom: 5px;
+  }
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    width: 50%;
+  }
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    width: 33%;
+  }
+}
