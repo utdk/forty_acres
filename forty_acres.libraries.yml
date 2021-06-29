@@ -65,7 +65,7 @@ bootstrap-tooltip:
     theme:
       css/tooltip.css: {}
   js:
-    js/bootstrap.js: {}
+    js/tooltip.js: {}
   dependencies:
     - core/jquery
     - forty_acres/popper-js
