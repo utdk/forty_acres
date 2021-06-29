@@ -78,8 +78,9 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     '#title' => t('Select additional Bootstrap elements to load their CSS and JavaScript files.'),
     '#description' => t('Note: this is an experimental feature.  We do not guarantee these elements will work correctly with Drupal.'),
     '#options' => [
-      'collapse' => t('Collapse <a href="@bootstrap-accordion" target="_blank">see here for more information</a>.', [
+      'collapse' => t('Collapse <a href="@bootstrap-accordion" target="_blank">see here for more information</a>. For Forty Acres specific usage of accordions, see the  <a href="@utdk-docs-accordion" target="_blank">documentation page for this component</a>.', [
         '@bootstrap-accordion' => 'https://getbootstrap.com/docs/4.0/components/collapse/',
+        '@utdk-docs-accordion' => 'https://drupalkit.its.utexas.edu/docs/forty_acres/theme_settings.html#collapse-accordion',
       ]),
       'alert' => t('Alerts <a href="@bootstrap-alerts" target="_blank">see here for more information</a>.', [
         '@bootstrap-alerts' => 'https://getbootstrap.com/docs/4.0/components/alerts/',

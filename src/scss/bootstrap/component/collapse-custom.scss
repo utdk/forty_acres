@@ -1,0 +1,17 @@
+.accordion-header {
+  background-color: #f0f0f0;
+  margin-bottom: 0.5rem;
+
+  .accordion-button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+  }
+  .accordion-button:hover {
+    text-decoration: underline;
+  }
+}
+.accordion-body {
+  padding: .5rem 1rem;
+}
