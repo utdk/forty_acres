@@ -1,0 +1,21 @@
+details {
+  margin-bottom: 9px;
+}
+summary {
+  padding: .375rem .75em;
+  background: #f0f0f0;
+  border: 1px solid #eeeeee;
+  list-style: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: 1px dotted;
+  }
+}
+details[open] {
+  padding: 0 1rem;
+}
+details[open] summary {
+  margin: 0 -1rem .75rem;
+}
