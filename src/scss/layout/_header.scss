@@ -32,6 +32,7 @@ header.ut-header {
     }
   }
   .header-flex-wrapper {
+    align-items: center;
     margin-top: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {

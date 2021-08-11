@@ -1498,6 +1498,9 @@ header.ut-header .ut-header-wrapper {
   }
 }
 header.ut-header .header-flex-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 1.25rem;
 }
 @media screen and (min-width: 1200px) {
