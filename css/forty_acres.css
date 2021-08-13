@@ -1330,6 +1330,7 @@ div.search-block-form div.contextual {
   margin-left: 0;
   padding: 0;
   border: 1px solid #5e686e;
+  border-radius: 4px;
   background-color: #fff;
 }
 @media screen and (min-width: 1200px) {
