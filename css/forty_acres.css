@@ -857,6 +857,9 @@ img {
     margin-left: -10px;
   }
 }
+.main-menu__list li.active a.main-menu__link {
+  color: #bf5700;
+}
 .main-menu__list-item {
   position: relative;
   display: -webkit-box;
