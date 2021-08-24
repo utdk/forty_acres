@@ -31,7 +31,7 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
   $form['logo']['logo_height'] = [
     '#type' => 'radios',
     '#title' => t('Logo Height'),
-    '#description' => "Most UT Austin logos will work with the 'short' option, but logos that are taller or wider than normal may need to use the 'tall' setting in order to not appear too small. For best results, use an image that is twice as large as the desired display size, for higher pixel density screens.",
+    '#description' => t("Most UT Austin logos will work with the 'short' option, but logos that are taller or wider than normal may need to use the 'tall' setting in order to not appear too small. For best results, use an image that is twice as large as the desired display size, for higher pixel density screens."),
     '#options' => [
       'short_logo' => t('Short'),
       'tall_logo' => t('Tall'),
@@ -60,6 +60,21 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
       'placeholder' => t('https://'),
     ],
     '#element_validate' => ['_forty_acres_parent_link_validate'],
+  ];
+  $form['header_theme_settings']['region_display_fieldset'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Region display settings'),
+  ];
+  $header_secondary_display_setting = theme_get_setting('header_secondary_display');
+  $form['header_theme_settings']['region_display_fieldset']['header_secondary_display'] = [
+    '#type' => 'radios',
+    '#title' => t('Header Secondary display'),
+    '#description' => t('Display blocks placed in the Header Secondary region as side-by-side or stacked.'),
+    '#options' => [
+      'side_by_side' => t('Side-by-side'),
+      'stacked' => t('Stacked'),
+    ],
+    '#default_value' => $header_secondary_display_setting ?? 'stacked',
   ];
   // Bootstrap settings.
   $form['bootstrap'] = [

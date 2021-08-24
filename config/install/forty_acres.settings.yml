@@ -9,3 +9,4 @@ bootstrap_components:
   dropdown: 0
   modal: 0
   tab: 'tab'
+header_secondary_display: side_by_side
