@@ -69,12 +69,17 @@ function forty_acres_form_user_login_form_alter(&$form, &$form_state, $form_id) 
 function forty_acres_preprocess_field(&$variables, $hook) {
   switch ($variables['element']['#bundle']) {
     case 'feed_block':
-      if ($variables['element']['#field_name'] == 'field_read_more') {
+      if ($variables['element']['#field_name'] === 'field_read_more') {
         // Add 'button' class to Read more <a> tag.
         $variables['attributes']['class'][] = 'ut-cta';
         $variables['items'][0]['content']['#options']['attributes']['class'][] = 'ut-btn--secondary';
       }
-      if ($variables['element']['#field_name'] == 'field_intro_text') {
+      if ($variables['element']['#field_name'] === 'field_intro_text') {
+        $variables['attributes']['class'][] = 'ut-copy';
+      }
+      break;
+    case 'basic':
+      if ($variables['element']['#field_name'] === 'body' && $variables['element']['#entity_type'] === 'block_content') {
         $variables['attributes']['class'][] = 'ut-copy';
       }
       break;
