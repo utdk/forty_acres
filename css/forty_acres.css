@@ -7,24 +7,6 @@
   outline: 2px dotted #aeb0b5;
   outline-offset: 3px;
 }
-.ut-brandbar {
-  height: 40px;
-  text-align: center;
-  background-color: #bf5700;
-}
-.ut-brandbar .ut-logo--shieldtexas {
-  display: block;
-  max-height: 25px;
-}
-@media screen and (min-width: 900px) {
-  .ut-brandbar .ut-logo--shieldtexas {
-    float: right;
-  }
-}
-.ut-brandbar .ut-logo--shieldtexas img {
-  height: 25px;
-  margin-top: 6px;
-}
 .ut-btn,
 .ut-btn--secondary,
 .ut-btn--disabled,
@@ -1198,26 +1180,6 @@ ul.subnav li a:after {
   padding-left: 7px;
   font-size: 0.6875rem;
 }
-.ut-parent_entity {
-  position: static;
-}
-@media screen and (min-width: 900px) {
-  .ut-parent_entity {
-    position: absolute;
-    top: -3.375rem;
-  }
-}
-.ut-parent_entity a {
-  color: #333f48;
-  font-family: "LibreFrank", Arial, Helvetica, sans-serif;
-}
-@media screen and (min-width: 900px) {
-  .ut-parent_entity a {
-    color: #fff;
-    font-family: "CharisSil", Georgia, serif;
-    font-size: 0.875rem;
-  }
-}
 .ut-header,
 .ut-footer {
   max-width: 100%;
@@ -1863,9 +1825,41 @@ ol li ol li ol li ol li ol li ol li {
 .ut-headline {
   padding: 0.5rem 0;
 }
-.ut-brandbar .ut-logo--shieldtexas img {
-  height: 25px;
-  margin-top: 6px;
+.ut-brandbar {
+  text-align: center;
+  background: #bf5700;
+}
+.ut-brandbar .ut-logo--wrapper {
+  height: 40px;
+  padding-top: 6px;
+  vertical-align: center;
+  background: #bf5700;
+}
+.ut-brandbar .ut-logo--wrapper img {
+  max-height: 25px;
+}
+@media screen and (min-width: 900px) {
+  .ut-brandbar .ut-logo--wrapper {
+    text-align: right;
+  }
+}
+.ut-brandbar .ut-parent-entity {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  vertical-align: center;
+  color: #fff;
+  background-color: #333f48;
+  font-family: "CharisSil", Georgia, serif;
+  font-weight: 600;
+}
+.ut-brandbar .ut-parent-entity a {
+  color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .ut-brandbar .ut-parent-entity {
+    text-align: left;
+    background: transparent;
+  }
 }
 #drupal-off-canvas input[type="checkbox"],
 #drupal-off-canvas input[type="radio"] {

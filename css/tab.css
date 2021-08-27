@@ -24,10 +24,8 @@
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
-.nav-tabs .nav-item {
-  margin-bottom: -1px;
-}
 .nav-tabs .nav-link {
+  margin-bottom: -1px;
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -60,12 +58,14 @@
   color: #fff;
   background-color: #007bff;
 }
+.nav-fill > .nav-link,
 .nav-fill .nav-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   text-align: center;
 }
+.nav-justified > .nav-link,
 .nav-justified .nav-item {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;

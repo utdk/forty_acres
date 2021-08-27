@@ -1,13 +1,18 @@
 <section role="region" aria-label="University Brand Bar" class="ut-brandbar">
-  <div class="container">
+  <div class="container-md">
     <div class="row">
-      <div class="col-12">
+      <div class="ut-logo--wrapper col order-md-2">
         <a href="https://www.utexas.edu" class="ut-logo--shieldtexas">
           <span class="img-fluid logo--formal">
-            <img src="{{ brandbar_shield }}" alt="Texas Shield Logo" />
+            <img src="{{ brandbar_shield }}" alt="Texas Shield Logo"/>
           </span>
         </a>
       </div>
+      {% if parent_entity_link %}
+        <div class="ut-parent-entity col-md-9 order-md-1">
+          <a href="{{ parent_entity_link }}">{{ parent_entity_title }}</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>
