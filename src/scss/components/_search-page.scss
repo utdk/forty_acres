@@ -1,0 +1,125 @@
+// Google CS results page styles.
+.google-cse {
+  label {
+    display: none;
+  }
+  .search-help-link {
+    font-size: 13px;
+  }
+}
+
+// Hide Search results title.
+.search-results-page {
+  h2 {
+    display: none;
+  }
+  .gsc-control-cse {
+    padding: 0;
+  }
+  .gsc-result-info {
+    color: #676767;
+    font-size: 13px;
+    margin: 0;
+    padding: 4px 4px 10px 0;
+    text-align: left;
+  }
+  .gsc-thumbnail-inside,
+  .gsc-url-top,
+  .gsc-table-result {
+    padding-left: 0;
+  }
+  .gsc-orderby-container {
+    vertical-align: top;
+  }
+  .gsc-url-top {
+    margin: 20px 0 0 0;
+  }
+  .gsc-above-wrapper-area {
+    border-bottom: 0;
+    padding: 5px 0 15px 0;
+  }
+  .gsc-webResult .gsc-result {
+    margin-left: 0;
+    padding: 20px 0 5px;
+    border-top: 1px solid #e1ddd2;
+  }
+  .gs-imageResult a.gs-title:link,
+  .gs-webResult.gs-result a.gs-title:link,
+  .gs-imageResult a.gs-title:link b,
+  .gs-webResult.gs-result a.gs-title:link b,
+  .gs-result .gs-title *,
+  .gs-spelling a {
+    color: $ut-burntorange;
+  }
+  .gsc-control-cse .gs-spelling,
+  .gsc-control-cse .gs-result .gs-title,
+  .gsc-control-cse .gs-result .gs-title * {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .gsc-control-cse .gs-spelling {
+    padding-bottom: 12px;
+  }
+  .gs-webResult div.gs-visibleUrl-long {
+    display: block;
+  }
+  .gs-webResult div.gs-visibleUrl {
+    color: #6a6a6a;
+    font-size: 0.875rem;
+    margin: 7px 0 5px;
+  }
+  .gs-webResult .gs-snippet,
+  .gs-imageResult div.gs-visibleUrl,
+  .gs-fileFormatType {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin: 0.875rem 0;
+    padding-left: 1px;
+    color: #6a6a6a;
+    font-family: $ut-font--sans;
+  }
+  .gs-webResult .gs-image {
+    display: none;
+  }
+  // Pager styling.
+  .gsc-results .gsc-cursor-box {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    max-width: 100%;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    border-radius: 3px;
+    cursor: pointer;
+    color: #6a6a6a;
+    display: inline-block;
+    font-family: $ut-font--sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    height: 1.5rem;
+    line-height: 1;
+    margin-left: 0.3125rem;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    background: #bf5700;
+    color: #FFF;
+    font-weight: bold;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
+  .gsc-results .gsc-cursor-box .gsc-cursor-page:focus {
+    background: #ececec;
+  }
+  .gs-no-results-result .gs-snippet,
+  .gs-error-result .gs-snippet {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin: 5px;
+    padding: 15px;
+    font-weight: bold;
+  }
+}
