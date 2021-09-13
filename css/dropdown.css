@@ -189,7 +189,7 @@
 .dropdown-item:focus {
   text-decoration: none;
   color: #16181b;
-  background-color: #f8f9fa;
+  background-color: #e9ecef;
 }
 .dropdown-item.active,
 .dropdown-item:active {
@@ -200,7 +200,7 @@
 .dropdown-item.disabled,
 .dropdown-item:disabled {
   pointer-events: none;
-  color: #6c757d;
+  color: #adb5bd;
   background-color: transparent;
 }
 .dropdown-menu.show {

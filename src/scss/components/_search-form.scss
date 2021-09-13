@@ -14,6 +14,7 @@ div.search-block-form div.contextual {
   height: 35px;
   margin: 0;
   margin-left: 0;
+  border-radius: 4px;
   width: 100%;
   padding: 0;
   // stylelint-disable-next-line at-rule-no-unknown
@@ -72,28 +73,76 @@ div.search-block-form div.contextual {
 
 form.search-form {
   position: relative;
+  margin-top: -10px;
   input {
     max-width: unset;
+    padding: 10px 0 8px 10px;
+    margin: 10px 0 2px 0;
+    line-height: 1.125rem;
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+    height: 60px;
+    width: 100%;
+    border: 1px solid #e1ddd2;
+
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      padding: 0 0 5px 20px;
+      line-height: 2.125rem;
+      font-size: 2.125rem;
+    }
   }
+
+  /* clears the X from Internet Explorer */
+  input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  /* clears the X from Chrome */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
   #edit-keys {
     background: transparent;
   }
   #edit-submit {
     position: absolute;
     width: 50px;
-    top: rem-calc(25);
+    top: 6px;
     right: 0;
     border: none;
     background: transparent;
     color: transparent;
+    border: none;
+    cursor: pointer;
   }
   .svg.search {
-    fill: $ut-burntorange;
-    width: 30px;
-    height: 30px;
     position: absolute;
-    right: rem-calc(10);
-    top: rem-calc(35);
     z-index: -1;
+    right: 0.625rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      width: 2.375rem;
+      height: 2.375rem;
+      top: 10px;
+    }
+
+    fill: $ut-burntorange;
+    top: 18px;
+    z-index: 0;
   }
 }

@@ -20,6 +20,9 @@
     margin-right: -10px;
     align-items: flex-end;
   }
+  li.active a.main-menu__link {
+    color: $ut-burntorange;
+  }
 }
 
 // A top level navigation item in the mega menu (main menu ul > li)
