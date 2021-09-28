@@ -114,6 +114,8 @@
         }
       });
 
+      // Get innerWidth to use for later comparison
+      var currentWidth = window.innerWidth;
       var resizeEvent = debounce(function() {
         // Reset to defaults
         $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
@@ -131,8 +133,14 @@
           $("i.subnav-trigger").off("click");
         }
       }, 100);
-      $(window).on('load resize', resizeEvent);
-
+      $(window).on('load', resizeEvent);
+      $(window).on('resize', function(e) {
+        var newWidth = window.innerWidth;
+        if (newWidth !== currentWidth) {
+          currentWidth = newWidth;
+          resizeEvent;
+        }
+      });
     }
   };
 
