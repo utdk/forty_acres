@@ -18,7 +18,7 @@ popper-js:
     js/popper.js: {}
 bootstrap-collapse:
   css:
-    theme:
+    base:
       css/collapse.css: {}
   js:
     js/collapse.js: {}
@@ -26,7 +26,7 @@ bootstrap-collapse:
     - core/jquery
 bootstrap-alert:
   css:
-    theme:
+    base:
       css/alert.css: {}
   js:
     js/alert.js: {}
@@ -34,7 +34,7 @@ bootstrap-alert:
     - core/jquery
 bootstrap-dropdown:
   css:
-    theme:
+    base:
       css/dropdown.css: {}
   js:
     js/dropdown.js: {}
@@ -43,7 +43,7 @@ bootstrap-dropdown:
     - forty_acres/popper-js
 bootstrap-modal:
   css:
-    theme:
+    base:
       css/modal.css: {}
   js:
     js/modal.js: {}
@@ -51,7 +51,7 @@ bootstrap-modal:
     - core/jquery
 bootstrap-tab:
   css:
-    theme:
+    base:
       css/tab.css: {}
   js:
     js/tab.js: {}
@@ -62,7 +62,7 @@ bootstrap-tooltip-init:
     js/tooltip-initialize.js: {}
 bootstrap-tooltip:
   css:
-    theme:
+    base:
       css/tooltip.css: {}
   js:
     js/tooltip.js: {}
