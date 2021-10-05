@@ -718,6 +718,9 @@ blockquote {
   border-bottom: 1px solid #3e4549;
   font-size: 2rem;
 }
+body blockquote p {
+  font-size: inherit;
+}
 address {
   margin: 0 0 1.5em;
 }
