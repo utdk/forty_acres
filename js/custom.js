@@ -29,7 +29,8 @@
       // Enable main menu dropdown trigger and set aria-expanded attribute.
       var menuToggler = $('#js-nav-toggle');
       var togglerTarget = $('#ut-main_menu-wrapper');
-      menuToggler.on('click', function () {
+      menuToggler.on('click', function (event) {
+        event.stopImmediatePropagation();
         if (menuToggler.text() == 'CLOSE') {
           resetDefaults();
         }
