@@ -731,6 +731,9 @@ pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
 }
+.layout__region {
+  min-width: 0;
+}
 code,
 kbd,
 tt,
