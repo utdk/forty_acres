@@ -75,7 +75,7 @@ header.ut-header {
       width: 100%;
       position: absolute;
       z-index: -100;
-      top: rem-calc(80);
+      top: 5.15rem;
       left: 0;
       overflow: hidden;
       opacity: 0;
@@ -88,7 +88,7 @@ header.ut-header {
       }
     }
     @media (max-width: map-get($grid-breakpoints, md) - 1px) {
-      top: rem-calc(60);
+      top: 4.5rem;
     }
     @media (min-width: map-get($grid-breakpoints, lg) + 1px) {
       position: relative;

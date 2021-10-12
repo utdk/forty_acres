@@ -1706,7 +1706,7 @@ header.ut-header #ut-main_menu-wrapper {
   header.ut-header #ut-main_menu-wrapper {
     position: absolute;
     z-index: -100;
-    top: 5rem;
+    top: 5.15rem;
     left: 0;
     display: none;
     overflow: hidden;
@@ -1727,7 +1727,7 @@ header.ut-header #ut-main_menu-wrapper {
 }
 @media (max-width: 899px) {
   header.ut-header #ut-main_menu-wrapper {
-    top: 3.75rem;
+    top: 4.5rem;
   }
 }
 @media (min-width: 1201px) {
