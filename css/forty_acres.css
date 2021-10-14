@@ -820,6 +820,9 @@ hr {
   font-size: 1rem;
   line-height: 1.375;
 }
+.block-bundle-basic .ut-copy {
+  line-height: 1.5625;
+}
 .ut-img--fluid {
   max-width: 100%;
   height: auto;

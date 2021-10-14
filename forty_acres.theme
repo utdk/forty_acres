@@ -5,11 +5,14 @@
  * The primary PHP file for the Forty Acres theme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\node\NodeInterface;
 use Drupal\block\Entity\Block;
+use Drupal\block_content\BlockContentInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Template\Attribute;
+use Drupal\node\NodeInterface;
+
 use Drupal\forty_acres\FortyAcresRenderCallback;
 
 /**
@@ -103,6 +106,11 @@ function forty_acres_preprocess_block(&$variables) {
   }
   // Style block title like the headline by using its dedicated class.
   $variables['title_attributes']['class'][] = 'ut-headline';
+
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('block-bundle-' . $content['#block_content']->bundle());
+  }
 }
 
 /**
