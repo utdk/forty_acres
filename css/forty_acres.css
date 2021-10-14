@@ -1059,6 +1059,9 @@ img {
   display: block;
   padding: 0.5rem 0;
 }
+.sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav:hover {
+  color: #bf5700;
+}
 @media (max-width: 1199px) {
   .sub-nav-wrapper .main-menu__list--subnav {
     position: relative;
