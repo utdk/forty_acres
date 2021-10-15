@@ -2070,6 +2070,9 @@ ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
 .ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
 }
+.promo-list .ut-copy p {
+  font-size: 1rem;
+}
 .utexas-quick-links .ut-headline {
   margin-bottom: 0.9375rem;
 }
