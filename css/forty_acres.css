@@ -820,6 +820,11 @@ hr {
   font-size: 1rem;
   line-height: 1.375;
 }
+.ut-copy:after {
+  display: block;
+  clear: both;
+  content: "";
+}
 .block-bundle-basic .ut-copy {
   line-height: 1.5625;
 }
