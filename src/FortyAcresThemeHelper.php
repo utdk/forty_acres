@@ -23,6 +23,9 @@ class FortyAcresThemeHelper {
       $display = \Drupal::entityTypeManager()
         ->getStorage('entity_view_display')
         ->load($entity_type . '.' . $bundle . '.default');
+      if (!$display) {
+        return FALSE;
+      }
       if ($display->isLayoutBuilderEnabled()) {
         return TRUE;
       }
