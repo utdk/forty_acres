@@ -718,6 +718,9 @@ blockquote {
   border-bottom: 1px solid #3e4549;
   font-size: 2rem;
 }
+body blockquote p {
+  font-size: inherit;
+}
 address {
   margin: 0 0 1.5em;
 }
@@ -727,6 +730,9 @@ pre {
   padding: 1em;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
+}
+.layout__region {
+  min-width: 0;
 }
 code,
 kbd,
@@ -813,6 +819,14 @@ hr {
 .ut-copy {
   font-size: 1rem;
   line-height: 1.375;
+}
+.ut-copy:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.block-bundle-basic .ut-copy {
+  line-height: 1.5625;
 }
 .ut-img--fluid {
   max-width: 100%;
@@ -1049,6 +1063,9 @@ img {
 .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav {
   display: block;
   padding: 0.5rem 0;
+}
+.sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav:hover {
+  color: #bf5700;
 }
 @media (max-width: 1199px) {
   .sub-nav-wrapper .main-menu__list--subnav {
@@ -1700,7 +1717,7 @@ header.ut-header #ut-main_menu-wrapper {
   header.ut-header #ut-main_menu-wrapper {
     position: absolute;
     z-index: -100;
-    top: 5rem;
+    top: 5.15rem;
     left: 0;
     display: none;
     overflow: hidden;
@@ -1721,7 +1738,7 @@ header.ut-header #ut-main_menu-wrapper {
 }
 @media (max-width: 899px) {
   header.ut-header #ut-main_menu-wrapper {
-    top: 3.75rem;
+    top: 4.5rem;
   }
 }
 @media (min-width: 1201px) {
@@ -1779,22 +1796,22 @@ in the context of the "main_content" region.  */
   margin-bottom: 2.5rem;
 }
 /* Declare format for nested ordered lists */
-ol li {
+ol > li {
   list-style-type: decimal;
 }
-ol li ol li {
+ol > li > ol > li {
   list-style-type: upper-alpha;
 }
-ol li ol li ol li {
+ol > li > ol > li > ol > li {
   list-style-type: upper-roman;
 }
-ol li ol li ol li ol li {
+ol > li > ol > li > ol > li > ol > li {
   list-style-type: decimal;
 }
-ol li ol li ol li ol li ol li {
+ol > li > ol > li > ol > li > ol > li > ol > li {
   list-style-type: lower-alpha;
 }
-ol li ol li ol li ol li ol li ol li {
+ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
   list-style-type: lower-roman;
 }
 .block-local-tasks-block {
@@ -2058,6 +2075,9 @@ ol li ol li ol li ol li ol li ol li {
 .ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
 }
+.promo-list .ut-copy p {
+  font-size: 1rem;
+}
 .utexas-quick-links .ut-headline {
   margin-bottom: 0.9375rem;
 }
@@ -2081,9 +2101,6 @@ ol li ol li ol li ol li ol li ol li {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-}
-.utexas-quick-links .link-list li {
-  padding-bottom: 1.875rem;
 }
 .utexas-quick-links .link-list a.ut-link {
   font-weight: 500;

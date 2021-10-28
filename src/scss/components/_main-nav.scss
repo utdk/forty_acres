@@ -204,6 +204,9 @@
       display: block;
       padding: 0.5rem 0;
     }
+    .main-menu__link--subnav:hover {
+      color: $ut-burntorange;
+    }
     // Mobile only styles.
     @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       width: 100%;

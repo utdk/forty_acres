@@ -111,6 +111,9 @@ blockquote {
   border-top: 1px solid $ut-shade--s60;
   border-bottom: 1px solid $ut-shade--s60;
 }
+body blockquote p {
+  font-size: inherit;
+}
 
 address {
   margin: 0 0 1.5em;
@@ -122,6 +125,11 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em;
+}
+
+// Prevent text in a pre tag from breaking the layout by not scrolling horizontally
+.layout__region {
+  min-width: 0;
 }
 
 code,

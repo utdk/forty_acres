@@ -29,7 +29,8 @@
       // Enable main menu dropdown trigger and set aria-expanded attribute.
       var menuToggler = $('#js-nav-toggle');
       var togglerTarget = $('#ut-main_menu-wrapper');
-      menuToggler.on('click', function () {
+      menuToggler.on('click', function (event) {
+        event.stopImmediatePropagation();
         if (menuToggler.text() == 'CLOSE') {
           resetDefaults();
         }
@@ -114,6 +115,8 @@
         }
       });
 
+      // Get innerWidth to use for later comparison
+      var currentWidth = window.innerWidth;
       var resizeEvent = debounce(function() {
         // Reset to defaults
         $('#js-nav-toggle').html('MENU').attr('aria-expanded', 'false');
@@ -131,8 +134,14 @@
           $("i.subnav-trigger").off("click");
         }
       }, 100);
-      $(window).on('load resize', resizeEvent);
-
+      $(window).on('load', resizeEvent);
+      $(window).on('resize', function(e) {
+        var newWidth = window.innerWidth;
+        if (newWidth !== currentWidth) {
+          currentWidth = newWidth;
+          resizeEvent;
+        }
+      });
     }
   };
 

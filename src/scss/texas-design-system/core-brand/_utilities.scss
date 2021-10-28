@@ -56,11 +56,19 @@
   }
 }
 
-// ----------
-// Intro Text Style
+// ---------
+// Copy text
 .ut-copy {
   font-size: 1rem;
   line-height: 1.375;
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+.block-bundle-basic .ut-copy {
+  line-height: 1.5625;
 }
 
 // ----------
