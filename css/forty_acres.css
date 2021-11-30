@@ -716,7 +716,7 @@ blockquote {
   color: #3e4549;
   border-top: 1px solid #3e4549;
   border-bottom: 1px solid #3e4549;
-  font-size: 2rem;
+  font-size: 1.125rem;
 }
 body blockquote p {
   font-size: inherit;
