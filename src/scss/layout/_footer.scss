@@ -23,6 +23,17 @@ footer.ut-footer {
     padding-left: rem-calc(10);
     border-left: 1px solid $ut-shade--t60;
   }
+
+  // Add padding and separator to footer columns at larger screen widths.
+  @include screen-mq(md) {
+    .row:first-child > div:not(:first-child) > .region{
+      padding-left: 2rem
+    }
+    .row:first-child > div:not(:first-child) {
+      border-left: 1px solid $ut-shade--t60;
+    }
+  }
+
   a {
     color: $ut-burntorange--s20;
   }

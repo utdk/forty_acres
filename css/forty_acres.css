@@ -1780,6 +1780,14 @@ footer.ut-footer .footer-textarea {
   font-size: 0.875rem;
   line-height: 1.25;
 }
+@media screen and (min-width: 900px) {
+  footer.ut-footer .row:first-child > div:not(:first-child) > .region {
+    padding-left: 2rem;
+  }
+  footer.ut-footer .row:first-child > div:not(:first-child) {
+    border-left: 1px solid #c4cdd4;
+  }
+}
 footer.ut-footer a {
   color: #9d4700;
 }
