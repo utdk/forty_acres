@@ -777,6 +777,12 @@ hr {
     font-size: 1.125rem;
   }
 }
+.updated-date-message,
+.updated-date {
+  color: #56544e;
+  font-size: 0.9rem;
+  font-style: italic;
+}
 .ut-headline,
 .ut-headline--underline {
   margin: 0 0 0.5rem;

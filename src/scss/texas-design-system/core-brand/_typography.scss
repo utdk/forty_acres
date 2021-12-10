@@ -184,3 +184,11 @@ hr {
     }
   }
 }
+
+// Last updated text.
+.updated-date-message,
+.updated-date {
+  font-style: italic;
+  font-size: .9rem;
+  color: $ut-limestone--s60;
+}
