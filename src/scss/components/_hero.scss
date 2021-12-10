@@ -57,6 +57,7 @@
   .hero-headline {
     font-size: 2.0625rem;
     font-weight: 600;
+    line-height: normal;
     color: $ut-white;
     margin-bottom: .5rem;
 
@@ -105,7 +106,7 @@
 .ut-hero.hero--photo-gradient .hero-headline {
   color: $ut-white;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: normal;
   font-size: 2.0625rem;
 }
 
@@ -113,7 +114,6 @@
 @include screen-mq(lg) {
   .ut-hero.hero--photo-gradient .hero-headline {
     font-size: 2.4375rem;
-    line-height: 2.625;
   }
 }
 
