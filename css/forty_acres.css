@@ -1822,6 +1822,11 @@ ol > li > ol > li > ol > li > ol > li > ol > li {
 ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
   list-style-type: lower-roman;
 }
+/* Tablesaw tables. */
+/* Add a background color for table headers. */
+.tablesaw thead {
+  background: #ebeced;
+}
 .block-local-tasks-block {
   margin: 1.5rem 0;
 }

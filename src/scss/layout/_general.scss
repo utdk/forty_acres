@@ -36,3 +36,9 @@ ol {
     }
   }
 }
+
+/* Tablesaw tables. */
+/* Add a background color for table headers. */
+.tablesaw thead {
+  background: $ut-charcoal--t20;
+}
