@@ -25,9 +25,10 @@ footer.ut-footer {
   }
 
   // Add padding and separator to footer columns at larger screen widths.
+  // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(md) {
-    .row:first-child > div:not(:first-child) > .region{
-      padding-left: 2rem
+    .row:first-child > div:not(:first-child) > .region {
+      padding-left: 2rem;
     }
     .row:first-child > div:not(:first-child) {
       border-left: 1px solid $ut-shade--t60;
