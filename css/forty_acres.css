@@ -2120,9 +2120,6 @@ ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
   padding-left: 0;
   list-style: none;
 }
-.utexas-quick-links .link-list a.ut-link {
-  font-weight: 500;
-}
 /* General defaults for Hero elements */
 .ut-hero .ut-btn--hero {
   display: inline-block;
