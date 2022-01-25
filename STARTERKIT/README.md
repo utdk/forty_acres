@@ -1,12 +1,15 @@
 # Forty Acres Subtheme Developer Documentation
 
 ### Creating a Forty Acres Subtheme
-Copy the STARTERKIT directory and put it at the same level as the forty_acres theme (/web/themes).  Rename the subtheme name in place of the name STARTERKIT, and replace the word STARTERKIT in your subtheme in the following places within your subtheme:
+Copy the STARTERKIT directory into a site-specific theme directory as described in https://drupalkit.its.utexas.edu/docs/development/#add-a-site-specific-custom-module-theme . Rename the subtheme name in place of the name STARTERKIT, and replace the word STARTERKIT in your subtheme in the following places within your subtheme:
+
+```
 /config/install/STARTERKIT.settings.yml
 package.json
 STARTERKIT.info.yml (the name and 2 instances inside this file)
 STARTERKIT.theme
 STARTERKIT.libraries.yml
+```
 
 ### Customizing your subtheme
 
