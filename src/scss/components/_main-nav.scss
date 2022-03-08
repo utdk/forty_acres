@@ -98,6 +98,7 @@
     }
   }
   // L1 links with subnavs.
+  // stylelint-disable-next-line
   &.menu-item-has-children > .main-menu__link {
     @media (max-width: map-get($grid-breakpoints, lg) - 1px) {
       border-right: 1px solid $ut-charcoal--t40;
