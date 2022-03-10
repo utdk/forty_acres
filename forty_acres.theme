@@ -57,6 +57,11 @@ function forty_acres_preprocess_page(&$variables) {
     // Remove breadcrumbs block from breadcrumb region.
     unset($variables['page']['breadcrumb']['breadcrumbs']);
   }
+
+  // If the current page uses Layout Builder, add a flag.
+  if (FortyAcresThemeHelper::isLayoutBuilderPage()) {
+    $variables['is_layout_builder_page'] = TRUE;
+  }
 }
 
 /**

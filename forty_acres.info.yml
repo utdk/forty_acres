@@ -17,8 +17,8 @@ regions:
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help
-  content: Content
   sidebar_first: Left Sidebar
+  content: Content
   sidebar_second: Right Sidebar
   footer_left: Left Footer
   footer_middle: Middle Footer
