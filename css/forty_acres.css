@@ -1832,6 +1832,22 @@ ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
 .tablesaw thead {
   background: #ebeced;
 }
+/* Defaults to no border if border attribute is used. */
+table[border].tablesaw th,
+table[border].tablesaw td {
+  border: 0;
+}
+/* Add borders to 640px screen sizes and up. */
+@media screen and (min-width: 640px) {
+  table[border="1"].tablesaw th,
+  table[border="1"].tablesaw td {
+    border: solid 1px #ddd;
+  }
+  table[border="2"].tablesaw th,
+  table[border="2"].tablesaw td {
+    border: solid 2px #ddd;
+  }
+}
 .block-local-tasks-block {
   margin: 1.5rem 0;
 }

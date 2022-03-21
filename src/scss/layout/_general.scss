@@ -42,3 +42,29 @@ ol {
 .tablesaw thead {
   background: $ut-charcoal--t20;
 }
+
+/* Defaults to no border if border attribute is used. */
+table[border].tablesaw {
+  th,
+  td {
+    border: 0;
+  }
+}
+
+/* Add borders to 640px screen sizes and up. */
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq("640px") {
+  table[border="1"].tablesaw {
+    th,
+    td {
+      border: solid 1px #ddd;
+    }
+  }
+
+  table[border="2"].tablesaw {
+    th,
+    td {
+      border: solid 2px #ddd;
+    }
+  }
+}

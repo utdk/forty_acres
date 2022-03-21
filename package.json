@@ -1,6 +1,6 @@
 {
   "name": "@utexas/forty_acres",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Default Drupal theme used with the UT Drupal Kit",
   "main": "gulpfile.js",
   "repository": {
@@ -24,7 +24,7 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cli": "^2.1.0",
     "gulp-csscombx": "^4.2.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.1",
     "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "lodash": "^4.17.11",
