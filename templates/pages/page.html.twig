@@ -56,8 +56,8 @@
 
 {% if page.sidebar_first or page.sidebar_second or not is_layout_builder_page %}
 <div class="container">
-{% endif %}
   <div class="row">
+{% endif %}
     {% if page.sidebar_first %}
     <aside class="layout-sidebar-first col-md-3" role="complementary">
       {{ page.sidebar_first }}
@@ -74,8 +74,8 @@
       {{ page.sidebar_second }}
     </aside>
     {% endif %}
-  </div>
 {% if page.sidebar_first or page.sidebar_second or not is_layout_builder_page %}
+  </div>
 </div>
 {% endif %}
 
