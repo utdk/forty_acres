@@ -37,3 +37,7 @@ libraries-override:
 
 ckeditor_stylesheets:
   - css/align-override.css
+  - css/lists.css
+ckeditor5-stylesheets:
+  - css/align-override.css
+  - css/lists.css
