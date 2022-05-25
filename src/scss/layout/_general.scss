@@ -5,38 +5,6 @@
   margin-bottom: 2.5rem;
 }
 
-/* Declare format for nested ordered lists */
-ol {
-  > li {
-    list-style-type: decimal;
-    > ol {
-      > li {
-        list-style-type: upper-alpha;
-        > ol {
-          > li {
-            list-style-type: upper-roman;
-            > ol {
-              > li {
-                list-style-type: decimal;
-                > ol {
-                  > li {
-                    list-style-type: lower-alpha;
-                    > ol {
-                      > li {
-                        list-style-type: lower-roman;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 /* Tablesaw tables. */
 /* Add a background color for table headers. */
 .tablesaw thead {

@@ -4,6 +4,7 @@ global:
       css/base.css: {}
       css/forty_acres.css: {}
       css/align-override.css: {}
+      css/lists.css: {}
   js:
     js/jquery-accessibleMegaMenu.js: {}
     js/util.js: {}

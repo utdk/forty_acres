@@ -54,30 +54,26 @@
 
 {{ page.help }}
 
-{% if page.sidebar_first or page.sidebar_second or not is_layout_builder_page %}
 <div class="container">
-  <div class="row">
-{% endif %}
-    {% if page.sidebar_first %}
-    <aside class="layout-sidebar-first col-md-3" role="complementary">
-      {{ page.sidebar_first }}
-    </aside>
-    {% endif %}
+  <main role="main" class="row">
+    <a id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
+    <div class="layout-content  mx-auto col-sm-12 col-md-9 col-lg-9 col-xl-9 search-results-page">
+      {{ page.content }}
+    </div>
+    {# /.layout-content #}
 
-    <main role="main" class="layout-content col">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-        {{ page.content }}
-    </main>
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first col-sm-12 col-md-3 " role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
 
     {% if page.sidebar_second %}
-    <aside class="layout-sidebar-second col-md-3" role="complementary">
-      {{ page.sidebar_second }}
-    </aside>
+      <aside class="layout-sidebar-second col-sm-12 col-md-3" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
     {% endif %}
-{% if page.sidebar_first or page.sidebar_second or not is_layout_builder_page %}
-  </div>
-</div>
-{% endif %}
-
+  </main>
+</div>{# /.container #}
 {% include '@forty_acres/includes/footer.html.twig' %}
-
