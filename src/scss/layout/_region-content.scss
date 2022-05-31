@@ -5,3 +5,7 @@ in the context of the "main_content" region.  */
   padding-right: 0;
   padding-left: 0;
 }
+
+div:not(.row) > main.col {
+  padding:0;
+}
