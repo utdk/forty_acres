@@ -1086,6 +1086,9 @@ img {
   display: block;
   max-height: 500px;
 }
+.sub-nav-wrapper .main-menu__list--subnav i.subnav-trigger {
+  display: none;
+}
 @media screen and (min-width: 1200px) {
   .sub-nav-wrapper .main-menu__list-item--subnav {
     display: block;
