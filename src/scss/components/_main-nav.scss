@@ -221,8 +221,10 @@
       display: block;
       max-height: 500px;
     }
+    i.subnav-trigger {
+      display: none;
+    }
   }
-
   // Desktop only styles for subnavs that overflow the screen and
   // to determine the number of columns per subnav.
   // stylelint-disable-next-line at-rule-no-unknown
