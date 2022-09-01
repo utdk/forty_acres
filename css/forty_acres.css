@@ -760,6 +760,9 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1.75rem;
 }
+summary {
+  font-size: 1.125rem;
+}
 .ut-copy--intro {
   color: #333f48;
   font-size: 1.25rem;
