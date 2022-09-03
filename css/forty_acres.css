@@ -824,10 +824,6 @@ summary {
     font-size: 3.0625rem;
   }
 }
-.ut-copy {
-  font-size: 1rem;
-  line-height: 1.375;
-}
 .ut-copy:after {
   display: block;
   clear: both;
@@ -2098,9 +2094,6 @@ table[border].tablesaw td {
 }
 .ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
-}
-.promo-list .ut-copy p {
-  font-size: 1rem;
 }
 .utexas-quick-links .ut-headline {
   margin-bottom: 0.9375rem;
