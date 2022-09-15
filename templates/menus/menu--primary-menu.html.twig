@@ -47,7 +47,7 @@
       <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url, item.link_attributes.addClass(link_classes)) }}
         {% if item.is_expanded %}
-          <i class="icon subnav-trigger" tabindex=0>
+          <i class="icon subnav-trigger" aria-hidden="true" tabindex=0>
             <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>
           </i>
         {% endif %}
