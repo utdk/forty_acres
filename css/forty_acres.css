@@ -1519,8 +1519,12 @@ form.search-form .svg.search {
 .search-results-page .gs-imageResult a.gs-title:link b,
 .search-results-page .gs-webResult.gs-result a.gs-title:link b,
 .search-results-page .gs-result .gs-title *,
-.search-results-page .gs-spelling a {
+.search-results-page .gs-spelling a,
+.search-results-page .gcsc-more-maybe-branding-root .gcsc-find-more-on-google {
   color: #bf5700;
+}
+.search-results-page .gcsc-find-more-on-google-magnifier {
+  fill: #bf5700;
 }
 .search-results-page .gsc-control-cse .gs-spelling,
 .search-results-page .gsc-control-cse .gs-result .gs-title,
