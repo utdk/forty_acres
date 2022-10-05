@@ -48,8 +48,12 @@
   .gs-imageResult a.gs-title:link b,
   .gs-webResult.gs-result a.gs-title:link b,
   .gs-result .gs-title *,
-  .gs-spelling a {
+  .gs-spelling a,
+  .gcsc-more-maybe-branding-root .gcsc-find-more-on-google {
     color: $ut-burntorange;
+  }
+  .gcsc-find-more-on-google-magnifier {
+    fill: $ut-burntorange;
   }
   .gsc-control-cse .gs-spelling,
   .gsc-control-cse .gs-result .gs-title,

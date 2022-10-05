@@ -760,6 +760,9 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1.75rem;
 }
+summary {
+  font-size: 1.125rem;
+}
 .ut-copy--intro {
   color: #333f48;
   font-size: 1.25rem;
@@ -820,10 +823,6 @@ hr {
   .ut-headline--poster {
     font-size: 3.0625rem;
   }
-}
-.ut-copy {
-  font-size: 1rem;
-  line-height: 1.375;
 }
 .ut-copy:after {
   display: block;
@@ -1520,8 +1519,12 @@ form.search-form .svg.search {
 .search-results-page .gs-imageResult a.gs-title:link b,
 .search-results-page .gs-webResult.gs-result a.gs-title:link b,
 .search-results-page .gs-result .gs-title *,
-.search-results-page .gs-spelling a {
+.search-results-page .gs-spelling a,
+.search-results-page .gcsc-more-maybe-branding-root .gcsc-find-more-on-google {
   color: #bf5700;
+}
+.search-results-page .gcsc-find-more-on-google-magnifier {
+  fill: #bf5700;
 }
 .search-results-page .gsc-control-cse .gs-spelling,
 .search-results-page .gsc-control-cse .gs-result .gs-title,
@@ -2095,9 +2098,6 @@ table[border].tablesaw td {
 }
 .ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
-}
-.promo-list .ut-copy p {
-  font-size: 1rem;
 }
 .utexas-quick-links .ut-headline {
   margin-bottom: 0.9375rem;
