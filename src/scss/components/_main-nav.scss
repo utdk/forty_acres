@@ -122,6 +122,13 @@
       }
     }
   }
+  // Hide downward arrow if no children (or only unpublished children) of L1.
+  &.menu-item-has-children > .main-menu__link.no-children::after {
+    content: "";
+  }
+  &.menu-item-has-children > .main-menu__link.no-children + i {
+    display: none;
+  }
 
   .main-menu__link--subnav {
     font-size: 0.875rem;

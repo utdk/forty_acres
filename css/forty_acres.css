@@ -979,6 +979,12 @@ img {
     bottom: 0.125rem;
   }
 }
+.main-menu__list-item.menu-item-has-children > .main-menu__link.no-children::after {
+  content: "";
+}
+.main-menu__list-item.menu-item-has-children > .main-menu__link.no-children + i {
+  display: none;
+}
 .main-menu__list-item .main-menu__link--subnav {
   position: relative;
   display: block;

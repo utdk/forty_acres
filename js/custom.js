@@ -64,6 +64,13 @@
         }
       });
 
+      // Add a CSS class to be able to hide downward arrow if no children
+      $('.main-menu__link').each(function() {
+        if($(this).siblings('.sub-nav-wrapper').length == 0) {
+          $(this).addClass('no-children');
+        }
+      });
+
       // Click event on L2 links on mobile menu trigger.
       var iconClick = function() {
         $('i.subnav-trigger').on('touchstart mousedown keydown', function(e) {
