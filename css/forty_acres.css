@@ -2391,6 +2391,10 @@ Library checkboxes. See UDK8-1055.
   height: 0.8rem;
   margin-left: 4px;
 }
+.node--unpublished,
+.is-unpublished {
+  background-color: #fff4f4;
+}
 /**
  * @file
  * Target default Drupal class markup for Views pagers.
