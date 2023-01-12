@@ -3,6 +3,7 @@
 namespace Drupal\forty_acres;
 
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\layout_builder\Entity\LayoutBuilderEntityViewDisplay;
 
 /**
  * Business logic for theme processing.
@@ -26,7 +27,7 @@ class FortyAcresThemeHelper {
       if (!$display) {
         return FALSE;
       }
-      if ($display->isLayoutBuilderEnabled()) {
+      if ($display instanceof LayoutBuilderEntityViewDisplay && $display->isLayoutBuilderEnabled()) {
         return TRUE;
       }
     }
