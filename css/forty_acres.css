@@ -979,6 +979,12 @@ img {
     bottom: 0.125rem;
   }
 }
+.main-menu__list-item.menu-item-has-children > .main-menu__link.no-children::after {
+  content: "";
+}
+.main-menu__list-item.menu-item-has-children > .main-menu__link.no-children + i {
+  display: none;
+}
 .main-menu__list-item .main-menu__link--subnav {
   position: relative;
   display: block;
@@ -2384,6 +2390,10 @@ Library checkboxes. See UDK8-1055.
   width: 0.8rem;
   height: 0.8rem;
   margin-left: 4px;
+}
+.node--unpublished,
+.is-unpublished {
+  background-color: #fff4f4;
 }
 /**
  * @file
