@@ -18,7 +18,7 @@
   },
   "license": "GPL-2.0-or-later",
   "dependencies": {
-    "accessible-mega-menu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu",
+    "accessible-mega-menu": "https://github.com/utdk/Accessible-Mega-Menu.git",
     "bootstrap": "^4.6.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
