@@ -40,3 +40,4 @@ ckeditor_stylesheets:
 ckeditor5-stylesheets:
   - css/align-override.css
   - css/lists.css
+  - css/tables.css
