@@ -1,8 +1,7 @@
-core: 8.x
-core_version_requirement: ^8 || ^9
-version: '3.10.0'
+core_version_requirement: ^9 || ^10
+version: '3.11.0'
 type: theme
-base theme: stable
+base theme: stable9
 name: Forty Acres
 description: UT-branded theme using the Bootstrap library v4.
 screenshot: images/screenshot.png
@@ -41,3 +40,4 @@ ckeditor_stylesheets:
 ckeditor5-stylesheets:
   - css/align-override.css
   - css/lists.css
+  - css/tables.css
