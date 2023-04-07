@@ -71,3 +71,7 @@ bootstrap-tooltip:
     - core/jquery
     - forty_acres/popper-js
     - forty_acres/bootstrap-tooltip-init
+messages:
+  css:
+    base:
+      css/messages.css: {}
