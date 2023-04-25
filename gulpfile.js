@@ -37,7 +37,6 @@ gulp.task('copy-js', function () {
       './node_modules/bootstrap/js/dist/util.js',
       './node_modules/bootstrap/js/dist/collapse.js',
       './node_modules/bootstrap/js/dist/alert.js',
-      './node_modules/bootstrap/js/dist/dropdown.js',
       './node_modules/bootstrap/js/dist/modal.js',
       './node_modules/bootstrap/js/dist/tooltip.js',
       './node_modules/popper.js/dist/umd/popper.js'
