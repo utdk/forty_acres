@@ -44,7 +44,7 @@
   border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
   /* LTR */
   background-color: #f3faef;
-  background-image: url(../../../../misc/icons/73b355/check.svg);
+  background-image: url(../../../../core/misc/icons/73b355/check.svg);
   box-shadow: -8px 0 0 #77b259;
   /* LTR */
 }
@@ -61,7 +61,7 @@
   border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
   /* LTR */
   background-color: #fdf8ed;
-  background-image: url(../../../../misc/icons/e29700/warning.svg);
+  background-image: url(../../../../core/misc/icons/e29700/warning.svg);
   box-shadow: -8px 0 0 #e09600;
   /* LTR */
 }
@@ -77,7 +77,7 @@
   border-color: #f9c9bf #f9c9bf #f9c9bf transparent;
   /* LTR */
   background-color: #fcf4f2;
-  background-image: url(../../../../misc/icons/e32700/error.svg);
+  background-image: url(../../../../core/misc/icons/e32700/error.svg);
   box-shadow: -8px 0 0 #e62600;
   /* LTR */
 }
