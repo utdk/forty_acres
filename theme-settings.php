@@ -100,9 +100,6 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
       'alert' => t('Alerts <a href="@bootstrap-alerts" target="_blank">see here for more information</a>.', [
         '@bootstrap-alerts' => 'https://getbootstrap.com/docs/4.0/components/alerts/',
       ]),
-      'dropdown' => t('Dropdowns <a href="@bootstrap-dropdowns" target="_blank">see here for more information</a>.', [
-        '@bootstrap-dropdowns' => 'https://getbootstrap.com/docs/4.0/components/dropdowns/',
-      ]),
       'modal' => t('Modal <a href="@bootstrap-modal" target="_blank">see here for more information</a>. For Forty Acres specific usage of modals, see the  <a href="@utdk-docs-modal" target="_blank">documentation page for this component</a>.', [
         '@bootstrap-modal' => 'https://getbootstrap.com/docs/4.0/components/modal/',
         '@utdk-docs-modal' => 'https://drupalkit.its.utexas.edu/docs/forty_acres/theme_settings.html#modal',

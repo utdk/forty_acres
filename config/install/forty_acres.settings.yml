@@ -6,7 +6,6 @@ bootstrap_components:
   tooltip: 0
   collapse: 'collapse'
   alert: 0
-  dropdown: 0
   modal: 0
   tab: 'tab'
 header_secondary_display: side_by_side

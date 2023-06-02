@@ -52,6 +52,13 @@
   .gcsc-more-maybe-branding-root .gcsc-find-more-on-google {
     color: $ut-burntorange;
   }
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
+    color: $ut-burntorange--s20;
+  }
+  .gs-webResult.gs-result,
   .gcsc-find-more-on-google-magnifier {
     fill: $ut-burntorange;
   }

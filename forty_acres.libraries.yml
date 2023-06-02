@@ -33,15 +33,6 @@ bootstrap-alert:
     js/alert.js: {}
   dependencies:
     - core/jquery
-bootstrap-dropdown:
-  css:
-    base:
-      css/dropdown.css: {}
-  js:
-    js/dropdown.js: {}
-  dependencies:
-    - core/jquery
-    - forty_acres/popper-js
 bootstrap-modal:
   css:
     base:
@@ -71,3 +62,7 @@ bootstrap-tooltip:
     - core/jquery
     - forty_acres/popper-js
     - forty_acres/bootstrap-tooltip-init
+messages:
+  css:
+    base:
+      css/messages.css: {}
