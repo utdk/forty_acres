@@ -206,6 +206,7 @@
     background-color: $ut-white;
     width: 240px;
     max-height: 500px;
+    overflow: auto;
     transition: background-color, color, 0.33s;
     z-index: 2;
     .main-menu__link--subnav {
@@ -268,6 +269,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       max-height: 500px;
+      overflow: auto;
     }
   }
 }

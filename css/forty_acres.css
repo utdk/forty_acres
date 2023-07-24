@@ -1061,6 +1061,7 @@ img {
   position: absolute;
   z-index: 2;
   display: none;
+  overflow: auto;
   width: 240px;
   max-height: 500px;
   padding: 0.5rem 1rem;
@@ -1132,6 +1133,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: auto;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
