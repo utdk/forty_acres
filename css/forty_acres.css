@@ -1854,6 +1854,14 @@ div:not(.row) > main.col {
 .block {
   margin-bottom: 2.5rem;
 }
+table.border-1 th,
+table.border-1 td {
+  border: 1px solid #ddd;
+}
+table.border-2 th,
+table.border-2 td {
+  border: 2px solid #ddd;
+}
 /* Tablesaw tables. */
 /* Add a background color for table headers. */
 .tablesaw thead {
