@@ -29,10 +29,13 @@
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  background-color: transparent;
 }
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
+
+  isolation: isolate;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -51,7 +54,9 @@
   border-top-right-radius: 0;
 }
 .nav-pills .nav-link {
+  border: 0;
   border-radius: 0.25rem;
+  background: none;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {

@@ -27,6 +27,18 @@
     transition: none;
   }
 }
+.collapsing.width {
+  width: 0;
+  height: auto;
+  -webkit-transition: width 0.35s ease;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.width {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
 .accordion-header {
   margin-bottom: 0.5rem;
   background-color: #f0f0f0;
