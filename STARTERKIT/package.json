@@ -3,32 +3,38 @@
   "version": "1.0.0",
   "description": "Bootstrap based Drupal Forty Acres subtheme",
   "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js default"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.austin.utexas.edu:eis1-wcs/forty_acres.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "./node_modules/gulp/bin/gulp.js default"
+  "author": {
+    "name": "Web Content Management Solutions Team, Information Technology Services, The University of Texas at Austin",
+    "email": "drupal-kit-support@utlists.utexas.edu",
+    "url": "https://drupalkit.its.utexas.edu"
   },
-  "author": "Mike Marsello",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^1.9.1",
-    "natives": "^1.1.6",
-    "popper.js": "^1.14.7"
-  },
+  "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cli": "^2.3.0",
     "gulp-csscombx": "^4.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sequence": "^1.0.0",
-    "gulp-stylelint": "^7.0.0",
-    "stylelint": "^9.3.0",
-    "stylelint-checkstyle-formatter": "^0.1.1",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-no-browser-hacks": "^1.1.0"
+    "gulp-sass": "^5.1.0",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "hosted-git-info": "^6.1.1",
+    "lodash": "^4.17.21",
+    "natives": "^1.1.6",
+    "sass": "^1.64.2",
+    "stylelint": "^10.0.1",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-no-browser-hacks": "^1.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "popper.js": "^1.16.1"
   }
 }

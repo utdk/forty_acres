@@ -1,14 +1,14 @@
 "use strict";
 
 var gulp = require("gulp");
-var sass = require("gulp-sass");
+var sass = require('gulp-sass')(require('sass'));
 var autoprefixer = require("gulp-autoprefixer");
 var gulpStylelint = require("gulp-stylelint");
 var csscombx = require("gulp-csscombx");
 
 gulp.task("scss-lint", function lintCssTask() {
   return gulp
-    .src("src/scss/**/*.scss")
+    .src("./src/scss/**/*.scss")
     .pipe(gulpStylelint({
       reporters: [
         {formatter: "string", console: true}
@@ -18,10 +18,9 @@ gulp.task("scss-lint", function lintCssTask() {
 });
 
 gulp.task("sass", function () {
-  return gulp.src("src/scss/build/**/*.scss")
+  return gulp.src("./src/scss/build/**/*.scss")
     .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
     .pipe(autoprefixer({
-      browsers: ["last 2 versions"],
       cascade: false
     }))
     .pipe(csscombx())

@@ -2,12 +2,14 @@
 // UT DS Global Mixins
 //
 
-// ----------
-// Block Modifier @access public
-// @param {String} $modifer - Modifier's name
 // stylelint-disable at-rule-no-unknown
 // stylelint-disable plugin/no-browser-hacks
 // stylelint-disable length-zero-no-unit
+@use 'sass:math';
+
+// ----------
+// Block Modifier @access public
+// @param {String} $modifer - Modifier's name
 @mixin mod($modifier) {
   &--#{$modifier} {
     @content;
@@ -33,17 +35,6 @@
 }
 
 // ----------
-//  Caret icon appender @access public
-// @mixin link-caret {
-//   &:after {
-//     font-family: "ut-icons";
-//     content: "\f105";
-//     position: absolute;
-//     padding-left: 5px;
-//   }
-// }
-
-// ----------
 // Focus on elements appearance
 @mixin focus-default {
   outline: 2px dotted #aeb0b5;
@@ -65,14 +56,14 @@
 
 // ----------
 // Strip unit of measure
-@function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+@function stripunit($num) {
+  @return math.div($num, $num * 0 + 1);
 }
 
 // ----------
 // Convert the value to rem
 @function convert-to-rem($value, $base-value: $ut-rem-base) {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  $value: calc(stripunit($value) / stripunit($base-value)) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }

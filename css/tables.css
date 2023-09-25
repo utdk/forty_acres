@@ -12,19 +12,23 @@
 .ck.ck-content .table table td {
   padding: .5em .7em;
   height: auto;
-  border: dotted 1px #d3d3d3; 
+  border: dotted 1px #d3d3d3;
 }
-.ck.ck-content .table table, 
+.ck.ck-content .table table,
 .ck.ck-content .table table tr,
 .ck.ck-content .table table[border] th,
-.ck.ck-content .table table[border] td { 
+.ck.ck-content .table table[border] td {
   border: dotted 1px #d3d3d3;
 }
 .ck.ck-content .table table[border="1"] th,
-.ck.ck-content .table table[border="1"] td {
+.ck.ck-content .table table[border="1"] td,
+.ck.ck-content .table table.border-1 th,
+.ck.ck-content .table table.border-1 td {
   border: solid 1px #ddd;
-}  
+}
 .ck.ck-content .table table[border="2"] th,
-.ck.ck-content .table table[border="2"] td {
+.ck.ck-content .table table[border="2"] td,
+.ck.ck-content .table table.border-2 th,
+.ck.ck-content .table table.border-2 td {
   border: solid 2px #ddd;
 }

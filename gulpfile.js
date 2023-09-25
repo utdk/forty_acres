@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var sass = require("gulp-sass");
+var sass = require('gulp-sass')(require('sass'));
 var uglify = require("gulp-uglify");
 var autoprefixer = require("gulp-autoprefixer");
 var gulpStylelint = require("gulp-stylelint");
@@ -22,7 +22,6 @@ gulp.task("sass", function () {
   return gulp.src("./src/scss/build/**/*.scss")
     .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
     .pipe(autoprefixer({
-      browsers: ["last 2 versions"],
       cascade: false
     }))
     .pipe(csscombx())

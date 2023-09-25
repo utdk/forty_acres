@@ -5,6 +5,21 @@
   margin-bottom: 2.5rem;
 }
 
+table {
+  &.border-1 {
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+  }
+  &.border-2 {
+    th,
+    td {
+      border: 2px solid #ddd;
+    }
+  }
+}
+
 /* Tablesaw tables. */
 /* Add a background color for table headers. */
 .tablesaw thead {
