@@ -1417,6 +1417,9 @@ form.search-form {
   /* clears the X from Internet Explorer */
   /* clears the X from Chrome */
 }
+form.search-form .container-inline div {
+  display: block;
+}
 form.search-form input {
   width: 100%;
   max-width: unset;

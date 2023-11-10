@@ -74,6 +74,9 @@ div.search-block-form div.contextual {
 form.search-form {
   position: relative;
   margin-top: -10px;
+  .container-inline div {
+    display: block;
+  }
   input {
     max-width: unset;
     padding: 10px 0 8px 10px;
