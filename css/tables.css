@@ -1,3 +1,4 @@
+/* For table layout in the editor. */
 .ck.ck-content .table {
   display: block;
   margin:0;
@@ -31,4 +32,28 @@
 .ck.ck-content .table table.border-2 th,
 .ck.ck-content .table table.border-2 td {
   border: solid 2px #ddd;
+}
+.ck.ck-content .table table th,
+.ck.ck-content .table table td {
+  padding: 0 0;
+  height: auto;
+  border: dotted 1px #d3d3d3;
+}
+
+.ck.ck-content .table table {
+  width: auto;
+}
+
+.ck.ck-content .table table.tablesaw th,
+.ck.ck-content .table table.tablesaw td,
+.ck.ck-content .table table:has(thead) td,
+.ck.ck-content .table table:has(thead) th {
+  padding: .5em .7em;
+  height: auto;
+  border: dotted 1px #d3d3d3;
+}
+
+.ck.ck-content .table table.tablesaw,
+.ck.ck-content .table table:has(thead) {
+  width: 100%;
 }
