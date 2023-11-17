@@ -1062,9 +1062,8 @@ img {
   position: absolute;
   z-index: 2;
   display: none;
-  overflow: auto;
   width: 240px;
-  max-height: 500px;
+  max-height: none;
   padding: 0.5rem 1rem;
   list-style: none;
   -webkit-transition: background-color, color, 0.33s;
@@ -1091,7 +1090,7 @@ img {
 }
 .sub-nav-wrapper .main-menu__list--subnav.open {
   display: block;
-  max-height: 500px;
+  max-height: none;
 }
 .sub-nav-wrapper .main-menu__list--subnav i.subnav-trigger {
   display: none;
@@ -1134,13 +1133,12 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    overflow: auto;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    max-height: 500px;
+    max-height: none;
   }
 }
 #js-nav-toggle {
