@@ -1385,6 +1385,12 @@ div.search-block-form div.contextual {
 .ut-search-form input[type=search]::placeholder {
   font-style: italic;
 }
+.ut-search-form input[type=search]::-webkit-search-decoration,
+.ut-search-form input[type=search]::-webkit-search-cancel-button,
+.ut-search-form input[type=search]::-webkit-search-results-button,
+.ut-search-form input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
 .ut-search-form input[type=submit] {
   position: absolute;
   z-index: 1;
@@ -1414,8 +1420,6 @@ div.search-block-form div.contextual {
 form.search-form {
   position: relative;
   margin-top: -10px;
-  /* clears the X from Internet Explorer */
-  /* clears the X from Chrome */
 }
 form.search-form .container-inline div {
   display: block;
