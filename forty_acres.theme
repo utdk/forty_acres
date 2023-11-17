@@ -117,7 +117,7 @@ function forty_acres_preprocess_block(&$variables) {
   $variables['title_attributes']['class'][] = 'ut-headline';
 
   if (isset($variables['attributes']['id'])) {
-    $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+    $variables['content']['#attributes']['data-block'] = $variables['attributes']['id'];
   }
 
   // Add a bundle identifier as a CSS class.
@@ -193,8 +193,8 @@ function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $va
   $theme_key = strtolower($theme_name) . '-';
   // Remove the block, the themename (if present), and replace dashes with
   // underscores in the block ID to use for the hook name.
-  if (isset($variables['attributes']['block'])) {
-    $hook = str_replace([$theme_key, 'block-', '-'], ['', '', '_'], $variables['attributes']['block']);
+  if (isset($variables['attributes']['data-block'])) {
+    $hook = str_replace([$theme_key, 'block-', '-'], ['', '', '_'], $variables['attributes']['data-block']);
     if ($block = Block::load($hook)) {
       $region = $block->getRegion();
       $suggestions[] = 'menu__' . $region;
