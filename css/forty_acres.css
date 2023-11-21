@@ -1461,9 +1461,13 @@ form.search-form #edit-keys {
 }
 form.search-form #edit-submit {
   position: absolute;
-  top: 6px;
+  z-index: 1;
+  top: 0;
   right: 0;
-  width: 50px;
+  width: 56px;
+  margin: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   cursor: pointer;
   color: transparent;
   border: none;
