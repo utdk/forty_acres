@@ -205,8 +205,7 @@
     border: 1px solid $ut-charcoal--t40;
     background-color: $ut-white;
     width: 240px;
-    max-height: 500px;
-    overflow: auto;
+    max-height: none;
     transition: background-color, color, 0.33s;
     z-index: 2;
     .main-menu__link--subnav {
@@ -227,7 +226,7 @@
     }
     &.open {
       display: block;
-      max-height: 500px;
+      max-height: none;
     }
     i.subnav-trigger {
       display: none;
@@ -268,8 +267,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      max-height: 500px;
-      overflow: auto;
+      max-height: none;
     }
   }
 }
