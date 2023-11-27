@@ -11,8 +11,8 @@ regions:
   header_primary: Header Primary
   header_secondary: Header Secondary
   header_tertiary: Header Tertiary
-  site_announcement: Site Announcement
   primary_menu: Primary Menu
+  site_announcement: Site Announcement
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help
