@@ -877,6 +877,22 @@ img {
 .main-menu__list li.active a.main-menu__link {
   color: #bf5700;
 }
+.main-menu-flex-start .main-menu__list {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main-menu-flex-start .main-menu__list > li {
+  margin-right: 16px;
+}
+.main-menu-flex-end .main-menu__list {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+.main-menu-flex-end .main-menu__list > li {
+  margin-left: 16px;
+}
 .main-menu__list-item {
   position: relative;
   display: -webkit-box;

@@ -9,3 +9,4 @@ bootstrap_components:
   modal: 0
   tab: 'tab'
 header_secondary_display: side_by_side
+main_menu_alignment: full_width_centered

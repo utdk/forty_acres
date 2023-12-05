@@ -24,6 +24,20 @@
     color: $ut-burntorange;
   }
 }
+// Align main menu links to the left.
+.main-menu-flex-start .main-menu__list {
+  justify-content: start;
+}
+.main-menu-flex-start .main-menu__list > li {
+  margin-right: 16px;
+}
+// Align main menu links to the right.
+.main-menu-flex-end .main-menu__list {
+  justify-content: end;
+}
+.main-menu-flex-end .main-menu__list > li {
+  margin-left: 16px;
+}
 
 // A top level navigation item in the mega menu (main menu ul > li)
 .main-menu__list-item {
