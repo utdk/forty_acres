@@ -10,10 +10,15 @@
 }
 #js-nav-toggle,
 .ut-btn--large,
+button--large,
 .ut-btn--small,
+button--small,
 .ut-btn--disabled,
+button--disabled,
 .ut-btn--secondary,
-.ut-btn {
+button--secondary,
+.ut-btn,
+button {
   display: inline-block;
   margin-bottom: 0.55rem;
   padding: 0.5rem 1rem;
@@ -29,30 +34,50 @@
 }
 #js-nav-toggle:link,
 .ut-btn--large:link,
+button--large:link,
 .ut-btn--small:link,
+button--small:link,
 .ut-btn--disabled:link,
+button--disabled:link,
 .ut-btn--secondary:link,
+button--secondary:link,
 .ut-btn:link,
+button:link,
 #js-nav-toggle:visited,
 .ut-btn--large:visited,
+button--large:visited,
 .ut-btn--small:visited,
+button--small:visited,
 .ut-btn--disabled:visited,
+button--disabled:visited,
 .ut-btn--secondary:visited,
-.ut-btn:visited {
+button--secondary:visited,
+.ut-btn:visited,
+button:visited {
   color: #fff;
 }
 #js-nav-toggle:hover,
 .ut-btn--large:hover,
+button--large:hover,
 .ut-btn--small:hover,
+button--small:hover,
 .ut-btn--disabled:hover,
+button--disabled:hover,
 .ut-btn--secondary:hover,
+button--secondary:hover,
 .ut-btn:hover,
+button:hover,
 #js-nav-toggle:focus,
 .ut-btn--large:focus,
+button--large:focus,
 .ut-btn--small:focus,
+button--small:focus,
 .ut-btn--disabled:focus,
+button--disabled:focus,
 .ut-btn--secondary:focus,
-.ut-btn:focus {
+button--secondary:focus,
+.ut-btn:focus,
+button:focus {
   cursor: pointer;
   text-decoration: none;
   color: #fff !important;
@@ -61,43 +86,58 @@
 }
 #js-nav-toggle:active,
 .ut-btn--large:active,
+button--large:active,
 .ut-btn--small:active,
+button--small:active,
 .ut-btn--disabled:active,
+button--disabled:active,
 .ut-btn--secondary:active,
-.ut-btn:active {
+button--secondary:active,
+.ut-btn:active,
+button:active {
   background-color: #ae4f00;
 }
-.ut-btn--secondary {
+.ut-btn--secondary,
+button--secondary {
   color: #bf5700;
   border-color: #bf5700;
   background-color: #fff;
 }
 .ut-btn--secondary:link,
-.ut-btn--secondary:visited {
+.ut-btn--secondary:visited,
+button--secondary:link,
+button--secondary:visited {
   color: #bf5700;
 }
-.ut-btn--disabled {
+.ut-btn--disabled,
+button--disabled {
   color: #9cadb7;
   border-color: #e6ebed;
   background-color: #e6ebed;
 }
 .ut-btn--disabled:link,
-.ut-btn--disabled:visited {
+.ut-btn--disabled:visited,
+button--disabled:link,
+button--disabled:visited {
   color: #9cadb7;
 }
 .ut-btn--disabled:hover,
-.ut-btn--disabled:focus {
+.ut-btn--disabled:focus,
+button--disabled:hover,
+button--disabled:focus {
   color: #1f262b !important;
   border-color: #e6ebed;
   background-color: #e6ebed;
 }
-.ut-btn--small {
+.ut-btn--small,
+button--small {
   padding: 0.25rem 0.75rem;
   text-transform: uppercase;
   font-size: 0.825rem;
   line-height: 1.5;
 }
-.ut-btn--large {
+.ut-btn--large,
+button--large {
   padding: 0.75rem 1.25rem;
   text-transform: uppercase;
 }
