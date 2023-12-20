@@ -25,6 +25,10 @@ header.ut-header {
   // Wraps the Primary Header region and #js-nav-toggle button
   .ut-header-wrapper {
     justify-content: space-between;
+    button#js-nav-toggle {
+      flex: 0 1 103px;
+      margin-left: 40px;
+    }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       position: absolute;
