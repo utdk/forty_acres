@@ -17,7 +17,7 @@
   {% if site_logo %}
     <span class="site-title sr-only">{{ site.title }}</span>
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img class="img-fluid ut-logo--main" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      <img class="img-fluid ut-logo--main" src="{{ site_logo }}" alt="{{ logo_alt_text ~ ' home'|t}}"/>
     </a>
   {% endif %}
   {% if site_name %}
