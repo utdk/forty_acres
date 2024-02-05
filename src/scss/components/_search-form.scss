@@ -127,9 +127,13 @@ form.search-form {
   }
   #edit-submit {
     position: absolute;
-    width: 50px;
-    top: 6px;
+    width: 56px;
+    top: 0;
     right: 0;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    z-index: 1;
     border: none;
     background: transparent;
     color: transparent;

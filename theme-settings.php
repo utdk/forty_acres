@@ -65,6 +65,7 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     '#type' => 'fieldset',
     '#title' => t('Region display settings'),
   ];
+
   $header_secondary_display_setting = theme_get_setting('header_secondary_display');
   $form['header_theme_settings']['region_display_fieldset']['header_secondary_display'] = [
     '#type' => 'radios',
@@ -76,6 +77,24 @@ function forty_acres_form_system_theme_settings_alter(&$form, FormStateInterface
     ],
     '#default_value' => $header_secondary_display_setting ?? 'stacked',
   ];
+  $form['header_theme_settings']['menu_display_fieldset'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Main menu settings'),
+  ];
+
+  $header_main_menu_setting = theme_get_setting('main_menu_alignment');
+  $form['header_theme_settings']['menu_display_fieldset']['main_menu_alignment'] = [
+    '#type' => 'radios',
+    '#title' => t('Main menu alignment'),
+    '#description' => t('Set the alignment of top-level items in the main menu: <ul><li><strong>"Centered, full-width"</strong> (default) optimizes for usability, providing easy access to targets for each menu item</li><li><strong>"Left aligned"</strong> reduces space between targets if there are few menu items, which may look too widely spaced when centered</li><li><strong>"Right aligned"</strong> can provide visual appeal but may negatively affect usability by placing content outside where users expect menu items to appear</li></ul>'),
+    '#options' => [
+      'full_width_centered' => t('Centered, full-width (recommended)'),
+      'left_alignment' => t('Left aligned'),
+      'right_alignment' => t('Right aligned'),
+    ],
+    '#default_value' => $header_main_menu_setting ?? 'full_width_centered',
+  ];
+
   // Bootstrap settings.
   $form['bootstrap'] = [
     '#type' => 'details',

@@ -29,3 +29,16 @@ figure.align-center figcaption {
   caption-side: bottom;
   text-align: left;
 }
+/* Ensure ul, ol and dt elements layout properly with floated left images. */
+.align-left ~ ul,
+.align-left ~ ol,
+.drupal-media-style-align-left ~ ul,
+.drupal-media-style-align-left ~ ol {
+  overflow: hidden;
+  padding-left: 1.85rem;
+}
+.align-left ~ dl,
+.drupal-media-style-align-left ~ dl {
+  overflow: hidden;
+  padding-left: 0.85rem;
+}
