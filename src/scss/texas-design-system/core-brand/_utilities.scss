@@ -7,16 +7,21 @@
 // This is used to build out the header text styles on any content element.
 %ut-headline {
   color: $ut-charcoal;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.625;
   margin: 0 0 0.5rem;
+}
+
+// -----------
+// Default headline style
+// Typically used as the headline field on component instances
+.ut-headline {
+
   // stylelint-disable-next-line at-rule-no-unknown
-  @include screen-mq(md) {
-    font-size: 1.125rem;
-    line-height: 1.625;
-    margin: 0 0 0.5rem;
-  }
+  @extend %ut-headline;
+
+  font-size: 1.125rem;
+  line-height: 1.625;
+  font-weight: 600;
+
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(lg) {
     font-size: 1.25rem;
@@ -24,12 +29,37 @@
   }
 }
 
-// -----------
-// Headline Text Default
-// Typical use as the headline field on component instances
-.ut-headline {
+// Large headline style
+.ut-headline--lg {
+
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 1.5625rem;
+  }
+}
+
+// Extra large headline style
+
+.ut-headline--xl {
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+
+  font-size: 1.5625rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 2rem;
+  }
 }
 
 // ----------

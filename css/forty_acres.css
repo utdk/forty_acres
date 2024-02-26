@@ -827,26 +827,41 @@ summary {
   font-style: italic;
 }
 .ut-headline--underline,
+.ut-headline--xl,
+.ut-headline--lg,
 .ut-headline {
   margin: 0 0 0.5rem;
   color: #333f48;
+}
+.ut-headline {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.625;
 }
-@media screen and (min-width: 900px) {
-  .ut-headline--underline,
-  .ut-headline {
-    margin: 0 0 0.5rem;
-    font-size: 1.125rem;
-    line-height: 1.625;
-  }
-}
 @media screen and (min-width: 1200px) {
-  .ut-headline--underline,
   .ut-headline {
     font-size: 1.25rem;
     line-height: 1.6875;
+  }
+}
+.ut-headline--lg {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1200px) {
+  .ut-headline--lg {
+    font-size: 1.5625rem;
+  }
+}
+.ut-headline--xl {
+  font-size: 1.5625rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1200px) {
+  .ut-headline--xl {
+    font-size: 2rem;
   }
 }
 .ut-headline--underline {
