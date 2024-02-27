@@ -1,0 +1,65 @@
+.ck-content {
+  /* Ensure caption text does not exceed image */
+  /* Solution modeled after https://stackoverflow.com/a/28394126 */
+  /* Ensure ul, ol and dt elements layout properly with floated left images. */
+  /* Declare format for nested ordered lists */
+}
+.ck-content .align-left,
+.ck-content .align-right,
+.ck-content .align-center {
+  margin-bottom: 1rem;
+  padding-top: 0.4rem;
+}
+.ck-content .align-left {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+.ck-content .align-right {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.ck-content .align-center {
+  text-align: center;
+}
+.ck-content figure.align-right,
+.ck-content figure.align-left,
+.ck-content figure.align-center {
+  display: table;
+}
+.ck-content figure.align-right figcaption,
+.ck-content figure.align-left figcaption,
+.ck-content figure.align-center figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align: left;
+}
+.ck-content .align-left ~ ul,
+.ck-content .align-left ~ ol,
+.ck-content .drupal-media-style-align-left ~ ul,
+.ck-content .drupal-media-style-align-left ~ ol {
+  overflow: hidden;
+  padding-left: 1.85rem;
+}
+.ck-content .align-left ~ dl,
+.ck-content .drupal-media-style-align-left ~ dl {
+  overflow: hidden;
+  padding-left: 0.85rem;
+}
+.ck-content ol > li {
+  list-style-type: decimal;
+}
+.ck-content ol > li > ol > li {
+  list-style-type: upper-alpha;
+}
+.ck-content ol > li > ol > li > ol > li {
+  list-style-type: upper-roman;
+}
+.ck-content ol > li > ol > li > ol > li > ol > li {
+  list-style-type: decimal;
+}
+.ck-content ol > li > ol > li > ol > li > ol > li > ol > li {
+  list-style-type: lower-alpha;
+}
+.ck-content ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+  list-style-type: lower-roman;
+}
