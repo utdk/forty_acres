@@ -63,3 +63,139 @@
 .ck-content ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
   list-style-type: lower-roman;
 }
+.ck-content .ut-btn--large,
+.ck-content button--large,
+.ck-content .ut-btn--small,
+.ck-content button--small,
+.ck-content .ut-btn--disabled,
+.ck-content button--disabled,
+.ck-content .ut-btn--secondary,
+.ck-content button--secondary,
+.ck-content .ut-btn,
+.ck-content button {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  padding: 0.5rem 1rem;
+  -webkit-transition: background-color, color, border-color, 0.33s ease-out;
+  transition: background-color, color, border-color, 0.33s ease-out;
+  text-decoration: none !important;
+  color: #fff;
+  border: 2px solid #bf5700;
+  border-radius: 4px;
+  background-color: #bf5700;
+  font-family: "LibreFrank", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.ck-content .ut-btn--large:link,
+.ck-content button--large:link,
+.ck-content .ut-btn--small:link,
+.ck-content button--small:link,
+.ck-content .ut-btn--disabled:link,
+.ck-content button--disabled:link,
+.ck-content .ut-btn--secondary:link,
+.ck-content button--secondary:link,
+.ck-content .ut-btn:link,
+.ck-content button:link,
+.ck-content .ut-btn--large:visited,
+.ck-content button--large:visited,
+.ck-content .ut-btn--small:visited,
+.ck-content button--small:visited,
+.ck-content .ut-btn--disabled:visited,
+.ck-content button--disabled:visited,
+.ck-content .ut-btn--secondary:visited,
+.ck-content button--secondary:visited,
+.ck-content .ut-btn:visited,
+.ck-content button:visited {
+  color: #fff;
+}
+.ck-content .ut-btn--large:hover,
+.ck-content button--large:hover,
+.ck-content .ut-btn--small:hover,
+.ck-content button--small:hover,
+.ck-content .ut-btn--disabled:hover,
+.ck-content button--disabled:hover,
+.ck-content .ut-btn--secondary:hover,
+.ck-content button--secondary:hover,
+.ck-content .ut-btn:hover,
+.ck-content button:hover,
+.ck-content .ut-btn--large:focus,
+.ck-content button--large:focus,
+.ck-content .ut-btn--small:focus,
+.ck-content button--small:focus,
+.ck-content .ut-btn--disabled:focus,
+.ck-content button--disabled:focus,
+.ck-content .ut-btn--secondary:focus,
+.ck-content button--secondary:focus,
+.ck-content .ut-btn:focus,
+.ck-content button:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff !important;
+  border: 2px solid #9d4700;
+  background-color: #9d4700;
+}
+.ck-content .ut-btn--large:active,
+.ck-content button--large:active,
+.ck-content .ut-btn--small:active,
+.ck-content button--small:active,
+.ck-content .ut-btn--disabled:active,
+.ck-content button--disabled:active,
+.ck-content .ut-btn--secondary:active,
+.ck-content button--secondary:active,
+.ck-content .ut-btn:active,
+.ck-content button:active {
+  background-color: #ae4f00;
+}
+.ck-content .ut-btn--secondary,
+.ck-content button--secondary {
+  color: #bf5700;
+  border-color: #bf5700;
+  background-color: #fff;
+}
+.ck-content .ut-btn--secondary:link,
+.ck-content .ut-btn--secondary:visited,
+.ck-content button--secondary:link,
+.ck-content button--secondary:visited {
+  color: #bf5700;
+}
+.ck-content .ut-btn--disabled,
+.ck-content button--disabled {
+  color: #9cadb7;
+  border-color: #e6ebed;
+  background-color: #e6ebed;
+}
+.ck-content .ut-btn--disabled:link,
+.ck-content .ut-btn--disabled:visited,
+.ck-content button--disabled:link,
+.ck-content button--disabled:visited {
+  color: #9cadb7;
+}
+.ck-content .ut-btn--disabled:hover,
+.ck-content .ut-btn--disabled:focus,
+.ck-content button--disabled:hover,
+.ck-content button--disabled:focus {
+  color: #1f262b !important;
+  border-color: #e6ebed;
+  background-color: #e6ebed;
+}
+.ck-content .ut-btn--small,
+.ck-content button--small {
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  line-height: 1.5;
+}
+.ck-content .ut-btn--large,
+.ck-content button--large {
+  padding: 0.75rem 1.25rem;
+  text-transform: uppercase;
+}
+.ck-content .corner--rounded {
+  border-radius: 4px !important;
+}
+.ck-content .corner--square {
+  border-radius: 0 !important;
+}
+.ck-content .corner--pill {
+  border-radius: 2rem !important;
+}
