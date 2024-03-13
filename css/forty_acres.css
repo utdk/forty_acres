@@ -685,6 +685,8 @@ a,
 a:link,
 a:visited {
   color: #9d4700;
+
+  overflow-wrap: anywhere;
 }
 a:hover,
 a:focus {
