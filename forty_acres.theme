@@ -11,10 +11,9 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Template\Attribute;
-use Drupal\node\NodeInterface;
-
 use Drupal\forty_acres\FortyAcresRenderCallback;
 use Drupal\forty_acres\FortyAcresThemeHelper;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess_page().
@@ -113,7 +112,7 @@ function forty_acres_preprocess_block(&$variables) {
   $base_plugin_id = $variables['base_plugin_id'];
   $content = $variables['elements']['content'];
 
-  // Add logo alt text
+  // Add logo alt text.
   if ($base_plugin_id === 'system_branding_block') {
     $config = \Drupal::config('system.site');
     $variables['logo_alt_text'] = $config->get('name');
@@ -176,7 +175,7 @@ function forty_acres_preprocess_region(&$variables) {
     if ($alignment === 'left_alignment') {
       $variables['attributes']['class'][] = 'main-menu-flex-start';
     }
-    else if ($alignment === 'right_alignment') {
+    elseif ($alignment === 'right_alignment') {
       $variables['attributes']['class'][] = 'main-menu-flex-end';
     }
   }
@@ -340,4 +339,13 @@ function forty_acres_preprocess_menu_local_action(&$variables) {
   if (isset($variables['link'])) {
     $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
   }
+}
+
+/**
+ * Implements hook_template_preprocess_views_view_table().
+ */
+function forty_acres_preprocess_views_view_table(&$variables) {
+  // Developers can override this with a preprocess hook of their own
+  // in the sub-theme that removes the class.
+  $variables['attributes']['class'][] = 'border-1';
 }

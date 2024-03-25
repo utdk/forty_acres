@@ -118,6 +118,10 @@
         // When href does exist, add back the "go to href" behavior that has
         // been removed elsewhere in the accessibleMegaMenu.js library.
         else {
+          if (event.type === 'mousedown' && event.which !== 1) {
+            // Only add this back for *left* mouse clicks.
+            return;
+          }
           window.location.href = $(this).attr('href');
         }
       });
