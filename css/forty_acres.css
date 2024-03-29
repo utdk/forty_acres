@@ -1894,6 +1894,9 @@ header.ut-header #ut-main_menu-wrapper.active {
   display: -ms-flexbox;
   display: flex;
 }
+header.ut-header a {
+  overflow-wrap: unset;
+}
 footer.ut-footer .block {
   margin-bottom: 1.25rem;
 }
@@ -1932,6 +1935,8 @@ footer.ut-footer .footer-textarea {
 }
 footer.ut-footer a {
   color: #9d4700;
+
+  overflow-wrap: unset;
 }
 /* To provide full bleed display, override the default
 Bootstrap padding on "container-fluid". This applies only
@@ -2179,6 +2184,9 @@ table[border].tablesaw td {
 .ut-brandbar {
   text-align: center;
   background: #bf5700;
+}
+.ut-brandbar a {
+  overflow-wrap: unset;
 }
 .ut-brandbar .ut-logo--wrapper {
   height: 40px;
