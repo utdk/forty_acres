@@ -102,4 +102,7 @@ header.ut-header {
       display: flex;
     }
   }
+  a {
+    overflow-wrap: unset;
+  }
 }
