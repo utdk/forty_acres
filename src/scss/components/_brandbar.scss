@@ -2,6 +2,9 @@
 .ut-brandbar {
   background: $ut-burntorange;
   text-align: center;
+  a {
+    overflow-wrap: unset;
+  }
   .ut-logo--wrapper {
     background: $ut-burntorange;
     height: 40px;
