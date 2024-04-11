@@ -118,8 +118,14 @@ function forty_acres_preprocess_block(&$variables) {
     $variables['logo_alt_text'] = $config->get('name');
   }
 
-  // Style block title like the headline by using its dedicated class.
-  $variables['title_attributes']['class'][] = 'ut-headline';
+  if ($base_plugin_id === 'menu_block') {
+    // Menu block titles should use `ut-headline`.
+    $variables['title_attributes']['class'][] = 'ut-headline';
+  }
+  else {
+    // All other block titles should use `ut-headline--xl`.
+   $variables['title_attributes']['class'][] = 'ut-headline--xl';
+  }
 
   if (isset($variables['attributes']['id'])) {
     $variables['content']['#attributes']['data-block'] = $variables['attributes']['id'];
