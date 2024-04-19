@@ -2,7 +2,10 @@
   /* Ensure caption text does not exceed image */
   /* Solution modeled after https://stackoverflow.com/a/28394126 */
   /* Ensure ul, ol and dt elements layout properly with floated left images. */
+  /* Revert-layer is needed to support case-sensitivity. See
+  https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors */
   /* Declare format for nested ordered lists */
+  /* The `not` declarations are necessary to allow overriding defaults (#471) */
 }
 .ck-content .align-left,
 .ck-content .align-right,
@@ -45,22 +48,28 @@
   overflow: hidden;
   padding-left: 0.85rem;
 }
-.ck-content ol > li {
+.ck-content ol,
+.ck-content ol ol,
+.ck-content ol ol ol,
+.ck-content ol ol ol ol {
+  list-style-type: revert-layer;
+}
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: decimal;
 }
-.ck-content ol > li > ol > li {
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: upper-alpha;
 }
-.ck-content ol > li > ol > li > ol > li {
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: upper-roman;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li {
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: decimal;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li > ol > li {
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: lower-alpha;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: lower-roman;
 }
 .ck-content .ut-btn--large,
