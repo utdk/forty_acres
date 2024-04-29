@@ -99,9 +99,8 @@ function forty_acres_preprocess_block(&$variables) {
     $config = \Drupal::config('system.site');
     $variables['logo_alt_text'] = $config->get('name');
   }
-
-  if ($base_plugin_id === 'menu_block') {
-    // Menu block titles should use `ut-headline`.
+  if (in_array($base_plugin_id, ['menu_block', 'addtoany_block'])) {
+    // AddToAny and Menu block titles should use the smaller `ut-headline`.
     $variables['title_attributes']['class'][] = 'ut-headline';
   }
   else {
