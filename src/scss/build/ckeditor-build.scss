@@ -1,7 +1,7 @@
 // Style for the CKEditor.
 @import "../variables";
 
-.ck-content {
+.ck.ck-content {
   @import "../drupal/align-override";
   @import "../build/lists";
   @import "../texas-design-system/components/buttons";
