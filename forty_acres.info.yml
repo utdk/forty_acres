@@ -1,5 +1,5 @@
 core_version_requirement: ^9 || ^10
-version: '3.17.1'
+version: '3.18.0'
 type: theme
 base theme: stable9
 name: Forty Acres
