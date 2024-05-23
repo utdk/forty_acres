@@ -1,20 +1,33 @@
+// stylelint-disable at-rule-no-unknown
+@use "sass:string";
+
+/* Revert-layer is needed to support case-sensitivity. See
+https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors */
+ol,
+ol ol,
+ol ol ol,
+ol ol ol ol {
+  list-style-type: revert-layer;
+}
+
 /* Declare format for nested ordered lists */
-ol {
+/* The `not` declarations are necessary to allow overriding defaults (#471) */
+ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
   > li {
     list-style-type: decimal;
-    > ol {
+    > ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
       > li {
         list-style-type: upper-alpha;
-        > ol {
+        > ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
           > li {
             list-style-type: upper-roman;
-            > ol {
+            > ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
               > li {
                 list-style-type: decimal;
-                > ol {
+                > ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
                   > li {
                     list-style-type: lower-alpha;
-                    > ol {
+                    > ol:not([type="a"],[type="A"],[type="i"],[type="I"],[type="1"]) {
                       > li {
                         list-style-type: lower-roman;
                       }

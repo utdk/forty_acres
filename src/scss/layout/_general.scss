@@ -19,6 +19,15 @@ table {
     }
   }
 }
+table a {
+  overflow-wrap: break-word;
+  &:link {
+    overflow-wrap: break-word;
+  }
+  &:visited {
+    overflow-wrap: break-word;
+  }
+}
 
 /* Tablesaw tables. */
 /* Add a background color for table headers. */

@@ -32,7 +32,7 @@
  */
 #}
 {% set heading_id ="block-accessible-main-menu" %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby', 'id')}} id="{{ heading_id }}">
+<nav role="navigation" aria-label="Main Menu" {{ attributes|without('role', 'aria-labelledby', 'id')}} id="{{ heading_id }}">
 	{# Label. If not displayed, we still provide it for screen readers. #}
 	{% if not configuration.label_display %}
 		{% set title_attributes = title_attributes.addClass('visually-hidden') %}
@@ -42,4 +42,3 @@
 		{{ content }}
 	{% endblock %}
 </nav>
-

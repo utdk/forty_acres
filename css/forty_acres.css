@@ -773,9 +773,6 @@ pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
 }
-.layout__region {
-  min-width: 0;
-}
 code,
 kbd,
 tt,
@@ -1960,6 +1957,15 @@ table.border-1 td {
 table.border-2 th,
 table.border-2 td {
   border: 2px solid #ddd;
+}
+table a {
+  overflow-wrap: break-word;
+}
+table a:link {
+  overflow-wrap: break-word;
+}
+table a:visited {
+  overflow-wrap: break-word;
 }
 /* Tablesaw tables. */
 /* Add a background color for table headers. */

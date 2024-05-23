@@ -1,78 +1,87 @@
-.ck-content {
+.ck.ck-content {
   /* Ensure caption text does not exceed image */
   /* Solution modeled after https://stackoverflow.com/a/28394126 */
   /* Ensure ul, ol and dt elements layout properly with floated left images. */
+  /* Revert-layer is needed to support case-sensitivity. See
+  https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors */
   /* Declare format for nested ordered lists */
+  /* The `not` declarations are necessary to allow overriding defaults (#471) */
 }
-.ck-content .align-left,
-.ck-content .align-right,
-.ck-content .align-center {
+.ck.ck-content .align-left,
+.ck.ck-content .align-right,
+.ck.ck-content .align-center {
   margin-bottom: 1rem;
   padding-top: 0.4rem;
 }
-.ck-content .align-left {
+.ck.ck-content .align-left {
   margin-right: 1rem;
   margin-left: 0;
 }
-.ck-content .align-right {
+.ck.ck-content .align-right {
   margin-right: 0;
   margin-left: 1rem;
 }
-.ck-content .align-center {
+.ck.ck-content .align-center {
   text-align: center;
 }
-.ck-content figure.align-right,
-.ck-content figure.align-left,
-.ck-content figure.align-center {
+.ck.ck-content figure.align-right,
+.ck.ck-content figure.align-left,
+.ck.ck-content figure.align-center {
   display: table;
 }
-.ck-content figure.align-right figcaption,
-.ck-content figure.align-left figcaption,
-.ck-content figure.align-center figcaption {
+.ck.ck-content figure.align-right figcaption,
+.ck.ck-content figure.align-left figcaption,
+.ck.ck-content figure.align-center figcaption {
   display: table-caption;
   caption-side: bottom;
   text-align: left;
 }
-.ck-content .align-left ~ ul,
-.ck-content .align-left ~ ol,
-.ck-content .drupal-media-style-align-left ~ ul,
-.ck-content .drupal-media-style-align-left ~ ol {
+.ck.ck-content .align-left ~ ul,
+.ck.ck-content .align-left ~ ol,
+.ck.ck-content .drupal-media-style-align-left ~ ul,
+.ck.ck-content .drupal-media-style-align-left ~ ol {
   overflow: hidden;
   padding-left: 1.85rem;
 }
-.ck-content .align-left ~ dl,
-.ck-content .drupal-media-style-align-left ~ dl {
+.ck.ck-content .align-left ~ dl,
+.ck.ck-content .drupal-media-style-align-left ~ dl {
   overflow: hidden;
   padding-left: 0.85rem;
 }
-.ck-content ol > li {
+.ck.ck-content ol,
+.ck.ck-content ol ol,
+.ck.ck-content ol ol ol,
+.ck.ck-content ol ol ol ol {
+  list-style-type: revert-layer;
+}
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: decimal;
 }
-.ck-content ol > li > ol > li {
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: upper-alpha;
 }
-.ck-content ol > li > ol > li > ol > li {
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: upper-roman;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li {
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: decimal;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li > ol > li {
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: lower-alpha;
 }
-.ck-content ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+.ck.ck-content ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: lower-roman;
 }
-.ck-content .ut-btn--large,
-.ck-content button--large,
-.ck-content .ut-btn--small,
-.ck-content button--small,
-.ck-content .ut-btn--disabled,
-.ck-content button--disabled,
-.ck-content .ut-btn--secondary,
-.ck-content button--secondary,
-.ck-content .ut-btn,
-.ck-content button {
+.ck.ck-content .ut-btn--large,
+.ck.ck-content button--large,
+.ck.ck-content .ut-btn--small,
+.ck.ck-content button--small,
+.ck.ck-content .ut-btn--disabled,
+.ck.ck-content button--disabled,
+.ck.ck-content .ut-btn--secondary,
+.ck.ck-content button--secondary,
+.ck.ck-content .ut-btn,
+.ck.ck-content button {
   display: inline-block;
   margin-bottom: 0.55rem;
   padding: 0.5rem 1rem;
@@ -86,116 +95,116 @@
   font-family: "LibreFrank", Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
-.ck-content .ut-btn--large:link,
-.ck-content button--large:link,
-.ck-content .ut-btn--small:link,
-.ck-content button--small:link,
-.ck-content .ut-btn--disabled:link,
-.ck-content button--disabled:link,
-.ck-content .ut-btn--secondary:link,
-.ck-content button--secondary:link,
-.ck-content .ut-btn:link,
-.ck-content button:link,
-.ck-content .ut-btn--large:visited,
-.ck-content button--large:visited,
-.ck-content .ut-btn--small:visited,
-.ck-content button--small:visited,
-.ck-content .ut-btn--disabled:visited,
-.ck-content button--disabled:visited,
-.ck-content .ut-btn--secondary:visited,
-.ck-content button--secondary:visited,
-.ck-content .ut-btn:visited,
-.ck-content button:visited {
+.ck.ck-content .ut-btn--large:link,
+.ck.ck-content button--large:link,
+.ck.ck-content .ut-btn--small:link,
+.ck.ck-content button--small:link,
+.ck.ck-content .ut-btn--disabled:link,
+.ck.ck-content button--disabled:link,
+.ck.ck-content .ut-btn--secondary:link,
+.ck.ck-content button--secondary:link,
+.ck.ck-content .ut-btn:link,
+.ck.ck-content button:link,
+.ck.ck-content .ut-btn--large:visited,
+.ck.ck-content button--large:visited,
+.ck.ck-content .ut-btn--small:visited,
+.ck.ck-content button--small:visited,
+.ck.ck-content .ut-btn--disabled:visited,
+.ck.ck-content button--disabled:visited,
+.ck.ck-content .ut-btn--secondary:visited,
+.ck.ck-content button--secondary:visited,
+.ck.ck-content .ut-btn:visited,
+.ck.ck-content button:visited {
   color: #fff;
 }
-.ck-content .ut-btn--large:hover,
-.ck-content button--large:hover,
-.ck-content .ut-btn--small:hover,
-.ck-content button--small:hover,
-.ck-content .ut-btn--disabled:hover,
-.ck-content button--disabled:hover,
-.ck-content .ut-btn--secondary:hover,
-.ck-content button--secondary:hover,
-.ck-content .ut-btn:hover,
-.ck-content button:hover,
-.ck-content .ut-btn--large:focus,
-.ck-content button--large:focus,
-.ck-content .ut-btn--small:focus,
-.ck-content button--small:focus,
-.ck-content .ut-btn--disabled:focus,
-.ck-content button--disabled:focus,
-.ck-content .ut-btn--secondary:focus,
-.ck-content button--secondary:focus,
-.ck-content .ut-btn:focus,
-.ck-content button:focus {
+.ck.ck-content .ut-btn--large:hover,
+.ck.ck-content button--large:hover,
+.ck.ck-content .ut-btn--small:hover,
+.ck.ck-content button--small:hover,
+.ck.ck-content .ut-btn--disabled:hover,
+.ck.ck-content button--disabled:hover,
+.ck.ck-content .ut-btn--secondary:hover,
+.ck.ck-content button--secondary:hover,
+.ck.ck-content .ut-btn:hover,
+.ck.ck-content button:hover,
+.ck.ck-content .ut-btn--large:focus,
+.ck.ck-content button--large:focus,
+.ck.ck-content .ut-btn--small:focus,
+.ck.ck-content button--small:focus,
+.ck.ck-content .ut-btn--disabled:focus,
+.ck.ck-content button--disabled:focus,
+.ck.ck-content .ut-btn--secondary:focus,
+.ck.ck-content button--secondary:focus,
+.ck.ck-content .ut-btn:focus,
+.ck.ck-content button:focus {
   cursor: pointer;
   text-decoration: none;
   color: #fff !important;
   border: 2px solid #9d4700;
   background-color: #9d4700;
 }
-.ck-content .ut-btn--large:active,
-.ck-content button--large:active,
-.ck-content .ut-btn--small:active,
-.ck-content button--small:active,
-.ck-content .ut-btn--disabled:active,
-.ck-content button--disabled:active,
-.ck-content .ut-btn--secondary:active,
-.ck-content button--secondary:active,
-.ck-content .ut-btn:active,
-.ck-content button:active {
+.ck.ck-content .ut-btn--large:active,
+.ck.ck-content button--large:active,
+.ck.ck-content .ut-btn--small:active,
+.ck.ck-content button--small:active,
+.ck.ck-content .ut-btn--disabled:active,
+.ck.ck-content button--disabled:active,
+.ck.ck-content .ut-btn--secondary:active,
+.ck.ck-content button--secondary:active,
+.ck.ck-content .ut-btn:active,
+.ck.ck-content button:active {
   background-color: #ae4f00;
 }
-.ck-content .ut-btn--secondary,
-.ck-content button--secondary {
+.ck.ck-content .ut-btn--secondary,
+.ck.ck-content button--secondary {
   color: #bf5700;
   border-color: #bf5700;
   background-color: #fff;
 }
-.ck-content .ut-btn--secondary:link,
-.ck-content .ut-btn--secondary:visited,
-.ck-content button--secondary:link,
-.ck-content button--secondary:visited {
+.ck.ck-content .ut-btn--secondary:link,
+.ck.ck-content .ut-btn--secondary:visited,
+.ck.ck-content button--secondary:link,
+.ck.ck-content button--secondary:visited {
   color: #bf5700;
 }
-.ck-content .ut-btn--disabled,
-.ck-content button--disabled {
+.ck.ck-content .ut-btn--disabled,
+.ck.ck-content button--disabled {
   color: #9cadb7;
   border-color: #e6ebed;
   background-color: #e6ebed;
 }
-.ck-content .ut-btn--disabled:link,
-.ck-content .ut-btn--disabled:visited,
-.ck-content button--disabled:link,
-.ck-content button--disabled:visited {
+.ck.ck-content .ut-btn--disabled:link,
+.ck.ck-content .ut-btn--disabled:visited,
+.ck.ck-content button--disabled:link,
+.ck.ck-content button--disabled:visited {
   color: #9cadb7;
 }
-.ck-content .ut-btn--disabled:hover,
-.ck-content .ut-btn--disabled:focus,
-.ck-content button--disabled:hover,
-.ck-content button--disabled:focus {
+.ck.ck-content .ut-btn--disabled:hover,
+.ck.ck-content .ut-btn--disabled:focus,
+.ck.ck-content button--disabled:hover,
+.ck.ck-content button--disabled:focus {
   color: #1f262b !important;
   border-color: #e6ebed;
   background-color: #e6ebed;
 }
-.ck-content .ut-btn--small,
-.ck-content button--small {
+.ck.ck-content .ut-btn--small,
+.ck.ck-content button--small {
   padding: 0.25rem 0.75rem;
   text-transform: uppercase;
   font-size: 0.825rem;
   line-height: 1.5;
 }
-.ck-content .ut-btn--large,
-.ck-content button--large {
+.ck.ck-content .ut-btn--large,
+.ck.ck-content button--large {
   padding: 0.75rem 1.25rem;
   text-transform: uppercase;
 }
-.ck-content .corner--rounded {
+.ck.ck-content .corner--rounded {
   border-radius: 4px !important;
 }
-.ck-content .corner--square {
+.ck.ck-content .corner--square {
   border-radius: 0 !important;
 }
-.ck-content .corner--pill {
+.ck.ck-content .corner--pill {
   border-radius: 2rem !important;
 }

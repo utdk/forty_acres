@@ -30,25 +30,7 @@ function forty_acres_preprocess_page(&$variables) {
   $variables['parent_entity_link'] = theme_get_setting('parent_link');
   // Add css if user selects a logo option in theme settings.
   $variables['logo_height'] = theme_get_setting('logo_height');
-  // Set default/fallback components.
-  $default_components = [
-    'tab' => 'tab',
-    'collapse' => 'collapse',
-  ];
-  // Get user defined components if config exists.
-  $user_defined_components = NULL;
-  if (!is_null(theme_get_setting('bootstrap_components'))) {
-    $user_defined_components = theme_get_setting('bootstrap_components');
-  }
-  // Load user defined components, if there's no config for it, load defaults.
-  $bootstrap_components = $user_defined_components ?? $default_components;
-  foreach ($bootstrap_components as $component) {
-    // If the component is checked and library files are available.
-    if (is_string($component)) {
-      // Attach the component library.
-      $variables['#attached']['library'][] = 'forty_acres/bootstrap-' . $component;
-    }
-  }
+
   /** @var \Drupal\Core\Routing\CurrentRouteMatch $current_route_match */
   $current_route_match = \Drupal::routeMatch();
   $route_name = $current_route_match->getRouteName();
@@ -117,9 +99,14 @@ function forty_acres_preprocess_block(&$variables) {
     $config = \Drupal::config('system.site');
     $variables['logo_alt_text'] = $config->get('name');
   }
-
-  // Style block title like the headline by using its dedicated class.
-  $variables['title_attributes']['class'][] = 'ut-headline';
+  if (in_array($base_plugin_id, ['menu_block', 'addtoany_block'])) {
+    // AddToAny and Menu block titles should use the smaller `ut-headline`.
+    $variables['title_attributes']['class'][] = 'ut-headline';
+  }
+  else {
+    // All other block titles should use `ut-headline--xl`.
+    $variables['title_attributes']['class'][] = 'ut-headline--xl';
+  }
 
   if (isset($variables['attributes']['id'])) {
     $variables['content']['#attributes']['data-block'] = $variables['attributes']['id'];

@@ -7,61 +7,12 @@ global:
       css/lists.css: {}
   js:
     js/jquery-accessibleMegaMenu.js: {}
-    js/util.js: {}
     js/svgxuse.js: {}
     js/custom.js: {}
   dependencies:
     - core/jquery
     - core/drupal
     - core/drupal.debounce
-popper-js:
-  js:
-    js/popper.js: {}
-bootstrap-collapse:
-  css:
-    base:
-      css/collapse.css: {}
-  js:
-    js/collapse.js: {}
-  dependencies:
-    - core/jquery
-bootstrap-alert:
-  css:
-    base:
-      css/alert.css: {}
-  js:
-    js/alert.js: {}
-  dependencies:
-    - core/jquery
-bootstrap-modal:
-  css:
-    base:
-      css/modal.css: {}
-  js:
-    js/modal.js: {}
-  dependencies:
-    - core/jquery
-bootstrap-tab:
-  css:
-    base:
-      css/tab.css: {}
-  js:
-    js/tab.js: {}
-  dependencies:
-    - core/jquery
-bootstrap-tooltip-init:
-  js:
-    js/tooltip-initialize.js: {}
-bootstrap-tooltip:
-  css:
-    base:
-      css/tooltip.css: {}
-  js:
-    js/tooltip.js: {}
-  dependencies:
-    - core/jquery
-    - forty_acres/popper-js
-    - forty_acres/bootstrap-tooltip-init
 messages:
   css:
     base:
