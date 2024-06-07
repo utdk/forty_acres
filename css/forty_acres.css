@@ -1365,6 +1365,9 @@ ul.header-menu__list .header-menu__list-item {
     margin-left: 0.3125rem;
   }
 }
+ul.header-menu__list .header-menu__list-item.active a.header-menu__link {
+  color: #bf5700;
+}
 ul.header-menu__list .header-menu__link {
   padding: 0.3125rem;
 }

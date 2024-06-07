@@ -19,6 +19,9 @@ ul.header-menu__list {
       }
     }
   }
+  .header-menu__list-item.active a.header-menu__link {
+    color: $ut-burntorange;
+  }
   .header-menu__link {
     padding: rem-calc(5);
   }
