@@ -163,9 +163,6 @@ button--large {
 .ut-flex-content-area-wrapper .link-list li {
   margin-bottom: 0.5625rem;
 }
-.ut-flex-content-area-wrapper .ut-headline {
-  padding: 0.5rem 0;
-}
 ul.ut-menu--list-bold,
 ul.ut-menu--list {
   margin: 0 0 1.5rem;
@@ -833,6 +830,7 @@ summary {
   color: #333f48;
 }
 .ut-headline {
+  padding: 0.5rem 0;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.625;
@@ -2186,9 +2184,6 @@ table[border].tablesaw td {
 .field-border.ut-newsreel .ut-copy,
 .field-border.ut-newsreel .ut-btn--secondary {
   padding-left: 15px;
-}
-.ut-headline {
-  padding: 0.5rem 0;
 }
 .ut-brandbar {
   text-align: center;

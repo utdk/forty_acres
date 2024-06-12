@@ -21,6 +21,7 @@
   font-size: 1.125rem;
   line-height: 1.625;
   font-weight: 600;
+  padding: 0.5rem 0;
 
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(lg) {
