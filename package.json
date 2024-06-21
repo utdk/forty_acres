@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "accessible-mega-menu": "https://github.com/utdk/Accessible-Mega-Menu.git",
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^5.3.3"
   }
 }

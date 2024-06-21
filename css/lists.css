@@ -6,6 +6,7 @@ ol ol ol,
 ol ol ol ol {
   list-style-type: revert-layer;
 }
+
 /* Declare format for nested ordered lists */
 /* The `not` declarations are necessary to allow overriding defaults (#471) */
 ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
@@ -26,3 +27,5 @@ ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a
 ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li > ol:not([type=a], [type=A], [type=i], [type=I], [type="1"]) > li {
   list-style-type: lower-roman;
 }
+
+/*# sourceMappingURL=lists.css.map */
