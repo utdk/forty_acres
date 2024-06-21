@@ -486,6 +486,41 @@ progress {
   display: none !important;
 }
 
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  .container-sm, .container {
+    max-width: 840px;
+  }
+}
+@media (min-width: 900px) {
+  .container-md, .container-sm, .container {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1600px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1500px;
+  }
+}
 :root {
   --bs-breakpoint-xs: 0;
   --bs-breakpoint-sm: 600px;
