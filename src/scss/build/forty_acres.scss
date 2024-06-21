@@ -1,10 +1,11 @@
 ///// Global Imports & Styles For Forty Acres
 
-// Functions, Mixins and Variables
-// functions.scss is necessary to import before settings
-@import "../../../node_modules/bootstrap/scss/functions";
+// Fonts
+@import "../fonts/charis";
+@import "../fonts/libre-franklin";
+@import "../fonts/ut-icons";
+
 @import "../variables";
-@import "../../../node_modules/bootstrap/scss/variables";
 @import "../mixins/responsive";
 @import "../mixins/general_mixins";
 
