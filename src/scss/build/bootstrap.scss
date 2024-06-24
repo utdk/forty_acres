@@ -9,7 +9,14 @@
 // Functions, Mixins and Variables
 // functions.scss is necessary to import before settings
 @import "../../../node_modules/bootstrap/scss/functions";
+@import "../variables";
 @import "../../../node_modules/bootstrap/scss/variables";
+
+// Fonts
+@import "../fonts/charis";
+@import "../fonts/libre-franklin";
+@import "../fonts/ut-icons";
+
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/vendor/rfs";
