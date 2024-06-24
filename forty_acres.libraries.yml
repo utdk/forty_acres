@@ -1,7 +1,7 @@
 global:
   css:
     theme:
-      css/bootstrap.css: {}
+      css/base.css: {}
       css/forty_acres.css: {}
       css/align-override.css: {}
       css/lists.css: {}
