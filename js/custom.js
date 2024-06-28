@@ -161,9 +161,9 @@
     await new Promise((resolve, reject) => setTimeout(resolve, 250));
     if ($("#ut-main_menu-wrapper").hasClass("active")) {
       // 1. Simulate menu toggle button click.
-      $('.ut-btn--toggle').click();
+      $('.ut-btn--toggle').trigger("click");
       // 2. Set focus to the mobile menu button.
-      $(".ut-btn--toggle").focus();
+      $(".ut-btn--toggle").trigger("focus");
     }
 
   }
@@ -181,13 +181,13 @@
           if (event.key === "Escape" && $("#ut-main_menu-wrapper").hasClass("active")) {
             // Give first click if pressing Esc within the mobile menu.
             if (event.target.className !== "ut-btn--toggle") {
-              $('.ut-btn--toggle').click();
+              $('.ut-btn--toggle').trigger("click");
             }
             closeMenu();
           }
         });
         // If children of mobile menu loses focus.
-        $("#ut-main_menu-wrapper").children().focusout(function (e) {
+        $("#ut-main_menu-wrapper").children().on('focusout', function (e) {
           // Grab all parents and get their IDs.
           var parentIds = $(e.relatedTarget).parents().map(function () {
             return this.id;
