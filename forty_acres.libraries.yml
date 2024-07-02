@@ -18,3 +18,30 @@ messages:
   css:
     base:
       css/messages.css: {}
+# Begin components relocated from utdk_profile in 2024.
+utexas_block_social_links:
+  css:
+    theme:
+      css/components/block_social_links.css: {}
+utexas_featured_highlight:
+  css:
+    theme:
+      css/components/featured_highlight.css: {}
+utexas_flex_content_area:
+  css:
+    theme:
+      css/components/flex_content_area.css: {}
+utexas_flex_list:
+  css:
+    theme:
+      css/components/flex_list__default.css: {}
+      css/components/flex_list__accordions.css: {}
+      css/components/flex_list__horizontal_tabs.css: {}
+utexas_hero_carousel:
+  css:
+    theme:
+      css/components/hero_carousel.css: {}
+utexas_image_link:
+  css:
+    theme:
+      css/components/image_link.css: {}

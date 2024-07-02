@@ -88,6 +88,48 @@ function forty_acres_preprocess_field(&$variables, $hook) {
 }
 
 /**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_utexas_sl_social_links(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_block_social_links';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_featured_highlight(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_featured_highlight';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_fca(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_flex_content_area';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_utexas_flex_list_items(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_flex_list';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_hero_carousel(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_hero_carousel';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_il(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/image_link';
+}
+
+/**
  * Implements hook_preprocess_block().
  */
 function forty_acres_preprocess_block(&$variables) {
