@@ -37,6 +37,15 @@ utexas_flex_list:
       css/components/flex_list__default.css: {}
       css/components/flex_list__accordions.css: {}
       css/components/flex_list__horizontal_tabs.css: {}
+utexas_hero:
+  css:
+    theme:
+      hero-default.css: {}
+      hero-style-1.css: {}
+      hero-style-2.css: {}
+      hero-style-3.css: {}
+      hero-style-4.css: {}
+      hero-style-5.css: {}
 utexas_hero_carousel:
   css:
     theme:
@@ -45,3 +54,28 @@ utexas_image_link:
   css:
     theme:
       css/components/image_link.css: {}
+utexas_instagram:
+  css:
+    theme:
+      css/components/instagram_block.css: {}
+      css/components/instagram_post.css: {}
+utexas_photo_content_area:
+  css:
+    theme:
+      css/components/photo-content-area.css: {}
+utexas_promo_list:
+  css:
+    theme:
+      css/components/promo_list.css: {}
+utexas_promo_unit:
+  css:
+    theme:
+      css/components/promo_unit.css: {}
+utexas_quick_links:
+  css:
+    theme:
+      css/components/quick_links.css: {}
+utexas_resources:
+  css:
+    theme:
+      css/components/resources.css: {}

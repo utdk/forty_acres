@@ -118,6 +118,13 @@ function forty_acres_preprocess_field__field_utexas_flex_list_items(&$variables)
 /**
  * Implements hook_preprocess_field().
  */
+function forty_acres_preprocess_field__field_block_hero(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_hero';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
 function forty_acres_preprocess_field__field_hero_carousel(&$variables) {
   $variables['#attached']['library'][] = 'forty_acres/utexas_hero_carousel';
 }
@@ -126,7 +133,49 @@ function forty_acres_preprocess_field__field_hero_carousel(&$variables) {
  * Implements hook_preprocess_field().
  */
 function forty_acres_preprocess_field__field_block_il(&$variables) {
-  $variables['#attached']['library'][] = 'forty_acres/image_link';
+  $variables['#attached']['library'][] = 'forty_acres/utexas_image_link';
+}
+
+/**
+ * Implements hook_preprocess_block_system_messages_block().
+ */
+function forty_acres_preprocess_block__utexas_instagram(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_instagram';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_pca(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_photo_content_area';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_pl(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_promo_list';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_pu(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_promo_unit';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_ql(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_quick_links';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function forty_acres_preprocess_field__field_block_resources(&$variables) {
+  $variables['#attached']['library'][] = 'forty_acres/utexas_resources';
 }
 
 /**
