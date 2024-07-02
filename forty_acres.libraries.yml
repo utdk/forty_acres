@@ -5,6 +5,29 @@ global:
       css/forty_acres.css: {}
       css/align-override.css: {}
       css/lists.css: {}
+      # Begin components relocated from utdk_profile in 2024.
+      css/components/block_social_links.css: {}
+      css/components/featured_highlight.css: {}
+      css/components/flex_content_area.css: {}
+      css/components/flex_list__default.css: {}
+      css/components/flex_list__accordion.css: {}
+      css/components/flex_list__horizontal_tabs.css: {}
+      css/components/hero-default.css: {}
+      css/components/hero-style-1.css: {}
+      css/components/hero-style-2.css: {}
+      css/components/hero-style-3.css: {}
+      css/components/hero-style-4.css: {}
+      css/components/hero-style-5.css: {}
+      css/components/hero-style-base.css: {}
+      css/components/hero_carousel.css: {}
+      css/components/image_link.css: {}
+      css/components/instagram_feed.css: {}
+      css/components/instagram_post.css: {}
+      css/components/photo-content-area.css: {}
+      css/components/promo_list.css: {}
+      css/components/promo_unit.css: {}
+      css/components/quick_links.css: {}
+      css/components/resources.css: {}
   js:
     js/jquery-ui.min.js: {}
     js/jquery-accessibleMegaMenu.js: {}
@@ -18,64 +41,3 @@ messages:
   css:
     base:
       css/messages.css: {}
-# Begin components relocated from utdk_profile in 2024.
-utexas_block_social_links:
-  css:
-    theme:
-      css/components/block_social_links.css: {}
-utexas_featured_highlight:
-  css:
-    theme:
-      css/components/featured_highlight.css: {}
-utexas_flex_content_area:
-  css:
-    theme:
-      css/components/flex_content_area.css: {}
-utexas_flex_list:
-  css:
-    theme:
-      css/components/flex_list__default.css: {}
-      css/components/flex_list__accordions.css: {}
-      css/components/flex_list__horizontal_tabs.css: {}
-utexas_hero:
-  css:
-    theme:
-      hero-default.css: {}
-      hero-style-1.css: {}
-      hero-style-2.css: {}
-      hero-style-3.css: {}
-      hero-style-4.css: {}
-      hero-style-5.css: {}
-utexas_hero_carousel:
-  css:
-    theme:
-      css/components/hero_carousel.css: {}
-utexas_image_link:
-  css:
-    theme:
-      css/components/image_link.css: {}
-utexas_instagram:
-  css:
-    theme:
-      css/components/instagram_block.css: {}
-      css/components/instagram_post.css: {}
-utexas_photo_content_area:
-  css:
-    theme:
-      css/components/photo-content-area.css: {}
-utexas_promo_list:
-  css:
-    theme:
-      css/components/promo_list.css: {}
-utexas_promo_unit:
-  css:
-    theme:
-      css/components/promo_unit.css: {}
-utexas_quick_links:
-  css:
-    theme:
-      css/components/quick_links.css: {}
-utexas_resources:
-  css:
-    theme:
-      css/components/resources.css: {}
