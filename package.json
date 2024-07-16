@@ -27,7 +27,6 @@
     "hosted-git-info": "^6.1.1",
     "lodash": "^4.17.21",
     "natives": "^1.1.6",
-    "popper.js": "^1.16.1",
     "sass": "^1.64.2",
     "stylelint": "^10.0.1",
     "stylelint-checkstyle-formatter": "^0.1.2",

@@ -5,6 +5,7 @@ global:
       css/forty_acres.css: {}
       css/align-override.css: {}
       css/lists.css: {}
+      css/collapse-custom.css: {}
   js:
     js/jquery-ui.min.js: {}
     js/jquery-accessibleMegaMenu.js: {}
