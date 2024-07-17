@@ -2224,17 +2224,6 @@ table[border].tablesaw td {
     background: transparent;
   }
 }
-#drupal-off-canvas input[type=checkbox],
-#drupal-off-canvas input[type=radio] {
-  display: inline-block;
-  width: 20px;
-}
-#drupal-off-canvas label {
-  display: inline-block;
-}
-#drupal-off-canvas label:before {
-  display: none;
-}
 .ut-promo-list-wrapper .promo-list .ut-headline {
   font-size: 1.125rem;
   font-weight: 600;
