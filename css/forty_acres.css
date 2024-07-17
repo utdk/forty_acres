@@ -2480,6 +2480,20 @@ details[open] {
 details[open] summary {
   margin: 0 -1rem 0.75rem;
 }
+.nav-tabs {
+  margin-bottom: 1rem;
+}
+.nav-tabs .nav-link {
+  border: 1px solid #dee2e6;
+  background-color: #f2f1ed;
+}
+.nav-tabs .nav-link.active {
+  font-weight: 600;
+}
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  background: #fff;
+}
 /*
 Texas Design System input manipulation is incompatible with Drupal's Media
 Library checkboxes. See UDK8-1055.
