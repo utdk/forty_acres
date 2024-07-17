@@ -2461,21 +2461,26 @@ table[border].tablesaw td {
 }
 details {
   margin-bottom: 9px;
+  border: 1px solid rgba(214, 210, 196, 0.25);
+  background: #fff;
 }
-summary {
+details summary {
   padding: 0.375rem 0.75em;
-  list-style: none;
-  border: 1px solid #eee;
-  background: #f0f0f0;
-}
-summary:hover {
-  text-decoration: underline;
-}
-summary:focus {
-  outline: 1px dotted;
+  list-style: revert-layer;
+  color: #9d4700;
+  background: rgba(214, 210, 196, 0.25);
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 details[open] {
-  padding: 0 1rem;
+  padding: 0 1rem 0.5rem 1rem;
+  border: 1px solid #9d4700;
+}
+details[open] summary,
+details summary:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #9d4700;
 }
 details[open] summary {
   margin: 0 -1rem 0.75rem;
