@@ -11,6 +11,7 @@ global:
     js/jquery-accessibleMegaMenu.js: {}
     js/svgxuse.js: {}
     js/custom.js: {}
+    js/search-facets.js: {}
   dependencies:
     - core/jquery
     - core/drupal
