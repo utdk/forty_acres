@@ -1,11 +1,6 @@
 global:
   css:
     theme:
-      css/base.css: {}
-      css/forty_acres.css: {}
-      css/align-override.css: {}
-      css/lists.css: {}
-      css/collapse-custom.css: {}
       # Begin components relocated from utdk_profile in 2024.
       css/components/block_social_links.css: {}
       css/components/featured_highlight.css: {}
@@ -29,6 +24,12 @@ global:
       css/components/promo_unit.css: {}
       css/components/quick_links.css: {}
       css/components/resources.css: {}
+      # Begin original Forty Acres CSS
+      css/base.css: {}
+      css/forty_acres.css: {}
+      css/align-override.css: {}
+      css/lists.css: {}
+      css/collapse-custom.css: {}
   js:
     js/jquery-ui.min.js: {}
     js/jquery-accessibleMegaMenu.js: {}
