@@ -6,7 +6,6 @@ global:
       css/components/featured_highlight.css: {}
       css/components/flex_content_area.css: {}
       css/components/flex_list__default.css: {}
-      css/components/flex_list__accordion.css: {}
       css/components/flex_list__horizontal_tabs.css: {}
       css/components/hero-default.css: {}
       css/components/hero-style-1.css: {}
