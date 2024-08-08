@@ -172,18 +172,6 @@ summary {
   line-height: 1.25;
   color: $ut-charcoal;
 }
-// stylelint-disable-next-line at-rule-no-unknown
-@include screen-mq(lg) {
-  article {
-    word-wrap: break-word;
-    p,
-    ul,
-    ol,
-    dt {
-      font-size: 1.125rem;
-    }
-  }
-}
 
 // Last updated text.
 .updated-date-message,

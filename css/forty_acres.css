@@ -228,7 +228,7 @@ textarea {
   background-color: #fff;
   background-image: none;
   background-clip: padding-box;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5625;
 
   -moz-appearance: none;
@@ -668,7 +668,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: "LibreFrank", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5625;
 
   -webkit-font-smoothing: antialiased;
@@ -805,17 +805,6 @@ summary {
   font-size: 1.25rem;
   line-height: 1.25;
 }
-@media screen and (min-width: 1200px) {
-  article {
-    word-wrap: break-word;
-  }
-  article p,
-  article ul,
-  article ol,
-  article dt {
-    font-size: 1.125rem;
-  }
-}
 .updated-date-message,
 .updated-date {
   color: #56544e;
@@ -881,9 +870,6 @@ summary {
   display: block;
   clear: both;
   content: "";
-}
-.block-bundle-basic .ut-copy {
-  line-height: 1.5625;
 }
 .ut-img--fluid {
   max-width: 100%;
@@ -2353,9 +2339,6 @@ table[border].tablesaw td {
     font-size: 1.25rem;
     line-height: 1.6875;
   }
-}
-.utexas-quick-links .ut-copy {
-  font-size: 1rem;
 }
 .utexas-quick-links .link-list {
   margin-bottom: 0;
