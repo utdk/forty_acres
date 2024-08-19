@@ -1,6 +1,29 @@
 global:
   css:
     theme:
+      # Begin components relocated from utdk_profile in 2024.
+      css/components/block_social_links.css: {}
+      css/components/featured_highlight.css: {}
+      css/components/flex_content_area.css: {}
+      css/components/flex_list__default.css: {}
+      css/components/flex_list__horizontal_tabs.css: {}
+      css/components/hero-default.css: {}
+      css/components/hero-style-1.css: {}
+      css/components/hero-style-2.css: {}
+      css/components/hero-style-3.css: {}
+      css/components/hero-style-4.css: {}
+      css/components/hero-style-5.css: {}
+      css/components/hero-style-base.css: {}
+      css/components/hero_carousel.css: {}
+      css/components/image_link.css: {}
+      css/components/instagram_feed.css: {}
+      css/components/instagram_post.css: {}
+      css/components/photo-content-area.css: {}
+      css/components/promo_list.css: {}
+      css/components/promo_unit.css: {}
+      css/components/quick_links.css: {}
+      css/components/resources.css: {}
+      # Begin original Forty Acres CSS
       css/base.css: {}
       css/forty_acres.css: {}
       css/align-override.css: {}
