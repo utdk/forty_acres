@@ -23,6 +23,17 @@ global:
       css/components/promo_unit.css: {}
       css/components/quick_links.css: {}
       css/components/resources.css: {}
+      # Begin CSS relocated from utevent
+      css/utevent/calendar.css: {}
+      css/utevent/listing-block.layout.css: {}
+      css/utevent/listing-block.module.css: {}
+      css/utevent/listing-block.state.css: {}
+      css/utevent/listing-page.layout.css: {}
+      css/utevent/listing-page.module.css: {}
+      css/utevent/listing-page.state.css: {}
+      css/utevent/toggle-buttons.css: {}
+      css/utevent/utevent-event-base.css: {}
+      css/utevent/view-mode-full.css: {}
       # Begin original Forty Acres CSS
       css/base.css: {}
       css/forty_acres.css: {}
