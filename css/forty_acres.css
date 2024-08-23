@@ -882,9 +882,6 @@ summary {
   clear: both;
   content: "";
 }
-.block-bundle-basic .ut-copy {
-  line-height: 1.5625;
-}
 .ut-img--fluid {
   max-width: 100%;
   height: auto;
@@ -2353,9 +2350,6 @@ table[border].tablesaw td {
     font-size: 1.25rem;
     line-height: 1.6875;
   }
-}
-.utexas-quick-links .ut-copy {
-  font-size: 1rem;
 }
 .utexas-quick-links .link-list {
   margin-bottom: 0;
