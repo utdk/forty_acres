@@ -2,17 +2,13 @@
 
 .utexas-quick-links {
   .ut-headline {
-    margin-bottom: rem-calc(15);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       font-size: 1.125rem;
-      line-height: 1.625;
-      margin: 0 0 .5rem;
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       font-size: 1.25rem;
-      line-height: 1.6875;
     }
   }
   .link-list {

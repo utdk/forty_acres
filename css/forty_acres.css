@@ -822,61 +822,6 @@ summary {
   font-size: 0.9rem;
   font-style: italic;
 }
-.ut-headline--underline,
-.ut-headline--xl,
-.ut-headline--lg,
-.ut-headline {
-  margin: 0 0 0.5rem;
-  color: #333f48;
-}
-.ut-headline {
-  padding: 0.5rem 0;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.625;
-}
-@media screen and (min-width: 1200px) {
-  .ut-headline {
-    font-size: 1.25rem;
-    line-height: 1.6875;
-  }
-}
-.ut-headline--lg {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-@media screen and (min-width: 1200px) {
-  .ut-headline--lg {
-    font-size: 1.5625rem;
-  }
-}
-.ut-headline--xl {
-  font-size: 1.5625rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-@media screen and (min-width: 1200px) {
-  .ut-headline--xl {
-    font-size: 2rem;
-  }
-}
-.ut-headline--underline {
-  margin: 0 0 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #005f86;
-}
-.ut-headline--poster {
-  text-transform: uppercase;
-  font-size: 2.0625rem;
-  font-weight: 900;
-  line-height: 0.925;
-}
-@media screen and (min-width: 900px) {
-  .ut-headline--poster {
-    font-size: 3.0625rem;
-  }
-}
 .ut-copy:after {
   display: block;
   clear: both;
@@ -885,6 +830,56 @@ summary {
 .ut-img--fluid {
   max-width: 100%;
   height: auto;
+}
+.ut-headline--poster,
+.ut-headline--underline,
+.ut-headline--xl,
+.ut-headline--lg,
+.ut-headline {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  color: #333f48;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.ut-headline {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 1200px) {
+  .ut-headline {
+    font-size: 1.25rem;
+  }
+}
+.ut-headline--lg {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 1200px) {
+  .ut-headline--lg {
+    font-size: 1.5625rem;
+  }
+}
+.ut-headline--xl {
+  font-size: 1.5625rem;
+}
+@media screen and (min-width: 1200px) {
+  .ut-headline--xl {
+    font-size: 2rem;
+  }
+}
+.ut-headline--underline {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #005f86;
+}
+.ut-headline--poster {
+  text-transform: uppercase;
+  font-size: 2.0625rem;
+  font-weight: 900;
+}
+@media screen and (min-width: 900px) {
+  .ut-headline--poster {
+    font-size: 3.0625rem;
+  }
 }
 img {
   max-width: 100%;
@@ -2330,25 +2325,18 @@ table[border].tablesaw td {
 .ut-promo-list-wrapper .promo-list .ut-headline {
   font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.5;
 }
 .ut-promo-list-wrapper .promo-list a > .ut-headline {
   color: #bf5700;
 }
-.utexas-quick-links .ut-headline {
-  margin-bottom: 0.9375rem;
-}
 @media screen and (min-width: 900px) {
   .utexas-quick-links .ut-headline {
-    margin: 0 0 0.5rem;
     font-size: 1.125rem;
-    line-height: 1.625;
   }
 }
 @media screen and (min-width: 1200px) {
   .utexas-quick-links .ut-headline {
     font-size: 1.25rem;
-    line-height: 1.6875;
   }
 }
 .utexas-quick-links .link-list {
