@@ -34,6 +34,11 @@ global:
       css/utevent/toggle-buttons.css: {}
       css/utevent/utevent-event-base.css: {}
       css/utevent/view-mode-full.css: {}
+      # Begin CSS relocated from utnews
+      css/utnews/listing-block.layout.css: {}
+      css/utnews/listing-page.layout.css: {}
+      css/utnews/node-display.css: {}
+      css/utnews/view-mode-teaser.css: {}
       # Begin original Forty Acres CSS
       css/base.css: {}
       css/forty_acres.css: {}
