@@ -39,6 +39,9 @@
 .fc-unthemed {
   padding-top: 48px;
 }
+.fc-unthemed .fc-button {
+  border-width: 1px;
+}
 
 .fc-unthemed .fc-button-primary {
   background-color: #bf5700;
@@ -48,7 +51,7 @@
 .fc-unthemed .fc-button-primary:not(:disabled):active,
 .fc-unthemed .fc-button-primary:hover,
 .fc-unthemed .fc-button-primary:focus {
-  background-color: #9d4700;
+  background-color: #9d4700 !important;
 }
 
 .fc-unthemed .fc-event {
@@ -74,6 +77,7 @@
 .fc-unthemed .fc-button-primary:disabled {
   background-color: #fff;
   color: #000;
+  opacity: 1;
 }
 
 .utevent__calendar .form-item label {
