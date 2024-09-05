@@ -39,6 +39,15 @@ global:
       css/utnews/listing-page.layout.css: {}
       css/utnews/node-display.css: {}
       css/utnews/view-mode-teaser.css: {}
+      # Begin CSS relocated from utprof
+      css/utprof/block-profile-listing.css: {}
+      css/utprof/contact-info.css: {}
+      css/utprof/node-display.css: {}
+      css/utprof/view-mode-base.css: {}
+      css/utprof/view-mode-utexas-basic.css: {}
+      css/utprof/view-mode-utexas-name-only.css: {}
+      css/utprof/view-mode-utexas-prominent.css: {}
+      css/utprof/views-view-list.css: {}
       # Begin original Forty Acres CSS
       css/base.css: {}
       css/forty_acres.css: {}
