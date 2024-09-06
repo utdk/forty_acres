@@ -39,11 +39,11 @@
   border: 1px solid #f2f1ed;
   display: block;
   margin-bottom: 1.25rem;
-  padding: 0.25rem 1.25rem 1.25rem 1.25rem;
+  padding: .875rem 1.25rem 1.25rem 1.25rem;
   order: 3;
 }
 .utnews__author-information-wrapper .utnews__image {
-  padding-top: 1rem;
+  padding-top: 0.25rem;
 }
 
 .utnews__image {
