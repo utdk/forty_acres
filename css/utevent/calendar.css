@@ -1,8 +1,13 @@
 .utevent__calendar form,
 .utevent-listing-page form {
-  text-align: center;
+  text-align: left;
 }
-
+@media screen and (min-width: 900px) {
+  .utevent__calendar form,
+  .utevent-listing-page form {
+    text-align: center;
+  }
+}
 .utevent__calendar .form-item,
 .utevent__calendar input[type=submit],
 .utevent__calendar .form-actions,
@@ -36,9 +41,30 @@
   border: 1px solid #bf5700;
   border-radius: 4px;
 }
+
 .fc-unthemed {
-  padding-top: 48px;
+  padding-top: 20px;
 }
+
+.fc-unthemed .fc-toolbar.fc-header-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fc-unthemed .fc-left,
+.fc-unthemed .fc-center,
+.fc-unthemed .fc-right {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .fc-unthemed .fc-left,
+  .fc-unthemed .fc-center,
+  .fc-unthemed .fc-right {
+    margin-bottom: 0;
+  }
+}
+
 .fc-unthemed .fc-button {
   border-width: 1px;
 }
@@ -83,6 +109,6 @@
 .utevent__calendar .form-item label {
   display: block;
   max-width: 46rem;
-  margin-top: 2.25rem;
+  margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
