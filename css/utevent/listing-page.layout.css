@@ -12,3 +12,9 @@
   display: table;
   clear: both;
 }
+.utevent-listing-page .views-view-grid {
+  width: 100%;
+}
+.utevent-listing-page > nav.pager {
+  margin: 0 auto;
+}
