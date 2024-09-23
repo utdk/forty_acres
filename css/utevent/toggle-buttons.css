@@ -1,0 +1,39 @@
+/* Button toggling (#140) */
+.utevent-button-wrapper .ut-btn:link,
+.utevent-button-wrapper .ut-btn:visited {
+  background-color: #f2f1ed;
+  border-color: #9d4700;
+  color: #9d4700 !important;
+  font-weight: bold;
+  margin: 0 -3px 1rem;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+}
+.utevent-button-wrapper .ut-btn--secondary:link,
+.utevent-button-wrapper .ut-btn--secondary:visited {
+  border: solid 2px #8f8f8f;
+  color: #56544e;
+  margin: 0 -3px 1rem;
+  border-radius: 0;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .utevent-button-wrapper .ut-btn:link,
+  .utevent-button-wrapper .ut-btn:visited,
+  .utevent-button-wrapper .ut-btn--secondary:link,
+  .utevent-button-wrapper .ut-btn--secondary:visited {
+    width: auto;
+    text-align: left;
+  }
+  .utevent-button-wrapper .upcoming-btn.ut-btn--secondary,
+  .utevent-button-wrapper .past-btn.ut-btn--secondary {
+    width: auto;
+    text-align: left;
+  }
+}
+.utevent-button-wrapper .upcoming-btn+.past-btn {
+  border-left: solid 2px #9d4700;
+}

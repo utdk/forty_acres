@@ -37,8 +37,9 @@
 // ----------
 // Focus on elements appearance
 @mixin focus-default {
-  outline: 2px dotted #aeb0b5;
-  outline-offset: 3px;
+  outline: 2px #F9F9F9 solid;
+  outline-offset: 0px;
+  box-shadow: 0 0 0 4px #193146;
 }
 
 *:focus,

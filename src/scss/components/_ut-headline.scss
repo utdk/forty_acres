@@ -1,0 +1,73 @@
+
+// ----------
+// Headline Extension
+// This is used to build out the header text styles on any content element.
+%ut-headline {
+  color: $ut-charcoal;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  padding-bottom: 0;
+  line-height: 1.5;
+}
+
+// -----------
+// Default headline style
+// Typically used as the headline field on component instances
+.ut-headline {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+  font-size: 1.125rem;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 1.25rem;
+  }
+}
+
+// Large headline style
+.ut-headline--lg {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+  font-size: 1.25rem;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 1.5625rem;
+  }
+}
+
+// Extra large headline style
+.ut-headline--xl {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+  font-size: 1.5625rem;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 2rem;
+  }
+}
+
+// ----------
+// Headline with underline
+.ut-headline--underline {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+  border-bottom: 2px solid $ut-bluebonnet;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.3rem;
+}
+
+// ----------
+// Poster Headers aka. LARGE BLOCK TEXT
+.ut-headline--poster {
+  @extend %ut-headline;
+  font-size: 2.0625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    font-size: 3.0625rem;
+  }
+}
