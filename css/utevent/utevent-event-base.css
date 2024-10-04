@@ -100,15 +100,21 @@
 declaration on <button> HTML **/
 .utevent-event-field--field-utevent-datetime button:hover,
 .utevent-event-field--field-utevent-datetime button:focus {
+  border: 0;
   color: #9d4700 !important;
   text-decoration: underline !important;
-  border: 0;
   background-color: inherit;
 }
-.utevent-event-field--field-utevent-datetime button:focus,
 .utevent-event-field--field-utevent-datetime button:focus {
-  outline: 2px dotted #aeb0b5;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.utevent-event-field--field-utevent-datetime button:focus-visible {
+  outline: none;
   outline-offset: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .event-status--canceled .utevent-event-field button {

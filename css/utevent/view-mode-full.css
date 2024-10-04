@@ -84,3 +84,20 @@
 .utevent-event--full .utevent-event-field--field-utevent-status {
   margin-bottom: 2rem;
 }
+.utevent-event--full .add-to-calendar.modal {
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  border: 1px solid #bf5700;
+  box-shadow: 0 4px 8px #bf5700;
+}
+.utevent-event--full .add-to-calendar.modal[open] {
+  display: inline-block;
+}
+.utevent-event--full .add-to-calendar button.close:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #bf5700;
+  border-radius: 5px;
+}
