@@ -92,7 +92,7 @@ function forty_acres_preprocess_field(&$variables, $hook) {
  */
 function forty_acres_preprocess_block(&$variables) {
   $base_plugin_id = $variables['base_plugin_id'];
-  $content = $variables['elements']['content'];
+  $content = $variables['elements']['content'] ?? [];
 
   // Add logo alt text.
   if ($base_plugin_id === 'system_branding_block') {
