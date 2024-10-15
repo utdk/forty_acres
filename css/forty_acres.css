@@ -619,7 +619,7 @@ a.ut-link--darker:visited {
 .ut-cta-link--external::after {
   margin-left: 5px;
   padding: 0 0.5em;
-  content: "";
+  content: "" / "Link is external";
   vertical-align: middle;
   background-color: currentColor;
   font-size: 11px;
@@ -636,7 +636,7 @@ a.ut-link--darker:visited {
 .ut-cta-link--lock::after {
   margin-left: 5px;
   padding: 0 0.5em;
-  content: "";
+  content: "" / "Link is restricted";
   vertical-align: middle;
   background-color: currentColor;
   font-size: 8px;
