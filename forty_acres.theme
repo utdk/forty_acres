@@ -16,7 +16,7 @@ use Drupal\forty_acres\FortyAcresThemeHelper;
 use Drupal\node\NodeInterface;
 
 /**
- * Implements hook_preprocess_page().
+ * Implements hook_preprocess_page()
  */
 function forty_acres_preprocess_page(&$variables) {
   // UT logo in brandbar.

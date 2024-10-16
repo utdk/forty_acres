@@ -1,13 +1,26 @@
 #!/bin/bash -ex
 
+set -e
+
 COMPOSER_CMD="php -d memory_limit=-1 /usr/local/bin/composer"
 TOOLING=".github/workflows/scripts/syntax_checker.json"
+REPO="forty_acres"
+HOST="github.austin.utexas.edu"
+OWNER="eis1-wcs"
+WORKINGDIR="syntax/"
 
-## For local testing, uncomment these lines, then run the script directly.
-#REPO="forty_acres"
-#BRANCH="560-syntax"
-#git clone https://github.com/utdk/$REPO.git
-#cd $REPO
+mkdir -p $WORKINGDIR
+cd $WORKINGDIR
+# Clean up cloned repository before starting.
+if [ -d $REPO ]; then
+  rm -rf $REPO
+fi
+
+# Authenticate to gh cli
+echo $TOKEN | gh auth login --hostname $HOST --with-token
+gh auth setup-git --hostname $HOST
+gh repo clone $OWNER/$REPO
+cd $REPO
 
 git checkout -f
 git fetch && git checkout develop
@@ -32,6 +45,9 @@ if [ -z "$PHP_LIST" ]; then
 fi
 vendor/bin/phpcs --standard="vendor/drupal/coder/coder_sniffer/DrupalPractice/ruleset.xml" $PHP_LIST --extensions=$PHP_EXTENSIONS --exclude=Drupal.InfoFiles.AutoAddedKeys
 vendor/bin/phpcs --standard="vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml" $PHP_LIST --extensions=$PHP_EXTENSIONS --exclude=$EXCLUDE_RULES
+
+# Clean up before exiting.
+rm -rf $REPO
 
 # If a PHPCS violation has been found, send exit code to runner.
 if [ $? -ne 0 ]; then
