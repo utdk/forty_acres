@@ -1,6 +1,6 @@
 {
   "name": "@utexas/forty_acres",
-  "version": "3.20.2",
+  "version": "3.18.0",
   "description": "Default Drupal theme used with the UT Drupal Kit",
   "main": "gulpfile.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "hosted-git-info": "^6.1.1",
     "lodash": "^4.17.21",
     "natives": "^1.1.6",
+    "popper.js": "^1.16.1",
     "sass": "^1.64.2",
     "stylelint": "^10.0.1",
     "stylelint-checkstyle-formatter": "^0.1.2",
@@ -35,6 +36,6 @@
   },
   "dependencies": {
     "accessible-mega-menu": "https://github.com/utdk/Accessible-Mega-Menu.git",
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^5.3.3"
   }
 }
