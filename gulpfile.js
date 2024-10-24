@@ -24,7 +24,6 @@ gulp.task("sass", function () {
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(csscombx())
     .pipe(gulp.dest("css"));
 });
 
