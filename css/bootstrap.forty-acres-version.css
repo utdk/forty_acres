@@ -6967,3 +6967,17 @@ progress {
     transition: none;
   }
 }
+
+/* This is retained from Bootstrap 4 for legacy purposes */
+/* See https: //getbootstrap.com/docs/5.0/migration/#helpers */
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
