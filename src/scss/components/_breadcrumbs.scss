@@ -39,6 +39,6 @@
   }
 }
 /* Override the margin-bottom for .block class. */
-#block-breadcrumbs {
-  margin-bottom: 1rem;
+.block.block-system-breadcrumb-block {
+  margin-bottom: 0;
 }
