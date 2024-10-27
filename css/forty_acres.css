@@ -1825,7 +1825,7 @@ form.search-form .svg.search {
 
 /* Override the margin-bottom for .block class. */
 .block.block-system-breadcrumb-block {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .block-facets h2 {
