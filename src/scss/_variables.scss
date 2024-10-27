@@ -6,6 +6,11 @@ $ut-font--sans: "LibreFrank", Arial, Helvetica, sans-serif;
 
 $ut-font--code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $ut-font--pre: "Courier 10 Pitch", Courier, monospace;
+$font-family-sans-serif: $ut-font--sans;
+// Minor Third for smaller screens.
+$min-font-scale: 1.2;
+// Major Third for larger screens.
+$max-font-scale: 1.25;
 
 $ut-text--line-height: 1.5625;
 $ut-text--line-height-pre: 1.6;
@@ -53,8 +58,15 @@ $ut-limestone--s20: #aba89e;
 $ut-limestone--s40: #807e76;
 $ut-limestone--s60: #56544e;
 
+// ----------
+// Default settings for Font Colors
+$ut-body-font-color: $ut-charcoal--s40;
+$ut-header-font-color: $ut-charcoal;
+$input-bg-disabled: #e6e6e6;
+// stylelint-enable
+
+
 // Overrides of variables in node_modules/bootstrap/scss/_variables.scss
-$font-family-sans-serif: $ut-font--sans;
 $grid-breakpoints: (
   xs: 0,
   sm: 600px,
@@ -77,16 +89,3 @@ $container-max-widths: (
   lg: 1140px,
   xl: 1500px,
 );
-
-// Minor Third for smaller screens.
-$min-font-scale: 1.2;
-
-// Major Third for larger screens.
-$max-font-scale: 1.25;
-
-// ----------
-// Default settings for Font Colors
-$ut-body-font-color: $ut-charcoal--s40;
-$ut-header-font-color: $ut-charcoal;
-$input-bg-disabled: #e6e6e6;
-// stylelint-enable

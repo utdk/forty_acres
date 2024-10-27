@@ -9,13 +9,14 @@
 // functions.scss is necessary to import before settings
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
+@import "../variables";
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/vendor/rfs";
 @import "../../../node_modules/bootstrap/scss/utilities";
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
-@import "../variables";
+
 
 @import "../../../node_modules/bootstrap/scss/reboot";
 @import "../../../node_modules/bootstrap/scss/containers";
