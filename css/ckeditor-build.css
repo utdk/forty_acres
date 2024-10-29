@@ -127,16 +127,16 @@
 .ck.ck-content button--secondary:hover,
 .ck.ck-content .ut-btn:hover,
 .ck.ck-content button:hover,
-.ck.ck-content .ut-btn--large:focus,
-.ck.ck-content button--large:focus,
-.ck.ck-content .ut-btn--small:focus,
-.ck.ck-content button--small:focus,
-.ck.ck-content .ut-btn--disabled:focus,
-.ck.ck-content button--disabled:focus,
-.ck.ck-content .ut-btn--secondary:focus,
-.ck.ck-content button--secondary:focus,
-.ck.ck-content .ut-btn:focus,
-.ck.ck-content button:focus {
+.ck.ck-content .ut-btn--large:focus-visible,
+.ck.ck-content button--large:focus-visible,
+.ck.ck-content .ut-btn--small:focus-visible,
+.ck.ck-content button--small:focus-visible,
+.ck.ck-content .ut-btn--disabled:focus-visible,
+.ck.ck-content button--disabled:focus-visible,
+.ck.ck-content .ut-btn--secondary:focus-visible,
+.ck.ck-content button--secondary:focus-visible,
+.ck.ck-content .ut-btn:focus-visible,
+.ck.ck-content button:focus-visible {
   cursor: pointer;
   text-decoration: none;
   color: #fff !important;
@@ -180,9 +180,9 @@
   color: #9cadb7;
 }
 .ck.ck-content .ut-btn--disabled:hover,
-.ck.ck-content .ut-btn--disabled:focus,
+.ck.ck-content .ut-btn--disabled:focus-visible,
 .ck.ck-content button--disabled:hover,
-.ck.ck-content button--disabled:focus {
+.ck.ck-content button--disabled:focus-visible {
   color: #1f262b !important;
   border-color: #e6ebed;
   background-color: #e6ebed;

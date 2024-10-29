@@ -23,7 +23,7 @@
     color: $ut-white;
   }
   &:hover,
-  &:focus {
+  &:focus-visible {
     border: 2px solid $ut-burntorange--s20;
     background-color: $ut-burntorange--s20;
     color: $ut-white !important;
@@ -72,7 +72,7 @@ button {
       color: $ut-shade;
     }
     &:hover,
-    &:focus {
+    &:focus-visible {
       color: $ut-charcoal--s40 !important;
       background-color: $ut-shade--t40;
       border-color: $ut-shade--t40;

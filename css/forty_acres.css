@@ -78,17 +78,17 @@ button--disabled:hover,
 button--secondary:hover,
 .ut-btn:hover,
 button:hover,
-#js-nav-toggle:focus,
-.ut-btn--large:focus,
-button--large:focus,
-.ut-btn--small:focus,
-button--small:focus,
-.ut-btn--disabled:focus,
-button--disabled:focus,
-.ut-btn--secondary:focus,
-button--secondary:focus,
-.ut-btn:focus,
-button:focus {
+#js-nav-toggle:focus-visible,
+.ut-btn--large:focus-visible,
+button--large:focus-visible,
+.ut-btn--small:focus-visible,
+button--small:focus-visible,
+.ut-btn--disabled:focus-visible,
+button--disabled:focus-visible,
+.ut-btn--secondary:focus-visible,
+button--secondary:focus-visible,
+.ut-btn:focus-visible,
+button:focus-visible {
   cursor: pointer;
   text-decoration: none;
   color: #fff !important;
@@ -133,9 +133,9 @@ button--disabled:visited {
   color: #9cadb7;
 }
 .ut-btn--disabled:hover,
-.ut-btn--disabled:focus,
+.ut-btn--disabled:focus-visible,
 button--disabled:hover,
-button--disabled:focus {
+button--disabled:focus-visible {
   color: #1f262b !important;
   border-color: #e6ebed;
   background-color: #e6ebed;
@@ -212,10 +212,10 @@ ul.ut-menu--list-bold {
   text-transform: uppercase;
   font-weight: 600;
 }
-input:focus,
-optgroup:focus,
-select:focus,
-textarea:focus {
+input:focus-visible,
+optgroup:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   color: #333f48;
   border: 2px solid #333f48;
   background-color: #f2f1ed;
@@ -404,8 +404,8 @@ input[type=radio] {
   background-repeat: no-repeat;
   background-position: 50%;
 }
-[type=radio]:focus + label::before,
-[type=checkbox]:focus + label::before {
+[type=radio]:focus-visible + label::before,
+[type=checkbox]:focus-visible + label::before {
   outline: 2px dotted #aeb0b5;
   outline-offset: 6px;
 }
@@ -621,7 +621,7 @@ a.ut-link--darker:visited {
 .ut-cta-link--darker:visited {
   color: #9d4700;
 }
-.ut-cta-link--darker:focus,
+.ut-cta-link--darker:focus-visible,
 .ut-cta-link--darker:hover {
   color: #bf5700;
 }
@@ -697,7 +697,7 @@ a:visited {
   overflow-wrap: anywhere;
 }
 a:hover,
-a:focus {
+a:focus-visible {
   color: #bf5700;
 }
 a:active {

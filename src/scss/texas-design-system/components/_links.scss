@@ -68,7 +68,7 @@ a.ut-link {
   }
 
   // stylelint-disable-next-line plugin/no-browser-hacks
-  &--darker:focus,
+  &--darker:focus-visible,
   &--darker:hover, {
     color: $ut-burntorange;
   }
