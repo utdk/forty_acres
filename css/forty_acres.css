@@ -3,7 +3,16 @@
   padding-left: 0;
   list-style: none;
 }
-*:focus,
+/* Unset legacy :focus, which is not context-sensitive */
+*:focus {
+  outline: none;
+  outline-offset: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* :focus-visible uses browser heuristics to apply to items that "need"
+ a visible focus indicator" */
+*:focus-visible,
 .ut-focus {
   outline: 2px #f9f9f9 solid;
   outline-offset: 0;
