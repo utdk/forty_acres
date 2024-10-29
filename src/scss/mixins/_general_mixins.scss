@@ -35,16 +35,20 @@
 }
 
 // ----------
-// Focus on elements appearance
-@mixin focus-default {
+/* :focus is utilized by click actions and does not need to be as prominent */
+*:focus,
+.ut-focus {
+  outline: 1px #f9f9f9 solid;
+  outline-offset: 0;
+  -webkit-box-shadow: 0 0 0 1px #193146;
+  box-shadow: 0 0 0 1px #193146;
+
+}
+/* :focus-visible is used by keyboard navigation and should be more prominent */
+*:focus-visible {
   outline: 2px #F9F9F9 solid;
   outline-offset: 0px;
   box-shadow: 0 0 0 4px #193146;
-}
-
-*:focus,
-.ut-focus {
-  @include focus-default;
 }
 
 // ----------
