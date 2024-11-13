@@ -1,6 +1,9 @@
 global:
   css:
-    theme:
+    layout:
+      css/bootstrap/bootstrap.min.css: {}
+      css/bootstrap.forty-acres.overrides.css: {}
+    component:
       # Begin components relocated from utdk_profile in 2024.
       css/components/block_social_links.css: {}
       css/components/featured_highlight.css: {}
@@ -48,8 +51,8 @@ global:
       css/utprof/view-mode-utexas-name-only.css: {}
       css/utprof/view-mode-utexas-prominent.css: {}
       css/utprof/views-view-list.css: {}
+    theme:
       # Begin original Forty Acres CSS
-      css/base.css: {}
       css/forty_acres.css: {}
       css/align-override.css: {}
       css/lists.css: {}

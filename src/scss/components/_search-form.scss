@@ -147,6 +147,9 @@ form.search-form {
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
+    fill: $ut-burntorange;
+    top: 18px;
+    z-index: 0;
 
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
@@ -154,9 +157,5 @@ form.search-form {
       height: 2.375rem;
       top: 10px;
     }
-
-    fill: $ut-burntorange;
-    top: 18px;
-    z-index: 0;
   }
 }

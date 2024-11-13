@@ -5,7 +5,6 @@ var sass = require('gulp-sass')(require('sass'));
 var uglify = require("gulp-uglify");
 var autoprefixer = require("gulp-autoprefixer");
 var gulpStylelint = require("gulp-stylelint");
-var csscombx = require("gulp-csscombx");
 
 gulp.task("scss-lint", function lintCssTask() {
   return gulp
@@ -18,14 +17,33 @@ gulp.task("scss-lint", function lintCssTask() {
     }));
 });
 
+gulp.task('copy-js', function () {
+  return gulp
+    .src([
+      './node_modules/accessible-mega-menu/js/jquery-accessibleMegaMenu.js'
+    ])
+    .pipe(uglify())
+    .pipe(gulp.dest('js'));
+});
+
+gulp.task('copy-css', function () {
+  return gulp
+    .src([
+      './node_modules/bootstrap/dist/css/bootstrap.min.css'
+    ])
+    .pipe(gulp.dest('css/bootstrap'));
+});
+
 gulp.task("sass", function () {
   return gulp.src("./src/scss/build/**/*.scss")
-    .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
+    .pipe(sass({
+      outputStyle: "expanded",
+      quietDeps: true
+    }).on("error", sass.logError))
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(csscombx())
     .pipe(gulp.dest("css"));
 });
 
-gulp.task("default", gulp.series("scss-lint", "sass"));
+gulp.task("default", gulp.series("scss-lint", "sass", "copy-js", "copy-css"));

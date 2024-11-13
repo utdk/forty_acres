@@ -16,6 +16,7 @@
 .ut-headline {
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
   font-size: 1.125rem;
 
   // stylelint-disable-next-line at-rule-no-unknown
@@ -28,6 +29,7 @@
 .ut-headline--lg {
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
   font-size: 1.25rem;
 
   // stylelint-disable-next-line at-rule-no-unknown
@@ -40,6 +42,7 @@
 .ut-headline--xl {
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
   font-size: 1.5625rem;
 
   // stylelint-disable-next-line at-rule-no-unknown
@@ -53,6 +56,7 @@
 .ut-headline--underline {
   // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
   border-bottom: 2px solid $ut-bluebonnet;
   margin-bottom: 1.25rem;
   padding-bottom: 0.3rem;
@@ -61,7 +65,9 @@
 // ----------
 // Poster Headers aka. LARGE BLOCK TEXT
 .ut-headline--poster {
+  // stylelint-disable-next-line at-rule-no-unknown
   @extend %ut-headline;
+
   font-size: 2.0625rem;
   font-weight: 900;
   text-transform: uppercase;

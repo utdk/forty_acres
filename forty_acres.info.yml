@@ -3,7 +3,7 @@ version: '3.20.2'
 type: theme
 base theme: stable9
 name: Forty Acres
-description: UT-branded theme using the Bootstrap library v4.
+description: UT-branded theme using the Bootstrap library v5.
 screenshot: images/screenshot.png
 
 regions:
