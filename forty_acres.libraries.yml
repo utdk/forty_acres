@@ -1,8 +1,7 @@
 global:
   css:
     layout:
-      css/bootstrap/bootstrap.min.css: {}
-      css/bootstrap.forty-acres.overrides.css: {}
+      css/bootstrap-customized.css: {}
     component:
       # Begin components relocated from utdk_profile in 2024.
       css/components/block_social_links.css: {}

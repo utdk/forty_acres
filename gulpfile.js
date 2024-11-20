@@ -26,14 +26,6 @@ gulp.task('copy-js', function () {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task('copy-css', function () {
-  return gulp
-    .src([
-      './node_modules/bootstrap/dist/css/bootstrap.min.css'
-    ])
-    .pipe(gulp.dest('css/bootstrap'));
-});
-
 gulp.task("sass", function () {
   return gulp.src("./src/scss/build/**/*.scss")
     .pipe(sass({
@@ -46,4 +38,4 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("css"));
 });
 
-gulp.task("default", gulp.series("scss-lint", "sass", "copy-js", "copy-css"));
+gulp.task("default", gulp.series("scss-lint", "sass", "copy-js"));
