@@ -1,0 +1,7 @@
+
+/* Prevents layout builder modal from loading at bottom of screen */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: unset !important;
+  }
+}
