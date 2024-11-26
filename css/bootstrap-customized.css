@@ -6692,3 +6692,7 @@ progress {
   background-color: unset;
   opacity: 1;
 }
+
+code {
+  color: #1f262b;
+}
