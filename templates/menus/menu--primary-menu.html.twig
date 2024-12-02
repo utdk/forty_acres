@@ -45,7 +45,9 @@
       %}
       {% set link_classes = [menu_level == 0 ? 'main-menu__link' : 'main-menu__link--subnav'] %}
       <li{{ create_attribute().addClass(item_classes) }}>
-        {{ link(item.title, item.url, item.attributes.addClass(link_classes)) }}
+        {% set link_original = item.attributes.addClass(link_classes) %}
+        {% set link_compiled = link_original|merge(item.link_attributes) %}
+        {{ link(item.title, item.url, link_compiled) }}
         {% if item.is_expanded %}
           <i class="icon subnav-trigger" aria-hidden="true" tabindex=0>
             <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>

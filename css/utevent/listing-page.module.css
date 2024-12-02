@@ -21,3 +21,6 @@
 .utevent-listing-page .views-field-field-utevent-body p {
   margin-bottom: 0;
 }
+.utevent-listing-page .no-results {
+  width: 100%;
+}

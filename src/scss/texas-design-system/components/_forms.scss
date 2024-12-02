@@ -45,8 +45,8 @@ $ut-input--placeholder: $ut-charcoal;
     background-color: transparent;
     border: 0;
   }
-  // Customize the `:focus` state to imitate native WebKit styles.
-  &:focus {
+  // Customize the `:focus-visible` state to imitate native WebKit styles.
+  &:focus-visible {
     // stylelint-disable-next-line at-rule-no-unknown
     @extend %ut-input--focus;
   }
@@ -198,8 +198,8 @@ input[type="radio"] {
 }
 
 // stylelint-disable no-descending-specificity
-[type="radio"]:focus + label::before,
-[type="checkbox"]:focus + label::before {
+[type="radio"]:focus-visible + label::before,
+[type="checkbox"]:focus-visible + label::before {
   outline: 2px dotted #aeb0b5;
   outline-offset: 6px;
 }
