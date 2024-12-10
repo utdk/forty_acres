@@ -1,6 +1,6 @@
 {
   "name": "@utexas/forty_acres",
-  "version": "3.21.0",
+  "version": "3.21.1",
   "description": "Default Drupal theme used with the UT Drupal Kit",
   "main": "gulpfile.js",
   "scripts": {
