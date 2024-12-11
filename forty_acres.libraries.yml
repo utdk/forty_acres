@@ -56,6 +56,7 @@ global:
       css/align-override.css: {}
       css/lists.css: {}
       css/collapse-custom.css: {}
+      css/bootstrap4-legacy.css: {}
   js:
     js/jquery-ui.min.js: {}
     js/jquery-accessibleMegaMenu.js: {}
