@@ -8,10 +8,21 @@
   --ipr-grid-gap: 1vw;
   --ipr-grid-min-min-size: 200px;
   --ipr-grid-min-max-size: 275px;
+  container-type: size;
 
   display: grid;
   grid-gap: var(--ipr-grid-gap);
   grid-template-columns: repeat(auto-fit, minmax(max(var(--ipr-grid-min-min-size), var(--ipr-grid-min-max-size)), 1fr));
+}
+.utexas-layout--twocol--75-25 .layout__region .layout__region--second,
+.utexas-layout--twocol—25-75 .layout__region .layout__region—first {
+  Container-type: size;
+}
+@container (min-width: 184px) and (max-width: 253px) {
+  .utexas-quick-links ul.link-list li {
+    --ipr-grid-min-min-size: 198px;
+    --ipr-grid-min-max-size: 198px;
+  }
 }
 
 .utexas-onecol .utexas-quick-links ul.link-list {
