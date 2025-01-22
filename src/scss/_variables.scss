@@ -3,6 +3,7 @@
 $variable-prefix: bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix: $variable-prefix;
 $enable-container-classes: true;
+$enable-negative-margins: true;
 $grid-columns: 12;
 $grid-gutter-width: 1.5rem;
 $grid-row-columns: 6 !default;
@@ -93,3 +94,6 @@ $ut-body-font-color: $ut-charcoal--s40;
 $ut-header-font-color: $ut-charcoal;
 $input-bg-disabled: #e6e6e6;
 // stylelint-enable
+
+// Set Bootstrap variable value for underlining links.
+$link-hover-decoration: underline;
