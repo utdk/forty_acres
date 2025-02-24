@@ -125,10 +125,6 @@ function forty_acres_preprocess_block(&$variables) {
   if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('block-bundle-' . $content['#block_content']->bundle());
   }
-  // Address blocks placed in the main 'content' region on Layout Builder pages.
-  if (empty($variables['elements']['#utexas_layouts_region'])) {
-    return;
-  }
 }
 
 /**
