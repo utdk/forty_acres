@@ -8,12 +8,10 @@
 use Drupal\block\Entity\Block;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\Component\Utility\Html;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Template\Attribute;
 use Drupal\forty_acres\FortyAcresRenderCallback;
 use Drupal\forty_acres\FortyAcresThemeHelper;
-use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess_page()
@@ -51,33 +49,6 @@ function forty_acres_preprocess_page(&$variables) {
   ];
   if (in_array($route_name, $layout_builder_routes)) {
     $variables['#attached']['library'][] = 'forty_acres/layout_builder_editor';
-  }
-}
-
-/**
- * Implements hook_preprocess_field().
- */
-function forty_acres_preprocess_field(&$variables, $hook) {
-  if (!isset($variables['element']['#bundle'])) {
-    return;
-  }
-  switch ($variables['element']['#bundle']) {
-    case 'feed_block':
-      if ($variables['element']['#field_name'] === 'field_read_more') {
-        // Add 'button' class to Read more <a> tag.
-        $variables['attributes']['class'][] = 'ut-cta';
-        $variables['items'][0]['content']['#options']['attributes']['class'][] = 'ut-btn--secondary';
-      }
-      if ($variables['element']['#field_name'] === 'field_intro_text') {
-        $variables['attributes']['class'][] = 'ut-copy';
-      }
-      break;
-
-    case 'basic':
-      if ($variables['element']['#field_name'] === 'body' && $variables['element']['#entity_type'] === 'block_content') {
-        $variables['attributes']['class'][] = 'ut-copy';
-      }
-      break;
   }
 }
 
