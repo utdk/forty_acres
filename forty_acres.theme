@@ -242,12 +242,3 @@ function forty_acres_preprocess_menu_local_action(&$variables) {
     $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
   }
 }
-
-/**
- * Implements hook_template_preprocess_views_view_table().
- */
-function forty_acres_preprocess_views_view_table(&$variables) {
-  // Developers can override this with a preprocess hook of their own
-  // in the sub-theme that removes the class.
-  $variables['attributes']['class'][] = 'border-1';
-}
