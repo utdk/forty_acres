@@ -180,12 +180,3 @@ function forty_acres_theme_suggestions_input_alter(array &$suggestions, array $v
     }
   }
 }
-
-/**
- * Implements hook_preprocess_menu().
- */
-function forty_acres_preprocess_menu_local_action(&$variables) {
-  if (isset($variables['link'])) {
-    $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
-  }
-}
