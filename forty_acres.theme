@@ -24,14 +24,6 @@ function forty_acres_preprocess_page(&$variables) {
   $variables['parent_entity_link'] = theme_get_setting('parent_link');
   // Add css if user selects a logo option in theme settings.
   $variables['logo_height'] = theme_get_setting('logo_height');
-
-  /** @var \Drupal\Core\Routing\CurrentRouteMatch $current_route_match */
-  $current_route_match = \Drupal::routeMatch();
-  $route_name = $current_route_match->getRouteName();
-  if ($route_name === 'search.view_google_cse_search') {
-    // Remove breadcrumbs block from breadcrumb region.
-    unset($variables['page']['breadcrumb']['breadcrumbs']);
-  }
 }
 
 /**
