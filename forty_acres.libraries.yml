@@ -71,7 +71,3 @@ messages:
   css:
     base:
       css/messages.css: {}
-layout_builder_editor:
-  css:
-    base:
-      css/layout_builder_editor.css: {}

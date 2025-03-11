@@ -32,15 +32,6 @@ function forty_acres_preprocess_page(&$variables) {
     // Remove breadcrumbs block from breadcrumb region.
     unset($variables['page']['breadcrumb']['breadcrumbs']);
   }
-
-  // Add a stylesheet to the layout builder editor pages.
-  $layout_builder_routes = [
-    'layout_builder.defaults.node.view',
-    'layout_builder.overrides.node.view',
-  ];
-  if (in_array($route_name, $layout_builder_routes)) {
-    $variables['#attached']['library'][] = 'forty_acres/layout_builder_editor';
-  }
 }
 
 /**
