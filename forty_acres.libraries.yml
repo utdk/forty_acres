@@ -67,7 +67,4 @@ global:
     - core/jquery
     - core/drupal
     - core/drupal.debounce
-messages:
-  css:
-    base:
-      css/messages.css: {}
+
