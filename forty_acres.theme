@@ -8,92 +8,22 @@
 use Drupal\block\Entity\Block;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\Component\Utility\Html;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Template\Attribute;
-use Drupal\forty_acres\FortyAcresRenderCallback;
-use Drupal\forty_acres\FortyAcresThemeHelper;
-use Drupal\node\NodeInterface;
 
 /**
- * Implements hook_preprocess_page()
+ * Implements hook_preprocess_page().
  */
 function forty_acres_preprocess_page(&$variables) {
   // UT logo in brandbar.
   $theme_handler = \Drupal::service('theme_handler');
   $theme_path = $theme_handler->getTheme('forty_acres')->getPath();
   $variables['brandbar_shield'] = '/' . $theme_path . '/images/utexas-brandbar-shield.svg';
-  // Year for use in footer copyright.
-  $variables['year'] = date('Y');
   // Parent entity link and title.
   $variables['parent_entity_title'] = theme_get_setting('parent_link_title');
   $variables['parent_entity_link'] = theme_get_setting('parent_link');
   // Add css if user selects a logo option in theme settings.
   $variables['logo_height'] = theme_get_setting('logo_height');
-
-  /** @var \Drupal\Core\Routing\CurrentRouteMatch $current_route_match */
-  $current_route_match = \Drupal::routeMatch();
-  $route_name = $current_route_match->getRouteName();
-  if ($route_name === 'search.view_google_cse_search') {
-    // Remove breadcrumbs block from breadcrumb region.
-    unset($variables['page']['breadcrumb']['breadcrumbs']);
-  }
-
-  // If the current page uses Layout Builder, add a flag.
-  if (FortyAcresThemeHelper::isLayoutBuilderPage()) {
-    $variables['is_layout_builder_page'] = TRUE;
-  }
-
-  // Add a stylesheet to the layout builder editor pages.
-  $layout_builder_routes = [
-    'layout_builder.defaults.node.view',
-    'layout_builder.overrides.node.view',
-  ];
-  if (in_array($route_name, $layout_builder_routes)) {
-    $variables['#attached']['library'][] = 'forty_acres/layout_builder_editor';
-  }
-}
-
-/**
- * Implements hook_form_FORMTPYE_alter().
- */
-function forty_acres_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form['keys']['#attributes']['placeholder'] = 'Search the site...';
-  $form['actions']['#attributes']['id'] = 'edit-search-actions';
-}
-
-/**
- * Implements hook_form_FORMTPYE_alter().
- */
-function forty_acres_form_user_login_form_alter(&$form, &$form_state, $form_id) {
-  $form['actions']['submit']['#attributes']['class'][] = 'ut-btn';
-}
-
-/**
- * Implements hook_preprocess_field().
- */
-function forty_acres_preprocess_field(&$variables, $hook) {
-  if (!isset($variables['element']['#bundle'])) {
-    return;
-  }
-  switch ($variables['element']['#bundle']) {
-    case 'feed_block':
-      if ($variables['element']['#field_name'] === 'field_read_more') {
-        // Add 'button' class to Read more <a> tag.
-        $variables['attributes']['class'][] = 'ut-cta';
-        $variables['items'][0]['content']['#options']['attributes']['class'][] = 'ut-btn--secondary';
-      }
-      if ($variables['element']['#field_name'] === 'field_intro_text') {
-        $variables['attributes']['class'][] = 'ut-copy';
-      }
-      break;
-
-    case 'basic':
-      if ($variables['element']['#field_name'] === 'body' && $variables['element']['#entity_type'] === 'block_content') {
-        $variables['attributes']['class'][] = 'ut-copy';
-      }
-      break;
-  }
 }
 
 /**
@@ -108,14 +38,6 @@ function forty_acres_preprocess_block(&$variables) {
     $config = \Drupal::config('system.site');
     $variables['logo_alt_text'] = $config->get('name');
   }
-  if (in_array($base_plugin_id, ['menu_block', 'addtoany_block'])) {
-    // AddToAny and Menu block titles should use the smaller `ut-headline`.
-    $variables['title_attributes']['class'][] = 'ut-headline';
-  }
-  else {
-    // All other block titles should use `ut-headline--xl`.
-    $variables['title_attributes']['class'][] = 'ut-headline--xl';
-  }
 
   if (isset($variables['attributes']['id'])) {
     $variables['content']['#attributes']['data-block'] = $variables['attributes']['id'];
@@ -125,34 +47,7 @@ function forty_acres_preprocess_block(&$variables) {
   if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('block-bundle-' . $content['#block_content']->bundle());
   }
-  // Address blocks placed in the main 'content' region on Layout Builder pages.
-  if (empty($variables['elements']['#utexas_layouts_region'])) {
-    return;
-  }
-  if ($base_plugin_id === 'system_main_block' || $variables['elements']['#utexas_layouts_region'] !== 'content') {
-    return;
-  }
 
-  // This is a resuable block placed located in the 'content' region.
-  // If the current page uses Layout Builder, set to 'container' width.
-  if (FortyAcresThemeHelper::isLayoutBuilderPage()) {
-    $variables['attributes']['class'][] = 'container';
-  }
-}
-
-/**
- * Implements hook_preprocess_layout().
- */
-function forty_acres_preprocess_layout(&$variables) {
-  // If a class of "container-fluid" has NOT been applied to this layout,
-  // (i.e., via Layout Builder Styles) add "container".
-  $add_container = TRUE;
-  if (isset($variables['attributes']['class']) && in_array('container-fluid', $variables['attributes']['class'])) {
-    $add_container = FALSE;
-  }
-  if ($add_container) {
-    $variables['attributes']['class'][] = 'container';
-  }
 }
 
 /**
@@ -173,41 +68,6 @@ function forty_acres_preprocess_region(&$variables) {
     }
     elseif ($alignment === 'right_alignment') {
       $variables['attributes']['class'][] = 'main-menu-flex-end';
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function forty_acres_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  // Add content type suggestions.
-  if ($node = \Drupal::request()->attributes->get('node')) {
-    if ($node instanceof NodeInterface) {
-      array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
-    }
-    else {
-      $node_revision = \Drupal::entityTypeManager()->getStorage('node')->load($node);
-      if ($node_revision instanceof NodeInterface) {
-        array_splice($suggestions, 1, 0, 'page__node__' . $node_revision->getType());
-      }
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function forty_acres_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
-  $theme_name = \Drupal::service('theme.manager')->getActiveTheme()->getName();
-  $theme_key = strtolower($theme_name) . '-';
-  // Remove the block, the themename (if present), and replace dashes with
-  // underscores in the block ID to use for the hook name.
-  if (isset($variables['attributes']['data-block'])) {
-    $hook = str_replace([$theme_key, 'block-', '-'], ['', '', '_'], $variables['attributes']['data-block']);
-    if ($block = Block::load($hook)) {
-      $region = $block->getRegion();
-      $suggestions[] = 'menu__' . $region;
     }
   }
 }
@@ -277,23 +137,6 @@ function _forty_acres_preprocess_menu_items_nolink(&$items) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function forty_acres_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  // Remove the block and replace dashes with underscores in the block ID to
-  // use for the hook name.
-  $base_plugin_id = $variables['elements']['#base_plugin_id'];
-  if (isset($base_plugin_id) && $base_plugin_id === 'system_menu_block') {
-    if (isset($variables['elements']['#id'])) {
-      $hook = $variables['elements']['#id'];
-      $block = Block::load($hook);
-      $region = $block->getRegion();
-      $suggestions[] = 'block__system_menu_block__' . $region;
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
 function forty_acres_theme_suggestions_input_alter(array &$suggestions, array $variables) {
   if (isset($variables['element']['#value']) && isset($variables['element']['#type'])) {
     if ($variables['element']['#value'] instanceof TranslatableMarkup) {
@@ -302,46 +145,4 @@ function forty_acres_theme_suggestions_input_alter(array &$suggestions, array $v
       }
     }
   }
-}
-
-/**
- * Implements hook_preprocess_breadcrumb().
- */
-function forty_acres_preprocess_breadcrumb(&$variables) {
-  // Use a placeholder to inject dynamic content.
-  $placeholder_title = [
-    '#lazy_builder' => [
-      FortyAcresRenderCallback::class . '::lazyBuilder',
-      ['page_title'],
-    ],
-    '#create_placeholder' => TRUE,
-  ];
-  $variables['breadcrumb'][] = [
-    'text' => $placeholder_title,
-  ];
-}
-
-/**
- * Implements hook_preprocess_block_system_messages_block().
- */
-function forty_acres_preprocess_block__system_messages_block(&$variables) {
-  $variables['content']['#include_fallback'] = FALSE;
-}
-
-/**
- * Implements hook_preprocess_menu().
- */
-function forty_acres_preprocess_menu_local_action(&$variables) {
-  if (isset($variables['link'])) {
-    $variables['link']['#options']['attributes']['class'][] = 'ut-admin-button';
-  }
-}
-
-/**
- * Implements hook_template_preprocess_views_view_table().
- */
-function forty_acres_preprocess_views_view_table(&$variables) {
-  // Developers can override this with a preprocess hook of their own
-  // in the sub-theme that removes the class.
-  $variables['attributes']['class'][] = 'border-1';
 }
