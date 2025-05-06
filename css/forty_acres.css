@@ -2085,7 +2085,7 @@ header.ut-header #ut-main_menu-wrapper {
     width: 100%;
     position: absolute;
     z-index: -100;
-    top: 5.15rem;
+    top: 5rem;
     left: 0;
     overflow: hidden;
     opacity: 0;
