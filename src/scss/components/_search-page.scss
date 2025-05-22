@@ -10,10 +10,18 @@
   }
 }
 
-// Hide Search results title.
 .search-results-page {
+  // Visually hide the search results title.
   h2 {
-    display: none;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
   }
   .gsc-control-cse {
     padding: 0;

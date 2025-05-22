@@ -633,11 +633,6 @@ p a {
   text-decoration: underline;
 }
 
-/* Set links in announcement message to be underlined. */
-.announcement-body a {
-  text-decoration: underline;
-}
-
 /* Set links in ut-copy fields to be underlined. */
 .ut-copy a,
 .ut-copy ol a,
@@ -1672,7 +1667,15 @@ form.search-form .svg.search {
 }
 
 .search-results-page h2 {
-  display: none;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
 }
 .search-results-page .gsc-control-cse {
   padding: 0;
@@ -2082,7 +2085,7 @@ header.ut-header #ut-main_menu-wrapper {
     width: 100%;
     position: absolute;
     z-index: -100;
-    top: 5.15rem;
+    top: 5rem;
     left: 0;
     overflow: hidden;
     opacity: 0;
