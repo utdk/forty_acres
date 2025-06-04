@@ -5,4 +5,10 @@
   @import "../drupal/align-override";
   @import "../layout/lists";
   @import "../texas-design-system/components/buttons";
+
+  /* CKEditor italicizes blockquotes, which is inconsistent with the theme
+  design, so we revert it. */
+  blockquote {
+    font-style: normal;
+  }
 }
