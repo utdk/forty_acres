@@ -9,6 +9,11 @@
 .utexas-featured-highlight .ut-copy * {
   color: #000;
 }
+.utexas-featured-highlight .ut-copy blockquote {
+    background: transparent;
+    margin-left: 0;
+    margin-top: 1rem;
+}
 .utexas-featured-highlight .content-wrapper .ut-headline,
 .utexas-featured-highlight .content-wrapper .ut-headline a {
   color: #000;
