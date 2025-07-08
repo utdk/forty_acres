@@ -42,6 +42,12 @@
   padding: .875rem 1.25rem 1.25rem 1.25rem;
   order: 3;
 }
+.utnews__author a {
+  text-decoration: underline;
+}
+.utnews__author a:hover {
+  text-decoration: none;
+}
 .utnews__author-information-wrapper .utnews__image {
   padding-top: 0.25rem;
 }
