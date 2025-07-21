@@ -9,6 +9,12 @@
 .utexas-featured-highlight .ut-copy * {
   color: #000;
 }
+.utexas-featured-highlight .ut-copy blockquote {
+    background: transparent;
+    margin-left: 0;
+    margin-top: 1rem;
+    border-left: 5px solid #3E4549;
+}
 .utexas-featured-highlight .content-wrapper .ut-headline,
 .utexas-featured-highlight .content-wrapper .ut-headline a {
   color: #000;
@@ -32,6 +38,9 @@
 .utexas-featured-highlight.medium .ut-copy * {
   color: #fff;
 }
+.utexas-featured-highlight.medium .ut-copy blockquote {
+  border-left: 5px solid #fff;
+}
 .utexas-featured-highlight.medium .ut-copy .ut-btn--secondary {
   color: #bf5700;
 }
@@ -46,6 +55,9 @@
 }
 .utexas-featured-highlight.dark .ut-copy * {
   color: #fff;
+}
+.utexas-featured-highlight.dark .ut-copy blockquote {
+  border-left: 5px solid #fff;
 }
 .utexas-featured-highlight.dark .ut-copy .ut-btn--secondary {
   color: #bf5700;

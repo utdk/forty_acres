@@ -3,7 +3,7 @@
  * @file
  * Theme override to display a node.
  *
- * Available default variables:
+ * Available variables:
  * - node: The node entity with limited access to object properties and methods.
  *   Only method names starting with "get", "has", or "is" and a few common
  *   methods such as "id", "label", and "bundle" are available. For example:
@@ -15,7 +15,7 @@
  *   Calling other methods, such as node.delete(), will result in an exception.
  *   See \Drupal\node\Entity\Node for a full list of public properties and
  *   methods for the node object.
- * - label: The title of the node.
+ * - label: (optional) The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
  *   {{ content|without('field_example') }} to temporarily suppress the printing
@@ -23,8 +23,8 @@
  * - author_picture: The node author user entity, rendered using the "compact"
  *   view mode.
  * - metadata: Metadata for this node.
- * - date: Themed creation date field.
- * - author_name: Themed author name field.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
  * - url: Direct URL of the current node.
  * - display_submitted: Whether submission information should be displayed.
  * - attributes: HTML attributes for the containing element.
@@ -63,111 +63,92 @@
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
  *
- * Available custom variables:
- * - has_sidebar_fields: Used for defining layouts with/without sidebar
- * - author_information: Author information - for the author image, name, description
- * - main_image: The news story image
- * - news_tags: News story tags
- * - news_categories: News story categories
- * - linked_title: The title field pointing to the node or external URL
- * - body_summary: The summary of the body field
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
  */
 #}
 
+{#
+/**
+ * These classes are copied verbatim from the core theme Classy node.html.twig
+ * template. Additionally, "node__meta", "node__submitted" and "node__content"
+ * have been preserved in the body of the template according to their
+ * implementation in the Classy theme node.html.twig template. "node__title" has
+ * been added for the sake of consistancy.
+ */
+#}
 {%
   set classes = [
-    view_mode ? view_mode|clean_class,
-    not node.isPublished() ? 'is-unpublished',
-    node.bundle|clean_class,
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    canceled ? 'event-status--canceled'
+  ]
+%}
+
+{# These classes are part of a BEM implentation used by the utevent module. #}
+{% set bem_block =  node.bundle|clean_class %}
+{% set classes_utevent = [
+    bem_block,
+    not node.isPublished() ? bem_block ~ '--unpublished',
+    view_mode ? bem_block ~ '--' ~ view_mode|clean_class,
     'clearfix',
   ]
 %}
+
+{# The "classes" array from the Classy theme and the BEM classes used to style
+  the utevent module are merged. #}
+{% set classes = classes|merge(classes_utevent) %}
+
+{# An array of additional classes can be added when this template is embedded in
+  a child template.#}
+{% set classes = classes|merge(classes_additional|default([])) %}
+
 <article{{ attributes.addClass(classes) }}>
-  <div class="utnews__top-row">
-    {% if author_information %}
-      <div class="utnews__author-wrapper">
-        <span class="field__label">By </span>
-        <span class="utnews__author">{{ author_information.name }}</span>
-      </div>
-    {% endif %}
 
-    {% if content.field_utnews_publication_date|render is not empty %}
-      <div class="utnews__published-wrapper">
-        <span class="field__label">Published: </span>
-        <span class="utnews__published">{{ content.field_utnews_publication_date }}</span>
-      </div>
-    {% endif %}
-    {% if content.field_utnews_external_link|render is not empty %}
-      <div class="utnews__external-link-wrapper">
-        <span>External link:</span>
-        {{ content.field_utnews_external_link }}
-      </div>
-    {% endif %}
-  </div>
-
-  {% if has_sidebar_fields %}
-    <div class="utnews__wrapper">
-  {% else %}
-    <div class="utnews__wrapper-no-sidebar">
-  {% endif %}
-    <div class="utnews__left-col">
-      {% if main_image %}
-        <div class="utnews__image-wrapper">
-          {{ main_image }}
-        </div>
+    {% block node_title %}
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h2{{ title_attributes.addClass('node__title', bem_block ~ '__title') }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
       {% endif %}
+      {{ title_suffix }}
+    {% endblock node_title %}
 
-      {% if content.field_utnews_body %}
-        <div class="utnews__body-wrapper">
-          {{ content.field_utnews_body }}
-        </div>
+    {% block display_submitted %}
+      {% if display_submitted %}
+        <footer class="node__meta {{ bem_block }}__meta">
+          {{ author_picture }}
+          <div{{ author_attributes.addClass('node__submitted', bem_block ~ '__submitted') }}>
+            {% trans %}Submitted by
+            {{ author_name }}
+            on
+            {{ date }}{% endtrans %}
+            {{ metadata }}
+          </div>
+        </footer>
       {% endif %}
-    </div>
+    {% endblock display_submitted %}
 
-    {% if author_information %}
-      <div class="utnews__author-information-wrapper">
-        {% if author_information.image %}
-          <div class="utnews__image">{{ author_information.image }}</div>
-        {% endif %}
-
-        {% if author_information.name or author_information.description %}
-          <div class="data-wrapper">
-            {% if author_information.name %}
-              <h3 class="ut-headline">{{ author_information.name }}</h3>
-            {% endif %}
-
-            {% if author_information.description %}
-              <div class="utnews__description-wrapper">{{ author_information.description }}</div>
-            {% endif %}
-          </div>
-        {% endif %}
+    {% block node_content %}
+      <div{{ content_attributes.addClass('node__content', bem_block ~ '__content') }}>
+        <div class="{{ bem_block }}__content-primary">
+          {{ content|without('field_utevent_datetime', 'field_utevent_location', 'field_utevent_tags') }}
+        </div>
+        <div class="{{ bem_block }}__content-secondary">
+          <div class="{{ bem_block }}__content-label">Event Details</div>
+          {{ content.field_utevent_datetime }}
+          {{ content.field_utevent_location }}
+          {{ content.field_utevent_tags }}
+        </div>
       </div>
-    {% endif %}
+    {% endblock node_content %}
 
-    {% if has_sidebar_fields %}
-      <div class="utnews__right-col">
-        {% if news_categories %}
-          <div class="utnews__categories-wrapper">
-            <h5 class="field__label">News category: </h5>
-            <span class="utnews__categories">
-              {% for category in news_categories %}
-                {{ category }}
-              {% endfor %}
-            </span>
-          </div>
-        {% endif %}
-
-        {% if news_tags %}
-          <div class="utnews__tags-wrapper">
-            <h5 class="field__label">News tags: </h5>
-            <span class="utnews__tags">
-              {% for tag in news_tags %}
-                <span class="utnews__tag">{{ tag }}</span>
-              {% endfor %}
-            </span>
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
-  </div>
 </article>

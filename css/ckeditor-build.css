@@ -6,6 +6,8 @@
   https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors */
   /* Declare format for nested ordered lists */
   /* The `not` declarations are necessary to allow overriding defaults (#471) */
+  /* CKEditor italicizes blockquotes, which is inconsistent with the theme
+  design, so we revert it. */
 }
 .ck.ck-content .align-left,
 .ck.ck-content .align-right,
@@ -178,4 +180,7 @@
 }
 .ck.ck-content .corner--pill {
   border-radius: 2rem !important;
+}
+.ck.ck-content blockquote {
+  font-style: normal;
 }
