@@ -39,10 +39,6 @@ function forty_acres_preprocess_block(&$variables) {
     $variables['logo_alt_text'] = $config->get('name');
   }
 
-  if (isset($variables['attributes']['id'])) {
-    $variables['content']['#attributes']['data-block'] = $variables['attributes']['id'];
-  }
-
   // Add a bundle identifier as a CSS class.
   if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('block-bundle-' . $content['#block_content']->bundle());
