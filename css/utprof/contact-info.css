@@ -1,8 +1,12 @@
 /* Styling for Contact Information part of profiles nodes. */
 
-.utprof__wrapper-code-rm .utprof__bldg-code, .utprof__wrapper-code-rm .utprof__rm-number {
+.utprof__wrapper-code-rm .utprof__bldg-code,
+.utprof__wrapper-code-rm .utprof__rm-number {
   display: inline-block;
   margin-right: .5rem;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .utprof__email-address a {
